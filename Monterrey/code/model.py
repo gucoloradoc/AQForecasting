@@ -10,6 +10,9 @@ dframe=pd.read_pickle('./AMMfull.pkl')
 #%% Preparation of the data.
 dframe.mean(axis=0).unstack('ESTACION')
 df2=dframe['NOROESTE'].fillna(method='ffill').as_matrix()
+
+#Max normalization
+df2=df2/np.nanmax(df2)
 #%% Looking back lookback, every step, we will predict the 
 # concentration in a delay.
 def generator(data, lookback, delay, min_index, max_index,
@@ -103,8 +106,8 @@ model.add(layers.Dense(1))
 
 model.compile(optimizer=RMSprop(), loss='mae')
 history = model.fit_generator(train_gen,
-                              steps_per_epoch=10,
-                              epochs=10,
+                              steps_per_epoch=1,
+                              epochs=100,
                               validation_data=val_gen,
                               validation_steps=val_steps)
 
