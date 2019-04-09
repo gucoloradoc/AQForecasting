@@ -5,6 +5,7 @@ import numpy as np
 import pandas as pd
 
 
+
 #%% Retrieving the data
 dframe=pd.read_pickle('./AMMfull.pkl')
 #%% Preparation of the data.
