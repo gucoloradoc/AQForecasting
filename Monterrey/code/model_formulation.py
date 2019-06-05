@@ -1,5 +1,7 @@
-#%% Model formulation
-import keras
+#%% Libraries needed for model formulation
+
+#pylint: disable=no-name-in-module
+from tensorflow import keras
 import os
 import numpy as np
 import pandas as pd
@@ -7,11 +9,13 @@ import pandas as pd
 
 
 #%% Retrieving the data
-dframe=pd.read_pickle('./AMMfull.pkl')
+#dframe=pd.read_pickle('./AMMfull.pkl')
+dframe=pd.read_csv("Monterrey/data/imputed/data/NOROESTE.csv", 
+    parse_dates=["FECHA"], infer_datetime_format=True).set_index("FECHA")
 #%% Preparation of the data.
-dframe.mean(axis=0).unstack('ESTACION')
-df2=dframe['NOROESTE'].fillna(method='ffill').as_matrix()
-
+#dframe.mean(axis=0).unstack('ESTACION')
+#df2=dframe['NOROESTE'].fillna(method='ffill').as_matrix()
+df2=dframe.values
 #Max normalization
 df2=df2/np.nanmax(df2)
 #%% Looking back lookback, every step, we will predict the 
@@ -41,8 +45,6 @@ def generator(data, lookback, delay, min_index, max_index,
             #Here my targets could be O3(4),PM10(5),PM2.5(6)
             targets[j] = data[rows[j] + delay][5]
         yield samples, targets
-
-
 #%%
 lookback = 72
 step = 1
@@ -72,7 +74,6 @@ test_gen = generator(df2,
                      step=step,
                      batch_size=batch_size)
 
-
 #%%
 
 # This is how many steps to draw from `val_gen`
@@ -96,6 +97,7 @@ def evaluate_naive_method():
 evaluate_naive_method()
 
 #%% Basic ANN Model
+#pylint: disable=import-error
 from keras.models import Sequential
 from keras import layers
 from keras.optimizers import RMSprop
@@ -111,9 +113,6 @@ history = model.fit_generator(train_gen,
                               epochs=100,
                               validation_data=val_gen,
                               validation_steps=val_steps)
-
-
-
 
 #%%
 import matplotlib.pyplot as plt
@@ -133,3 +132,4 @@ plt.legend()
 plt.show()
 
 #%%
+
