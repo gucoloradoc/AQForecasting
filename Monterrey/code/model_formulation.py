@@ -49,7 +49,7 @@ def generator(data, lookback, delay, min_index, max_index,
 lookback = 72
 step = 1
 delay = 24
-batch_size = 1
+batch_size = 128
 
 train_gen = generator(df2,
                       lookback=lookback,
@@ -104,13 +104,15 @@ from keras.optimizers import RMSprop
 
 model = Sequential()
 model.add(layers.Flatten(input_shape=(lookback // step, df2.shape[-1])))
-model.add(layers.Dense(32, activation='relu'))
+model.add(layers.Dense(64, activation='relu'))
+model.add(layers.Dense(128, activation='relu'))
+model.add(layers.Dense(64, activation='relu'))
 model.add(layers.Dense(1))
 
-model.compile(optimizer=RMSprop(), loss='mae')
+model.compile(optimizer=RMSprop(), loss='mae', metrics=['mae', 'acc'])
 history = model.fit_generator(train_gen,
-                              steps_per_epoch=1,
-                              epochs=100,
+                              steps_per_epoch=128,
+                              epochs=500,
                               validation_data=val_gen,
                               validation_steps=val_steps)
 
