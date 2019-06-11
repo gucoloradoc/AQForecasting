@@ -45,11 +45,11 @@ def generator(data, lookback, delay, min_index, max_index,
             #Here my targets could be O3(4),PM10(5),PM2.5(6)
             targets[j] = data[rows[j] + delay][5]
         yield samples, targets
-#%%
-lookback = 72
+#%% Generators setup
+lookback = 24
 step = 1
 delay = 24
-batch_size = 128
+batch_size = 64
 
 train_gen = generator(df2,
                       lookback=lookback,
@@ -105,8 +105,8 @@ from keras.optimizers import RMSprop
 model = Sequential()
 model.add(layers.Flatten(input_shape=(lookback // step, df2.shape[-1])))
 model.add(layers.Dense(32, activation='sigmoid'))
-model.add(layers.Dense(64, activation='relu'))
-model.add(layers.Dense(64, activation='linear'))
+model.add(layers.Dense(128, activation='tanh'))
+model.add(layers.Dense(128, activation='linear'))
 model.add(layers.Dense(1))
 
 model.compile(optimizer=RMSprop(), loss='mean_squared_error', metrics=['mean_squared_error'])
