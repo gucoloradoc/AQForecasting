@@ -109,14 +109,14 @@ model.add(layers.Dense(128, activation='relu'))
 model.add(layers.Dense(64, activation='relu'))
 model.add(layers.Dense(1))
 
-model.compile(optimizer=RMSprop(), loss='mae', metrics=['mae', 'acc'])
+model.compile(optimizer=RMSprop(), loss='mean_squared_error', metrics=['mean_squared_error'])
 history = model.fit_generator(train_gen,
-                              steps_per_epoch=128,
-                              epochs=500,
+                              steps_per_epoch=20,
+                              epochs=32,
                               validation_data=val_gen,
                               validation_steps=val_steps)
 
-#%%
+#%% Training metrics
 import matplotlib.pyplot as plt
 
 loss = history.history['loss']
@@ -133,5 +133,5 @@ plt.legend()
 
 plt.show()
 
-#%%
+#%% Test metrics
 
