@@ -111,6 +111,7 @@ evaluate_naive_method()
 from keras.models import Sequential
 from keras import layers
 from keras.optimizers import RMSprop
+from keras.optimizers import Adam
 
 #accuracy metric for regression chosen: r2
 from keras import backend as K #Required for tensorflow math
@@ -129,7 +130,7 @@ model.add(layers.Dense(128, activation='linear'))
 model.add(layers.Dense(1))
 
 #%% ANN model compilation
-model.compile(optimizer=RMSprop(), loss='mean_squared_error', metrics=['mean_squared_error', coeff_determination])
+model.compile(optimizer=Adam(), loss='mean_squared_error', metrics=['mean_squared_error', coeff_determination])
 history = model.fit_generator(train_gen,
                               steps_per_epoch=50,
                               epochs=50,
@@ -213,5 +214,8 @@ plt.annotate(("$R^2= $"+str(round(det_coeff,3))),(min(max(pred_test),max(samp_ou
 plt.ylabel("Measured")
 plt.xlabel("Predicted")
 plt.savefig(out_path+"/R2_test.png", dpi=300)
+
+#%%
+
 
 #%%
