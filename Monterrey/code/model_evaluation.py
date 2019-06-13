@@ -37,6 +37,8 @@ plt.plot([min(min(pred_test),min(samp_out)),
         [min(min(pred_test),min(samp_out)),
         min(max(pred_test),max(samp_out))],
         'r--')
+
+plt.savefig(out_path+"/R2_test.png", dpi=300)
 #%% sklearn metrics
 from sklearn import metrics
 det_coeff= metrics.r2_score(samp_out,pred_test)
