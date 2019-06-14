@@ -2,6 +2,7 @@
 
 #pylint: disable=no-name-in-module
 from tensorflow import keras
+from sklearn import metrics
 import os
 import numpy as np
 import pandas as pd
@@ -106,6 +107,20 @@ def evaluate_naive_method():
     
 evaluate_naive_method()
 
+#%% Naieve Method, redefinition
+def eval_naive_method(gen, steps):
+    batch_logmse = []
+    for step in range(steps):
+        samples, targets = next(gen)
+        preds = samples[:, -1, 5] #Last index corresponds to PM10(5), PM2.5(6)
+        logmse = np.log(np.mean(np.square(preds-targets)))
+        #mae = np.mean(np.abs(preds - targets))
+        batch_logmse.append(logmse)
+    print(np.mean(batch_logmse))
+
+
+
+eval_naive_method(val_gen, val_steps)
 #%% Basic ANN Model
 #pylint: disable=import-error
 from keras.models import Sequential
@@ -126,6 +141,7 @@ model.add(layers.Flatten(input_shape=(lookback // step, df2.shape[-1])))
 model.add(layers.Dense(32, activation='sigmoid'))
 model.add(layers.Dense(256, activation='tanh'))
 model.add(layers.Dense(128, activation='linear'))
+model.add(layers.Dense(128, activation='relu'))
 model.add(layers.Dense(1))
 
 #%% ANN model compilation
@@ -197,7 +213,7 @@ test_results=model.evaluate_generator(test_gen, steps=2)
 pred_test=model.predict(np.array(samp_imp))
 
 #%% sklearn metrics
-from sklearn import metrics
+
 det_coeff= metrics.r2_score(samp_out,pred_test)
 print(det_coeff)
 
