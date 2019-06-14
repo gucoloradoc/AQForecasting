@@ -139,9 +139,9 @@ def coeff_determination(y_true, y_pred):
 #%% ANN Model definition
 model = Sequential()
 model.add(layers.Flatten(input_shape=(lookback // step, df2.shape[-1])))
-model.add(layers.Dense(32, activation='sigmoid'))
+model.add(layers.Dense(32, activation='sigmoid', name='sigmoid'))
 #model.add(layers.Dense(256, activation='tanh'))
-#model.add(layers.Dense(128, activation='linear'))
+model.add(layers.Dense(128, activation='linear', name='linear'))
 #model.add(layers.Dense(128, activation='relu'))
 model.add(layers.Dense(1))
 
@@ -149,7 +149,7 @@ model.add(layers.Dense(1))
 model.compile(optimizer=RMSprop(), loss='mean_squared_error', metrics=['mean_squared_error', coeff_determination])
 history = model.fit_generator(train_gen,
                               steps_per_epoch=train_steps,
-                              epochs=50,
+                              epochs=500,
                               validation_data=val_gen,
                               validation_steps=val_steps)
 
