@@ -3,11 +3,10 @@
 #pylint: disable=no-name-in-module
 from tensorflow import keras
 from sklearn import metrics
-import os
 import numpy as np
 import pandas as pd
 from datetime import datetime
-
+import os
 #%% creating folder to save outputs
 out_path="Monterrey/ANN_output/"+datetime.now().strftime("%d-%m-%Y_%H-%M-%S")
 os.makedirs(out_path)
@@ -85,8 +84,10 @@ test_gen = generator(df2,
                      batch_size=batch_size,
                       target=target)
 
-#%%
+#%% Defining number of steps
+#Training steps
 
+train_steps=50
 # This is how many steps to draw from `val_gen`
 # in order to see the whole validation set:
 val_steps = (40000 - 35001 - lookback) // batch_size
@@ -95,32 +96,32 @@ val_steps = (40000 - 35001 - lookback) // batch_size
 # in order to see the whole test set:
 test_steps = (len(df2) - 40001 - lookback) // batch_size
 
-#%% Naieve Method
-def evaluate_naive_method():
-    batch_maes = []
-    for step in range(val_steps):
-        samples, targets = next(val_gen)
-        preds = samples[:, -1, 1]
-        mae = np.mean(np.abs(preds - targets))
-        batch_maes.append(mae)
-    print(np.mean(batch_maes))
-    
-evaluate_naive_method()
-
 #%% Naieve Method, redefinition
-def eval_naive_method(gen, steps):
+def eval_naive_method(gen, steps,var):
     batch_logmse = []
+    tar = []
+    pred = []
     for step in range(steps):
         samples, targets = next(gen)
-        preds = samples[:, -1, 5] #Last index corresponds to PM10(5), PM2.5(6)
+        preds = samples[:, -1, var] #Last index corresponds to PM10(5), PM2.5(6)
         logmse = np.log(np.mean(np.square(preds-targets)))
         #mae = np.mean(np.abs(preds - targets))
         batch_logmse.append(logmse)
-    print(np.mean(batch_logmse))
+        tar.extend(targets)
+        pred.extend(preds)
+    print("From naive assumption that the pollutant concentration"
+     "\n will be the same that 24h before: \n")
+    print("log(mse)= "+str(round(np.mean(batch_logmse),3)))
+    from sklearn.metrics import r2_score
+    print("r2= "+str(round(r2_score(tar,pred),5)))
+    return round(np.mean(batch_logmse),3), round(r2_score(tar,pred),5)
 
+print("\n Training set: \n")
+train_naive_loss, train_naive_r2 = eval_naive_method(train_gen, train_steps,5)
 
+print("\n Validation set: \n")
+val_naive_loss, val_naive_r2 =eval_naive_method(val_gen, val_steps,5)
 
-eval_naive_method(val_gen, val_steps)
 #%% Basic ANN Model
 #pylint: disable=import-error
 from keras.models import Sequential
@@ -139,15 +140,15 @@ def coeff_determination(y_true, y_pred):
 model = Sequential()
 model.add(layers.Flatten(input_shape=(lookback // step, df2.shape[-1])))
 model.add(layers.Dense(32, activation='sigmoid'))
-model.add(layers.Dense(256, activation='tanh'))
-model.add(layers.Dense(128, activation='linear'))
-model.add(layers.Dense(128, activation='relu'))
+#model.add(layers.Dense(256, activation='tanh'))
+#model.add(layers.Dense(128, activation='linear'))
+#model.add(layers.Dense(128, activation='relu'))
 model.add(layers.Dense(1))
 
 #%% ANN model compilation
 model.compile(optimizer=RMSprop(), loss='mean_squared_error', metrics=['mean_squared_error', coeff_determination])
 history = model.fit_generator(train_gen,
-                              steps_per_epoch=50,
+                              steps_per_epoch=train_steps,
                               epochs=50,
                               validation_data=val_gen,
                               validation_steps=val_steps)
@@ -173,12 +174,16 @@ plt.figure()
 plt.subplot(211)
 plt.plot(epochs, np.log(loss), 'bo', label='Training loss')
 plt.plot(epochs, np.log(val_loss), 'b', label='Validation loss')
+plt.plot(epochs, np.ones(len(epochs))*val_naive_loss, color='orange')
+plt.plot(epochs, np.ones(len(epochs))*train_naive_loss, color='red')
 plt.title('Training and validation loss and accuracy ($r^2$)')
 plt.legend()
 
 plt.subplot(212)
 plt.plot(epochs, acc, 'bo', label='Training $r^2$')
 plt.plot(epochs, val_acc, 'b', label='Validation $r^2$')
+plt.plot(epochs, np.ones(len(epochs))*val_naive_r2, color='orange')
+plt.plot(epochs, np.ones(len(epochs))*train_naive_r2, color='red')
 plt.ylim([-1,1])
 plt.legend()
 plt.savefig(out_path+"/Train_val_loss_acc.png", dpi=300)
