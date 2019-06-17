@@ -1,0 +1,719 @@
+
+ Training set: 
+
+From naive assumption that the pollutant concentration
+ will be the same that 24h before: 
+
+log(mse)= -0.565
+r2= -0.47804
+
+ Validation set: 
+
+From naive assumption that the pollutant concentration
+ will be the same that 24h before: 
+
+log(mse)= -1.162
+r2= -0.31611
+Epoch 1/100
+
+ 1/50 [..............................] - ETA: 2:34 - loss: 16.4407 - mean_squared_error: 16.4407 - coeff_determination: -29.0098
+13/50 [======>.......................] - ETA: 9s - loss: 1.7016 - mean_squared_error: 1.7016 - coeff_determination: -2.5047     
+25/50 [==============>...............] - ETA: 3s - loss: 1.1245 - mean_squared_error: 1.1245 - coeff_determination: -1.4228
+37/50 [=====================>........] - ETA: 1s - loss: 0.9187 - mean_squared_error: 0.9187 - coeff_determination: -1.0713
+50/50 [==============================] - 4s 71ms/step - loss: 0.8400 - mean_squared_error: 0.8400 - coeff_determination: -0.9235 - val_loss: 0.2823 - val_mean_squared_error: 0.2823 - val_coeff_determination: -0.4067
+Epoch 2/100
+
+ 1/50 [..............................] - ETA: 0s - loss: 0.2684 - mean_squared_error: 0.2684 - coeff_determination: 0.0258
+13/50 [======>.......................] - ETA: 0s - loss: 0.4844 - mean_squared_error: 0.4844 - coeff_determination: -0.3476
+26/50 [==============>...............] - ETA: 0s - loss: 0.5118 - mean_squared_error: 0.5118 - coeff_determination: -0.4016
+39/50 [======================>.......] - ETA: 0s - loss: 0.5115 - mean_squared_error: 0.5115 - coeff_determination: -0.3677
+50/50 [==============================] - 0s 7ms/step - loss: 0.4996 - mean_squared_error: 0.4996 - coeff_determination: -0.3357 - val_loss: 0.6141 - val_mean_squared_error: 0.6141 - val_coeff_determination: -2.2990
+Epoch 3/100
+
+ 1/50 [..............................] - ETA: 0s - loss: 0.5405 - mean_squared_error: 0.5405 - coeff_determination: -0.7984
+14/50 [=======>......................] - ETA: 0s - loss: 0.5080 - mean_squared_error: 0.5080 - coeff_determination: -0.2957
+28/50 [===============>..............] - ETA: 0s - loss: 0.4731 - mean_squared_error: 0.4731 - coeff_determination: -0.1875
+41/50 [=======================>......] - ETA: 0s - loss: 0.4683 - mean_squared_error: 0.4683 - coeff_determination: -0.1761
+50/50 [==============================] - 0s 7ms/step - loss: 0.4670 - mean_squared_error: 0.4670 - coeff_determination: -0.1651 - val_loss: 0.2913 - val_mean_squared_error: 0.2913 - val_coeff_determination: -0.4197
+Epoch 4/100
+
+ 1/50 [..............................] - ETA: 0s - loss: 0.2309 - mean_squared_error: 0.2309 - coeff_determination: 0.2649
+14/50 [=======>......................] - ETA: 0s - loss: 0.4110 - mean_squared_error: 0.4110 - coeff_determination: -0.1327
+26/50 [==============>...............] - ETA: 0s - loss: 0.4088 - mean_squared_error: 0.4088 - coeff_determination: -0.1063
+37/50 [=====================>........] - ETA: 0s - loss: 0.4100 - mean_squared_error: 0.4100 - coeff_determination: -0.1144
+50/50 [==============================] - 0s 7ms/step - loss: 0.4266 - mean_squared_error: 0.4266 - coeff_determination: -0.1141 - val_loss: 0.2768 - val_mean_squared_error: 0.2768 - val_coeff_determination: -0.3701
+Epoch 5/100
+
+ 1/50 [..............................] - ETA: 0s - loss: 0.3582 - mean_squared_error: 0.3582 - coeff_determination: 0.1244
+13/50 [======>.......................] - ETA: 0s - loss: 0.4164 - mean_squared_error: 0.4164 - coeff_determination: -0.0783
+25/50 [==============>...............] - ETA: 0s - loss: 0.4314 - mean_squared_error: 0.4314 - coeff_determination: -0.0745
+38/50 [=====================>........] - ETA: 0s - loss: 0.4289 - mean_squared_error: 0.4289 - coeff_determination: -0.1064
+50/50 [==============================] - 0s 7ms/step - loss: 0.4333 - mean_squared_error: 0.4333 - coeff_determination: -0.0974 - val_loss: 0.2822 - val_mean_squared_error: 0.2822 - val_coeff_determination: -0.3755
+Epoch 6/100
+
+ 1/50 [..............................] - ETA: 0s - loss: 0.3232 - mean_squared_error: 0.3232 - coeff_determination: 0.2723
+12/50 [======>.......................] - ETA: 0s - loss: 0.4253 - mean_squared_error: 0.4253 - coeff_determination: -0.1566
+25/50 [==============>...............] - ETA: 0s - loss: 0.3968 - mean_squared_error: 0.3968 - coeff_determination: -0.0747
+37/50 [=====================>........] - ETA: 0s - loss: 0.3797 - mean_squared_error: 0.3797 - coeff_determination: -0.0481
+49/50 [============================>.] - ETA: 0s - loss: 0.3973 - mean_squared_error: 0.3973 - coeff_determination: -0.0642
+50/50 [==============================] - 0s 7ms/step - loss: 0.3971 - mean_squared_error: 0.3971 - coeff_determination: -0.0612 - val_loss: 0.3036 - val_mean_squared_error: 0.3036 - val_coeff_determination: -0.4721
+Epoch 7/100
+
+ 1/50 [..............................] - ETA: 0s - loss: 0.2697 - mean_squared_error: 0.2697 - coeff_determination: 0.0622
+15/50 [========>.....................] - ETA: 0s - loss: 0.4175 - mean_squared_error: 0.4175 - coeff_determination: -0.0935
+29/50 [================>.............] - ETA: 0s - loss: 0.4067 - mean_squared_error: 0.4067 - coeff_determination: -0.0707
+43/50 [========================>.....] - ETA: 0s - loss: 0.4020 - mean_squared_error: 0.4020 - coeff_determination: -0.0414
+50/50 [==============================] - 0s 7ms/step - loss: 0.3931 - mean_squared_error: 0.3931 - coeff_determination: -0.0404 - val_loss: 0.2761 - val_mean_squared_error: 0.2761 - val_coeff_determination: -0.3564
+Epoch 8/100
+
+ 1/50 [..............................] - ETA: 0s - loss: 0.3904 - mean_squared_error: 0.3904 - coeff_determination: 0.1023
+15/50 [========>.....................] - ETA: 0s - loss: 0.4214 - mean_squared_error: 0.4214 - coeff_determination: -0.1035
+29/50 [================>.............] - ETA: 0s - loss: 0.4277 - mean_squared_error: 0.4277 - coeff_determination: -0.0593
+43/50 [========================>.....] - ETA: 0s - loss: 0.4241 - mean_squared_error: 0.4241 - coeff_determination: -0.0723
+50/50 [==============================] - 0s 7ms/step - loss: 0.4132 - mean_squared_error: 0.4132 - coeff_determination: -0.0590 - val_loss: 0.3754 - val_mean_squared_error: 0.3754 - val_coeff_determination: -0.8654
+Epoch 9/100
+
+ 1/50 [..............................] - ETA: 0s - loss: 0.4827 - mean_squared_error: 0.4827 - coeff_determination: -0.1403
+15/50 [========>.....................] - ETA: 0s - loss: 0.4381 - mean_squared_error: 0.4381 - coeff_determination: 0.0050 
+29/50 [================>.............] - ETA: 0s - loss: 0.3919 - mean_squared_error: 0.3919 - coeff_determination: 0.0270
+43/50 [========================>.....] - ETA: 0s - loss: 0.3848 - mean_squared_error: 0.3848 - coeff_determination: 0.0116
+50/50 [==============================] - 0s 7ms/step - loss: 0.3904 - mean_squared_error: 0.3904 - coeff_determination: 0.0040 - val_loss: 0.2823 - val_mean_squared_error: 0.2823 - val_coeff_determination: -0.5357
+Epoch 10/100
+
+ 1/50 [..............................] - ETA: 0s - loss: 0.4160 - mean_squared_error: 0.4160 - coeff_determination: 0.1027
+15/50 [========>.....................] - ETA: 0s - loss: 0.4368 - mean_squared_error: 0.4368 - coeff_determination: -0.0307
+29/50 [================>.............] - ETA: 0s - loss: 0.3956 - mean_squared_error: 0.3956 - coeff_determination: 0.0015 
+43/50 [========================>.....] - ETA: 0s - loss: 0.3878 - mean_squared_error: 0.3878 - coeff_determination: 0.0047
+50/50 [==============================] - 0s 7ms/step - loss: 0.3872 - mean_squared_error: 0.3872 - coeff_determination: -0.0048 - val_loss: 0.2669 - val_mean_squared_error: 0.2669 - val_coeff_determination: -0.3983
+Epoch 11/100
+
+ 1/50 [..............................] - ETA: 0s - loss: 0.2186 - mean_squared_error: 0.2186 - coeff_determination: 0.0584
+15/50 [========>.....................] - ETA: 0s - loss: 0.4074 - mean_squared_error: 0.4074 - coeff_determination: 0.0530
+29/50 [================>.............] - ETA: 0s - loss: 0.3791 - mean_squared_error: 0.3791 - coeff_determination: 0.0335
+43/50 [========================>.....] - ETA: 0s - loss: 0.3808 - mean_squared_error: 0.3808 - coeff_determination: 0.0065
+50/50 [==============================] - 0s 6ms/step - loss: 0.3773 - mean_squared_error: 0.3773 - coeff_determination: 0.0147 - val_loss: 0.3234 - val_mean_squared_error: 0.3234 - val_coeff_determination: -0.8705
+Epoch 12/100
+
+ 1/50 [..............................] - ETA: 0s - loss: 0.4270 - mean_squared_error: 0.4270 - coeff_determination: 0.0759
+15/50 [========>.....................] - ETA: 0s - loss: 0.3976 - mean_squared_error: 0.3976 - coeff_determination: 0.0495
+29/50 [================>.............] - ETA: 0s - loss: 0.4021 - mean_squared_error: 0.4021 - coeff_determination: 0.0153
+43/50 [========================>.....] - ETA: 0s - loss: 0.3946 - mean_squared_error: 0.3946 - coeff_determination: 0.0163
+50/50 [==============================] - 0s 7ms/step - loss: 0.3900 - mean_squared_error: 0.3900 - coeff_determination: 0.0222 - val_loss: 0.3284 - val_mean_squared_error: 0.3284 - val_coeff_determination: -0.9089
+Epoch 13/100
+
+ 1/50 [..............................] - ETA: 0s - loss: 0.3403 - mean_squared_error: 0.3403 - coeff_determination: -0.2236
+15/50 [========>.....................] - ETA: 0s - loss: 0.3513 - mean_squared_error: 0.3513 - coeff_determination: 0.0336 
+29/50 [================>.............] - ETA: 0s - loss: 0.3822 - mean_squared_error: 0.3822 - coeff_determination: -4.5541e-04
+43/50 [========================>.....] - ETA: 0s - loss: 0.3900 - mean_squared_error: 0.3900 - coeff_determination: 0.0101     
+50/50 [==============================] - 0s 7ms/step - loss: 0.3942 - mean_squared_error: 0.3942 - coeff_determination: 0.0140 - val_loss: 0.2605 - val_mean_squared_error: 0.2605 - val_coeff_determination: -0.3243
+Epoch 14/100
+
+ 1/50 [..............................] - ETA: 0s - loss: 0.3689 - mean_squared_error: 0.3689 - coeff_determination: 0.1554
+15/50 [========>.....................] - ETA: 0s - loss: 0.3842 - mean_squared_error: 0.3842 - coeff_determination: 0.0559
+29/50 [================>.............] - ETA: 0s - loss: 0.3860 - mean_squared_error: 0.3860 - coeff_determination: 0.0345
+43/50 [========================>.....] - ETA: 0s - loss: 0.3846 - mean_squared_error: 0.3846 - coeff_determination: 0.0270
+50/50 [==============================] - 0s 7ms/step - loss: 0.3780 - mean_squared_error: 0.3780 - coeff_determination: 0.0334 - val_loss: 0.2848 - val_mean_squared_error: 0.2848 - val_coeff_determination: -0.5516
+Epoch 15/100
+
+ 1/50 [..............................] - ETA: 0s - loss: 0.3215 - mean_squared_error: 0.3215 - coeff_determination: -0.0823
+15/50 [========>.....................] - ETA: 0s - loss: 0.3707 - mean_squared_error: 0.3707 - coeff_determination: 0.0194 
+29/50 [================>.............] - ETA: 0s - loss: 0.3749 - mean_squared_error: 0.3749 - coeff_determination: -0.0019
+43/50 [========================>.....] - ETA: 0s - loss: 0.3835 - mean_squared_error: 0.3835 - coeff_determination: 0.0171 
+50/50 [==============================] - 0s 6ms/step - loss: 0.3902 - mean_squared_error: 0.3902 - coeff_determination: 0.0033 - val_loss: 0.3108 - val_mean_squared_error: 0.3108 - val_coeff_determination: -0.5094
+Epoch 16/100
+
+ 1/50 [..............................] - ETA: 0s - loss: 0.3013 - mean_squared_error: 0.3013 - coeff_determination: 0.1093
+15/50 [========>.....................] - ETA: 0s - loss: 0.4000 - mean_squared_error: 0.4000 - coeff_determination: 0.0786
+29/50 [================>.............] - ETA: 0s - loss: 0.3844 - mean_squared_error: 0.3844 - coeff_determination: 0.0507
+43/50 [========================>.....] - ETA: 0s - loss: 0.3766 - mean_squared_error: 0.3766 - coeff_determination: 0.0581
+50/50 [==============================] - 0s 7ms/step - loss: 0.3788 - mean_squared_error: 0.3788 - coeff_determination: 0.0446 - val_loss: 0.2726 - val_mean_squared_error: 0.2726 - val_coeff_determination: -0.4617
+Epoch 17/100
+
+ 1/50 [..............................] - ETA: 0s - loss: 0.4061 - mean_squared_error: 0.4061 - coeff_determination: 0.0700
+15/50 [========>.....................] - ETA: 0s - loss: 0.3840 - mean_squared_error: 0.3840 - coeff_determination: 0.0582
+29/50 [================>.............] - ETA: 0s - loss: 0.3436 - mean_squared_error: 0.3436 - coeff_determination: 0.0831
+43/50 [========================>.....] - ETA: 0s - loss: 0.3667 - mean_squared_error: 0.3667 - coeff_determination: 0.0414
+50/50 [==============================] - 0s 7ms/step - loss: 0.3594 - mean_squared_error: 0.3594 - coeff_determination: 0.0578 - val_loss: 0.2705 - val_mean_squared_error: 0.2705 - val_coeff_determination: -0.3235
+Epoch 18/100
+
+ 1/50 [..............................] - ETA: 0s - loss: 0.5236 - mean_squared_error: 0.5236 - coeff_determination: 0.0415
+15/50 [========>.....................] - ETA: 0s - loss: 0.3551 - mean_squared_error: 0.3551 - coeff_determination: 0.0374
+29/50 [================>.............] - ETA: 0s - loss: 0.3499 - mean_squared_error: 0.3499 - coeff_determination: 0.0621
+43/50 [========================>.....] - ETA: 0s - loss: 0.3504 - mean_squared_error: 0.3504 - coeff_determination: 0.0733
+50/50 [==============================] - 0s 7ms/step - loss: 0.3484 - mean_squared_error: 0.3484 - coeff_determination: 0.0877 - val_loss: 0.4923 - val_mean_squared_error: 0.4923 - val_coeff_determination: -2.0797
+Epoch 19/100
+
+ 1/50 [..............................] - ETA: 0s - loss: 0.7085 - mean_squared_error: 0.7085 - coeff_determination: -1.4563
+15/50 [========>.....................] - ETA: 0s - loss: 0.4146 - mean_squared_error: 0.4146 - coeff_determination: 2.1875e-04
+29/50 [================>.............] - ETA: 0s - loss: 0.4089 - mean_squared_error: 0.4089 - coeff_determination: -0.0013   
+43/50 [========================>.....] - ETA: 0s - loss: 0.4121 - mean_squared_error: 0.4121 - coeff_determination: 0.0074 
+50/50 [==============================] - 0s 7ms/step - loss: 0.4024 - mean_squared_error: 0.4024 - coeff_determination: 0.0055 - val_loss: 0.3716 - val_mean_squared_error: 0.3716 - val_coeff_determination: -0.8523
+Epoch 20/100
+
+ 1/50 [..............................] - ETA: 0s - loss: 0.3988 - mean_squared_error: 0.3988 - coeff_determination: 0.0992
+15/50 [========>.....................] - ETA: 0s - loss: 0.3827 - mean_squared_error: 0.3827 - coeff_determination: 0.0455
+29/50 [================>.............] - ETA: 0s - loss: 0.3555 - mean_squared_error: 0.3555 - coeff_determination: 0.0756
+43/50 [========================>.....] - ETA: 0s - loss: 0.3546 - mean_squared_error: 0.3546 - coeff_determination: 0.0682
+50/50 [==============================] - 0s 7ms/step - loss: 0.3496 - mean_squared_error: 0.3496 - coeff_determination: 0.0830 - val_loss: 0.3197 - val_mean_squared_error: 0.3197 - val_coeff_determination: -0.8397
+Epoch 21/100
+
+ 1/50 [..............................] - ETA: 0s - loss: 0.3660 - mean_squared_error: 0.3660 - coeff_determination: 0.1649
+15/50 [========>.....................] - ETA: 0s - loss: 0.3776 - mean_squared_error: 0.3776 - coeff_determination: 0.0437
+29/50 [================>.............] - ETA: 0s - loss: 0.3638 - mean_squared_error: 0.3638 - coeff_determination: 0.0631
+43/50 [========================>.....] - ETA: 0s - loss: 0.3706 - mean_squared_error: 0.3706 - coeff_determination: 0.0539
+50/50 [==============================] - 0s 7ms/step - loss: 0.3675 - mean_squared_error: 0.3675 - coeff_determination: 0.0589 - val_loss: 0.2629 - val_mean_squared_error: 0.2629 - val_coeff_determination: -0.3151
+Epoch 22/100
+
+ 1/50 [..............................] - ETA: 0s - loss: 0.3610 - mean_squared_error: 0.3610 - coeff_determination: -0.0108
+15/50 [========>.....................] - ETA: 0s - loss: 0.3622 - mean_squared_error: 0.3622 - coeff_determination: 0.0600 
+29/50 [================>.............] - ETA: 0s - loss: 0.3599 - mean_squared_error: 0.3599 - coeff_determination: 0.0800
+43/50 [========================>.....] - ETA: 0s - loss: 0.3606 - mean_squared_error: 0.3606 - coeff_determination: 0.0781
+50/50 [==============================] - 0s 7ms/step - loss: 0.3534 - mean_squared_error: 0.3534 - coeff_determination: 0.0881 - val_loss: 0.2829 - val_mean_squared_error: 0.2829 - val_coeff_determination: -0.3687
+Epoch 23/100
+
+ 1/50 [..............................] - ETA: 0s - loss: 0.2635 - mean_squared_error: 0.2635 - coeff_determination: 0.2932
+15/50 [========>.....................] - ETA: 0s - loss: 0.3461 - mean_squared_error: 0.3461 - coeff_determination: 0.1128
+29/50 [================>.............] - ETA: 0s - loss: 0.3746 - mean_squared_error: 0.3746 - coeff_determination: 0.0872
+43/50 [========================>.....] - ETA: 0s - loss: 0.3659 - mean_squared_error: 0.3659 - coeff_determination: 0.0942
+50/50 [==============================] - 0s 7ms/step - loss: 0.3656 - mean_squared_error: 0.3656 - coeff_determination: 0.0886 - val_loss: 0.2771 - val_mean_squared_error: 0.2771 - val_coeff_determination: -0.3482
+Epoch 24/100
+
+ 1/50 [..............................] - ETA: 0s - loss: 0.2923 - mean_squared_error: 0.2923 - coeff_determination: 0.2515
+15/50 [========>.....................] - ETA: 0s - loss: 0.3543 - mean_squared_error: 0.3543 - coeff_determination: 0.0810
+29/50 [================>.............] - ETA: 0s - loss: 0.3420 - mean_squared_error: 0.3420 - coeff_determination: 0.1109
+42/50 [========================>.....] - ETA: 0s - loss: 0.3543 - mean_squared_error: 0.3543 - coeff_determination: 0.0888
+50/50 [==============================] - 0s 7ms/step - loss: 0.3480 - mean_squared_error: 0.3480 - coeff_determination: 0.1012 - val_loss: 0.3190 - val_mean_squared_error: 0.3190 - val_coeff_determination: -0.5543
+Epoch 25/100
+
+ 1/50 [..............................] - ETA: 0s - loss: 0.3356 - mean_squared_error: 0.3356 - coeff_determination: 0.0328
+15/50 [========>.....................] - ETA: 0s - loss: 0.3919 - mean_squared_error: 0.3919 - coeff_determination: 0.0714
+29/50 [================>.............] - ETA: 0s - loss: 0.3889 - mean_squared_error: 0.3889 - coeff_determination: 0.0793
+43/50 [========================>.....] - ETA: 0s - loss: 0.3819 - mean_squared_error: 0.3819 - coeff_determination: 0.0743
+50/50 [==============================] - 0s 7ms/step - loss: 0.3830 - mean_squared_error: 0.3830 - coeff_determination: 0.0590 - val_loss: 0.4516 - val_mean_squared_error: 0.4516 - val_coeff_determination: -1.3213
+Epoch 26/100
+
+ 1/50 [..............................] - ETA: 0s - loss: 0.5598 - mean_squared_error: 0.5598 - coeff_determination: -0.3520
+15/50 [========>.....................] - ETA: 0s - loss: 0.3366 - mean_squared_error: 0.3366 - coeff_determination: 0.1025 
+29/50 [================>.............] - ETA: 0s - loss: 0.3622 - mean_squared_error: 0.3622 - coeff_determination: 0.0771
+43/50 [========================>.....] - ETA: 0s - loss: 0.3609 - mean_squared_error: 0.3609 - coeff_determination: 0.0663
+50/50 [==============================] - 0s 7ms/step - loss: 0.3624 - mean_squared_error: 0.3624 - coeff_determination: 0.0667 - val_loss: 0.3247 - val_mean_squared_error: 0.3247 - val_coeff_determination: -0.5936
+Epoch 27/100
+
+ 1/50 [..............................] - ETA: 0s - loss: 0.3920 - mean_squared_error: 0.3920 - coeff_determination: 0.1337
+14/50 [=======>......................] - ETA: 0s - loss: 0.3829 - mean_squared_error: 0.3829 - coeff_determination: 0.0189
+27/50 [===============>..............] - ETA: 0s - loss: 0.3941 - mean_squared_error: 0.3941 - coeff_determination: 0.0419
+41/50 [=======================>......] - ETA: 0s - loss: 0.3731 - mean_squared_error: 0.3731 - coeff_determination: 0.0677
+50/50 [==============================] - 0s 7ms/step - loss: 0.3704 - mean_squared_error: 0.3704 - coeff_determination: 0.0719 - val_loss: 0.2576 - val_mean_squared_error: 0.2576 - val_coeff_determination: -0.2964
+Epoch 28/100
+
+ 1/50 [..............................] - ETA: 0s - loss: 0.3150 - mean_squared_error: 0.3150 - coeff_determination: 0.1030
+15/50 [========>.....................] - ETA: 0s - loss: 0.3681 - mean_squared_error: 0.3681 - coeff_determination: 0.0857
+29/50 [================>.............] - ETA: 0s - loss: 0.3551 - mean_squared_error: 0.3551 - coeff_determination: 0.0799
+43/50 [========================>.....] - ETA: 0s - loss: 0.3665 - mean_squared_error: 0.3665 - coeff_determination: 0.0673
+50/50 [==============================] - 0s 7ms/step - loss: 0.3676 - mean_squared_error: 0.3676 - coeff_determination: 0.0762 - val_loss: 0.2822 - val_mean_squared_error: 0.2822 - val_coeff_determination: -0.5523
+Epoch 29/100
+
+ 1/50 [..............................] - ETA: 0s - loss: 0.3217 - mean_squared_error: 0.3217 - coeff_determination: 0.1567
+15/50 [========>.....................] - ETA: 0s - loss: 0.3399 - mean_squared_error: 0.3399 - coeff_determination: 0.1238
+29/50 [================>.............] - ETA: 0s - loss: 0.3579 - mean_squared_error: 0.3579 - coeff_determination: 0.0852
+42/50 [========================>.....] - ETA: 0s - loss: 0.3733 - mean_squared_error: 0.3733 - coeff_determination: 0.0645
+50/50 [==============================] - 0s 7ms/step - loss: 0.3592 - mean_squared_error: 0.3592 - coeff_determination: 0.0740 - val_loss: 0.2727 - val_mean_squared_error: 0.2727 - val_coeff_determination: -0.3217
+Epoch 30/100
+
+ 1/50 [..............................] - ETA: 0s - loss: 0.2153 - mean_squared_error: 0.2153 - coeff_determination: 0.2318
+15/50 [========>.....................] - ETA: 0s - loss: 0.3297 - mean_squared_error: 0.3297 - coeff_determination: 0.1086
+29/50 [================>.............] - ETA: 0s - loss: 0.3403 - mean_squared_error: 0.3403 - coeff_determination: 0.0760
+43/50 [========================>.....] - ETA: 0s - loss: 0.3387 - mean_squared_error: 0.3387 - coeff_determination: 0.1054
+50/50 [==============================] - 0s 7ms/step - loss: 0.3396 - mean_squared_error: 0.3396 - coeff_determination: 0.0969 - val_loss: 0.2614 - val_mean_squared_error: 0.2614 - val_coeff_determination: -0.2830
+Epoch 31/100
+
+ 1/50 [..............................] - ETA: 0s - loss: 0.2530 - mean_squared_error: 0.2530 - coeff_determination: 0.3570
+15/50 [========>.....................] - ETA: 0s - loss: 0.3292 - mean_squared_error: 0.3292 - coeff_determination: 0.1010
+29/50 [================>.............] - ETA: 0s - loss: 0.3393 - mean_squared_error: 0.3393 - coeff_determination: 0.0987
+43/50 [========================>.....] - ETA: 0s - loss: 0.3374 - mean_squared_error: 0.3374 - coeff_determination: 0.0971
+50/50 [==============================] - 0s 7ms/step - loss: 0.3446 - mean_squared_error: 0.3446 - coeff_determination: 0.0876 - val_loss: 0.2651 - val_mean_squared_error: 0.2651 - val_coeff_determination: -0.2738
+Epoch 32/100
+
+ 1/50 [..............................] - ETA: 0s - loss: 0.2559 - mean_squared_error: 0.2559 - coeff_determination: 0.0714
+15/50 [========>.....................] - ETA: 0s - loss: 0.3926 - mean_squared_error: 0.3926 - coeff_determination: 0.0838
+29/50 [================>.............] - ETA: 0s - loss: 0.3732 - mean_squared_error: 0.3732 - coeff_determination: 0.0916
+43/50 [========================>.....] - ETA: 0s - loss: 0.3751 - mean_squared_error: 0.3751 - coeff_determination: 0.0827
+50/50 [==============================] - 0s 7ms/step - loss: 0.3715 - mean_squared_error: 0.3715 - coeff_determination: 0.0932 - val_loss: 0.2681 - val_mean_squared_error: 0.2681 - val_coeff_determination: -0.3234
+Epoch 33/100
+
+ 1/50 [..............................] - ETA: 0s - loss: 0.3453 - mean_squared_error: 0.3453 - coeff_determination: -0.0534
+15/50 [========>.....................] - ETA: 0s - loss: 0.3494 - mean_squared_error: 0.3494 - coeff_determination: 0.0804 
+29/50 [================>.............] - ETA: 0s - loss: 0.3391 - mean_squared_error: 0.3391 - coeff_determination: 0.0605
+43/50 [========================>.....] - ETA: 0s - loss: 0.3413 - mean_squared_error: 0.3413 - coeff_determination: 0.0854
+50/50 [==============================] - 0s 7ms/step - loss: 0.3440 - mean_squared_error: 0.3440 - coeff_determination: 0.0786 - val_loss: 0.2721 - val_mean_squared_error: 0.2721 - val_coeff_determination: -0.4649
+Epoch 34/100
+
+ 1/50 [..............................] - ETA: 0s - loss: 0.2847 - mean_squared_error: 0.2847 - coeff_determination: -0.1564
+15/50 [========>.....................] - ETA: 0s - loss: 0.3545 - mean_squared_error: 0.3545 - coeff_determination: 0.0452 
+29/50 [================>.............] - ETA: 0s - loss: 0.3499 - mean_squared_error: 0.3499 - coeff_determination: 0.0734
+43/50 [========================>.....] - ETA: 0s - loss: 0.3493 - mean_squared_error: 0.3493 - coeff_determination: 0.0875
+50/50 [==============================] - 0s 7ms/step - loss: 0.3570 - mean_squared_error: 0.3570 - coeff_determination: 0.0798 - val_loss: 0.2771 - val_mean_squared_error: 0.2771 - val_coeff_determination: -0.3367
+Epoch 35/100
+
+ 1/50 [..............................] - ETA: 0s - loss: 0.2583 - mean_squared_error: 0.2583 - coeff_determination: 0.1424
+15/50 [========>.....................] - ETA: 0s - loss: 0.3536 - mean_squared_error: 0.3536 - coeff_determination: 0.0928
+29/50 [================>.............] - ETA: 0s - loss: 0.3526 - mean_squared_error: 0.3526 - coeff_determination: 0.1038
+43/50 [========================>.....] - ETA: 0s - loss: 0.3408 - mean_squared_error: 0.3408 - coeff_determination: 0.1035
+50/50 [==============================] - 0s 6ms/step - loss: 0.3417 - mean_squared_error: 0.3417 - coeff_determination: 0.1099 - val_loss: 0.3068 - val_mean_squared_error: 0.3068 - val_coeff_determination: -0.7436
+Epoch 36/100
+
+ 1/50 [..............................] - ETA: 0s - loss: 0.4620 - mean_squared_error: 0.4620 - coeff_determination: -0.0082
+15/50 [========>.....................] - ETA: 0s - loss: 0.3515 - mean_squared_error: 0.3515 - coeff_determination: 0.1074 
+29/50 [================>.............] - ETA: 0s - loss: 0.3505 - mean_squared_error: 0.3505 - coeff_determination: 0.1289
+43/50 [========================>.....] - ETA: 0s - loss: 0.3508 - mean_squared_error: 0.3508 - coeff_determination: 0.1111
+50/50 [==============================] - 0s 7ms/step - loss: 0.3555 - mean_squared_error: 0.3555 - coeff_determination: 0.1066 - val_loss: 0.3047 - val_mean_squared_error: 0.3047 - val_coeff_determination: -0.4786
+Epoch 37/100
+
+ 1/50 [..............................] - ETA: 0s - loss: 0.3501 - mean_squared_error: 0.3501 - coeff_determination: -0.0088
+15/50 [========>.....................] - ETA: 0s - loss: 0.3609 - mean_squared_error: 0.3609 - coeff_determination: 0.1234 
+29/50 [================>.............] - ETA: 0s - loss: 0.3628 - mean_squared_error: 0.3628 - coeff_determination: 0.1197
+43/50 [========================>.....] - ETA: 0s - loss: 0.3482 - mean_squared_error: 0.3482 - coeff_determination: 0.1155
+50/50 [==============================] - 0s 7ms/step - loss: 0.3428 - mean_squared_error: 0.3428 - coeff_determination: 0.1184 - val_loss: 0.2509 - val_mean_squared_error: 0.2509 - val_coeff_determination: -0.2398
+Epoch 38/100
+
+ 1/50 [..............................] - ETA: 0s - loss: 0.2284 - mean_squared_error: 0.2284 - coeff_determination: 0.3895
+15/50 [========>.....................] - ETA: 0s - loss: 0.3422 - mean_squared_error: 0.3422 - coeff_determination: 0.1637
+29/50 [================>.............] - ETA: 0s - loss: 0.3334 - mean_squared_error: 0.3334 - coeff_determination: 0.1513
+43/50 [========================>.....] - ETA: 0s - loss: 0.3318 - mean_squared_error: 0.3318 - coeff_determination: 0.1475
+50/50 [==============================] - 0s 7ms/step - loss: 0.3421 - mean_squared_error: 0.3421 - coeff_determination: 0.1236 - val_loss: 0.2623 - val_mean_squared_error: 0.2623 - val_coeff_determination: -0.3723
+Epoch 39/100
+
+ 1/50 [..............................] - ETA: 0s - loss: 0.3420 - mean_squared_error: 0.3420 - coeff_determination: 0.2487
+16/50 [========>.....................] - ETA: 0s - loss: 0.3619 - mean_squared_error: 0.3619 - coeff_determination: 0.1348
+30/50 [=================>............] - ETA: 0s - loss: 0.3597 - mean_squared_error: 0.3597 - coeff_determination: 0.1168
+44/50 [=========================>....] - ETA: 0s - loss: 0.3570 - mean_squared_error: 0.3570 - coeff_determination: 0.1117
+50/50 [==============================] - 0s 7ms/step - loss: 0.3578 - mean_squared_error: 0.3578 - coeff_determination: 0.1102 - val_loss: 0.3167 - val_mean_squared_error: 0.3167 - val_coeff_determination: -0.5425
+Epoch 40/100
+
+ 1/50 [..............................] - ETA: 0s - loss: 0.3963 - mean_squared_error: 0.3963 - coeff_determination: 0.1477
+15/50 [========>.....................] - ETA: 0s - loss: 0.3191 - mean_squared_error: 0.3191 - coeff_determination: 0.1137
+29/50 [================>.............] - ETA: 0s - loss: 0.3306 - mean_squared_error: 0.3306 - coeff_determination: 0.1397
+43/50 [========================>.....] - ETA: 0s - loss: 0.3196 - mean_squared_error: 0.3196 - coeff_determination: 0.1403
+50/50 [==============================] - 0s 7ms/step - loss: 0.3244 - mean_squared_error: 0.3244 - coeff_determination: 0.1311 - val_loss: 0.2535 - val_mean_squared_error: 0.2535 - val_coeff_determination: -0.2776
+Epoch 41/100
+
+ 1/50 [..............................] - ETA: 0s - loss: 0.1951 - mean_squared_error: 0.1951 - coeff_determination: 0.1991
+15/50 [========>.....................] - ETA: 0s - loss: 0.3173 - mean_squared_error: 0.3173 - coeff_determination: 0.1688
+29/50 [================>.............] - ETA: 0s - loss: 0.3542 - mean_squared_error: 0.3542 - coeff_determination: 0.1122
+43/50 [========================>.....] - ETA: 0s - loss: 0.3467 - mean_squared_error: 0.3467 - coeff_determination: 0.1141
+50/50 [==============================] - 0s 7ms/step - loss: 0.3360 - mean_squared_error: 0.3360 - coeff_determination: 0.1203 - val_loss: 0.2629 - val_mean_squared_error: 0.2629 - val_coeff_determination: -0.3640
+Epoch 42/100
+
+ 1/50 [..............................] - ETA: 0s - loss: 0.2646 - mean_squared_error: 0.2646 - coeff_determination: 0.0978
+15/50 [========>.....................] - ETA: 0s - loss: 0.3813 - mean_squared_error: 0.3813 - coeff_determination: 0.1386
+29/50 [================>.............] - ETA: 0s - loss: 0.3836 - mean_squared_error: 0.3836 - coeff_determination: 0.1134
+43/50 [========================>.....] - ETA: 0s - loss: 0.3729 - mean_squared_error: 0.3729 - coeff_determination: 0.1147
+50/50 [==============================] - 0s 7ms/step - loss: 0.3694 - mean_squared_error: 0.3694 - coeff_determination: 0.1149 - val_loss: 0.2875 - val_mean_squared_error: 0.2875 - val_coeff_determination: -0.5993
+Epoch 43/100
+
+ 1/50 [..............................] - ETA: 0s - loss: 0.4346 - mean_squared_error: 0.4346 - coeff_determination: 0.1370
+15/50 [========>.....................] - ETA: 0s - loss: 0.3569 - mean_squared_error: 0.3569 - coeff_determination: 0.1425
+29/50 [================>.............] - ETA: 0s - loss: 0.3510 - mean_squared_error: 0.3510 - coeff_determination: 0.1264
+43/50 [========================>.....] - ETA: 0s - loss: 0.3401 - mean_squared_error: 0.3401 - coeff_determination: 0.1350
+50/50 [==============================] - 0s 7ms/step - loss: 0.3470 - mean_squared_error: 0.3470 - coeff_determination: 0.1306 - val_loss: 0.2713 - val_mean_squared_error: 0.2713 - val_coeff_determination: -0.3219
+Epoch 44/100
+
+ 1/50 [..............................] - ETA: 0s - loss: 0.2307 - mean_squared_error: 0.2307 - coeff_determination: 0.2555
+15/50 [========>.....................] - ETA: 0s - loss: 0.3355 - mean_squared_error: 0.3355 - coeff_determination: 0.1099
+29/50 [================>.............] - ETA: 0s - loss: 0.3348 - mean_squared_error: 0.3348 - coeff_determination: 0.1184
+43/50 [========================>.....] - ETA: 0s - loss: 0.3392 - mean_squared_error: 0.3392 - coeff_determination: 0.1272
+50/50 [==============================] - 0s 7ms/step - loss: 0.3413 - mean_squared_error: 0.3413 - coeff_determination: 0.1281 - val_loss: 0.3151 - val_mean_squared_error: 0.3151 - val_coeff_determination: -0.5260
+Epoch 45/100
+
+ 1/50 [..............................] - ETA: 0s - loss: 0.2629 - mean_squared_error: 0.2629 - coeff_determination: -0.0922
+15/50 [========>.....................] - ETA: 0s - loss: 0.3593 - mean_squared_error: 0.3593 - coeff_determination: 0.1222 
+29/50 [================>.............] - ETA: 0s - loss: 0.3397 - mean_squared_error: 0.3397 - coeff_determination: 0.1397
+43/50 [========================>.....] - ETA: 0s - loss: 0.3496 - mean_squared_error: 0.3496 - coeff_determination: 0.1222
+50/50 [==============================] - 0s 7ms/step - loss: 0.3507 - mean_squared_error: 0.3507 - coeff_determination: 0.1200 - val_loss: 0.4140 - val_mean_squared_error: 0.4140 - val_coeff_determination: -1.0878
+Epoch 46/100
+
+ 1/50 [..............................] - ETA: 0s - loss: 0.3462 - mean_squared_error: 0.3462 - coeff_determination: 0.0198
+15/50 [========>.....................] - ETA: 0s - loss: 0.3761 - mean_squared_error: 0.3761 - coeff_determination: 0.0870
+29/50 [================>.............] - ETA: 0s - loss: 0.3513 - mean_squared_error: 0.3513 - coeff_determination: 0.1098
+43/50 [========================>.....] - ETA: 0s - loss: 0.3445 - mean_squared_error: 0.3445 - coeff_determination: 0.1178
+50/50 [==============================] - 0s 7ms/step - loss: 0.3408 - mean_squared_error: 0.3408 - coeff_determination: 0.1190 - val_loss: 0.2542 - val_mean_squared_error: 0.2542 - val_coeff_determination: -0.2713
+Epoch 47/100
+
+ 1/50 [..............................] - ETA: 0s - loss: 0.2234 - mean_squared_error: 0.2234 - coeff_determination: 0.2420
+15/50 [========>.....................] - ETA: 0s - loss: 0.3554 - mean_squared_error: 0.3554 - coeff_determination: 0.1054
+29/50 [================>.............] - ETA: 0s - loss: 0.3384 - mean_squared_error: 0.3384 - coeff_determination: 0.1366
+43/50 [========================>.....] - ETA: 0s - loss: 0.3325 - mean_squared_error: 0.3325 - coeff_determination: 0.1508
+50/50 [==============================] - 0s 7ms/step - loss: 0.3373 - mean_squared_error: 0.3373 - coeff_determination: 0.1490 - val_loss: 0.2567 - val_mean_squared_error: 0.2567 - val_coeff_determination: -0.2934
+Epoch 48/100
+
+ 1/50 [..............................] - ETA: 0s - loss: 0.2961 - mean_squared_error: 0.2961 - coeff_determination: 0.0424
+15/50 [========>.....................] - ETA: 0s - loss: 0.3508 - mean_squared_error: 0.3508 - coeff_determination: 0.1138
+29/50 [================>.............] - ETA: 0s - loss: 0.3289 - mean_squared_error: 0.3289 - coeff_determination: 0.1108
+43/50 [========================>.....] - ETA: 0s - loss: 0.3302 - mean_squared_error: 0.3302 - coeff_determination: 0.1112
+50/50 [==============================] - 0s 7ms/step - loss: 0.3327 - mean_squared_error: 0.3327 - coeff_determination: 0.1178 - val_loss: 0.3183 - val_mean_squared_error: 0.3183 - val_coeff_determination: -0.5545
+Epoch 49/100
+
+ 1/50 [..............................] - ETA: 0s - loss: 0.4251 - mean_squared_error: 0.4251 - coeff_determination: 0.0076
+15/50 [========>.....................] - ETA: 0s - loss: 0.3185 - mean_squared_error: 0.3185 - coeff_determination: 0.1093
+29/50 [================>.............] - ETA: 0s - loss: 0.3112 - mean_squared_error: 0.3112 - coeff_determination: 0.1314
+43/50 [========================>.....] - ETA: 0s - loss: 0.3218 - mean_squared_error: 0.3218 - coeff_determination: 0.1349
+50/50 [==============================] - 0s 7ms/step - loss: 0.3173 - mean_squared_error: 0.3173 - coeff_determination: 0.1395 - val_loss: 0.2629 - val_mean_squared_error: 0.2629 - val_coeff_determination: -0.3017
+Epoch 50/100
+
+ 1/50 [..............................] - ETA: 0s - loss: 0.3114 - mean_squared_error: 0.3114 - coeff_determination: 0.2379
+15/50 [========>.....................] - ETA: 0s - loss: 0.3643 - mean_squared_error: 0.3643 - coeff_determination: 0.1533
+29/50 [================>.............] - ETA: 0s - loss: 0.3737 - mean_squared_error: 0.3737 - coeff_determination: 0.1108
+43/50 [========================>.....] - ETA: 0s - loss: 0.3653 - mean_squared_error: 0.3653 - coeff_determination: 0.1398
+50/50 [==============================] - 0s 7ms/step - loss: 0.3673 - mean_squared_error: 0.3673 - coeff_determination: 0.1411 - val_loss: 0.2924 - val_mean_squared_error: 0.2924 - val_coeff_determination: -0.4263
+Epoch 51/100
+
+ 1/50 [..............................] - ETA: 0s - loss: 0.2334 - mean_squared_error: 0.2334 - coeff_determination: 0.2373
+15/50 [========>.....................] - ETA: 0s - loss: 0.3577 - mean_squared_error: 0.3577 - coeff_determination: 0.1456
+29/50 [================>.............] - ETA: 0s - loss: 0.3346 - mean_squared_error: 0.3346 - coeff_determination: 0.1510
+43/50 [========================>.....] - ETA: 0s - loss: 0.3364 - mean_squared_error: 0.3364 - coeff_determination: 0.1561
+50/50 [==============================] - 0s 7ms/step - loss: 0.3341 - mean_squared_error: 0.3341 - coeff_determination: 0.1408 - val_loss: 0.3053 - val_mean_squared_error: 0.3053 - val_coeff_determination: -0.4942
+Epoch 52/100
+
+ 1/50 [..............................] - ETA: 0s - loss: 0.3122 - mean_squared_error: 0.3122 - coeff_determination: 0.2709
+15/50 [========>.....................] - ETA: 0s - loss: 0.3273 - mean_squared_error: 0.3273 - coeff_determination: 0.1084
+29/50 [================>.............] - ETA: 0s - loss: 0.3361 - mean_squared_error: 0.3361 - coeff_determination: 0.1186
+43/50 [========================>.....] - ETA: 0s - loss: 0.3276 - mean_squared_error: 0.3276 - coeff_determination: 0.1237
+50/50 [==============================] - 0s 7ms/step - loss: 0.3311 - mean_squared_error: 0.3311 - coeff_determination: 0.1215 - val_loss: 0.2637 - val_mean_squared_error: 0.2637 - val_coeff_determination: -0.2854
+Epoch 53/100
+
+ 1/50 [..............................] - ETA: 0s - loss: 0.2074 - mean_squared_error: 0.2074 - coeff_determination: 0.2679
+15/50 [========>.....................] - ETA: 0s - loss: 0.3567 - mean_squared_error: 0.3567 - coeff_determination: 0.1087
+29/50 [================>.............] - ETA: 0s - loss: 0.3206 - mean_squared_error: 0.3206 - coeff_determination: 0.1328
+43/50 [========================>.....] - ETA: 0s - loss: 0.3309 - mean_squared_error: 0.3309 - coeff_determination: 0.1267
+50/50 [==============================] - 0s 7ms/step - loss: 0.3266 - mean_squared_error: 0.3266 - coeff_determination: 0.1260 - val_loss: 0.2823 - val_mean_squared_error: 0.2823 - val_coeff_determination: -0.3660
+Epoch 54/100
+
+ 1/50 [..............................] - ETA: 0s - loss: 0.2005 - mean_squared_error: 0.2005 - coeff_determination: 0.0965
+15/50 [========>.....................] - ETA: 0s - loss: 0.3545 - mean_squared_error: 0.3545 - coeff_determination: 0.1080
+29/50 [================>.............] - ETA: 0s - loss: 0.3550 - mean_squared_error: 0.3550 - coeff_determination: 0.0831
+43/50 [========================>.....] - ETA: 0s - loss: 0.3539 - mean_squared_error: 0.3539 - coeff_determination: 0.0806
+50/50 [==============================] - 0s 7ms/step - loss: 0.3527 - mean_squared_error: 0.3527 - coeff_determination: 0.0854 - val_loss: 0.2719 - val_mean_squared_error: 0.2719 - val_coeff_determination: -0.3323
+Epoch 55/100
+
+ 1/50 [..............................] - ETA: 0s - loss: 0.4562 - mean_squared_error: 0.4562 - coeff_determination: 0.1862
+15/50 [========>.....................] - ETA: 0s - loss: 0.3375 - mean_squared_error: 0.3375 - coeff_determination: 0.1857
+29/50 [================>.............] - ETA: 0s - loss: 0.3242 - mean_squared_error: 0.3242 - coeff_determination: 0.1538
+43/50 [========================>.....] - ETA: 0s - loss: 0.3297 - mean_squared_error: 0.3297 - coeff_determination: 0.1563
+50/50 [==============================] - 0s 7ms/step - loss: 0.3430 - mean_squared_error: 0.3430 - coeff_determination: 0.1337 - val_loss: 0.2582 - val_mean_squared_error: 0.2582 - val_coeff_determination: -0.3184
+Epoch 56/100
+
+ 1/50 [..............................] - ETA: 0s - loss: 0.3235 - mean_squared_error: 0.3235 - coeff_determination: -0.0257
+15/50 [========>.....................] - ETA: 0s - loss: 0.3142 - mean_squared_error: 0.3142 - coeff_determination: 0.1612 
+29/50 [================>.............] - ETA: 0s - loss: 0.3315 - mean_squared_error: 0.3315 - coeff_determination: 0.1442
+43/50 [========================>.....] - ETA: 0s - loss: 0.3302 - mean_squared_error: 0.3302 - coeff_determination: 0.1326
+50/50 [==============================] - 0s 7ms/step - loss: 0.3273 - mean_squared_error: 0.3273 - coeff_determination: 0.1398 - val_loss: 0.2881 - val_mean_squared_error: 0.2881 - val_coeff_determination: -0.5945
+Epoch 57/100
+
+ 1/50 [..............................] - ETA: 0s - loss: 0.2849 - mean_squared_error: 0.2849 - coeff_determination: -0.0427
+15/50 [========>.....................] - ETA: 0s - loss: 0.3327 - mean_squared_error: 0.3327 - coeff_determination: 0.1247 
+29/50 [================>.............] - ETA: 0s - loss: 0.3402 - mean_squared_error: 0.3402 - coeff_determination: 0.1132
+43/50 [========================>.....] - ETA: 0s - loss: 0.3349 - mean_squared_error: 0.3349 - coeff_determination: 0.1163
+50/50 [==============================] - 0s 7ms/step - loss: 0.3399 - mean_squared_error: 0.3399 - coeff_determination: 0.1194 - val_loss: 0.4125 - val_mean_squared_error: 0.4125 - val_coeff_determination: -1.1042
+Epoch 58/100
+
+ 1/50 [..............................] - ETA: 0s - loss: 0.3480 - mean_squared_error: 0.3480 - coeff_determination: -0.0477
+15/50 [========>.....................] - ETA: 0s - loss: 0.3581 - mean_squared_error: 0.3581 - coeff_determination: 0.1451 
+29/50 [================>.............] - ETA: 0s - loss: 0.3336 - mean_squared_error: 0.3336 - coeff_determination: 0.1582
+43/50 [========================>.....] - ETA: 0s - loss: 0.3254 - mean_squared_error: 0.3254 - coeff_determination: 0.1661
+50/50 [==============================] - 0s 6ms/step - loss: 0.3261 - mean_squared_error: 0.3261 - coeff_determination: 0.1630 - val_loss: 0.2745 - val_mean_squared_error: 0.2745 - val_coeff_determination: -0.3254
+Epoch 59/100
+
+ 1/50 [..............................] - ETA: 0s - loss: 0.3231 - mean_squared_error: 0.3231 - coeff_determination: 0.1456
+15/50 [========>.....................] - ETA: 0s - loss: 0.3623 - mean_squared_error: 0.3623 - coeff_determination: 0.1483
+29/50 [================>.............] - ETA: 0s - loss: 0.3376 - mean_squared_error: 0.3376 - coeff_determination: 0.1611
+43/50 [========================>.....] - ETA: 0s - loss: 0.3366 - mean_squared_error: 0.3366 - coeff_determination: 0.1688
+50/50 [==============================] - 0s 7ms/step - loss: 0.3440 - mean_squared_error: 0.3440 - coeff_determination: 0.1632 - val_loss: 0.2876 - val_mean_squared_error: 0.2876 - val_coeff_determination: -0.5842
+Epoch 60/100
+
+ 1/50 [..............................] - ETA: 0s - loss: 0.3183 - mean_squared_error: 0.3183 - coeff_determination: -0.0135
+14/50 [=======>......................] - ETA: 0s - loss: 0.2957 - mean_squared_error: 0.2957 - coeff_determination: 0.1939 
+28/50 [===============>..............] - ETA: 0s - loss: 0.3042 - mean_squared_error: 0.3042 - coeff_determination: 0.1683
+42/50 [========================>.....] - ETA: 0s - loss: 0.3180 - mean_squared_error: 0.3180 - coeff_determination: 0.1623
+50/50 [==============================] - 0s 7ms/step - loss: 0.3224 - mean_squared_error: 0.3224 - coeff_determination: 0.1598 - val_loss: 0.2595 - val_mean_squared_error: 0.2595 - val_coeff_determination: -0.2766
+Epoch 61/100
+
+ 1/50 [..............................] - ETA: 0s - loss: 0.3568 - mean_squared_error: 0.3568 - coeff_determination: 0.0365
+15/50 [========>.....................] - ETA: 0s - loss: 0.3729 - mean_squared_error: 0.3729 - coeff_determination: 0.1337
+29/50 [================>.............] - ETA: 0s - loss: 0.3481 - mean_squared_error: 0.3481 - coeff_determination: 0.1435
+43/50 [========================>.....] - ETA: 0s - loss: 0.3450 - mean_squared_error: 0.3450 - coeff_determination: 0.1323
+50/50 [==============================] - 0s 7ms/step - loss: 0.3409 - mean_squared_error: 0.3409 - coeff_determination: 0.1363 - val_loss: 0.2611 - val_mean_squared_error: 0.2611 - val_coeff_determination: -0.3621
+Epoch 62/100
+
+ 1/50 [..............................] - ETA: 0s - loss: 0.2023 - mean_squared_error: 0.2023 - coeff_determination: 0.1213
+15/50 [========>.....................] - ETA: 0s - loss: 0.3185 - mean_squared_error: 0.3185 - coeff_determination: 0.1616
+29/50 [================>.............] - ETA: 0s - loss: 0.3119 - mean_squared_error: 0.3119 - coeff_determination: 0.1687
+43/50 [========================>.....] - ETA: 0s - loss: 0.3199 - mean_squared_error: 0.3199 - coeff_determination: 0.1561
+50/50 [==============================] - 0s 7ms/step - loss: 0.3249 - mean_squared_error: 0.3249 - coeff_determination: 0.1506 - val_loss: 0.3211 - val_mean_squared_error: 0.3211 - val_coeff_determination: -0.5737
+Epoch 63/100
+
+ 1/50 [..............................] - ETA: 0s - loss: 0.2103 - mean_squared_error: 0.2103 - coeff_determination: 0.3185
+15/50 [========>.....................] - ETA: 0s - loss: 0.3076 - mean_squared_error: 0.3076 - coeff_determination: 0.1869
+29/50 [================>.............] - ETA: 0s - loss: 0.3055 - mean_squared_error: 0.3055 - coeff_determination: 0.1913
+43/50 [========================>.....] - ETA: 0s - loss: 0.3253 - mean_squared_error: 0.3253 - coeff_determination: 0.1721
+50/50 [==============================] - 0s 7ms/step - loss: 0.3276 - mean_squared_error: 0.3276 - coeff_determination: 0.1589 - val_loss: 0.2578 - val_mean_squared_error: 0.2578 - val_coeff_determination: -0.2481
+Epoch 64/100
+
+ 1/50 [..............................] - ETA: 0s - loss: 0.4009 - mean_squared_error: 0.4009 - coeff_determination: 0.2393
+15/50 [========>.....................] - ETA: 0s - loss: 0.3189 - mean_squared_error: 0.3189 - coeff_determination: 0.1863
+29/50 [================>.............] - ETA: 0s - loss: 0.3129 - mean_squared_error: 0.3129 - coeff_determination: 0.1956
+43/50 [========================>.....] - ETA: 0s - loss: 0.3306 - mean_squared_error: 0.3306 - coeff_determination: 0.1863
+50/50 [==============================] - 0s 7ms/step - loss: 0.3247 - mean_squared_error: 0.3247 - coeff_determination: 0.1839 - val_loss: 0.2646 - val_mean_squared_error: 0.2646 - val_coeff_determination: -0.3769
+Epoch 65/100
+
+ 1/50 [..............................] - ETA: 0s - loss: 0.2678 - mean_squared_error: 0.2678 - coeff_determination: 0.3740
+15/50 [========>.....................] - ETA: 0s - loss: 0.3214 - mean_squared_error: 0.3214 - coeff_determination: 0.1496
+29/50 [================>.............] - ETA: 0s - loss: 0.3205 - mean_squared_error: 0.3205 - coeff_determination: 0.1561
+43/50 [========================>.....] - ETA: 0s - loss: 0.3293 - mean_squared_error: 0.3293 - coeff_determination: 0.1395
+50/50 [==============================] - 0s 7ms/step - loss: 0.3305 - mean_squared_error: 0.3305 - coeff_determination: 0.1341 - val_loss: 0.2718 - val_mean_squared_error: 0.2718 - val_coeff_determination: -0.3210
+Epoch 66/100
+
+ 1/50 [..............................] - ETA: 0s - loss: 0.2817 - mean_squared_error: 0.2817 - coeff_determination: 0.1379
+15/50 [========>.....................] - ETA: 0s - loss: 0.3232 - mean_squared_error: 0.3232 - coeff_determination: 0.1359
+29/50 [================>.............] - ETA: 0s - loss: 0.3359 - mean_squared_error: 0.3359 - coeff_determination: 0.1346
+43/50 [========================>.....] - ETA: 0s - loss: 0.3321 - mean_squared_error: 0.3321 - coeff_determination: 0.1305
+50/50 [==============================] - 0s 7ms/step - loss: 0.3288 - mean_squared_error: 0.3288 - coeff_determination: 0.1398 - val_loss: 0.2719 - val_mean_squared_error: 0.2719 - val_coeff_determination: -0.3322
+Epoch 67/100
+
+ 1/50 [..............................] - ETA: 0s - loss: 0.3627 - mean_squared_error: 0.3627 - coeff_determination: 0.1001
+15/50 [========>.....................] - ETA: 0s - loss: 0.3442 - mean_squared_error: 0.3442 - coeff_determination: 0.0492
+29/50 [================>.............] - ETA: 0s - loss: 0.3431 - mean_squared_error: 0.3431 - coeff_determination: 0.0867
+43/50 [========================>.....] - ETA: 0s - loss: 0.3395 - mean_squared_error: 0.3395 - coeff_determination: 0.1048
+50/50 [==============================] - 0s 7ms/step - loss: 0.3444 - mean_squared_error: 0.3444 - coeff_determination: 0.1007 - val_loss: 0.2715 - val_mean_squared_error: 0.2715 - val_coeff_determination: -0.3011
+Epoch 68/100
+
+ 1/50 [..............................] - ETA: 0s - loss: 0.2222 - mean_squared_error: 0.2222 - coeff_determination: 0.3101
+15/50 [========>.....................] - ETA: 0s - loss: 0.3148 - mean_squared_error: 0.3148 - coeff_determination: 0.2018
+29/50 [================>.............] - ETA: 0s - loss: 0.3171 - mean_squared_error: 0.3171 - coeff_determination: 0.1976
+43/50 [========================>.....] - ETA: 0s - loss: 0.3153 - mean_squared_error: 0.3153 - coeff_determination: 0.1794
+50/50 [==============================] - 0s 7ms/step - loss: 0.3164 - mean_squared_error: 0.3164 - coeff_determination: 0.1703 - val_loss: 0.2590 - val_mean_squared_error: 0.2590 - val_coeff_determination: -0.2628
+Epoch 69/100
+
+ 1/50 [..............................] - ETA: 0s - loss: 0.2640 - mean_squared_error: 0.2640 - coeff_determination: 0.1581
+15/50 [========>.....................] - ETA: 0s - loss: 0.3218 - mean_squared_error: 0.3218 - coeff_determination: 0.1292
+29/50 [================>.............] - ETA: 0s - loss: 0.3320 - mean_squared_error: 0.3320 - coeff_determination: 0.1333
+43/50 [========================>.....] - ETA: 0s - loss: 0.3303 - mean_squared_error: 0.3303 - coeff_determination: 0.1378
+50/50 [==============================] - 0s 7ms/step - loss: 0.3305 - mean_squared_error: 0.3305 - coeff_determination: 0.1364 - val_loss: 0.3596 - val_mean_squared_error: 0.3596 - val_coeff_determination: -0.7834
+Epoch 70/100
+
+ 1/50 [..............................] - ETA: 0s - loss: 0.1902 - mean_squared_error: 0.1902 - coeff_determination: 0.0180
+15/50 [========>.....................] - ETA: 0s - loss: 0.3185 - mean_squared_error: 0.3185 - coeff_determination: 0.1771
+29/50 [================>.............] - ETA: 0s - loss: 0.3101 - mean_squared_error: 0.3101 - coeff_determination: 0.1725
+43/50 [========================>.....] - ETA: 0s - loss: 0.3043 - mean_squared_error: 0.3043 - coeff_determination: 0.1687
+50/50 [==============================] - 0s 7ms/step - loss: 0.3050 - mean_squared_error: 0.3050 - coeff_determination: 0.1699 - val_loss: 0.2802 - val_mean_squared_error: 0.2802 - val_coeff_determination: -0.3503
+Epoch 71/100
+
+ 1/50 [..............................] - ETA: 0s - loss: 0.3138 - mean_squared_error: 0.3138 - coeff_determination: 0.0932
+15/50 [========>.....................] - ETA: 0s - loss: 0.3067 - mean_squared_error: 0.3067 - coeff_determination: 0.1926
+29/50 [================>.............] - ETA: 0s - loss: 0.3129 - mean_squared_error: 0.3129 - coeff_determination: 0.1577
+43/50 [========================>.....] - ETA: 0s - loss: 0.3047 - mean_squared_error: 0.3047 - coeff_determination: 0.1690
+50/50 [==============================] - 0s 7ms/step - loss: 0.3079 - mean_squared_error: 0.3079 - coeff_determination: 0.1715 - val_loss: 0.2527 - val_mean_squared_error: 0.2527 - val_coeff_determination: -0.2523
+Epoch 72/100
+
+ 1/50 [..............................] - ETA: 0s - loss: 0.2186 - mean_squared_error: 0.2186 - coeff_determination: 0.3583
+15/50 [========>.....................] - ETA: 0s - loss: 0.3112 - mean_squared_error: 0.3112 - coeff_determination: 0.1917
+29/50 [================>.............] - ETA: 0s - loss: 0.3236 - mean_squared_error: 0.3236 - coeff_determination: 0.1694
+43/50 [========================>.....] - ETA: 0s - loss: 0.3186 - mean_squared_error: 0.3186 - coeff_determination: 0.1867
+50/50 [==============================] - 0s 7ms/step - loss: 0.3095 - mean_squared_error: 0.3095 - coeff_determination: 0.1967 - val_loss: 0.3026 - val_mean_squared_error: 0.3026 - val_coeff_determination: -0.4731
+Epoch 73/100
+
+ 1/50 [..............................] - ETA: 0s - loss: 0.2113 - mean_squared_error: 0.2113 - coeff_determination: 0.4749
+15/50 [========>.....................] - ETA: 0s - loss: 0.3262 - mean_squared_error: 0.3262 - coeff_determination: 0.1524
+29/50 [================>.............] - ETA: 0s - loss: 0.3160 - mean_squared_error: 0.3160 - coeff_determination: 0.1859
+43/50 [========================>.....] - ETA: 0s - loss: 0.3098 - mean_squared_error: 0.3098 - coeff_determination: 0.1730
+50/50 [==============================] - 0s 7ms/step - loss: 0.3183 - mean_squared_error: 0.3183 - coeff_determination: 0.1685 - val_loss: 0.2683 - val_mean_squared_error: 0.2683 - val_coeff_determination: -0.4501
+Epoch 74/100
+
+ 1/50 [..............................] - ETA: 0s - loss: 0.3512 - mean_squared_error: 0.3512 - coeff_determination: 0.1023
+15/50 [========>.....................] - ETA: 0s - loss: 0.3230 - mean_squared_error: 0.3230 - coeff_determination: 0.1627
+29/50 [================>.............] - ETA: 0s - loss: 0.3403 - mean_squared_error: 0.3403 - coeff_determination: 0.1516
+43/50 [========================>.....] - ETA: 0s - loss: 0.3365 - mean_squared_error: 0.3365 - coeff_determination: 0.1485
+50/50 [==============================] - 0s 7ms/step - loss: 0.3346 - mean_squared_error: 0.3346 - coeff_determination: 0.1577 - val_loss: 0.2727 - val_mean_squared_error: 0.2727 - val_coeff_determination: -0.4641
+Epoch 75/100
+
+ 1/50 [..............................] - ETA: 0s - loss: 0.3947 - mean_squared_error: 0.3947 - coeff_determination: 0.0132
+15/50 [========>.....................] - ETA: 0s - loss: 0.3569 - mean_squared_error: 0.3569 - coeff_determination: 0.1355
+29/50 [================>.............] - ETA: 0s - loss: 0.3502 - mean_squared_error: 0.3502 - coeff_determination: 0.1435
+42/50 [========================>.....] - ETA: 0s - loss: 0.3526 - mean_squared_error: 0.3526 - coeff_determination: 0.1471
+50/50 [==============================] - 0s 7ms/step - loss: 0.3423 - mean_squared_error: 0.3423 - coeff_determination: 0.1552 - val_loss: 0.3376 - val_mean_squared_error: 0.3376 - val_coeff_determination: -0.9875
+Epoch 76/100
+
+ 1/50 [..............................] - ETA: 0s - loss: 0.5044 - mean_squared_error: 0.5044 - coeff_determination: -0.4062
+13/50 [======>.......................] - ETA: 0s - loss: 0.3109 - mean_squared_error: 0.3109 - coeff_determination: 0.1127 
+26/50 [==============>...............] - ETA: 0s - loss: 0.3175 - mean_squared_error: 0.3175 - coeff_determination: 0.1358
+39/50 [======================>.......] - ETA: 0s - loss: 0.3106 - mean_squared_error: 0.3106 - coeff_determination: 0.1597
+50/50 [==============================] - 0s 7ms/step - loss: 0.3053 - mean_squared_error: 0.3053 - coeff_determination: 0.1649 - val_loss: 0.2644 - val_mean_squared_error: 0.2644 - val_coeff_determination: -0.2772
+Epoch 77/100
+
+ 1/50 [..............................] - ETA: 0s - loss: 0.2124 - mean_squared_error: 0.2124 - coeff_determination: 0.2467
+14/50 [=======>......................] - ETA: 0s - loss: 0.3431 - mean_squared_error: 0.3431 - coeff_determination: 0.1138
+27/50 [===============>..............] - ETA: 0s - loss: 0.3209 - mean_squared_error: 0.3209 - coeff_determination: 0.1513
+40/50 [=======================>......] - ETA: 0s - loss: 0.3115 - mean_squared_error: 0.3115 - coeff_determination: 0.1756
+50/50 [==============================] - 0s 7ms/step - loss: 0.3140 - mean_squared_error: 0.3140 - coeff_determination: 0.1675 - val_loss: 0.2675 - val_mean_squared_error: 0.2675 - val_coeff_determination: -0.3515
+Epoch 78/100
+
+ 1/50 [..............................] - ETA: 0s - loss: 0.2190 - mean_squared_error: 0.2190 - coeff_determination: 0.3778
+15/50 [========>.....................] - ETA: 0s - loss: 0.3026 - mean_squared_error: 0.3026 - coeff_determination: 0.1463
+29/50 [================>.............] - ETA: 0s - loss: 0.3139 - mean_squared_error: 0.3139 - coeff_determination: 0.1695
+43/50 [========================>.....] - ETA: 0s - loss: 0.3333 - mean_squared_error: 0.3333 - coeff_determination: 0.1609
+50/50 [==============================] - 0s 7ms/step - loss: 0.3327 - mean_squared_error: 0.3327 - coeff_determination: 0.1691 - val_loss: 0.2922 - val_mean_squared_error: 0.2922 - val_coeff_determination: -0.4158
+Epoch 79/100
+
+ 1/50 [..............................] - ETA: 0s - loss: 0.2670 - mean_squared_error: 0.2670 - coeff_determination: 0.1453
+15/50 [========>.....................] - ETA: 0s - loss: 0.3031 - mean_squared_error: 0.3031 - coeff_determination: 0.1658
+29/50 [================>.............] - ETA: 0s - loss: 0.3092 - mean_squared_error: 0.3092 - coeff_determination: 0.1839
+43/50 [========================>.....] - ETA: 0s - loss: 0.3225 - mean_squared_error: 0.3225 - coeff_determination: 0.1746
+50/50 [==============================] - 0s 7ms/step - loss: 0.3263 - mean_squared_error: 0.3263 - coeff_determination: 0.1704 - val_loss: 0.2574 - val_mean_squared_error: 0.2574 - val_coeff_determination: -0.3324
+Epoch 80/100
+
+ 1/50 [..............................] - ETA: 0s - loss: 0.3189 - mean_squared_error: 0.3189 - coeff_determination: 0.1145
+15/50 [========>.....................] - ETA: 0s - loss: 0.2868 - mean_squared_error: 0.2868 - coeff_determination: 0.1730
+29/50 [================>.............] - ETA: 0s - loss: 0.3231 - mean_squared_error: 0.3231 - coeff_determination: 0.1941
+43/50 [========================>.....] - ETA: 0s - loss: 0.3149 - mean_squared_error: 0.3149 - coeff_determination: 0.1845
+50/50 [==============================] - 0s 7ms/step - loss: 0.3207 - mean_squared_error: 0.3207 - coeff_determination: 0.1842 - val_loss: 0.3518 - val_mean_squared_error: 0.3518 - val_coeff_determination: -0.7467
+Epoch 81/100
+
+ 1/50 [..............................] - ETA: 0s - loss: 0.2281 - mean_squared_error: 0.2281 - coeff_determination: 0.3276
+15/50 [========>.....................] - ETA: 0s - loss: 0.3311 - mean_squared_error: 0.3311 - coeff_determination: 0.2125
+29/50 [================>.............] - ETA: 0s - loss: 0.3271 - mean_squared_error: 0.3271 - coeff_determination: 0.1969
+43/50 [========================>.....] - ETA: 0s - loss: 0.3274 - mean_squared_error: 0.3274 - coeff_determination: 0.2025
+50/50 [==============================] - 0s 7ms/step - loss: 0.3227 - mean_squared_error: 0.3227 - coeff_determination: 0.2039 - val_loss: 0.2735 - val_mean_squared_error: 0.2735 - val_coeff_determination: -0.3601
+Epoch 82/100
+
+ 1/50 [..............................] - ETA: 0s - loss: 0.3840 - mean_squared_error: 0.3840 - coeff_determination: 0.0760
+15/50 [========>.....................] - ETA: 0s - loss: 0.3225 - mean_squared_error: 0.3225 - coeff_determination: 0.1402
+29/50 [================>.............] - ETA: 0s - loss: 0.3109 - mean_squared_error: 0.3109 - coeff_determination: 0.1717
+43/50 [========================>.....] - ETA: 0s - loss: 0.3065 - mean_squared_error: 0.3065 - coeff_determination: 0.1866
+50/50 [==============================] - 0s 7ms/step - loss: 0.3151 - mean_squared_error: 0.3151 - coeff_determination: 0.1747 - val_loss: 0.2606 - val_mean_squared_error: 0.2606 - val_coeff_determination: -0.2675
+Epoch 83/100
+
+ 1/50 [..............................] - ETA: 0s - loss: 0.1283 - mean_squared_error: 0.1283 - coeff_determination: 0.4062
+15/50 [========>.....................] - ETA: 0s - loss: 0.2863 - mean_squared_error: 0.2863 - coeff_determination: 0.1841
+29/50 [================>.............] - ETA: 0s - loss: 0.2909 - mean_squared_error: 0.2909 - coeff_determination: 0.1789
+43/50 [========================>.....] - ETA: 0s - loss: 0.3080 - mean_squared_error: 0.3080 - coeff_determination: 0.1625
+50/50 [==============================] - 0s 7ms/step - loss: 0.3039 - mean_squared_error: 0.3039 - coeff_determination: 0.1631 - val_loss: 0.2602 - val_mean_squared_error: 0.2602 - val_coeff_determination: -0.2610
+Epoch 84/100
+
+ 1/50 [..............................] - ETA: 0s - loss: 0.2172 - mean_squared_error: 0.2172 - coeff_determination: 0.2805
+15/50 [========>.....................] - ETA: 0s - loss: 0.3188 - mean_squared_error: 0.3188 - coeff_determination: 0.1439
+29/50 [================>.............] - ETA: 0s - loss: 0.3138 - mean_squared_error: 0.3138 - coeff_determination: 0.1549
+43/50 [========================>.....] - ETA: 0s - loss: 0.3115 - mean_squared_error: 0.3115 - coeff_determination: 0.1656
+50/50 [==============================] - 0s 7ms/step - loss: 0.3107 - mean_squared_error: 0.3107 - coeff_determination: 0.1773 - val_loss: 0.2722 - val_mean_squared_error: 0.2722 - val_coeff_determination: -0.3191
+Epoch 85/100
+
+ 1/50 [..............................] - ETA: 0s - loss: 0.8348 - mean_squared_error: 0.8348 - coeff_determination: -0.0668
+15/50 [========>.....................] - ETA: 0s - loss: 0.3649 - mean_squared_error: 0.3649 - coeff_determination: 0.1405 
+29/50 [================>.............] - ETA: 0s - loss: 0.3437 - mean_squared_error: 0.3437 - coeff_determination: 0.1582
+43/50 [========================>.....] - ETA: 0s - loss: 0.3340 - mean_squared_error: 0.3340 - coeff_determination: 0.1680
+50/50 [==============================] - 0s 7ms/step - loss: 0.3344 - mean_squared_error: 0.3344 - coeff_determination: 0.1776 - val_loss: 0.2601 - val_mean_squared_error: 0.2601 - val_coeff_determination: -0.2948
+Epoch 86/100
+
+ 1/50 [..............................] - ETA: 0s - loss: 0.2395 - mean_squared_error: 0.2395 - coeff_determination: 0.2760
+15/50 [========>.....................] - ETA: 0s - loss: 0.2960 - mean_squared_error: 0.2960 - coeff_determination: 0.2522
+29/50 [================>.............] - ETA: 0s - loss: 0.3013 - mean_squared_error: 0.3013 - coeff_determination: 0.2155
+43/50 [========================>.....] - ETA: 0s - loss: 0.2936 - mean_squared_error: 0.2936 - coeff_determination: 0.2155
+50/50 [==============================] - 0s 7ms/step - loss: 0.2963 - mean_squared_error: 0.2963 - coeff_determination: 0.2072 - val_loss: 0.2690 - val_mean_squared_error: 0.2690 - val_coeff_determination: -0.4218
+Epoch 87/100
+
+ 1/50 [..............................] - ETA: 0s - loss: 0.3535 - mean_squared_error: 0.3535 - coeff_determination: 0.1494
+15/50 [========>.....................] - ETA: 0s - loss: 0.3332 - mean_squared_error: 0.3332 - coeff_determination: 0.1877
+29/50 [================>.............] - ETA: 0s - loss: 0.3297 - mean_squared_error: 0.3297 - coeff_determination: 0.1784
+43/50 [========================>.....] - ETA: 0s - loss: 0.3306 - mean_squared_error: 0.3306 - coeff_determination: 0.1671
+50/50 [==============================] - 0s 7ms/step - loss: 0.3257 - mean_squared_error: 0.3257 - coeff_determination: 0.1690 - val_loss: 0.3028 - val_mean_squared_error: 0.3028 - val_coeff_determination: -0.4740
+Epoch 88/100
+
+ 1/50 [..............................] - ETA: 0s - loss: 0.2661 - mean_squared_error: 0.2661 - coeff_determination: 0.3468
+15/50 [========>.....................] - ETA: 0s - loss: 0.3383 - mean_squared_error: 0.3383 - coeff_determination: 0.1375
+29/50 [================>.............] - ETA: 0s - loss: 0.3269 - mean_squared_error: 0.3269 - coeff_determination: 0.1643
+43/50 [========================>.....] - ETA: 0s - loss: 0.3269 - mean_squared_error: 0.3269 - coeff_determination: 0.1679
+50/50 [==============================] - 0s 7ms/step - loss: 0.3303 - mean_squared_error: 0.3303 - coeff_determination: 0.1645 - val_loss: 0.3115 - val_mean_squared_error: 0.3115 - val_coeff_determination: -0.5138
+Epoch 89/100
+
+ 1/50 [..............................] - ETA: 0s - loss: 0.2956 - mean_squared_error: 0.2956 - coeff_determination: 0.1377
+15/50 [========>.....................] - ETA: 0s - loss: 0.3338 - mean_squared_error: 0.3338 - coeff_determination: 0.1830
+29/50 [================>.............] - ETA: 0s - loss: 0.3125 - mean_squared_error: 0.3125 - coeff_determination: 0.2045
+43/50 [========================>.....] - ETA: 0s - loss: 0.3230 - mean_squared_error: 0.3230 - coeff_determination: 0.1898
+50/50 [==============================] - 0s 7ms/step - loss: 0.3265 - mean_squared_error: 0.3265 - coeff_determination: 0.1862 - val_loss: 0.3051 - val_mean_squared_error: 0.3051 - val_coeff_determination: -0.4842
+Epoch 90/100
+
+ 1/50 [..............................] - ETA: 0s - loss: 0.4673 - mean_squared_error: 0.4673 - coeff_determination: 0.2357
+15/50 [========>.....................] - ETA: 0s - loss: 0.3284 - mean_squared_error: 0.3284 - coeff_determination: 0.1570
+29/50 [================>.............] - ETA: 0s - loss: 0.3377 - mean_squared_error: 0.3377 - coeff_determination: 0.1691
+43/50 [========================>.....] - ETA: 0s - loss: 0.3291 - mean_squared_error: 0.3291 - coeff_determination: 0.1711
+50/50 [==============================] - 0s 7ms/step - loss: 0.3270 - mean_squared_error: 0.3270 - coeff_determination: 0.1740 - val_loss: 0.3370 - val_mean_squared_error: 0.3370 - val_coeff_determination: -0.6570
+Epoch 91/100
+
+ 1/50 [..............................] - ETA: 0s - loss: 0.3329 - mean_squared_error: 0.3329 - coeff_determination: 0.2216
+15/50 [========>.....................] - ETA: 0s - loss: 0.3215 - mean_squared_error: 0.3215 - coeff_determination: 0.2226
+29/50 [================>.............] - ETA: 0s - loss: 0.3320 - mean_squared_error: 0.3320 - coeff_determination: 0.1984
+43/50 [========================>.....] - ETA: 0s - loss: 0.3217 - mean_squared_error: 0.3217 - coeff_determination: 0.2037
+50/50 [==============================] - 0s 7ms/step - loss: 0.3159 - mean_squared_error: 0.3159 - coeff_determination: 0.2067 - val_loss: 0.4075 - val_mean_squared_error: 0.4075 - val_coeff_determination: -1.0360
+Epoch 92/100
+
+ 1/50 [..............................] - ETA: 0s - loss: 0.4761 - mean_squared_error: 0.4761 - coeff_determination: 0.0057
+15/50 [========>.....................] - ETA: 0s - loss: 0.2997 - mean_squared_error: 0.2997 - coeff_determination: 0.1909
+29/50 [================>.............] - ETA: 0s - loss: 0.3175 - mean_squared_error: 0.3175 - coeff_determination: 0.1662
+43/50 [========================>.....] - ETA: 0s - loss: 0.3134 - mean_squared_error: 0.3134 - coeff_determination: 0.1646
+50/50 [==============================] - 0s 7ms/step - loss: 0.3113 - mean_squared_error: 0.3113 - coeff_determination: 0.1650 - val_loss: 0.2680 - val_mean_squared_error: 0.2680 - val_coeff_determination: -0.2784
+Epoch 93/100
+
+ 1/50 [..............................] - ETA: 0s - loss: 0.2750 - mean_squared_error: 0.2750 - coeff_determination: 0.1463
+15/50 [========>.....................] - ETA: 0s - loss: 0.3338 - mean_squared_error: 0.3338 - coeff_determination: 0.2185
+29/50 [================>.............] - ETA: 0s - loss: 0.3102 - mean_squared_error: 0.3102 - coeff_determination: 0.2059
+43/50 [========================>.....] - ETA: 0s - loss: 0.3065 - mean_squared_error: 0.3065 - coeff_determination: 0.1959
+50/50 [==============================] - 0s 7ms/step - loss: 0.3116 - mean_squared_error: 0.3116 - coeff_determination: 0.1992 - val_loss: 0.3482 - val_mean_squared_error: 0.3482 - val_coeff_determination: -0.7133
+Epoch 94/100
+
+ 1/50 [..............................] - ETA: 0s - loss: 0.2770 - mean_squared_error: 0.2770 - coeff_determination: 0.0102
+15/50 [========>.....................] - ETA: 0s - loss: 0.3589 - mean_squared_error: 0.3589 - coeff_determination: 0.1672
+29/50 [================>.............] - ETA: 0s - loss: 0.3340 - mean_squared_error: 0.3340 - coeff_determination: 0.1792
+43/50 [========================>.....] - ETA: 0s - loss: 0.3349 - mean_squared_error: 0.3349 - coeff_determination: 0.1836
+50/50 [==============================] - 0s 7ms/step - loss: 0.3281 - mean_squared_error: 0.3281 - coeff_determination: 0.1876 - val_loss: 0.2553 - val_mean_squared_error: 0.2553 - val_coeff_determination: -0.2582
+Epoch 95/100
+
+ 1/50 [..............................] - ETA: 0s - loss: 0.2476 - mean_squared_error: 0.2476 - coeff_determination: 0.2557
+15/50 [========>.....................] - ETA: 0s - loss: 0.2822 - mean_squared_error: 0.2822 - coeff_determination: 0.1461
+29/50 [================>.............] - ETA: 0s - loss: 0.2782 - mean_squared_error: 0.2782 - coeff_determination: 0.1935
+43/50 [========================>.....] - ETA: 0s - loss: 0.2927 - mean_squared_error: 0.2927 - coeff_determination: 0.1996
+50/50 [==============================] - 0s 7ms/step - loss: 0.2894 - mean_squared_error: 0.2894 - coeff_determination: 0.1897 - val_loss: 0.2678 - val_mean_squared_error: 0.2678 - val_coeff_determination: -0.2851
+Epoch 96/100
+
+ 1/50 [..............................] - ETA: 0s - loss: 0.2332 - mean_squared_error: 0.2332 - coeff_determination: 0.3516
+15/50 [========>.....................] - ETA: 0s - loss: 0.3307 - mean_squared_error: 0.3307 - coeff_determination: 0.2139
+29/50 [================>.............] - ETA: 0s - loss: 0.3247 - mean_squared_error: 0.3247 - coeff_determination: 0.2087
+43/50 [========================>.....] - ETA: 0s - loss: 0.3287 - mean_squared_error: 0.3287 - coeff_determination: 0.1944
+50/50 [==============================] - 0s 6ms/step - loss: 0.3221 - mean_squared_error: 0.3221 - coeff_determination: 0.1992 - val_loss: 0.2563 - val_mean_squared_error: 0.2563 - val_coeff_determination: -0.2695
+Epoch 97/100
+
+ 1/50 [..............................] - ETA: 0s - loss: 0.1874 - mean_squared_error: 0.1874 - coeff_determination: 0.2773
+15/50 [========>.....................] - ETA: 0s - loss: 0.3275 - mean_squared_error: 0.3275 - coeff_determination: 0.2409
+29/50 [================>.............] - ETA: 0s - loss: 0.3341 - mean_squared_error: 0.3341 - coeff_determination: 0.2311
+43/50 [========================>.....] - ETA: 0s - loss: 0.3340 - mean_squared_error: 0.3340 - coeff_determination: 0.2127
+50/50 [==============================] - 0s 7ms/step - loss: 0.3336 - mean_squared_error: 0.3336 - coeff_determination: 0.2128 - val_loss: 0.2552 - val_mean_squared_error: 0.2552 - val_coeff_determination: -0.2821
+Epoch 98/100
+
+ 1/50 [..............................] - ETA: 0s - loss: 0.2428 - mean_squared_error: 0.2428 - coeff_determination: 0.2450
+14/50 [=======>......................] - ETA: 0s - loss: 0.2897 - mean_squared_error: 0.2897 - coeff_determination: 0.2025
+28/50 [===============>..............] - ETA: 0s - loss: 0.3259 - mean_squared_error: 0.3259 - coeff_determination: 0.1860
+42/50 [========================>.....] - ETA: 0s - loss: 0.3179 - mean_squared_error: 0.3179 - coeff_determination: 0.1745
+50/50 [==============================] - 0s 7ms/step - loss: 0.3131 - mean_squared_error: 0.3131 - coeff_determination: 0.1796 - val_loss: 0.2734 - val_mean_squared_error: 0.2734 - val_coeff_determination: -0.3257
+Epoch 99/100
+
+ 1/50 [..............................] - ETA: 0s - loss: 0.3551 - mean_squared_error: 0.3551 - coeff_determination: 0.2043
+15/50 [========>.....................] - ETA: 0s - loss: 0.3292 - mean_squared_error: 0.3292 - coeff_determination: 0.1891
+29/50 [================>.............] - ETA: 0s - loss: 0.3370 - mean_squared_error: 0.3370 - coeff_determination: 0.1907
+43/50 [========================>.....] - ETA: 0s - loss: 0.3273 - mean_squared_error: 0.3273 - coeff_determination: 0.1979
+50/50 [==============================] - 0s 7ms/step - loss: 0.3379 - mean_squared_error: 0.3379 - coeff_determination: 0.1884 - val_loss: 0.2600 - val_mean_squared_error: 0.2600 - val_coeff_determination: -0.3430
+Epoch 100/100
+
+ 1/50 [..............................] - ETA: 0s - loss: 0.2935 - mean_squared_error: 0.2935 - coeff_determination: 0.1667
+15/50 [========>.....................] - ETA: 0s - loss: 0.3361 - mean_squared_error: 0.3361 - coeff_determination: 0.1569
+29/50 [================>.............] - ETA: 0s - loss: 0.3138 - mean_squared_error: 0.3138 - coeff_determination: 0.1729
+43/50 [========================>.....] - ETA: 0s - loss: 0.3166 - mean_squared_error: 0.3166 - coeff_determination: 0.1771
+50/50 [==============================] - 0s 7ms/step - loss: 0.3151 - mean_squared_error: 0.3151 - coeff_determination: 0.1802 - val_loss: 0.2571 - val_mean_squared_error: 0.2571 - val_coeff_determination: -0.3066
+Running test metrics
+0.061942000143865306

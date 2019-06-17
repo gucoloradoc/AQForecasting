@@ -7,10 +7,11 @@ import numpy as np
 import pandas as pd
 from datetime import datetime
 import os
+import sys
 #%% creating folder to save outputs
 out_path="Monterrey/ANN_output/"+datetime.now().strftime("%d-%m-%Y_%H-%M-%S")
 os.makedirs(out_path)
-
+sys.stdout = open(out_path+'/console_output.txt', 'w')
 #%% Retrieving the data
 #dframe=pd.read_pickle('./AMMfull.pkl')
 dframe=pd.read_csv("Monterrey/data/imputed/data/NOROESTE.csv", 
@@ -83,7 +84,7 @@ def generator(data, lookback, delay, min_index, max_index,
 lookback = 24
 step = 1
 delay = 24
-batch_size = 64
+batch_size = 128
 target=5 #PM10 (5), check the order in dframe
 
 train_gen = generator(df2,
@@ -115,7 +116,7 @@ test_gen = generator(df2,
 #%% Defining number of steps
 #Training steps
 
-train_steps=50
+train_steps=(35000- lookback) // batch_size
 # This is how many steps to draw from `val_gen`
 # in order to see the whole validation set:
 val_steps = (40000 - 35001 - lookback) // batch_size
@@ -168,7 +169,7 @@ def coeff_determination(y_true, y_pred):
 model = Sequential()
 model.add(layers.Flatten(input_shape=(lookback // step, df2.shape[-1])))
 model.add(layers.Dense(32, activation='sigmoid', name='sigmoid'))
-#model.add(layers.Dense(256, activation='tanh'))
+model.add(layers.Dense(256, activation='tanh'))
 model.add(layers.Dense(32, activation='linear', name='linear'))
 #model.add(layers.Dense(128, activation='relu'))
 model.add(layers.Dense(1, activation='linear', name='output'))
@@ -177,7 +178,7 @@ model.add(layers.Dense(1, activation='linear', name='output'))
 model.compile(optimizer=RMSprop(), loss='mean_squared_error', metrics=['mean_squared_error', coeff_determination])
 history = model.fit_generator(train_gen,
                               steps_per_epoch=train_steps,
-                              epochs=50,
+                              epochs=100,
                               validation_data=val_gen,
                               validation_steps=val_steps)
 
