@@ -17,13 +17,41 @@ dframe=pd.read_csv("Monterrey/data/imputed/data/NOROESTE.csv",
     parse_dates=["FECHA"], infer_datetime_format=True).set_index("FECHA")
 
 station="NOROESTE"
-
-#%% Preparation of the data.
+pollutants=list(dframe.columns)
+#%% Preparation of the data, normalization
 #dframe.mean(axis=0).unstack('ESTACION')
 #df2=dframe['NOROESTE'].fillna(method='ffill').as_matrix()
-df2=dframe.values
-#Max normalization
-df2=df2/np.nanmax(df2)
+dframe_norm=dframe.copy()
+#df2=dframe.values
+norm_guide={'CO':('log', 0.1),
+    'NO': ('log', 0.1),
+    'NO2': ('log', 0.1),
+    'NOX': ('log', 0.1),
+    'O3': ('log', 0.01),
+    'PM10': ('log', 0.1),
+    'PM2.5': ('log', 0.1),
+    'PRS': ('mean', 0),
+    'RAINF': ('log', 0.001),
+    'RH': ('mean', 0),
+    'SO2': ('log', 0.1),
+    'SR': ('none', 0),
+    'TOUT': ('mean',0),
+    'WDR': ('mean', 0),
+    'WSR': ('log', 0.1),
+    }
+
+for p in pollutants:
+    if norm_guide[p][0]=='log':
+        dframe_norm[p]=np.log(dframe[p]+norm_guide[p][1])
+    if norm_guide[p][0]=='none':
+        dframe_norm[p]=dframe[p]+norm_guide[p][1]
+    if norm_guide[p][0]=='mean':
+        dframe_norm[p]=(dframe[p]-dframe[p].mean())/dframe[p].std()
+
+
+df2=dframe_norm.values
+#%% normalization
+
 #%% Looking back lookback, every step, we will predict the 
 # concentration in a delay.
 def generator(data, lookback, delay, min_index, max_index,
@@ -149,7 +177,7 @@ model.add(layers.Dense(1, activation='linear', name='output'))
 model.compile(optimizer=RMSprop(), loss='mean_squared_error', metrics=['mean_squared_error', coeff_determination])
 history = model.fit_generator(train_gen,
                               steps_per_epoch=train_steps,
-                              epochs=5000,
+                              epochs=50,
                               validation_data=val_gen,
                               validation_steps=val_steps)
 
