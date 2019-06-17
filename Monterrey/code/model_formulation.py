@@ -141,15 +141,15 @@ model = Sequential()
 model.add(layers.Flatten(input_shape=(lookback // step, df2.shape[-1])))
 model.add(layers.Dense(32, activation='sigmoid', name='sigmoid'))
 #model.add(layers.Dense(256, activation='tanh'))
-model.add(layers.Dense(128, activation='linear', name='linear'))
+model.add(layers.Dense(32, activation='linear', name='linear'))
 #model.add(layers.Dense(128, activation='relu'))
-model.add(layers.Dense(1))
+model.add(layers.Dense(1, activation='linear', name='output'))
 
 #%% ANN model compilation
 model.compile(optimizer=RMSprop(), loss='mean_squared_error', metrics=['mean_squared_error', coeff_determination])
 history = model.fit_generator(train_gen,
                               steps_per_epoch=train_steps,
-                              epochs=500,
+                              epochs=5000,
                               validation_data=val_gen,
                               validation_steps=val_steps)
 
@@ -187,7 +187,7 @@ plt.plot(epochs, np.ones(len(epochs))*train_naive_r2, color='red')
 plt.ylim([-1,1])
 plt.legend()
 plt.savefig(out_path+"/Train_val_loss_acc.png", dpi=300)
-plt.show()
+#plt.show()
 
 #%% Test metrics############################
 print('Running test metrics')
@@ -223,6 +223,7 @@ det_coeff= metrics.r2_score(samp_out,pred_test)
 print(det_coeff)
 
 #Coefficient of determination (r^2)
+plt.figure()
 plt.plot(pred_test, samp_out,'o', alpha=0.05)
 plt.plot([min(min(pred_test),min(samp_out)),
         min(max(pred_test),max(samp_out))],
