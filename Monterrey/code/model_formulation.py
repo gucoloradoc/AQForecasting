@@ -8,10 +8,12 @@ import pandas as pd
 from datetime import datetime
 import os
 import sys
+import shutil
 #%% creating folder to save outputs
 out_path="Monterrey/ANN_output/"+datetime.now().strftime("%d-%m-%Y_%H-%M-%S")
 os.makedirs(out_path)
 sys.stdout = open(out_path+'/console_output.txt', 'w')
+shutil.copy2('Monterrey/code/model_formulation.py', out_path)
 #%% Retrieving the data
 #dframe=pd.read_pickle('./AMMfull.pkl')
 dframe=pd.read_csv("Monterrey/data/imputed/data/NOROESTE.csv", 
@@ -167,15 +169,16 @@ def coeff_determination(y_true, y_pred):
 
 #%% ANN Model definition
 model = Sequential()
-model.add(layers.Flatten(input_shape=(lookback // step, df2.shape[-1])))
-model.add(layers.Dense(32, activation='sigmoid', name='sigmoid'))
-model.add(layers.Dense(256, activation='tanh'))
+#model.add(layers.Flatten(input_shape=(lookback // step, df2.shape[-1])))
+#model.add(layers.Dense(32, activation='sigmoid', name='sigmoid'))
+model.add(layers.GRU(16, input_shape=(None, df2.shape[-1])))
+#model.add(layers.Dense(256, activation='tanh'))
 model.add(layers.Dense(32, activation='linear', name='linear'))
 #model.add(layers.Dense(128, activation='relu'))
 model.add(layers.Dense(1, activation='linear', name='output'))
 
 #%% ANN model compilation
-model.compile(optimizer=RMSprop(), loss='mean_squared_error', metrics=['mean_squared_error', coeff_determination])
+model.compile(optimizer=RMSprop(), loss='mean_squared_error', metrics=[coeff_determination])
 history = model.fit_generator(train_gen,
                               steps_per_epoch=train_steps,
                               epochs=100,
