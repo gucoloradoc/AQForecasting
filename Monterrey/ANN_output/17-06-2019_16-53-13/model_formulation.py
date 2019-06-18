@@ -183,7 +183,7 @@ model.add(layers.Dense(1, activation='linear', name='output'))
 model.compile(optimizer=RMSprop(), loss='mean_squared_error', metrics=[coeff_determination])
 history = model.fit_generator(train_gen,
                               steps_per_epoch=train_steps,
-                              epochs=15,
+                              epochs=100,
                               validation_data=val_gen,
                               validation_steps=val_steps)
 

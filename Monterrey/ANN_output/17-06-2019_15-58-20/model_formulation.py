@@ -171,11 +171,11 @@ def coeff_determination(y_true, y_pred):
 model = Sequential()
 #model.add(layers.Flatten(input_shape=(lookback // step, df2.shape[-1])))
 #model.add(layers.Dense(32, activation='sigmoid', name='sigmoid'))
-model.add(layers.GRU(64, input_shape=(None, df2.shape[-1]),
+model.add(layers.GRU(16, input_shape=(None, df2.shape[-1]),
                     dropout=0.2,
                     recurrent_dropout=0.2))
 #model.add(layers.Dense(256, activation='tanh'))
-#model.add(layers.Dense(32, activation='linear', name='linear'))
+model.add(layers.Dense(32, activation='linear', name='linear'))
 #model.add(layers.Dense(128, activation='relu'))
 model.add(layers.Dense(1, activation='linear', name='output'))
 
@@ -183,7 +183,7 @@ model.add(layers.Dense(1, activation='linear', name='output'))
 model.compile(optimizer=RMSprop(), loss='mean_squared_error', metrics=[coeff_determination])
 history = model.fit_generator(train_gen,
                               steps_per_epoch=train_steps,
-                              epochs=15,
+                              epochs=100,
                               validation_data=val_gen,
                               validation_steps=val_steps)
 
