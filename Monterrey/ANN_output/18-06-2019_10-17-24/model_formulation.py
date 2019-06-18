@@ -181,10 +181,10 @@ model.add(layers.GRU(64, input_shape=(None, df2.shape[-1]),
 model.add(layers.Dense(1, activation='linear', name='output'))
 
 #%% ANN model compilation
-model.compile(optimizer=Adam(), loss='mean_squared_error', metrics=[coeff_determination])
+model.compile(optimizer=RMSprop(), loss='mean_squared_error', metrics=[coeff_determination])
 history = model.fit_generator(train_gen,
                               steps_per_epoch=train_steps,
-                              epochs=100,
+                              epochs=15,
                               validation_data=val_gen,
                               validation_steps=val_steps)
 
