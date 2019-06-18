@@ -168,7 +168,6 @@ def coeff_determination(y_true, y_pred):
     SS_tot = K.sum(K.square( y_true - K.mean(y_true) ) ) 
     return ( 1 - SS_res/(SS_tot + K.epsilon()) )
 
-
 #%% ANN Model definition
 model = Sequential()
 #model.add(layers.Flatten(input_shape=(lookback // step, df2.shape[-1])))
@@ -176,7 +175,7 @@ model = Sequential()
 model.add(layers.GRU(32, input_shape=(None, df2.shape[-1]),
                     dropout=0.2,
                     recurrent_dropout=0.2))
-#model.add(layers.Dense(32, activation='tanh'))
+model.add(layers.Dense(32, activation='tanh'))
 #model.add(layers.Dense(32, activation='linear', name='linear'))
 #model.add(layers.Dense(128, activation='relu'))
 model.add(layers.Dense(1, activation='linear', name='output'))
