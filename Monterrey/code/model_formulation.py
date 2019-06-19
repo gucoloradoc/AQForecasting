@@ -12,8 +12,8 @@ import shutil
 #%% creating folder to save outputs
 out_path="Monterrey/ANN_output/"+datetime.now().strftime("%d-%m-%Y_%H-%M-%S")
 os.makedirs(out_path)
-sys.stdout = open(out_path+'/console_output.txt', 'w')
-shutil.copy2('Monterrey/code/model_formulation.py', out_path)
+#sys.stdout = open(out_path+'/console_output.txt', 'w')
+#shutil.copy2('Monterrey/code/model_formulation.py', out_path)
 #%% Retrieving the data
 #dframe=pd.read_pickle('./AMMfull.pkl')
 dframe=pd.read_csv("Monterrey/data/imputed/data/NOROESTE.csv", 
@@ -52,7 +52,7 @@ for p in pollutants:
         dframe_norm[p]=(dframe[p]-dframe[p].mean())/dframe[p].std()
 
 
-df2=dframe_norm.values
+df2=dframe_norm.resample('24H').mean().values
 #%% normalization
 
 #%% Looking back lookback, every step, we will predict the 
@@ -83,17 +83,28 @@ def generator(data, lookback, delay, min_index, max_index,
             targets[j] = data[rows[j] + delay][5]
         yield samples, targets
 #%% Generators setup
-lookback = 24
+
+lookback = 1
 step = 1
-delay = 24
-batch_size = 128
+delay = 1
+batch_size = 32
 target=5 #PM10 (5), check the order in dframe
+
+train_percent=0.7
+val_percent=0.15
+test_percent=0.15
+
+obs_len=len(df2)
+
+train_max_ind=int(train_percent*obs_len)
+val_max_ind=int(val_percent*obs_len+train_max_ind)
+test_max_ind=int(test_percent*obs_len+val_max_ind)
 
 train_gen = generator(df2,
                       lookback=lookback,
                       delay=delay,
                       min_index=0,
-                      max_index=35000,
+                      max_index=train_max_ind,
                       shuffle=True,
                       step=step, 
                       batch_size=batch_size,
@@ -101,15 +112,15 @@ train_gen = generator(df2,
 val_gen = generator(df2,
                     lookback=lookback,
                     delay=delay,
-                    min_index=35001,
-                    max_index=40000,
+                    min_index=train_max_ind+1,
+                    max_index=val_max_ind,
                     step=step,
                     batch_size=batch_size,
                       target=target)
 test_gen = generator(df2,
                      lookback=lookback,
                      delay=delay,
-                     min_index=40001,
+                     min_index=val_max_ind+1,
                      max_index=None,
                      step=step,
                      batch_size=batch_size,
@@ -118,14 +129,14 @@ test_gen = generator(df2,
 #%% Defining number of steps
 #Training steps
 
-train_steps=(35000- lookback) // batch_size
+train_steps=(train_max_ind - lookback) // batch_size
 # This is how many steps to draw from `val_gen`
 # in order to see the whole validation set:
-val_steps = (40000 - 35001 - lookback) // batch_size
+val_steps = (val_max_ind - train_max_ind + 1 - lookback) // batch_size
 
 # This is how many steps to draw from `test_gen`
 # in order to see the whole test set:
-test_steps = (len(df2) - 40001 - lookback) // batch_size
+test_steps = (len(df2) - val_max_ind+1 - lookback) // batch_size
 
 #%% Naieve Method, redefinition
 def eval_naive_method(gen, steps,var):
@@ -168,7 +179,9 @@ def coeff_determination(y_true, y_pred):
     SS_tot = K.sum(K.square( y_true - K.mean(y_true) ) ) 
     return ( 1 - SS_res/(SS_tot + K.epsilon()) )
 
-
+def RMSE_PM(y_true, y_pred):
+    RMSE=K.sqrt(K.sum(K.square(K.exp(y_pred)-K.exp(y_true))))
+    return RMSE
 #%% ANN Model definition
 model = Sequential()
 #model.add(layers.Flatten(input_shape=(lookback // step, df2.shape[-1])))
@@ -182,10 +195,10 @@ model.add(layers.GRU(32, input_shape=(None, df2.shape[-1]),
 model.add(layers.Dense(1, activation='linear', name='output'))
 
 #%% ANN model compilation
-model.compile(optimizer=Adam(), loss='mean_squared_error', metrics=[coeff_determination])
+model.compile(optimizer=Adam(), loss='mean_squared_error', metrics=[coeff_determination, RMSE_PM])
 history = model.fit_generator(train_gen,
                               steps_per_epoch=train_steps,
-                              epochs=30,
+                              epochs=100,
                               validation_data=val_gen,
                               validation_steps=val_steps)
 
@@ -203,24 +216,31 @@ val_loss = history.history['val_loss']
 acc=history.history['coeff_determination']
 val_acc=history.history['val_coeff_determination']
 
+train_rmse=history.history['RMSE_PM']/np.sqrt(test_steps*batch_size)
+val_rmse=history.history['val_RMSE_PM']/np.sqrt(val_steps*batch_size)
 epochs = range(len(loss))
 
 plt.figure()
 
-plt.subplot(211)
-plt.plot(epochs, np.log(loss), 'bo', label='Training loss')
+plt.subplot(311)
+plt.plot(epochs, np.log(loss), 'bo', alpha=0.5, label='Training loss')
 plt.plot(epochs, np.log(val_loss), 'b', label='Validation loss')
 plt.plot(epochs, np.ones(len(epochs))*val_naive_loss, color='orange')
 plt.plot(epochs, np.ones(len(epochs))*train_naive_loss, color='red')
 plt.title('Training and validation loss and accuracy ($r^2$)')
 plt.legend()
 
-plt.subplot(212)
-plt.plot(epochs, acc, 'bo', label='Training $r^2$')
+plt.subplot(312)
+plt.plot(epochs, acc, 'bo', alpha=0.5, label='Training $r^2$')
 plt.plot(epochs, val_acc, 'b', label='Validation $r^2$')
 plt.plot(epochs, np.ones(len(epochs))*val_naive_r2, color='orange')
 plt.plot(epochs, np.ones(len(epochs))*train_naive_r2, color='red')
 plt.ylim([-1,1])
+plt.legend()
+
+plt.subplot(313)
+plt.plot(epochs, train_rmse, 'bo', alpha=0.5, label='Training $RMSE$')
+plt.plot(epochs, val_rmse, 'b', label='Validation $RMSE$')
 plt.legend()
 plt.savefig(out_path+"/Train_val_loss_acc.png", dpi=300)
 #plt.show()
@@ -250,7 +270,7 @@ samp_imp, samp_out= data_from_generator(test_gen, test_steps)
 
 #%% testing the model
 
-test_results=model.evaluate_generator(test_gen, steps=2)
+test_results=model.evaluate_generator(test_gen, steps=1)
 pred_test=model.predict(np.array(samp_imp))
 
 #%% sklearn metrics
@@ -271,5 +291,7 @@ plt.annotate(("$R^2= $"+str(round(det_coeff,3))),(min(max(pred_test),max(samp_ou
 plt.ylabel("Measured")
 plt.xlabel("Predicted")
 plt.savefig(out_path+"/R2_test.png", dpi=300)
+
+
 
 #%%
