@@ -12,8 +12,8 @@ import shutil
 #%% creating folder to save outputs
 out_path="Monterrey/ANN_output/"+datetime.now().strftime("%d-%m-%Y_%H-%M-%S")
 os.makedirs(out_path)
-#sys.stdout = open(out_path+'/console_output.txt', 'w')
-#shutil.copy2('Monterrey/code/model_formulation.py', out_path)
+sys.stdout = open(out_path+'/console_output.txt', 'w')
+shutil.copy2('Monterrey/code/model_formulation.py', out_path)
 #%% Retrieving the data
 #dframe=pd.read_pickle('./AMMfull.pkl')
 dframe=pd.read_csv("Monterrey/data/imputed/data/NOROESTE.csv", 
@@ -52,7 +52,7 @@ for p in pollutants:
         dframe_norm[p]=(dframe[p]-dframe[p].mean())/dframe[p].std()
 
 
-df2=dframe_norm.resample('24H').mean().values
+df2=dframe_norm.resample('8H').mean().values
 #%% normalization
 
 #%% Looking back lookback, every step, we will predict the 
@@ -80,13 +80,13 @@ def generator(data, lookback, delay, min_index, max_index,
             indices = range(rows[j] - lookback, rows[j], step)
             samples[j] = data[indices]
             #Here my targets could be O3(4),PM10(5),PM2.5(6)
-            targets[j] = data[rows[j] + delay][5]
+            targets[j] = data[rows[j] + delay][target]
         yield samples, targets
 #%% Generators setup
 
-lookback = 1
+lookback = 3
 step = 1
-delay = 1
+delay = 3
 batch_size = 32
 target=5 #PM10 (5), check the order in dframe
 
@@ -276,7 +276,15 @@ pred_test=model.predict(np.array(samp_imp))
 #%% sklearn metrics
 
 det_coeff= metrics.r2_score(samp_out,pred_test)
-print(det_coeff)
+print("r2_secore: "+str(det_coeff))
+my_r2_score=coeff_determination(K.variable(np.exp(samp_out)),K.variable(np.exp(pred_test)))
+det_coeff_v2=K.eval(my_r2_score)
+print("my r2_secore: "+str(det_coeff_v2))
+rmse_test= np.sqrt(metrics.mean_squared_error(np.exp(samp_out),np.exp(pred_test)))
+print("RMSE: "+ str(rmse_test))
+my_RMSE_test=RMSE_PM(K.variable(np.exp(samp_out)),K.variable(np.exp(pred_test)))
+rmse_test_v2=K.eval(my_RMSE_test)
+print("My RMSE: "+ str(rmse_test_v2))
 
 #Coefficient of determination (r^2)
 plt.figure()
