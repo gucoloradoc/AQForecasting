@@ -1,0 +1,5 @@
+Running test metrics
+r2_secore: -0.43490417938059167
+my r2_secore: -0.4349041
+RMSE: 47.25488720249503
+My RMSE: 47.25489010131272

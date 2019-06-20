@@ -209,7 +209,7 @@ from keras.utils import plot_model
 plot_model(model, to_file=(out_path+'/model.png'), show_shapes=True)
 
 #%% Training metrics
-sys.stdout = open(out_path+'/training_metrics.txt', 'w')
+sys.stdout = open(out_path+'/console_output.txt', 'w')
 
 import matplotlib.pyplot as plt
 

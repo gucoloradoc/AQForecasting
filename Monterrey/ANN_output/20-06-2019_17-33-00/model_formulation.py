@@ -184,13 +184,13 @@ def RMSE_PM(y_true, y_pred):
     return RMSE
 #%% ANN Model definition
 model = Sequential()
-model.add(layers.Flatten(input_shape=(lookback // step, df2.shape[-1])))
-model.add(layers.Dense(32, activation='sigmoid', name='sigmoid'))
-#model.add(layers.GRU(32, input_shape=(None, df2.shape[-1]),
-#                    dropout=0.2,
-#                    recurrent_dropout=0.2))
+#model.add(layers.Flatten(input_shape=(lookback // step, df2.shape[-1])))
+#model.add(layers.Dense(32, activation='sigmoid', name='sigmoid'))
+model.add(layers.GRU(32, input_shape=(None, df2.shape[-1]),
+                    dropout=0.2,
+                    recurrent_dropout=0.2))
 #model.add(layers.Dense(32, activation='tanh'))
-model.add(layers.Dense(32, activation='linear', name='linear'))
+#model.add(layers.Dense(32, activation='linear', name='linear'))
 #model.add(layers.Dense(128, activation='relu'))
 model.add(layers.Dense(1, activation='linear', name='output'))
 
@@ -209,7 +209,7 @@ from keras.utils import plot_model
 plot_model(model, to_file=(out_path+'/model.png'), show_shapes=True)
 
 #%% Training metrics
-sys.stdout = open(out_path+'/training_metrics.txt', 'w')
+sys.stdout = open(out_path+'/console_output.txt', 'w')
 
 import matplotlib.pyplot as plt
 

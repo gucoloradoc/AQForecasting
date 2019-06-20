@@ -52,7 +52,7 @@ for p in pollutants:
         dframe_norm[p]=(dframe[p]-dframe[p].mean())/dframe[p].std()
 
 
-df2=dframe_norm.resample('24H').mean().values
+df2=dframe_norm.loc['2012',].resample('4H').mean().values
 #%% normalization
 
 #%% Looking back lookback, every step, we will predict the 
@@ -84,10 +84,10 @@ def generator(data, lookback, delay, min_index, max_index,
         yield samples, targets
 #%% Generators setup
 
-lookback = 3
+lookback = 18
 step = 1
-delay = 1
-batch_size = 32
+delay = 6
+batch_size = 2
 target=5 #PM10 (5), check the order in dframe
 
 train_percent=0.7
@@ -184,18 +184,17 @@ def RMSE_PM(y_true, y_pred):
     return RMSE
 #%% ANN Model definition
 model = Sequential()
-model.add(layers.Flatten(input_shape=(lookback // step, df2.shape[-1])))
-model.add(layers.Dense(32, activation='sigmoid', name='sigmoid'))
-#model.add(layers.GRU(32, input_shape=(None, df2.shape[-1]),
-#                    dropout=0.2,
-#                    recurrent_dropout=0.2))
+#model.add(layers.Flatten(input_shape=(lookback // step, df2.shape[-1])))
+#model.add(layers.Dense(32, activation='sigmoid', name='sigmoid'))
+model.add(layers.GRU(32, input_shape=(None, df2.shape[-1]),
+                    dropout=0.2,
+                    recurrent_dropout=0.2))
 #model.add(layers.Dense(32, activation='tanh'))
-model.add(layers.Dense(32, activation='linear', name='linear'))
+#model.add(layers.Dense(32, activation='linear', name='linear'))
 #model.add(layers.Dense(128, activation='relu'))
 model.add(layers.Dense(1, activation='linear', name='output'))
 
 #%% ANN model compilation
-sys.stdout = open(out_path+'/model_training_status.txt', 'w')
 model.compile(optimizer=Adam(), loss='mean_squared_error', metrics=[coeff_determination, RMSE_PM])
 history = model.fit_generator(train_gen,
                               steps_per_epoch=train_steps,
@@ -209,8 +208,6 @@ from keras.utils import plot_model
 plot_model(model, to_file=(out_path+'/model.png'), show_shapes=True)
 
 #%% Training metrics
-sys.stdout = open(out_path+'/training_metrics.txt', 'w')
-
 import matplotlib.pyplot as plt
 
 loss = history.history['loss']
