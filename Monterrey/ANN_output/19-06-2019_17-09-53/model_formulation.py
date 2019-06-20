@@ -12,8 +12,8 @@ import shutil
 #%% creating folder to save outputs
 out_path="Monterrey/ANN_output/"+datetime.now().strftime("%d-%m-%Y_%H-%M-%S")
 os.makedirs(out_path)
-#sys.stdout = open(out_path+'/console_output.txt', 'w')
-#shutil.copy2('Monterrey/code/model_formulation.py', out_path)
+sys.stdout = open(out_path+'/console_output.txt', 'w')
+shutil.copy2('Monterrey/code/model_formulation.py', out_path)
 #%% Retrieving the data
 #dframe=pd.read_pickle('./AMMfull.pkl')
 dframe=pd.read_csv("Monterrey/data/imputed/data/NOROESTE.csv", 
@@ -171,7 +171,7 @@ from keras import layers
 from keras.optimizers import RMSprop
 from keras.optimizers import Adam
 
-#accuracy metric for regression chosen: r2, RMSE
+#accuracy metric for regression chosen: r2
 from keras import backend as K #Required for tensorflow math
 
 def coeff_determination(y_true, y_pred):
@@ -198,7 +198,7 @@ model.add(layers.Dense(1, activation='linear', name='output'))
 model.compile(optimizer=Adam(), loss='mean_squared_error', metrics=[coeff_determination, RMSE_PM])
 history = model.fit_generator(train_gen,
                               steps_per_epoch=train_steps,
-                              epochs=50,
+                              epochs=100,
                               validation_data=val_gen,
                               validation_steps=val_steps)
 
@@ -259,10 +259,7 @@ def data_from_generator(gen,steps):
         samp_imp.extend(samples)
         samp_out.extend(targets)
     #print(np.mean(batch_maes))
-    samp_imp=np.array(samp_imp)
-    samp_out=np.array(samp_out, ndmin=1)
-    samp_out.shape=(len(samp_out),1)
-    return samp_imp,samp_out
+    return samp_imp, samp_out
 
 samp_imp, samp_out= data_from_generator(test_gen, test_steps)
 
@@ -280,15 +277,11 @@ pred_test=model.predict(np.array(samp_imp))
 
 det_coeff= metrics.r2_score(samp_out,pred_test)
 print("r2_secore: "+str(det_coeff))
-my_r2_score=coeff_determination(K.variable((samp_out)),K.variable((pred_test)))
-det_coeff_v2=K.eval(my_r2_score)
-print("my r2_secore: "+str(det_coeff_v2))
 rmse_test= np.sqrt(metrics.mean_squared_error(np.exp(samp_out),np.exp(pred_test)))
 print("RMSE: "+ str(rmse_test))
-my_RMSE_test=RMSE_PM(K.variable((samp_out)),K.variable((pred_test)))
-rmse_test_v2=K.eval(my_RMSE_test)/np.sqrt(len(pred_test))
-print("My RMSE: "+ str(rmse_test_v2))
-
+my_RMSE_test=RMSE_PM(K.variable(np.exp(np.array(samp_out)),np.exp(np.array(pred_test))))
+rmse_test2=K.eval(my_RMSE_test)
+print("My RMSE: "+ str(my_RMSE_test))
 #Coefficient of determination (r^2)
 plt.figure()
 plt.plot(pred_test, samp_out,'o', alpha=0.05)
@@ -303,9 +296,6 @@ plt.ylabel("Measured")
 plt.xlabel("Predicted")
 plt.savefig(out_path+"/R2_test.png", dpi=300)
 
-
-
-#%%
 
 
 #%%
