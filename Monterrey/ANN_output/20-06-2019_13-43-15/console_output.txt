@@ -1,0 +1,1653 @@
+
+ Training set: 
+
+From naive assumption that the pollutant concentration
+ will be the same that 24h before: 
+
+log(mse)= -0.918
+r2= -0.51066
+
+ Validation set: 
+
+From naive assumption that the pollutant concentration
+ will be the same that 24h before: 
+
+log(mse)= -0.792
+r2= -0.64525
+Epoch 1/50
+
+  1/143 [..............................] - ETA: 8:03 - loss: 15.0300 - coeff_determination: -43.7367 - RMSE_PM: 454.6404
+  6/143 [>.............................] - ETA: 1:19 - loss: 13.6797 - coeff_determination: -59.6548 - RMSE_PM: 431.1107
+ 11/143 [=>............................] - ETA: 42s - loss: 11.6500 - coeff_determination: -46.5733 - RMSE_PM: 426.5754 
+ 16/143 [==>...........................] - ETA: 28s - loss: 9.8510 - coeff_determination: -37.6645 - RMSE_PM: 418.9584 
+ 21/143 [===>..........................] - ETA: 21s - loss: 8.4500 - coeff_determination: -32.2938 - RMSE_PM: 409.1614
+ 26/143 [====>.........................] - ETA: 16s - loss: 7.2999 - coeff_determination: -27.4836 - RMSE_PM: 400.4129
+ 31/143 [=====>........................] - ETA: 13s - loss: 6.3382 - coeff_determination: -23.8821 - RMSE_PM: 383.7700
+ 36/143 [======>.......................] - ETA: 11s - loss: 5.5664 - coeff_determination: -20.8492 - RMSE_PM: 371.3476
+ 41/143 [=======>......................] - ETA: 9s - loss: 4.9742 - coeff_determination: -18.4983 - RMSE_PM: 357.4508 
+ 45/143 [========>.....................] - ETA: 8s - loss: 4.5764 - coeff_determination: -16.9193 - RMSE_PM: 347.6687
+ 50/143 [=========>....................] - ETA: 7s - loss: 4.1622 - coeff_determination: -15.2954 - RMSE_PM: 334.6357
+ 54/143 [==========>...................] - ETA: 6s - loss: 3.8834 - coeff_determination: -14.2210 - RMSE_PM: 327.1368
+ 58/143 [===========>..................] - ETA: 6s - loss: 3.6470 - coeff_determination: -13.3006 - RMSE_PM: 319.6280
+ 64/143 [============>.................] - ETA: 5s - loss: 3.3546 - coeff_determination: -12.1216 - RMSE_PM: 313.1882
+ 69/143 [=============>................] - ETA: 4s - loss: 3.1423 - coeff_determination: -11.2976 - RMSE_PM: 308.1119
+ 74/143 [==============>...............] - ETA: 4s - loss: 2.9614 - coeff_determination: -10.5739 - RMSE_PM: 304.7539
+ 79/143 [===============>..............] - ETA: 3s - loss: 2.8052 - coeff_determination: -9.9385 - RMSE_PM: 301.6214 
+ 84/143 [================>.............] - ETA: 3s - loss: 2.6624 - coeff_determination: -9.3802 - RMSE_PM: 296.1951
+ 89/143 [=================>............] - ETA: 2s - loss: 2.5303 - coeff_determination: -8.8663 - RMSE_PM: 291.2641
+ 94/143 [==================>...........] - ETA: 2s - loss: 2.4154 - coeff_determination: -8.4088 - RMSE_PM: 289.3202
+ 98/143 [===================>..........] - ETA: 2s - loss: 2.3297 - coeff_determination: -8.0761 - RMSE_PM: 286.5355
+103/143 [====================>.........] - ETA: 1s - loss: 2.2319 - coeff_determination: -7.7037 - RMSE_PM: 282.4823
+108/143 [=====================>........] - ETA: 1s - loss: 2.1454 - coeff_determination: -7.3603 - RMSE_PM: 281.7208
+113/143 [======================>.......] - ETA: 1s - loss: 2.0651 - coeff_determination: -7.0432 - RMSE_PM: 279.5223
+118/143 [=======================>......] - ETA: 1s - loss: 1.9957 - coeff_determination: -6.7613 - RMSE_PM: 279.2074
+123/143 [========================>.....] - ETA: 0s - loss: 1.9254 - coeff_determination: -6.4959 - RMSE_PM: 274.7832
+128/143 [=========================>....] - ETA: 0s - loss: 1.8639 - coeff_determination: -6.2594 - RMSE_PM: 272.5918
+132/143 [==========================>...] - ETA: 0s - loss: 1.8172 - coeff_determination: -6.0743 - RMSE_PM: 271.1385
+137/143 [===========================>..] - ETA: 0s - loss: 1.7638 - coeff_determination: -5.8598 - RMSE_PM: 269.8528
+141/143 [============================>.] - ETA: 0s - loss: 1.7230 - coeff_determination: -5.6968 - RMSE_PM: 269.0967
+143/143 [==============================] - 5s 38ms/step - loss: 1.7028 - coeff_determination: -5.6196 - RMSE_PM: 268.1540 - val_loss: 0.4294 - val_coeff_determination: -0.6636 - val_RMSE_PM: 211.9973
+Epoch 2/50
+
+  1/143 [..............................] - ETA: 2s - loss: 0.2766 - coeff_determination: -0.0408 - RMSE_PM: 203.1223
+  5/143 [>.............................] - ETA: 2s - loss: 0.2791 - coeff_determination: -0.2025 - RMSE_PM: 200.7816
+ 10/143 [=>............................] - ETA: 1s - loss: 0.3031 - coeff_determination: -0.2609 - RMSE_PM: 217.8428
+ 14/143 [=>............................] - ETA: 1s - loss: 0.2975 - coeff_determination: -0.2621 - RMSE_PM: 211.1256
+ 19/143 [==>...........................] - ETA: 1s - loss: 0.3044 - coeff_determination: -0.2862 - RMSE_PM: 217.6616
+ 23/143 [===>..........................] - ETA: 1s - loss: 0.3119 - coeff_determination: -0.2846 - RMSE_PM: 220.2745
+ 28/143 [====>.........................] - ETA: 1s - loss: 0.3019 - coeff_determination: -0.2656 - RMSE_PM: 214.4795
+ 32/143 [=====>........................] - ETA: 1s - loss: 0.2993 - coeff_determination: -0.2610 - RMSE_PM: 212.9859
+ 37/143 [======>.......................] - ETA: 1s - loss: 0.2949 - coeff_determination: -0.2303 - RMSE_PM: 212.0576
+ 42/143 [=======>......................] - ETA: 1s - loss: 0.2919 - coeff_determination: -0.2002 - RMSE_PM: 211.0426
+ 47/143 [========>.....................] - ETA: 1s - loss: 0.2907 - coeff_determination: -0.1970 - RMSE_PM: 209.7069
+ 52/143 [=========>....................] - ETA: 1s - loss: 0.2945 - coeff_determination: -0.1977 - RMSE_PM: 211.2645
+ 57/143 [==========>...................] - ETA: 1s - loss: 0.2956 - coeff_determination: -0.2017 - RMSE_PM: 212.7712
+ 62/143 [============>.................] - ETA: 1s - loss: 0.3002 - coeff_determination: -0.1917 - RMSE_PM: 217.9208
+ 67/143 [=============>................] - ETA: 1s - loss: 0.3020 - coeff_determination: -0.1884 - RMSE_PM: 220.6380
+ 72/143 [==============>...............] - ETA: 0s - loss: 0.3042 - coeff_determination: -0.1985 - RMSE_PM: 220.4062
+ 77/143 [===============>..............] - ETA: 0s - loss: 0.3063 - coeff_determination: -0.1906 - RMSE_PM: 220.5830
+ 82/143 [================>.............] - ETA: 0s - loss: 0.3073 - coeff_determination: -0.1878 - RMSE_PM: 219.5900
+ 86/143 [=================>............] - ETA: 0s - loss: 0.3071 - coeff_determination: -0.1889 - RMSE_PM: 218.1775
+ 92/143 [==================>...........] - ETA: 0s - loss: 0.3080 - coeff_determination: -0.1924 - RMSE_PM: 219.2126
+ 96/143 [===================>..........] - ETA: 0s - loss: 0.3071 - coeff_determination: -0.1957 - RMSE_PM: 218.8004
+101/143 [====================>.........] - ETA: 0s - loss: 0.3044 - coeff_determination: -0.1974 - RMSE_PM: 217.1979
+107/143 [=====================>........] - ETA: 0s - loss: 0.3011 - coeff_determination: -0.1956 - RMSE_PM: 215.2628
+112/143 [======================>.......] - ETA: 0s - loss: 0.3015 - coeff_determination: -0.1982 - RMSE_PM: 215.1401
+117/143 [=======================>......] - ETA: 0s - loss: 0.2999 - coeff_determination: -0.1943 - RMSE_PM: 214.9935
+121/143 [========================>.....] - ETA: 0s - loss: 0.3000 - coeff_determination: -0.1887 - RMSE_PM: 215.2209
+126/143 [=========================>....] - ETA: 0s - loss: 0.3002 - coeff_determination: -0.1804 - RMSE_PM: 215.3711
+131/143 [==========================>...] - ETA: 0s - loss: 0.2986 - coeff_determination: -0.1770 - RMSE_PM: 214.9317
+135/143 [===========================>..] - ETA: 0s - loss: 0.2965 - coeff_determination: -0.1802 - RMSE_PM: 214.1849
+140/143 [============================>.] - ETA: 0s - loss: 0.2975 - coeff_determination: -0.1825 - RMSE_PM: 215.1674
+143/143 [==============================] - 2s 14ms/step - loss: 0.2955 - coeff_determination: -0.1803 - RMSE_PM: 214.3615 - val_loss: 0.3858 - val_coeff_determination: -0.4470 - val_RMSE_PM: 200.8618
+Epoch 3/50
+
+  1/143 [..............................] - ETA: 2s - loss: 0.3544 - coeff_determination: -0.1189 - RMSE_PM: 302.8423
+  7/143 [>.............................] - ETA: 1s - loss: 0.2801 - coeff_determination: -0.0035 - RMSE_PM: 236.4923
+ 12/143 [=>............................] - ETA: 1s - loss: 0.2938 - coeff_determination: -0.0423 - RMSE_PM: 247.9244
+ 17/143 [==>...........................] - ETA: 1s - loss: 0.2795 - coeff_determination: -0.0501 - RMSE_PM: 222.9155
+ 22/143 [===>..........................] - ETA: 1s - loss: 0.2751 - coeff_determination: -0.0533 - RMSE_PM: 220.2574
+ 27/143 [====>.........................] - ETA: 1s - loss: 0.2786 - coeff_determination: -0.0604 - RMSE_PM: 224.2237
+ 32/143 [=====>........................] - ETA: 1s - loss: 0.2759 - coeff_determination: -0.0715 - RMSE_PM: 220.4918
+ 36/143 [======>.......................] - ETA: 1s - loss: 0.2789 - coeff_determination: -0.0667 - RMSE_PM: 219.1480
+ 41/143 [=======>......................] - ETA: 1s - loss: 0.2782 - coeff_determination: -0.0734 - RMSE_PM: 218.3598
+ 46/143 [========>.....................] - ETA: 1s - loss: 0.2756 - coeff_determination: -0.0775 - RMSE_PM: 215.9728
+ 51/143 [=========>....................] - ETA: 1s - loss: 0.2822 - coeff_determination: -0.0816 - RMSE_PM: 215.5172
+ 56/143 [==========>...................] - ETA: 1s - loss: 0.2813 - coeff_determination: -0.0795 - RMSE_PM: 213.7150
+ 61/143 [===========>..................] - ETA: 1s - loss: 0.2790 - coeff_determination: -0.0784 - RMSE_PM: 213.4645
+ 66/143 [============>.................] - ETA: 0s - loss: 0.2770 - coeff_determination: -0.0773 - RMSE_PM: 212.3465
+ 71/143 [=============>................] - ETA: 0s - loss: 0.2760 - coeff_determination: -0.0729 - RMSE_PM: 212.4948
+ 76/143 [==============>...............] - ETA: 0s - loss: 0.2773 - coeff_determination: -0.0801 - RMSE_PM: 211.5772
+ 81/143 [===============>..............] - ETA: 0s - loss: 0.2758 - coeff_determination: -0.0752 - RMSE_PM: 210.4463
+ 86/143 [=================>............] - ETA: 0s - loss: 0.2759 - coeff_determination: -0.0765 - RMSE_PM: 210.6552
+ 90/143 [=================>............] - ETA: 0s - loss: 0.2783 - coeff_determination: -0.0768 - RMSE_PM: 210.9943
+ 94/143 [==================>...........] - ETA: 0s - loss: 0.2770 - coeff_determination: -0.0725 - RMSE_PM: 212.5426
+ 99/143 [===================>..........] - ETA: 0s - loss: 0.2768 - coeff_determination: -0.0710 - RMSE_PM: 210.4933
+104/143 [====================>.........] - ETA: 0s - loss: 0.2795 - coeff_determination: -0.0668 - RMSE_PM: 213.1211
+109/143 [=====================>........] - ETA: 0s - loss: 0.2818 - coeff_determination: -0.0639 - RMSE_PM: 215.0774
+114/143 [======================>.......] - ETA: 0s - loss: 0.2821 - coeff_determination: -0.0701 - RMSE_PM: 214.1682
+119/143 [=======================>......] - ETA: 0s - loss: 0.2824 - coeff_determination: -0.0765 - RMSE_PM: 212.3905
+124/143 [=========================>....] - ETA: 0s - loss: 0.2846 - coeff_determination: -0.0757 - RMSE_PM: 212.2260
+129/143 [==========================>...] - ETA: 0s - loss: 0.2846 - coeff_determination: -0.0741 - RMSE_PM: 212.9817
+133/143 [==========================>...] - ETA: 0s - loss: 0.2872 - coeff_determination: -0.0821 - RMSE_PM: 213.6635
+138/143 [===========================>..] - ETA: 0s - loss: 0.2880 - coeff_determination: -0.0817 - RMSE_PM: 214.0996
+142/143 [============================>.] - ETA: 0s - loss: 0.2880 - coeff_determination: -0.0803 - RMSE_PM: 215.0956
+143/143 [==============================] - 2s 14ms/step - loss: 0.2882 - coeff_determination: -0.0805 - RMSE_PM: 215.5084 - val_loss: 0.3717 - val_coeff_determination: -0.3847 - val_RMSE_PM: 197.4690
+Epoch 4/50
+
+  1/143 [..............................] - ETA: 2s - loss: 0.2500 - coeff_determination: -0.0212 - RMSE_PM: 163.3330
+  6/143 [>.............................] - ETA: 1s - loss: 0.2592 - coeff_determination: -0.0562 - RMSE_PM: 214.1769
+ 10/143 [=>............................] - ETA: 1s - loss: 0.2622 - coeff_determination: -0.0662 - RMSE_PM: 202.8316
+ 15/143 [==>...........................] - ETA: 1s - loss: 0.2730 - coeff_determination: -0.0618 - RMSE_PM: 203.0090
+ 19/143 [==>...........................] - ETA: 1s - loss: 0.2734 - coeff_determination: -0.0533 - RMSE_PM: 197.7289
+ 24/143 [====>.........................] - ETA: 1s - loss: 0.2817 - coeff_determination: -0.0751 - RMSE_PM: 205.6616
+ 28/143 [====>.........................] - ETA: 1s - loss: 0.2773 - coeff_determination: -0.0745 - RMSE_PM: 204.3932
+ 32/143 [=====>........................] - ETA: 1s - loss: 0.2687 - coeff_determination: -0.0607 - RMSE_PM: 204.2395
+ 37/143 [======>.......................] - ETA: 1s - loss: 0.2740 - coeff_determination: -0.0513 - RMSE_PM: 210.2810
+ 41/143 [=======>......................] - ETA: 1s - loss: 0.2723 - coeff_determination: -0.0464 - RMSE_PM: 208.1668
+ 46/143 [========>.....................] - ETA: 1s - loss: 0.2725 - coeff_determination: -0.0368 - RMSE_PM: 211.8926
+ 50/143 [=========>....................] - ETA: 1s - loss: 0.2735 - coeff_determination: -0.0558 - RMSE_PM: 212.9066
+ 55/143 [==========>...................] - ETA: 1s - loss: 0.2680 - coeff_determination: -0.0518 - RMSE_PM: 210.3077
+ 60/143 [===========>..................] - ETA: 1s - loss: 0.2705 - coeff_determination: -0.0500 - RMSE_PM: 211.1435
+ 64/143 [============>.................] - ETA: 1s - loss: 0.2678 - coeff_determination: -0.0502 - RMSE_PM: 208.2693
+ 69/143 [=============>................] - ETA: 1s - loss: 0.2671 - coeff_determination: -0.0497 - RMSE_PM: 207.7959
+ 73/143 [==============>...............] - ETA: 0s - loss: 0.2710 - coeff_determination: -0.0501 - RMSE_PM: 208.2071
+ 78/143 [===============>..............] - ETA: 0s - loss: 0.2736 - coeff_determination: -0.0530 - RMSE_PM: 207.8978
+ 82/143 [================>.............] - ETA: 0s - loss: 0.2733 - coeff_determination: -0.0514 - RMSE_PM: 208.6830
+ 87/143 [=================>............] - ETA: 0s - loss: 0.2744 - coeff_determination: -0.0556 - RMSE_PM: 208.9600
+ 91/143 [==================>...........] - ETA: 0s - loss: 0.2764 - coeff_determination: -0.0571 - RMSE_PM: 211.6235
+ 96/143 [===================>..........] - ETA: 0s - loss: 0.2732 - coeff_determination: -0.0575 - RMSE_PM: 209.9380
+100/143 [===================>..........] - ETA: 0s - loss: 0.2717 - coeff_determination: -0.0591 - RMSE_PM: 209.4786
+105/143 [=====================>........] - ETA: 0s - loss: 0.2704 - coeff_determination: -0.0624 - RMSE_PM: 209.0878
+109/143 [=====================>........] - ETA: 0s - loss: 0.2713 - coeff_determination: -0.0650 - RMSE_PM: 209.1542
+114/143 [======================>.......] - ETA: 0s - loss: 0.2706 - coeff_determination: -0.0623 - RMSE_PM: 208.7938
+118/143 [=======================>......] - ETA: 0s - loss: 0.2708 - coeff_determination: -0.0583 - RMSE_PM: 209.9092
+123/143 [========================>.....] - ETA: 0s - loss: 0.2692 - coeff_determination: -0.0545 - RMSE_PM: 210.2151
+127/143 [=========================>....] - ETA: 0s - loss: 0.2688 - coeff_determination: -0.0551 - RMSE_PM: 210.3614
+132/143 [==========================>...] - ETA: 0s - loss: 0.2682 - coeff_determination: -0.0571 - RMSE_PM: 210.0633
+136/143 [===========================>..] - ETA: 0s - loss: 0.2674 - coeff_determination: -0.0580 - RMSE_PM: 209.4964
+140/143 [============================>.] - ETA: 0s - loss: 0.2649 - coeff_determination: -0.0580 - RMSE_PM: 208.4867
+143/143 [==============================] - 2s 15ms/step - loss: 0.2658 - coeff_determination: -0.0594 - RMSE_PM: 208.1882 - val_loss: 0.3643 - val_coeff_determination: -0.3519 - val_RMSE_PM: 195.7674
+Epoch 5/50
+
+  1/143 [..............................] - ETA: 2s - loss: 0.3447 - coeff_determination: 0.1236 - RMSE_PM: 235.2686
+  6/143 [>.............................] - ETA: 1s - loss: 0.2695 - coeff_determination: 0.0104 - RMSE_PM: 210.8088
+ 10/143 [=>............................] - ETA: 1s - loss: 0.2762 - coeff_determination: -0.0370 - RMSE_PM: 220.1274
+ 15/143 [==>...........................] - ETA: 1s - loss: 0.2898 - coeff_determination: -0.0264 - RMSE_PM: 222.3282
+ 20/143 [===>..........................] - ETA: 1s - loss: 0.2882 - coeff_determination: -0.0323 - RMSE_PM: 222.4949
+ 24/143 [====>.........................] - ETA: 1s - loss: 0.2833 - coeff_determination: -0.0337 - RMSE_PM: 217.7419
+ 29/143 [=====>........................] - ETA: 1s - loss: 0.2880 - coeff_determination: -0.0315 - RMSE_PM: 221.1700
+ 34/143 [======>.......................] - ETA: 1s - loss: 0.2835 - coeff_determination: -0.0359 - RMSE_PM: 215.1673
+ 38/143 [======>.......................] - ETA: 1s - loss: 0.2871 - coeff_determination: -0.0481 - RMSE_PM: 213.0853
+ 43/143 [========>.....................] - ETA: 1s - loss: 0.2813 - coeff_determination: -0.0362 - RMSE_PM: 220.4673
+ 48/143 [=========>....................] - ETA: 1s - loss: 0.2780 - coeff_determination: -0.0281 - RMSE_PM: 221.1790
+ 54/143 [==========>...................] - ETA: 1s - loss: 0.2779 - coeff_determination: -0.0275 - RMSE_PM: 221.3560
+ 59/143 [===========>..................] - ETA: 1s - loss: 0.2753 - coeff_determination: -0.0311 - RMSE_PM: 218.2083
+ 64/143 [============>.................] - ETA: 1s - loss: 0.2758 - coeff_determination: -0.0321 - RMSE_PM: 217.0658
+ 69/143 [=============>................] - ETA: 0s - loss: 0.2771 - coeff_determination: -0.0394 - RMSE_PM: 216.8053
+ 74/143 [==============>...............] - ETA: 0s - loss: 0.2755 - coeff_determination: -0.0384 - RMSE_PM: 214.9763
+ 79/143 [===============>..............] - ETA: 0s - loss: 0.2769 - coeff_determination: -0.0428 - RMSE_PM: 216.2026
+ 84/143 [================>.............] - ETA: 0s - loss: 0.2760 - coeff_determination: -0.0417 - RMSE_PM: 215.9972
+ 89/143 [=================>............] - ETA: 0s - loss: 0.2771 - coeff_determination: -0.0463 - RMSE_PM: 216.3180
+ 94/143 [==================>...........] - ETA: 0s - loss: 0.2766 - coeff_determination: -0.0473 - RMSE_PM: 217.7740
+ 99/143 [===================>..........] - ETA: 0s - loss: 0.2742 - coeff_determination: -0.0443 - RMSE_PM: 216.4019
+104/143 [====================>.........] - ETA: 0s - loss: 0.2759 - coeff_determination: -0.0395 - RMSE_PM: 218.9043
+108/143 [=====================>........] - ETA: 0s - loss: 0.2751 - coeff_determination: -0.0356 - RMSE_PM: 217.6720
+113/143 [======================>.......] - ETA: 0s - loss: 0.2774 - coeff_determination: -0.0342 - RMSE_PM: 218.5253
+119/143 [=======================>......] - ETA: 0s - loss: 0.2796 - coeff_determination: -0.0376 - RMSE_PM: 219.3447
+124/143 [=========================>....] - ETA: 0s - loss: 0.2802 - coeff_determination: -0.0371 - RMSE_PM: 221.6738
+129/143 [==========================>...] - ETA: 0s - loss: 0.2775 - coeff_determination: -0.0327 - RMSE_PM: 220.0888
+134/143 [===========================>..] - ETA: 0s - loss: 0.2776 - coeff_determination: -0.0336 - RMSE_PM: 221.8221
+138/143 [===========================>..] - ETA: 0s - loss: 0.2771 - coeff_determination: -0.0327 - RMSE_PM: 222.0978
+143/143 [==============================] - 2s 14ms/step - loss: 0.2779 - coeff_determination: -0.0362 - RMSE_PM: 221.7206 - val_loss: 0.3717 - val_coeff_determination: -0.3822 - val_RMSE_PM: 196.7373
+Epoch 6/50
+
+  1/143 [..............................] - ETA: 2s - loss: 0.2441 - coeff_determination: 0.0762 - RMSE_PM: 181.2078
+  5/143 [>.............................] - ETA: 1s - loss: 0.2323 - coeff_determination: 0.0438 - RMSE_PM: 209.4786
+  9/143 [>.............................] - ETA: 1s - loss: 0.2503 - coeff_determination: 0.0278 - RMSE_PM: 202.4276
+ 13/143 [=>............................] - ETA: 1s - loss: 0.2468 - coeff_determination: 0.0050 - RMSE_PM: 200.3918
+ 17/143 [==>...........................] - ETA: 1s - loss: 0.2633 - coeff_determination: 0.0262 - RMSE_PM: 213.5380
+ 21/143 [===>..........................] - ETA: 1s - loss: 0.2611 - coeff_determination: 0.0259 - RMSE_PM: 210.7000
+ 26/143 [====>.........................] - ETA: 1s - loss: 0.2553 - coeff_determination: 0.0098 - RMSE_PM: 210.7006
+ 31/143 [=====>........................] - ETA: 1s - loss: 0.2502 - coeff_determination: 0.0042 - RMSE_PM: 203.6783
+ 36/143 [======>.......................] - ETA: 1s - loss: 0.2483 - coeff_determination: -0.0082 - RMSE_PM: 198.8928
+ 41/143 [=======>......................] - ETA: 1s - loss: 0.2468 - coeff_determination: -0.0083 - RMSE_PM: 198.3132
+ 45/143 [========>.....................] - ETA: 1s - loss: 0.2543 - coeff_determination: -0.0179 - RMSE_PM: 199.2982
+ 49/143 [=========>....................] - ETA: 1s - loss: 0.2545 - coeff_determination: -0.0221 - RMSE_PM: 203.0112
+ 54/143 [==========>...................] - ETA: 1s - loss: 0.2587 - coeff_determination: -0.0217 - RMSE_PM: 207.2231
+ 58/143 [===========>..................] - ETA: 1s - loss: 0.2565 - coeff_determination: -0.0242 - RMSE_PM: 207.9538
+ 62/143 [============>.................] - ETA: 1s - loss: 0.2578 - coeff_determination: -0.0226 - RMSE_PM: 208.5521
+ 66/143 [============>.................] - ETA: 1s - loss: 0.2602 - coeff_determination: -0.0226 - RMSE_PM: 209.6530
+ 70/143 [=============>................] - ETA: 0s - loss: 0.2596 - coeff_determination: -0.0242 - RMSE_PM: 208.8006
+ 74/143 [==============>...............] - ETA: 0s - loss: 0.2578 - coeff_determination: -0.0209 - RMSE_PM: 208.1418
+ 78/143 [===============>..............] - ETA: 0s - loss: 0.2543 - coeff_determination: -0.0187 - RMSE_PM: 206.0594
+ 83/143 [================>.............] - ETA: 0s - loss: 0.2594 - coeff_determination: -0.0243 - RMSE_PM: 206.1281
+ 88/143 [=================>............] - ETA: 0s - loss: 0.2605 - coeff_determination: -0.0201 - RMSE_PM: 209.5991
+ 92/143 [==================>...........] - ETA: 0s - loss: 0.2621 - coeff_determination: -0.0200 - RMSE_PM: 211.2235
+ 96/143 [===================>..........] - ETA: 0s - loss: 0.2610 - coeff_determination: -0.0158 - RMSE_PM: 210.8778
+100/143 [===================>..........] - ETA: 0s - loss: 0.2597 - coeff_determination: -0.0200 - RMSE_PM: 211.4073
+104/143 [====================>.........] - ETA: 0s - loss: 0.2616 - coeff_determination: -0.0183 - RMSE_PM: 213.0056
+109/143 [=====================>........] - ETA: 0s - loss: 0.2655 - coeff_determination: -0.0194 - RMSE_PM: 214.2499
+114/143 [======================>.......] - ETA: 0s - loss: 0.2658 - coeff_determination: -0.0205 - RMSE_PM: 213.7147
+119/143 [=======================>......] - ETA: 0s - loss: 0.2672 - coeff_determination: -0.0222 - RMSE_PM: 214.7649
+124/143 [=========================>....] - ETA: 0s - loss: 0.2693 - coeff_determination: -0.0186 - RMSE_PM: 215.3481
+129/143 [==========================>...] - ETA: 0s - loss: 0.2690 - coeff_determination: -0.0166 - RMSE_PM: 214.6455
+133/143 [==========================>...] - ETA: 0s - loss: 0.2703 - coeff_determination: -0.0162 - RMSE_PM: 216.6352
+138/143 [===========================>..] - ETA: 0s - loss: 0.2698 - coeff_determination: -0.0151 - RMSE_PM: 216.2950
+143/143 [==============================] - 2s 14ms/step - loss: 0.2692 - coeff_determination: -0.0147 - RMSE_PM: 217.2079 - val_loss: 0.3760 - val_coeff_determination: -0.4000 - val_RMSE_PM: 197.3062
+Epoch 7/50
+
+  1/143 [..............................] - ETA: 0s - loss: 0.1691 - coeff_determination: 0.0416 - RMSE_PM: 134.9694
+  5/143 [>.............................] - ETA: 1s - loss: 0.2770 - coeff_determination: 0.0121 - RMSE_PM: 180.8185
+ 10/143 [=>............................] - ETA: 1s - loss: 0.2849 - coeff_determination: -0.0299 - RMSE_PM: 193.2051
+ 15/143 [==>...........................] - ETA: 1s - loss: 0.2720 - coeff_determination: -7.9274e-04 - RMSE_PM: 191.6523
+ 20/143 [===>..........................] - ETA: 1s - loss: 0.2652 - coeff_determination: 0.0157 - RMSE_PM: 192.7820     
+ 25/143 [====>.........................] - ETA: 1s - loss: 0.2693 - coeff_determination: -9.5168e-04 - RMSE_PM: 200.3389
+ 29/143 [=====>........................] - ETA: 1s - loss: 0.2627 - coeff_determination: -0.0027 - RMSE_PM: 201.6933    
+ 34/143 [======>.......................] - ETA: 1s - loss: 0.2535 - coeff_determination: -0.0020 - RMSE_PM: 197.3809
+ 39/143 [=======>......................] - ETA: 1s - loss: 0.2574 - coeff_determination: 0.0043 - RMSE_PM: 199.3903 
+ 44/143 [========>.....................] - ETA: 1s - loss: 0.2586 - coeff_determination: 0.0034 - RMSE_PM: 201.4182
+ 49/143 [=========>....................] - ETA: 1s - loss: 0.2511 - coeff_determination: 0.0054 - RMSE_PM: 199.9793
+ 53/143 [==========>...................] - ETA: 1s - loss: 0.2496 - coeff_determination: 0.0053 - RMSE_PM: 202.8226
+ 56/143 [==========>...................] - ETA: 1s - loss: 0.2500 - coeff_determination: 0.0031 - RMSE_PM: 202.7596
+ 60/143 [===========>..................] - ETA: 1s - loss: 0.2541 - coeff_determination: 0.0013 - RMSE_PM: 205.7109
+ 65/143 [============>.................] - ETA: 1s - loss: 0.2521 - coeff_determination: 0.0055 - RMSE_PM: 203.4055
+ 69/143 [=============>................] - ETA: 1s - loss: 0.2517 - coeff_determination: 0.0081 - RMSE_PM: 203.5122
+ 74/143 [==============>...............] - ETA: 0s - loss: 0.2529 - coeff_determination: 0.0115 - RMSE_PM: 204.5428
+ 79/143 [===============>..............] - ETA: 0s - loss: 0.2563 - coeff_determination: 0.0060 - RMSE_PM: 204.9227
+ 83/143 [================>.............] - ETA: 0s - loss: 0.2593 - coeff_determination: 0.0039 - RMSE_PM: 204.2816
+ 88/143 [=================>............] - ETA: 0s - loss: 0.2622 - coeff_determination: 0.0010 - RMSE_PM: 205.4544
+ 93/143 [==================>...........] - ETA: 0s - loss: 0.2604 - coeff_determination: 0.0036 - RMSE_PM: 205.8136
+ 98/143 [===================>..........] - ETA: 0s - loss: 0.2599 - coeff_determination: 0.0036 - RMSE_PM: 204.8172
+103/143 [====================>.........] - ETA: 0s - loss: 0.2615 - coeff_determination: 0.0043 - RMSE_PM: 205.4949
+108/143 [=====================>........] - ETA: 0s - loss: 0.2617 - coeff_determination: 0.0055 - RMSE_PM: 208.3007
+113/143 [======================>.......] - ETA: 0s - loss: 0.2623 - coeff_determination: 0.0041 - RMSE_PM: 207.3619
+118/143 [=======================>......] - ETA: 0s - loss: 0.2622 - coeff_determination: 0.0048 - RMSE_PM: 207.1636
+123/143 [========================>.....] - ETA: 0s - loss: 0.2634 - coeff_determination: 0.0012 - RMSE_PM: 208.0904
+129/143 [==========================>...] - ETA: 0s - loss: 0.2633 - coeff_determination: 0.0034 - RMSE_PM: 207.7295
+134/143 [===========================>..] - ETA: 0s - loss: 0.2632 - coeff_determination: 0.0054 - RMSE_PM: 207.2302
+139/143 [============================>.] - ETA: 0s - loss: 0.2616 - coeff_determination: 0.0075 - RMSE_PM: 207.1249
+143/143 [==============================] - 2s 14ms/step - loss: 0.2623 - coeff_determination: 0.0033 - RMSE_PM: 207.4772 - val_loss: 0.3514 - val_coeff_determination: -0.2908 - val_RMSE_PM: 192.7895
+Epoch 8/50
+
+  1/143 [..............................] - ETA: 0s - loss: 0.2551 - coeff_determination: -0.2147 - RMSE_PM: 174.8290
+  5/143 [>.............................] - ETA: 1s - loss: 0.2485 - coeff_determination: -0.0988 - RMSE_PM: 186.8911
+ 10/143 [=>............................] - ETA: 1s - loss: 0.2683 - coeff_determination: -0.0388 - RMSE_PM: 196.5584
+ 15/143 [==>...........................] - ETA: 1s - loss: 0.2543 - coeff_determination: -0.0164 - RMSE_PM: 203.4551
+ 20/143 [===>..........................] - ETA: 1s - loss: 0.2460 - coeff_determination: 0.0141 - RMSE_PM: 201.2414 
+ 25/143 [====>.........................] - ETA: 1s - loss: 0.2440 - coeff_determination: 0.0311 - RMSE_PM: 200.4923
+ 30/143 [=====>........................] - ETA: 1s - loss: 0.2565 - coeff_determination: 0.0294 - RMSE_PM: 211.7962
+ 35/143 [======>.......................] - ETA: 1s - loss: 0.2562 - coeff_determination: 0.0018 - RMSE_PM: 204.4766
+ 40/143 [=======>......................] - ETA: 1s - loss: 0.2633 - coeff_determination: 0.0048 - RMSE_PM: 209.7521
+ 45/143 [========>.....................] - ETA: 1s - loss: 0.2644 - coeff_determination: 0.0028 - RMSE_PM: 209.2174
+ 50/143 [=========>....................] - ETA: 1s - loss: 0.2584 - coeff_determination: 0.0071 - RMSE_PM: 206.8511
+ 55/143 [==========>...................] - ETA: 1s - loss: 0.2596 - coeff_determination: 0.0065 - RMSE_PM: 208.6292
+ 60/143 [===========>..................] - ETA: 1s - loss: 0.2657 - coeff_determination: 0.0011 - RMSE_PM: 211.1061
+ 65/143 [============>.................] - ETA: 0s - loss: 0.2638 - coeff_determination: 7.4310e-05 - RMSE_PM: 209.6558
+ 70/143 [=============>................] - ETA: 0s - loss: 0.2658 - coeff_determination: 0.0030 - RMSE_PM: 214.3358    
+ 75/143 [==============>...............] - ETA: 0s - loss: 0.2651 - coeff_determination: 0.0059 - RMSE_PM: 213.3500
+ 80/143 [===============>..............] - ETA: 0s - loss: 0.2606 - coeff_determination: 0.0156 - RMSE_PM: 211.0058
+ 85/143 [================>.............] - ETA: 0s - loss: 0.2604 - coeff_determination: 0.0158 - RMSE_PM: 210.4549
+ 90/143 [=================>............] - ETA: 0s - loss: 0.2612 - coeff_determination: 0.0171 - RMSE_PM: 211.3359
+ 94/143 [==================>...........] - ETA: 0s - loss: 0.2606 - coeff_determination: 0.0180 - RMSE_PM: 210.8632
+ 99/143 [===================>..........] - ETA: 0s - loss: 0.2592 - coeff_determination: 0.0204 - RMSE_PM: 210.0696
+104/143 [====================>.........] - ETA: 0s - loss: 0.2604 - coeff_determination: 0.0159 - RMSE_PM: 208.8168
+109/143 [=====================>........] - ETA: 0s - loss: 0.2622 - coeff_determination: 0.0168 - RMSE_PM: 209.2066
+114/143 [======================>.......] - ETA: 0s - loss: 0.2610 - coeff_determination: 0.0171 - RMSE_PM: 209.8707
+119/143 [=======================>......] - ETA: 0s - loss: 0.2605 - coeff_determination: 0.0141 - RMSE_PM: 210.9079
+124/143 [=========================>....] - ETA: 0s - loss: 0.2631 - coeff_determination: 0.0155 - RMSE_PM: 210.6635
+129/143 [==========================>...] - ETA: 0s - loss: 0.2620 - coeff_determination: 0.0158 - RMSE_PM: 210.7350
+134/143 [===========================>..] - ETA: 0s - loss: 0.2643 - coeff_determination: 0.0133 - RMSE_PM: 210.6691
+139/143 [============================>.] - ETA: 0s - loss: 0.2637 - coeff_determination: 0.0144 - RMSE_PM: 210.7368
+143/143 [==============================] - 2s 14ms/step - loss: 0.2633 - coeff_determination: 0.0138 - RMSE_PM: 211.4283 - val_loss: 0.3584 - val_coeff_determination: -0.3215 - val_RMSE_PM: 192.9670
+Epoch 9/50
+
+  1/143 [..............................] - ETA: 1s - loss: 0.2902 - coeff_determination: 0.1911 - RMSE_PM: 271.3789
+  5/143 [>.............................] - ETA: 2s - loss: 0.2505 - coeff_determination: 0.0981 - RMSE_PM: 242.6288
+  9/143 [>.............................] - ETA: 1s - loss: 0.2530 - coeff_determination: 0.0495 - RMSE_PM: 231.0033
+ 13/143 [=>............................] - ETA: 1s - loss: 0.2506 - coeff_determination: 0.0318 - RMSE_PM: 231.5065
+ 17/143 [==>...........................] - ETA: 1s - loss: 0.2528 - coeff_determination: -5.6516e-04 - RMSE_PM: 214.3965
+ 22/143 [===>..........................] - ETA: 1s - loss: 0.2575 - coeff_determination: 0.0181 - RMSE_PM: 222.4695     
+ 26/143 [====>.........................] - ETA: 1s - loss: 0.2574 - coeff_determination: 0.0204 - RMSE_PM: 222.9257
+ 30/143 [=====>........................] - ETA: 1s - loss: 0.2516 - coeff_determination: 0.0107 - RMSE_PM: 219.2116
+ 34/143 [======>.......................] - ETA: 1s - loss: 0.2608 - coeff_determination: 0.0125 - RMSE_PM: 223.1016
+ 38/143 [======>.......................] - ETA: 1s - loss: 0.2630 - coeff_determination: 0.0114 - RMSE_PM: 219.6623
+ 42/143 [=======>......................] - ETA: 1s - loss: 0.2682 - coeff_determination: 0.0096 - RMSE_PM: 218.8712
+ 46/143 [========>.....................] - ETA: 1s - loss: 0.2704 - coeff_determination: 0.0135 - RMSE_PM: 220.0068
+ 50/143 [=========>....................] - ETA: 1s - loss: 0.2703 - coeff_determination: 0.0130 - RMSE_PM: 222.2276
+ 54/143 [==========>...................] - ETA: 1s - loss: 0.2670 - coeff_determination: 0.0087 - RMSE_PM: 217.9025
+ 58/143 [===========>..................] - ETA: 1s - loss: 0.2654 - coeff_determination: 0.0097 - RMSE_PM: 223.0769
+ 62/143 [============>.................] - ETA: 1s - loss: 0.2601 - coeff_determination: 0.0159 - RMSE_PM: 218.4331
+ 66/143 [============>.................] - ETA: 1s - loss: 0.2581 - coeff_determination: 0.0149 - RMSE_PM: 217.2471
+ 70/143 [=============>................] - ETA: 1s - loss: 0.2555 - coeff_determination: 0.0172 - RMSE_PM: 215.9937
+ 74/143 [==============>...............] - ETA: 0s - loss: 0.2557 - coeff_determination: 0.0154 - RMSE_PM: 214.4069
+ 77/143 [===============>..............] - ETA: 0s - loss: 0.2545 - coeff_determination: 0.0091 - RMSE_PM: 212.4355
+ 81/143 [===============>..............] - ETA: 0s - loss: 0.2544 - coeff_determination: 0.0065 - RMSE_PM: 211.5484
+ 85/143 [================>.............] - ETA: 0s - loss: 0.2537 - coeff_determination: 0.0077 - RMSE_PM: 210.9376
+ 89/143 [=================>............] - ETA: 0s - loss: 0.2548 - coeff_determination: 0.0089 - RMSE_PM: 213.8921
+ 93/143 [==================>...........] - ETA: 0s - loss: 0.2544 - coeff_determination: 0.0065 - RMSE_PM: 212.2270
+ 98/143 [===================>..........] - ETA: 0s - loss: 0.2555 - coeff_determination: 0.0071 - RMSE_PM: 210.9199
+102/143 [====================>.........] - ETA: 0s - loss: 0.2565 - coeff_determination: 0.0060 - RMSE_PM: 210.8526
+106/143 [=====================>........] - ETA: 0s - loss: 0.2566 - coeff_determination: 0.0065 - RMSE_PM: 211.1950
+110/143 [======================>.......] - ETA: 0s - loss: 0.2553 - coeff_determination: 0.0096 - RMSE_PM: 211.1918
+113/143 [======================>.......] - ETA: 0s - loss: 0.2555 - coeff_determination: 0.0120 - RMSE_PM: 211.7503
+117/143 [=======================>......] - ETA: 0s - loss: 0.2575 - coeff_determination: 0.0114 - RMSE_PM: 211.9825
+121/143 [========================>.....] - ETA: 0s - loss: 0.2577 - coeff_determination: 0.0122 - RMSE_PM: 212.2164
+125/143 [=========================>....] - ETA: 0s - loss: 0.2578 - coeff_determination: 0.0128 - RMSE_PM: 211.9393
+129/143 [==========================>...] - ETA: 0s - loss: 0.2575 - coeff_determination: 0.0137 - RMSE_PM: 211.8417
+134/143 [===========================>..] - ETA: 0s - loss: 0.2573 - coeff_determination: 0.0111 - RMSE_PM: 211.6318
+139/143 [============================>.] - ETA: 0s - loss: 0.2600 - coeff_determination: 0.0089 - RMSE_PM: 213.1424
+143/143 [==============================] - 2s 15ms/step - loss: 0.2585 - coeff_determination: 0.0103 - RMSE_PM: 212.1477 - val_loss: 0.3604 - val_coeff_determination: -0.3277 - val_RMSE_PM: 192.9123
+Epoch 10/50
+
+  1/143 [..............................] - ETA: 2s - loss: 0.2255 - coeff_determination: -0.0781 - RMSE_PM: 147.3381
+  4/143 [..............................] - ETA: 2s - loss: 0.2496 - coeff_determination: -0.0101 - RMSE_PM: 190.6274
+  8/143 [>.............................] - ETA: 2s - loss: 0.2405 - coeff_determination: 0.0357 - RMSE_PM: 190.0097 
+ 12/143 [=>............................] - ETA: 2s - loss: 0.2538 - coeff_determination: 0.0290 - RMSE_PM: 195.5961
+ 16/143 [==>...........................] - ETA: 1s - loss: 0.2563 - coeff_determination: 0.0310 - RMSE_PM: 193.1820
+ 20/143 [===>..........................] - ETA: 1s - loss: 0.2574 - coeff_determination: 0.0219 - RMSE_PM: 190.1231
+ 24/143 [====>.........................] - ETA: 1s - loss: 0.2686 - coeff_determination: 0.0197 - RMSE_PM: 195.8147
+ 29/143 [=====>........................] - ETA: 1s - loss: 0.2625 - coeff_determination: 0.0255 - RMSE_PM: 198.2187
+ 33/143 [=====>........................] - ETA: 1s - loss: 0.2593 - coeff_determination: 0.0209 - RMSE_PM: 200.1378
+ 37/143 [======>.......................] - ETA: 1s - loss: 0.2631 - coeff_determination: 0.0169 - RMSE_PM: 200.5598
+ 42/143 [=======>......................] - ETA: 1s - loss: 0.2659 - coeff_determination: 0.0196 - RMSE_PM: 202.9841
+ 47/143 [========>.....................] - ETA: 1s - loss: 0.2617 - coeff_determination: 0.0238 - RMSE_PM: 200.8740
+ 51/143 [=========>....................] - ETA: 1s - loss: 0.2655 - coeff_determination: 0.0178 - RMSE_PM: 202.1867
+ 55/143 [==========>...................] - ETA: 1s - loss: 0.2645 - coeff_determination: 0.0219 - RMSE_PM: 200.6877
+ 58/143 [===========>..................] - ETA: 1s - loss: 0.2648 - coeff_determination: 0.0222 - RMSE_PM: 200.0526
+ 62/143 [============>.................] - ETA: 1s - loss: 0.2666 - coeff_determination: 0.0209 - RMSE_PM: 200.7431
+ 67/143 [=============>................] - ETA: 1s - loss: 0.2631 - coeff_determination: 0.0150 - RMSE_PM: 196.6296
+ 72/143 [==============>...............] - ETA: 1s - loss: 0.2620 - coeff_determination: 0.0119 - RMSE_PM: 197.0149
+ 77/143 [===============>..............] - ETA: 0s - loss: 0.2625 - coeff_determination: 0.0024 - RMSE_PM: 197.8500
+ 81/143 [===============>..............] - ETA: 0s - loss: 0.2627 - coeff_determination: -4.8171e-05 - RMSE_PM: 198.0569
+ 86/143 [=================>............] - ETA: 0s - loss: 0.2620 - coeff_determination: -0.0027 - RMSE_PM: 201.7979    
+ 90/143 [=================>............] - ETA: 0s - loss: 0.2609 - coeff_determination: -0.0024 - RMSE_PM: 201.4692
+ 95/143 [==================>...........] - ETA: 0s - loss: 0.2578 - coeff_determination: -3.6784e-04 - RMSE_PM: 199.9759
+100/143 [===================>..........] - ETA: 0s - loss: 0.2590 - coeff_determination: 0.0030 - RMSE_PM: 201.8660     
+105/143 [=====================>........] - ETA: 0s - loss: 0.2589 - coeff_determination: 0.0020 - RMSE_PM: 201.5892
+110/143 [======================>.......] - ETA: 0s - loss: 0.2578 - coeff_determination: 0.0032 - RMSE_PM: 201.7894
+115/143 [=======================>......] - ETA: 0s - loss: 0.2573 - coeff_determination: 0.0015 - RMSE_PM: 201.4338
+119/143 [=======================>......] - ETA: 0s - loss: 0.2585 - coeff_determination: -3.8434e-04 - RMSE_PM: 204.4319
+125/143 [=========================>....] - ETA: 0s - loss: 0.2608 - coeff_determination: 3.9272e-04 - RMSE_PM: 204.9206 
+129/143 [==========================>...] - ETA: 0s - loss: 0.2622 - coeff_determination: 0.0012 - RMSE_PM: 204.8175    
+134/143 [===========================>..] - ETA: 0s - loss: 0.2618 - coeff_determination: 0.0023 - RMSE_PM: 204.9043
+139/143 [============================>.] - ETA: 0s - loss: 0.2613 - coeff_determination: -5.3249e-04 - RMSE_PM: 204.5729
+143/143 [==============================] - 2s 14ms/step - loss: 0.2637 - coeff_determination: -0.0016 - RMSE_PM: 205.4730 - val_loss: 0.3485 - val_coeff_determination: -0.2734 - val_RMSE_PM: 190.7543
+Epoch 11/50
+
+  1/143 [..............................] - ETA: 2s - loss: 0.2562 - coeff_determination: -0.0809 - RMSE_PM: 203.3536
+  5/143 [>.............................] - ETA: 2s - loss: 0.2472 - coeff_determination: 0.0270 - RMSE_PM: 191.5296 
+ 10/143 [=>............................] - ETA: 1s - loss: 0.2654 - coeff_determination: -0.0171 - RMSE_PM: 190.4769
+ 15/143 [==>...........................] - ETA: 1s - loss: 0.2736 - coeff_determination: -0.0289 - RMSE_PM: 195.0006
+ 20/143 [===>..........................] - ETA: 1s - loss: 0.2805 - coeff_determination: -0.0205 - RMSE_PM: 203.6477
+ 25/143 [====>.........................] - ETA: 1s - loss: 0.2768 - coeff_determination: -0.0056 - RMSE_PM: 205.6758
+ 30/143 [=====>........................] - ETA: 1s - loss: 0.2834 - coeff_determination: -0.0061 - RMSE_PM: 203.5757
+ 34/143 [======>.......................] - ETA: 1s - loss: 0.2828 - coeff_determination: -0.0075 - RMSE_PM: 203.6866
+ 39/143 [=======>......................] - ETA: 1s - loss: 0.2737 - coeff_determination: 0.0064 - RMSE_PM: 204.6146 
+ 44/143 [========>.....................] - ETA: 1s - loss: 0.2710 - coeff_determination: 0.0085 - RMSE_PM: 207.2712
+ 49/143 [=========>....................] - ETA: 1s - loss: 0.2659 - coeff_determination: 0.0131 - RMSE_PM: 204.4238
+ 54/143 [==========>...................] - ETA: 1s - loss: 0.2662 - coeff_determination: 0.0097 - RMSE_PM: 203.2804
+ 59/143 [===========>..................] - ETA: 1s - loss: 0.2653 - coeff_determination: 0.0056 - RMSE_PM: 202.8340
+ 64/143 [============>.................] - ETA: 1s - loss: 0.2643 - coeff_determination: 0.0117 - RMSE_PM: 203.2016
+ 69/143 [=============>................] - ETA: 0s - loss: 0.2599 - coeff_determination: 0.0102 - RMSE_PM: 200.6200
+ 74/143 [==============>...............] - ETA: 0s - loss: 0.2550 - coeff_determination: 0.0139 - RMSE_PM: 198.8482
+ 79/143 [===============>..............] - ETA: 0s - loss: 0.2538 - coeff_determination: 0.0193 - RMSE_PM: 198.7636
+ 85/143 [================>.............] - ETA: 0s - loss: 0.2530 - coeff_determination: 0.0199 - RMSE_PM: 198.0271
+ 90/143 [=================>............] - ETA: 0s - loss: 0.2503 - coeff_determination: 0.0232 - RMSE_PM: 196.9507
+ 95/143 [==================>...........] - ETA: 0s - loss: 0.2489 - coeff_determination: 0.0212 - RMSE_PM: 196.9287
+100/143 [===================>..........] - ETA: 0s - loss: 0.2478 - coeff_determination: 0.0204 - RMSE_PM: 195.5077
+104/143 [====================>.........] - ETA: 0s - loss: 0.2470 - coeff_determination: 0.0259 - RMSE_PM: 195.3032
+109/143 [=====================>........] - ETA: 0s - loss: 0.2455 - coeff_determination: 0.0275 - RMSE_PM: 194.0730
+114/143 [======================>.......] - ETA: 0s - loss: 0.2468 - coeff_determination: 0.0242 - RMSE_PM: 197.6484
+119/143 [=======================>......] - ETA: 0s - loss: 0.2473 - coeff_determination: 0.0271 - RMSE_PM: 197.0232
+124/143 [=========================>....] - ETA: 0s - loss: 0.2477 - coeff_determination: 0.0291 - RMSE_PM: 196.5656
+129/143 [==========================>...] - ETA: 0s - loss: 0.2482 - coeff_determination: 0.0332 - RMSE_PM: 196.0735
+134/143 [===========================>..] - ETA: 0s - loss: 0.2487 - coeff_determination: 0.0335 - RMSE_PM: 195.6508
+139/143 [============================>.] - ETA: 0s - loss: 0.2501 - coeff_determination: 0.0341 - RMSE_PM: 196.0165
+143/143 [==============================] - 2s 13ms/step - loss: 0.2513 - coeff_determination: 0.0346 - RMSE_PM: 196.5191 - val_loss: 0.3309 - val_coeff_determination: -0.2074 - val_RMSE_PM: 187.6736
+Epoch 12/50
+
+  1/143 [..............................] - ETA: 2s - loss: 0.3202 - coeff_determination: 0.2277 - RMSE_PM: 220.2160
+  6/143 [>.............................] - ETA: 1s - loss: 0.2560 - coeff_determination: 0.0420 - RMSE_PM: 197.9537
+ 11/143 [=>............................] - ETA: 1s - loss: 0.2582 - coeff_determination: 0.0339 - RMSE_PM: 209.2797
+ 16/143 [==>...........................] - ETA: 1s - loss: 0.2607 - coeff_determination: 0.0304 - RMSE_PM: 211.4987
+ 21/143 [===>..........................] - ETA: 1s - loss: 0.2503 - coeff_determination: 0.0480 - RMSE_PM: 200.5004
+ 25/143 [====>.........................] - ETA: 1s - loss: 0.2469 - coeff_determination: 0.0450 - RMSE_PM: 199.5498
+ 30/143 [=====>........................] - ETA: 1s - loss: 0.2501 - coeff_determination: 0.0520 - RMSE_PM: 200.5199
+ 36/143 [======>.......................] - ETA: 1s - loss: 0.2567 - coeff_determination: 0.0411 - RMSE_PM: 203.3496
+ 41/143 [=======>......................] - ETA: 1s - loss: 0.2481 - coeff_determination: 0.0493 - RMSE_PM: 199.5666
+ 46/143 [========>.....................] - ETA: 1s - loss: 0.2461 - coeff_determination: 0.0535 - RMSE_PM: 201.0679
+ 50/143 [=========>....................] - ETA: 1s - loss: 0.2477 - coeff_determination: 0.0404 - RMSE_PM: 199.1004
+ 55/143 [==========>...................] - ETA: 1s - loss: 0.2467 - coeff_determination: 0.0482 - RMSE_PM: 199.1158
+ 60/143 [===========>..................] - ETA: 1s - loss: 0.2476 - coeff_determination: 0.0465 - RMSE_PM: 198.2915
+ 65/143 [============>.................] - ETA: 0s - loss: 0.2494 - coeff_determination: 0.0409 - RMSE_PM: 199.0167
+ 70/143 [=============>................] - ETA: 0s - loss: 0.2492 - coeff_determination: 0.0411 - RMSE_PM: 198.6197
+ 75/143 [==============>...............] - ETA: 0s - loss: 0.2482 - coeff_determination: 0.0394 - RMSE_PM: 198.9779
+ 80/143 [===============>..............] - ETA: 0s - loss: 0.2459 - coeff_determination: 0.0351 - RMSE_PM: 198.1950
+ 85/143 [================>.............] - ETA: 0s - loss: 0.2469 - coeff_determination: 0.0373 - RMSE_PM: 198.9954
+ 90/143 [=================>............] - ETA: 0s - loss: 0.2496 - coeff_determination: 0.0349 - RMSE_PM: 201.8337
+ 95/143 [==================>...........] - ETA: 0s - loss: 0.2487 - coeff_determination: 0.0376 - RMSE_PM: 202.8100
+100/143 [===================>..........] - ETA: 0s - loss: 0.2469 - coeff_determination: 0.0372 - RMSE_PM: 202.6548
+105/143 [=====================>........] - ETA: 0s - loss: 0.2466 - coeff_determination: 0.0403 - RMSE_PM: 203.8280
+110/143 [======================>.......] - ETA: 0s - loss: 0.2490 - coeff_determination: 0.0408 - RMSE_PM: 204.9463
+116/143 [=======================>......] - ETA: 0s - loss: 0.2491 - coeff_determination: 0.0320 - RMSE_PM: 204.0826
+120/143 [========================>.....] - ETA: 0s - loss: 0.2491 - coeff_determination: 0.0330 - RMSE_PM: 203.8111
+126/143 [=========================>....] - ETA: 0s - loss: 0.2467 - coeff_determination: 0.0354 - RMSE_PM: 202.1704
+131/143 [==========================>...] - ETA: 0s - loss: 0.2452 - coeff_determination: 0.0373 - RMSE_PM: 201.7390
+135/143 [===========================>..] - ETA: 0s - loss: 0.2461 - coeff_determination: 0.0372 - RMSE_PM: 202.0003
+140/143 [============================>.] - ETA: 0s - loss: 0.2466 - coeff_determination: 0.0366 - RMSE_PM: 202.3702
+143/143 [==============================] - 2s 13ms/step - loss: 0.2483 - coeff_determination: 0.0376 - RMSE_PM: 203.6917 - val_loss: 0.3679 - val_coeff_determination: -0.3510 - val_RMSE_PM: 193.9270
+Epoch 13/50
+
+  1/143 [..............................] - ETA: 2s - loss: 0.1389 - coeff_determination: 0.0132 - RMSE_PM: 148.6642
+  6/143 [>.............................] - ETA: 1s - loss: 0.2317 - coeff_determination: 0.0296 - RMSE_PM: 188.0552
+ 11/143 [=>............................] - ETA: 1s - loss: 0.2277 - coeff_determination: 0.0723 - RMSE_PM: 187.9174
+ 16/143 [==>...........................] - ETA: 1s - loss: 0.2350 - coeff_determination: 0.0384 - RMSE_PM: 188.6169
+ 21/143 [===>..........................] - ETA: 1s - loss: 0.2461 - coeff_determination: 0.0056 - RMSE_PM: 186.0519
+ 25/143 [====>.........................] - ETA: 1s - loss: 0.2521 - coeff_determination: 7.1926e-04 - RMSE_PM: 200.2094
+ 30/143 [=====>........................] - ETA: 1s - loss: 0.2484 - coeff_determination: 0.0029 - RMSE_PM: 202.7014    
+ 35/143 [======>.......................] - ETA: 1s - loss: 0.2521 - coeff_determination: 0.0062 - RMSE_PM: 204.8519
+ 40/143 [=======>......................] - ETA: 1s - loss: 0.2572 - coeff_determination: 0.0132 - RMSE_PM: 212.7712
+ 45/143 [========>.....................] - ETA: 1s - loss: 0.2589 - coeff_determination: 0.0106 - RMSE_PM: 213.0432
+ 50/143 [=========>....................] - ETA: 1s - loss: 0.2658 - coeff_determination: 0.0162 - RMSE_PM: 215.6156
+ 55/143 [==========>...................] - ETA: 1s - loss: 0.2677 - coeff_determination: 0.0116 - RMSE_PM: 216.3344
+ 60/143 [===========>..................] - ETA: 1s - loss: 0.2647 - coeff_determination: 0.0107 - RMSE_PM: 214.8184
+ 65/143 [============>.................] - ETA: 0s - loss: 0.2618 - coeff_determination: 0.0149 - RMSE_PM: 211.7194
+ 70/143 [=============>................] - ETA: 0s - loss: 0.2604 - coeff_determination: 0.0127 - RMSE_PM: 211.0595
+ 75/143 [==============>...............] - ETA: 0s - loss: 0.2627 - coeff_determination: 0.0123 - RMSE_PM: 213.5316
+ 80/143 [===============>..............] - ETA: 0s - loss: 0.2661 - coeff_determination: 0.0089 - RMSE_PM: 214.8731
+ 85/143 [================>.............] - ETA: 0s - loss: 0.2663 - coeff_determination: 0.0092 - RMSE_PM: 215.5750
+ 90/143 [=================>............] - ETA: 0s - loss: 0.2698 - coeff_determination: 0.0137 - RMSE_PM: 216.9570
+ 95/143 [==================>...........] - ETA: 0s - loss: 0.2681 - coeff_determination: 0.0197 - RMSE_PM: 215.2949
+100/143 [===================>..........] - ETA: 0s - loss: 0.2687 - coeff_determination: 0.0188 - RMSE_PM: 215.5799
+105/143 [=====================>........] - ETA: 0s - loss: 0.2662 - coeff_determination: 0.0192 - RMSE_PM: 213.7558
+109/143 [=====================>........] - ETA: 0s - loss: 0.2672 - coeff_determination: 0.0173 - RMSE_PM: 214.5556
+114/143 [======================>.......] - ETA: 0s - loss: 0.2667 - coeff_determination: 0.0151 - RMSE_PM: 212.9554
+119/143 [=======================>......] - ETA: 0s - loss: 0.2664 - coeff_determination: 0.0107 - RMSE_PM: 212.9056
+124/143 [=========================>....] - ETA: 0s - loss: 0.2644 - coeff_determination: 0.0085 - RMSE_PM: 211.5594
+129/143 [==========================>...] - ETA: 0s - loss: 0.2624 - coeff_determination: 0.0107 - RMSE_PM: 210.6088
+134/143 [===========================>..] - ETA: 0s - loss: 0.2630 - coeff_determination: 0.0090 - RMSE_PM: 210.6720
+139/143 [============================>.] - ETA: 0s - loss: 0.2648 - coeff_determination: 0.0116 - RMSE_PM: 211.3072
+143/143 [==============================] - 2s 13ms/step - loss: 0.2657 - coeff_determination: 0.0106 - RMSE_PM: 211.7413 - val_loss: 0.3403 - val_coeff_determination: -0.2368 - val_RMSE_PM: 189.8878
+Epoch 14/50
+
+  1/143 [..............................] - ETA: 2s - loss: 0.2149 - coeff_determination: 0.0864 - RMSE_PM: 286.9598
+  6/143 [>.............................] - ETA: 1s - loss: 0.2411 - coeff_determination: 0.1006 - RMSE_PM: 234.6063
+ 11/143 [=>............................] - ETA: 1s - loss: 0.2779 - coeff_determination: 0.0446 - RMSE_PM: 228.1304
+ 16/143 [==>...........................] - ETA: 1s - loss: 0.2647 - coeff_determination: 0.0411 - RMSE_PM: 224.3706
+ 21/143 [===>..........................] - ETA: 1s - loss: 0.2529 - coeff_determination: 0.0254 - RMSE_PM: 214.4934
+ 26/143 [====>.........................] - ETA: 1s - loss: 0.2524 - coeff_determination: 0.0149 - RMSE_PM: 211.0606
+ 31/143 [=====>........................] - ETA: 1s - loss: 0.2573 - coeff_determination: 0.0279 - RMSE_PM: 213.9692
+ 36/143 [======>.......................] - ETA: 1s - loss: 0.2540 - coeff_determination: 0.0346 - RMSE_PM: 209.7447
+ 41/143 [=======>......................] - ETA: 1s - loss: 0.2541 - coeff_determination: 0.0344 - RMSE_PM: 204.8376
+ 46/143 [========>.....................] - ETA: 1s - loss: 0.2587 - coeff_determination: 0.0294 - RMSE_PM: 212.5059
+ 51/143 [=========>....................] - ETA: 1s - loss: 0.2688 - coeff_determination: 0.0219 - RMSE_PM: 217.2956
+ 56/143 [==========>...................] - ETA: 1s - loss: 0.2770 - coeff_determination: 0.0220 - RMSE_PM: 215.3899
+ 61/143 [===========>..................] - ETA: 1s - loss: 0.2724 - coeff_determination: 0.0199 - RMSE_PM: 211.3423
+ 66/143 [============>.................] - ETA: 0s - loss: 0.2721 - coeff_determination: 0.0134 - RMSE_PM: 213.1641
+ 71/143 [=============>................] - ETA: 0s - loss: 0.2716 - coeff_determination: 0.0151 - RMSE_PM: 211.6390
+ 76/143 [==============>...............] - ETA: 0s - loss: 0.2705 - coeff_determination: 0.0154 - RMSE_PM: 211.5269
+ 81/143 [===============>..............] - ETA: 0s - loss: 0.2682 - coeff_determination: 0.0171 - RMSE_PM: 209.7324
+ 85/143 [================>.............] - ETA: 0s - loss: 0.2661 - coeff_determination: 0.0207 - RMSE_PM: 210.3070
+ 91/143 [==================>...........] - ETA: 0s - loss: 0.2661 - coeff_determination: 0.0137 - RMSE_PM: 207.9586
+ 95/143 [==================>...........] - ETA: 0s - loss: 0.2678 - coeff_determination: 0.0161 - RMSE_PM: 208.8095
+101/143 [====================>.........] - ETA: 0s - loss: 0.2672 - coeff_determination: 0.0163 - RMSE_PM: 209.0900
+106/143 [=====================>........] - ETA: 0s - loss: 0.2681 - coeff_determination: 0.0175 - RMSE_PM: 208.3685
+111/143 [======================>.......] - ETA: 0s - loss: 0.2695 - coeff_determination: 0.0203 - RMSE_PM: 208.7884
+116/143 [=======================>......] - ETA: 0s - loss: 0.2671 - coeff_determination: 0.0232 - RMSE_PM: 208.7844
+121/143 [========================>.....] - ETA: 0s - loss: 0.2685 - coeff_determination: 0.0225 - RMSE_PM: 208.4451
+126/143 [=========================>....] - ETA: 0s - loss: 0.2709 - coeff_determination: 0.0218 - RMSE_PM: 209.2144
+131/143 [==========================>...] - ETA: 0s - loss: 0.2703 - coeff_determination: 0.0197 - RMSE_PM: 208.8961
+136/143 [===========================>..] - ETA: 0s - loss: 0.2684 - coeff_determination: 0.0250 - RMSE_PM: 209.0642
+141/143 [============================>.] - ETA: 0s - loss: 0.2675 - coeff_determination: 0.0218 - RMSE_PM: 207.7335
+143/143 [==============================] - 2s 13ms/step - loss: 0.2665 - coeff_determination: 0.0189 - RMSE_PM: 206.8432 - val_loss: 0.3383 - val_coeff_determination: -0.2282 - val_RMSE_PM: 188.9805
+Epoch 15/50
+
+  1/143 [..............................] - ETA: 2s - loss: 0.1893 - coeff_determination: 0.2196 - RMSE_PM: 221.4772
+  6/143 [>.............................] - ETA: 1s - loss: 0.2172 - coeff_determination: 0.1218 - RMSE_PM: 227.3997
+ 11/143 [=>............................] - ETA: 1s - loss: 0.2249 - coeff_determination: 0.0750 - RMSE_PM: 223.4236
+ 16/143 [==>...........................] - ETA: 1s - loss: 0.2184 - coeff_determination: 0.0664 - RMSE_PM: 211.6490
+ 21/143 [===>..........................] - ETA: 1s - loss: 0.2149 - coeff_determination: 0.0752 - RMSE_PM: 204.4352
+ 26/143 [====>.........................] - ETA: 1s - loss: 0.2279 - coeff_determination: 0.0600 - RMSE_PM: 207.7864
+ 31/143 [=====>........................] - ETA: 1s - loss: 0.2282 - coeff_determination: 0.0558 - RMSE_PM: 205.5323
+ 36/143 [======>.......................] - ETA: 1s - loss: 0.2295 - coeff_determination: 0.0436 - RMSE_PM: 205.0166
+ 41/143 [=======>......................] - ETA: 1s - loss: 0.2322 - coeff_determination: 0.0247 - RMSE_PM: 202.2094
+ 46/143 [========>.....................] - ETA: 1s - loss: 0.2347 - coeff_determination: 0.0345 - RMSE_PM: 203.1385
+ 50/143 [=========>....................] - ETA: 1s - loss: 0.2337 - coeff_determination: 0.0374 - RMSE_PM: 204.2305
+ 55/143 [==========>...................] - ETA: 1s - loss: 0.2347 - coeff_determination: 0.0430 - RMSE_PM: 203.2305
+ 60/143 [===========>..................] - ETA: 1s - loss: 0.2391 - coeff_determination: 0.0382 - RMSE_PM: 203.6218
+ 65/143 [============>.................] - ETA: 0s - loss: 0.2384 - coeff_determination: 0.0423 - RMSE_PM: 202.8200
+ 70/143 [=============>................] - ETA: 0s - loss: 0.2413 - coeff_determination: 0.0434 - RMSE_PM: 203.7088
+ 75/143 [==============>...............] - ETA: 0s - loss: 0.2444 - coeff_determination: 0.0391 - RMSE_PM: 206.5211
+ 81/143 [===============>..............] - ETA: 0s - loss: 0.2443 - coeff_determination: 0.0381 - RMSE_PM: 203.7823
+ 85/143 [================>.............] - ETA: 0s - loss: 0.2408 - coeff_determination: 0.0390 - RMSE_PM: 202.3878
+ 90/143 [=================>............] - ETA: 0s - loss: 0.2416 - coeff_determination: 0.0363 - RMSE_PM: 202.4363
+ 95/143 [==================>...........] - ETA: 0s - loss: 0.2403 - coeff_determination: 0.0429 - RMSE_PM: 201.0226
+100/143 [===================>..........] - ETA: 0s - loss: 0.2410 - coeff_determination: 0.0410 - RMSE_PM: 201.1777
+105/143 [=====================>........] - ETA: 0s - loss: 0.2394 - coeff_determination: 0.0457 - RMSE_PM: 199.2838
+110/143 [======================>.......] - ETA: 0s - loss: 0.2396 - coeff_determination: 0.0463 - RMSE_PM: 198.2524
+115/143 [=======================>......] - ETA: 0s - loss: 0.2403 - coeff_determination: 0.0418 - RMSE_PM: 199.3771
+120/143 [========================>.....] - ETA: 0s - loss: 0.2396 - coeff_determination: 0.0434 - RMSE_PM: 199.1121
+125/143 [=========================>....] - ETA: 0s - loss: 0.2385 - coeff_determination: 0.0430 - RMSE_PM: 198.0119
+130/143 [==========================>...] - ETA: 0s - loss: 0.2389 - coeff_determination: 0.0434 - RMSE_PM: 196.9576
+134/143 [===========================>..] - ETA: 0s - loss: 0.2399 - coeff_determination: 0.0413 - RMSE_PM: 197.7495
+139/143 [============================>.] - ETA: 0s - loss: 0.2389 - coeff_determination: 0.0381 - RMSE_PM: 197.1880
+143/143 [==============================] - 2s 13ms/step - loss: 0.2410 - coeff_determination: 0.0379 - RMSE_PM: 200.1006 - val_loss: 0.3647 - val_coeff_determination: -0.3329 - val_RMSE_PM: 193.0165
+Epoch 16/50
+
+  1/143 [..............................] - ETA: 2s - loss: 0.2864 - coeff_determination: -2.9445e-05 - RMSE_PM: 220.4348
+  6/143 [>.............................] - ETA: 1s - loss: 0.2323 - coeff_determination: -0.0523 - RMSE_PM: 185.6201    
+ 11/143 [=>............................] - ETA: 1s - loss: 0.2395 - coeff_determination: 0.0033 - RMSE_PM: 185.8889 
+ 16/143 [==>...........................] - ETA: 1s - loss: 0.2456 - coeff_determination: 0.0036 - RMSE_PM: 183.7013
+ 21/143 [===>..........................] - ETA: 1s - loss: 0.2478 - coeff_determination: 0.0038 - RMSE_PM: 188.5175
+ 26/143 [====>.........................] - ETA: 1s - loss: 0.2519 - coeff_determination: 0.0202 - RMSE_PM: 199.3166
+ 31/143 [=====>........................] - ETA: 1s - loss: 0.2468 - coeff_determination: 0.0248 - RMSE_PM: 195.3083
+ 36/143 [======>.......................] - ETA: 1s - loss: 0.2456 - coeff_determination: 0.0280 - RMSE_PM: 194.0747
+ 41/143 [=======>......................] - ETA: 1s - loss: 0.2437 - coeff_determination: 0.0417 - RMSE_PM: 192.5142
+ 46/143 [========>.....................] - ETA: 1s - loss: 0.2438 - coeff_determination: 0.0401 - RMSE_PM: 192.4252
+ 51/143 [=========>....................] - ETA: 1s - loss: 0.2389 - coeff_determination: 0.0498 - RMSE_PM: 191.6544
+ 56/143 [==========>...................] - ETA: 1s - loss: 0.2459 - coeff_determination: 0.0453 - RMSE_PM: 193.8615
+ 61/143 [===========>..................] - ETA: 1s - loss: 0.2469 - coeff_determination: 0.0527 - RMSE_PM: 192.9216
+ 66/143 [============>.................] - ETA: 0s - loss: 0.2445 - coeff_determination: 0.0587 - RMSE_PM: 192.1976
+ 70/143 [=============>................] - ETA: 0s - loss: 0.2474 - coeff_determination: 0.0594 - RMSE_PM: 194.9847
+ 75/143 [==============>...............] - ETA: 0s - loss: 0.2460 - coeff_determination: 0.0601 - RMSE_PM: 194.6491
+ 80/143 [===============>..............] - ETA: 0s - loss: 0.2470 - coeff_determination: 0.0614 - RMSE_PM: 194.8971
+ 85/143 [================>.............] - ETA: 0s - loss: 0.2494 - coeff_determination: 0.0590 - RMSE_PM: 194.5953
+ 90/143 [=================>............] - ETA: 0s - loss: 0.2476 - coeff_determination: 0.0559 - RMSE_PM: 194.3297
+ 95/143 [==================>...........] - ETA: 0s - loss: 0.2492 - coeff_determination: 0.0558 - RMSE_PM: 194.2650
+100/143 [===================>..........] - ETA: 0s - loss: 0.2513 - coeff_determination: 0.0527 - RMSE_PM: 194.7701
+105/143 [=====================>........] - ETA: 0s - loss: 0.2554 - coeff_determination: 0.0490 - RMSE_PM: 198.4166
+110/143 [======================>.......] - ETA: 0s - loss: 0.2534 - coeff_determination: 0.0497 - RMSE_PM: 198.1458
+115/143 [=======================>......] - ETA: 0s - loss: 0.2495 - coeff_determination: 0.0516 - RMSE_PM: 196.4367
+120/143 [========================>.....] - ETA: 0s - loss: 0.2488 - coeff_determination: 0.0514 - RMSE_PM: 196.9156
+125/143 [=========================>....] - ETA: 0s - loss: 0.2469 - coeff_determination: 0.0519 - RMSE_PM: 196.7743
+130/143 [==========================>...] - ETA: 0s - loss: 0.2493 - coeff_determination: 0.0481 - RMSE_PM: 197.0378
+135/143 [===========================>..] - ETA: 0s - loss: 0.2500 - coeff_determination: 0.0485 - RMSE_PM: 196.9010
+140/143 [============================>.] - ETA: 0s - loss: 0.2486 - coeff_determination: 0.0490 - RMSE_PM: 196.7457
+143/143 [==============================] - 2s 13ms/step - loss: 0.2517 - coeff_determination: 0.0483 - RMSE_PM: 197.7092 - val_loss: 0.3426 - val_coeff_determination: -0.2418 - val_RMSE_PM: 189.5295
+Epoch 17/50
+
+  1/143 [..............................] - ETA: 2s - loss: 0.1892 - coeff_determination: 0.0555 - RMSE_PM: 155.5053
+  6/143 [>.............................] - ETA: 1s - loss: 0.2178 - coeff_determination: 0.0838 - RMSE_PM: 180.1791
+ 11/143 [=>............................] - ETA: 1s - loss: 0.2451 - coeff_determination: 0.0769 - RMSE_PM: 203.5160
+ 16/143 [==>...........................] - ETA: 1s - loss: 0.2499 - coeff_determination: 0.0527 - RMSE_PM: 198.8392
+ 21/143 [===>..........................] - ETA: 1s - loss: 0.2562 - coeff_determination: 0.0602 - RMSE_PM: 205.4733
+ 26/143 [====>.........................] - ETA: 1s - loss: 0.2508 - coeff_determination: 0.0718 - RMSE_PM: 212.5010
+ 31/143 [=====>........................] - ETA: 1s - loss: 0.2539 - coeff_determination: 0.0679 - RMSE_PM: 209.1151
+ 36/143 [======>.......................] - ETA: 1s - loss: 0.2460 - coeff_determination: 0.0730 - RMSE_PM: 207.1197
+ 41/143 [=======>......................] - ETA: 1s - loss: 0.2454 - coeff_determination: 0.0741 - RMSE_PM: 206.3977
+ 47/143 [========>.....................] - ETA: 1s - loss: 0.2427 - coeff_determination: 0.0697 - RMSE_PM: 204.0190
+ 51/143 [=========>....................] - ETA: 1s - loss: 0.2443 - coeff_determination: 0.0706 - RMSE_PM: 204.9368
+ 56/143 [==========>...................] - ETA: 1s - loss: 0.2433 - coeff_determination: 0.0642 - RMSE_PM: 204.8687
+ 61/143 [===========>..................] - ETA: 1s - loss: 0.2425 - coeff_determination: 0.0595 - RMSE_PM: 204.2684
+ 66/143 [============>.................] - ETA: 0s - loss: 0.2434 - coeff_determination: 0.0606 - RMSE_PM: 202.6212
+ 71/143 [=============>................] - ETA: 0s - loss: 0.2434 - coeff_determination: 0.0603 - RMSE_PM: 203.1780
+ 76/143 [==============>...............] - ETA: 0s - loss: 0.2439 - coeff_determination: 0.0539 - RMSE_PM: 202.6987
+ 81/143 [===============>..............] - ETA: 0s - loss: 0.2448 - coeff_determination: 0.0542 - RMSE_PM: 201.8734
+ 86/143 [=================>............] - ETA: 0s - loss: 0.2429 - coeff_determination: 0.0536 - RMSE_PM: 201.2208
+ 91/143 [==================>...........] - ETA: 0s - loss: 0.2423 - coeff_determination: 0.0557 - RMSE_PM: 203.2931
+ 96/143 [===================>..........] - ETA: 0s - loss: 0.2463 - coeff_determination: 0.0551 - RMSE_PM: 205.6366
+101/143 [====================>.........] - ETA: 0s - loss: 0.2475 - coeff_determination: 0.0544 - RMSE_PM: 204.8494
+106/143 [=====================>........] - ETA: 0s - loss: 0.2503 - coeff_determination: 0.0527 - RMSE_PM: 206.7664
+111/143 [======================>.......] - ETA: 0s - loss: 0.2506 - coeff_determination: 0.0492 - RMSE_PM: 206.7235
+116/143 [=======================>......] - ETA: 0s - loss: 0.2502 - coeff_determination: 0.0480 - RMSE_PM: 205.7189
+121/143 [========================>.....] - ETA: 0s - loss: 0.2508 - coeff_determination: 0.0447 - RMSE_PM: 205.5682
+126/143 [=========================>....] - ETA: 0s - loss: 0.2488 - coeff_determination: 0.0457 - RMSE_PM: 204.3796
+132/143 [==========================>...] - ETA: 0s - loss: 0.2459 - coeff_determination: 0.0488 - RMSE_PM: 202.9633
+137/143 [===========================>..] - ETA: 0s - loss: 0.2449 - coeff_determination: 0.0484 - RMSE_PM: 202.8206
+142/143 [============================>.] - ETA: 0s - loss: 0.2451 - coeff_determination: 0.0491 - RMSE_PM: 202.5416
+143/143 [==============================] - 2s 13ms/step - loss: 0.2458 - coeff_determination: 0.0481 - RMSE_PM: 202.7025 - val_loss: 0.3694 - val_coeff_determination: -0.3561 - val_RMSE_PM: 193.4883
+Epoch 18/50
+
+  1/143 [..............................] - ETA: 2s - loss: 0.2506 - coeff_determination: 0.1673 - RMSE_PM: 179.5641
+  6/143 [>.............................] - ETA: 1s - loss: 0.2598 - coeff_determination: 0.0185 - RMSE_PM: 185.3151
+ 11/143 [=>............................] - ETA: 1s - loss: 0.2370 - coeff_determination: -0.0049 - RMSE_PM: 191.8769
+ 16/143 [==>...........................] - ETA: 1s - loss: 0.2364 - coeff_determination: 0.0155 - RMSE_PM: 198.0953 
+ 21/143 [===>..........................] - ETA: 1s - loss: 0.2393 - coeff_determination: 0.0380 - RMSE_PM: 200.0700
+ 26/143 [====>.........................] - ETA: 1s - loss: 0.2397 - coeff_determination: 0.0551 - RMSE_PM: 201.6284
+ 31/143 [=====>........................] - ETA: 1s - loss: 0.2338 - coeff_determination: 0.0430 - RMSE_PM: 196.7522
+ 36/143 [======>.......................] - ETA: 1s - loss: 0.2370 - coeff_determination: 0.0585 - RMSE_PM: 203.1998
+ 41/143 [=======>......................] - ETA: 1s - loss: 0.2372 - coeff_determination: 0.0519 - RMSE_PM: 201.9804
+ 46/143 [========>.....................] - ETA: 1s - loss: 0.2429 - coeff_determination: 0.0473 - RMSE_PM: 209.0243
+ 51/143 [=========>....................] - ETA: 1s - loss: 0.2442 - coeff_determination: 0.0446 - RMSE_PM: 209.1916
+ 56/143 [==========>...................] - ETA: 1s - loss: 0.2440 - coeff_determination: 0.0472 - RMSE_PM: 208.3690
+ 61/143 [===========>..................] - ETA: 1s - loss: 0.2462 - coeff_determination: 0.0429 - RMSE_PM: 207.7770
+ 66/143 [============>.................] - ETA: 0s - loss: 0.2497 - coeff_determination: 0.0447 - RMSE_PM: 208.2477
+ 71/143 [=============>................] - ETA: 0s - loss: 0.2516 - coeff_determination: 0.0411 - RMSE_PM: 210.6291
+ 76/143 [==============>...............] - ETA: 0s - loss: 0.2504 - coeff_determination: 0.0453 - RMSE_PM: 209.8958
+ 81/143 [===============>..............] - ETA: 0s - loss: 0.2522 - coeff_determination: 0.0461 - RMSE_PM: 210.1771
+ 85/143 [================>.............] - ETA: 0s - loss: 0.2545 - coeff_determination: 0.0453 - RMSE_PM: 212.6507
+ 90/143 [=================>............] - ETA: 0s - loss: 0.2583 - coeff_determination: 0.0469 - RMSE_PM: 212.2651
+ 96/143 [===================>..........] - ETA: 0s - loss: 0.2594 - coeff_determination: 0.0425 - RMSE_PM: 212.1494
+100/143 [===================>..........] - ETA: 0s - loss: 0.2597 - coeff_determination: 0.0438 - RMSE_PM: 211.7218
+105/143 [=====================>........] - ETA: 0s - loss: 0.2588 - coeff_determination: 0.0471 - RMSE_PM: 211.3666
+110/143 [======================>.......] - ETA: 0s - loss: 0.2588 - coeff_determination: 0.0447 - RMSE_PM: 211.7014
+115/143 [=======================>......] - ETA: 0s - loss: 0.2565 - coeff_determination: 0.0495 - RMSE_PM: 210.3710
+120/143 [========================>.....] - ETA: 0s - loss: 0.2548 - coeff_determination: 0.0563 - RMSE_PM: 210.4859
+125/143 [=========================>....] - ETA: 0s - loss: 0.2548 - coeff_determination: 0.0573 - RMSE_PM: 210.4351
+130/143 [==========================>...] - ETA: 0s - loss: 0.2536 - coeff_determination: 0.0542 - RMSE_PM: 208.7284
+135/143 [===========================>..] - ETA: 0s - loss: 0.2539 - coeff_determination: 0.0554 - RMSE_PM: 211.3060
+140/143 [============================>.] - ETA: 0s - loss: 0.2527 - coeff_determination: 0.0576 - RMSE_PM: 210.6442
+143/143 [==============================] - 2s 13ms/step - loss: 0.2526 - coeff_determination: 0.0574 - RMSE_PM: 209.9171 - val_loss: 0.3280 - val_coeff_determination: -0.1849 - val_RMSE_PM: 185.9575
+Epoch 19/50
+
+  1/143 [..............................] - ETA: 2s - loss: 0.2400 - coeff_determination: -0.1112 - RMSE_PM: 170.5238
+  6/143 [>.............................] - ETA: 1s - loss: 0.2610 - coeff_determination: 0.0178 - RMSE_PM: 202.8401 
+ 11/143 [=>............................] - ETA: 1s - loss: 0.2611 - coeff_determination: 0.0539 - RMSE_PM: 236.6023
+ 16/143 [==>...........................] - ETA: 1s - loss: 0.2571 - coeff_determination: 0.0495 - RMSE_PM: 232.0667
+ 21/143 [===>..........................] - ETA: 1s - loss: 0.2549 - coeff_determination: 0.0466 - RMSE_PM: 224.2195
+ 26/143 [====>.........................] - ETA: 1s - loss: 0.2611 - coeff_determination: 0.0452 - RMSE_PM: 222.1495
+ 31/143 [=====>........................] - ETA: 1s - loss: 0.2660 - coeff_determination: 0.0543 - RMSE_PM: 227.2477
+ 36/143 [======>.......................] - ETA: 1s - loss: 0.2615 - coeff_determination: 0.0548 - RMSE_PM: 221.0402
+ 41/143 [=======>......................] - ETA: 1s - loss: 0.2634 - coeff_determination: 0.0579 - RMSE_PM: 222.8330
+ 46/143 [========>.....................] - ETA: 1s - loss: 0.2606 - coeff_determination: 0.0574 - RMSE_PM: 217.6700
+ 51/143 [=========>....................] - ETA: 1s - loss: 0.2624 - coeff_determination: 0.0596 - RMSE_PM: 217.9705
+ 56/143 [==========>...................] - ETA: 1s - loss: 0.2583 - coeff_determination: 0.0548 - RMSE_PM: 211.5176
+ 61/143 [===========>..................] - ETA: 1s - loss: 0.2542 - coeff_determination: 0.0500 - RMSE_PM: 208.5588
+ 66/143 [============>.................] - ETA: 0s - loss: 0.2552 - coeff_determination: 0.0488 - RMSE_PM: 212.8595
+ 71/143 [=============>................] - ETA: 0s - loss: 0.2549 - coeff_determination: 0.0530 - RMSE_PM: 215.0696
+ 76/143 [==============>...............] - ETA: 0s - loss: 0.2527 - coeff_determination: 0.0559 - RMSE_PM: 215.2427
+ 81/143 [===============>..............] - ETA: 0s - loss: 0.2528 - coeff_determination: 0.0476 - RMSE_PM: 215.9599
+ 86/143 [=================>............] - ETA: 0s - loss: 0.2541 - coeff_determination: 0.0474 - RMSE_PM: 215.8097
+ 92/143 [==================>...........] - ETA: 0s - loss: 0.2498 - coeff_determination: 0.0539 - RMSE_PM: 212.9387
+ 97/143 [===================>..........] - ETA: 0s - loss: 0.2460 - coeff_determination: 0.0590 - RMSE_PM: 210.2043
+102/143 [====================>.........] - ETA: 0s - loss: 0.2463 - coeff_determination: 0.0588 - RMSE_PM: 211.2022
+106/143 [=====================>........] - ETA: 0s - loss: 0.2468 - coeff_determination: 0.0608 - RMSE_PM: 210.7031
+110/143 [======================>.......] - ETA: 0s - loss: 0.2458 - coeff_determination: 0.0610 - RMSE_PM: 211.4874
+115/143 [=======================>......] - ETA: 0s - loss: 0.2474 - coeff_determination: 0.0645 - RMSE_PM: 213.3677
+120/143 [========================>.....] - ETA: 0s - loss: 0.2472 - coeff_determination: 0.0661 - RMSE_PM: 213.4746
+125/143 [=========================>....] - ETA: 0s - loss: 0.2461 - coeff_determination: 0.0670 - RMSE_PM: 212.4292
+129/143 [==========================>...] - ETA: 0s - loss: 0.2467 - coeff_determination: 0.0655 - RMSE_PM: 211.5856
+135/143 [===========================>..] - ETA: 0s - loss: 0.2478 - coeff_determination: 0.0660 - RMSE_PM: 212.1055
+140/143 [============================>.] - ETA: 0s - loss: 0.2485 - coeff_determination: 0.0663 - RMSE_PM: 211.9421
+143/143 [==============================] - 2s 13ms/step - loss: 0.2483 - coeff_determination: 0.0649 - RMSE_PM: 211.4706 - val_loss: 0.3270 - val_coeff_determination: -0.1811 - val_RMSE_PM: 185.4450
+Epoch 20/50
+
+  1/143 [..............................] - ETA: 2s - loss: 0.2054 - coeff_determination: -0.1987 - RMSE_PM: 182.9842
+  7/143 [>.............................] - ETA: 1s - loss: 0.2385 - coeff_determination: 0.1286 - RMSE_PM: 210.2896 
+ 11/143 [=>............................] - ETA: 1s - loss: 0.2571 - coeff_determination: 0.1050 - RMSE_PM: 202.0191
+ 17/143 [==>...........................] - ETA: 1s - loss: 0.2512 - coeff_determination: 0.1160 - RMSE_PM: 208.2200
+ 22/143 [===>..........................] - ETA: 1s - loss: 0.2652 - coeff_determination: 0.0949 - RMSE_PM: 221.7298
+ 27/143 [====>.........................] - ETA: 1s - loss: 0.2567 - coeff_determination: 0.1046 - RMSE_PM: 217.8148
+ 32/143 [=====>........................] - ETA: 1s - loss: 0.2606 - coeff_determination: 0.1041 - RMSE_PM: 222.1192
+ 37/143 [======>.......................] - ETA: 1s - loss: 0.2551 - coeff_determination: 0.0916 - RMSE_PM: 216.2809
+ 41/143 [=======>......................] - ETA: 1s - loss: 0.2494 - coeff_determination: 0.0920 - RMSE_PM: 210.8150
+ 46/143 [========>.....................] - ETA: 1s - loss: 0.2482 - coeff_determination: 0.0934 - RMSE_PM: 208.4323
+ 52/143 [=========>....................] - ETA: 1s - loss: 0.2470 - coeff_determination: 0.0905 - RMSE_PM: 206.2037
+ 56/143 [==========>...................] - ETA: 1s - loss: 0.2474 - coeff_determination: 0.0934 - RMSE_PM: 206.9876
+ 61/143 [===========>..................] - ETA: 1s - loss: 0.2478 - coeff_determination: 0.0898 - RMSE_PM: 208.2745
+ 66/143 [============>.................] - ETA: 0s - loss: 0.2447 - coeff_determination: 0.0879 - RMSE_PM: 209.1958
+ 72/143 [==============>...............] - ETA: 0s - loss: 0.2429 - coeff_determination: 0.0891 - RMSE_PM: 207.6879
+ 77/143 [===============>..............] - ETA: 0s - loss: 0.2462 - coeff_determination: 0.0877 - RMSE_PM: 209.3886
+ 81/143 [===============>..............] - ETA: 0s - loss: 0.2462 - coeff_determination: 0.0820 - RMSE_PM: 207.4988
+ 86/143 [=================>............] - ETA: 0s - loss: 0.2446 - coeff_determination: 0.0799 - RMSE_PM: 205.9627
+ 91/143 [==================>...........] - ETA: 0s - loss: 0.2440 - coeff_determination: 0.0731 - RMSE_PM: 205.9239
+ 96/143 [===================>..........] - ETA: 0s - loss: 0.2439 - coeff_determination: 0.0742 - RMSE_PM: 205.1258
+101/143 [====================>.........] - ETA: 0s - loss: 0.2431 - coeff_determination: 0.0744 - RMSE_PM: 204.1215
+106/143 [=====================>........] - ETA: 0s - loss: 0.2422 - coeff_determination: 0.0734 - RMSE_PM: 203.4559
+111/143 [======================>.......] - ETA: 0s - loss: 0.2420 - coeff_determination: 0.0738 - RMSE_PM: 202.4867
+116/143 [=======================>......] - ETA: 0s - loss: 0.2418 - coeff_determination: 0.0723 - RMSE_PM: 203.8604
+121/143 [========================>.....] - ETA: 0s - loss: 0.2425 - coeff_determination: 0.0684 - RMSE_PM: 204.6109
+126/143 [=========================>....] - ETA: 0s - loss: 0.2431 - coeff_determination: 0.0693 - RMSE_PM: 205.9584
+130/143 [==========================>...] - ETA: 0s - loss: 0.2452 - coeff_determination: 0.0666 - RMSE_PM: 205.7595
+135/143 [===========================>..] - ETA: 0s - loss: 0.2459 - coeff_determination: 0.0644 - RMSE_PM: 206.2175
+140/143 [============================>.] - ETA: 0s - loss: 0.2458 - coeff_determination: 0.0622 - RMSE_PM: 206.2088
+143/143 [==============================] - 2s 13ms/step - loss: 0.2453 - coeff_determination: 0.0630 - RMSE_PM: 206.4759 - val_loss: 0.3243 - val_coeff_determination: -0.1755 - val_RMSE_PM: 186.2356
+Epoch 21/50
+
+  1/143 [..............................] - ETA: 0s - loss: 0.2573 - coeff_determination: -0.2314 - RMSE_PM: 190.3785
+  6/143 [>.............................] - ETA: 1s - loss: 0.2533 - coeff_determination: 0.1396 - RMSE_PM: 219.9300 
+ 11/143 [=>............................] - ETA: 1s - loss: 0.2765 - coeff_determination: 0.0958 - RMSE_PM: 210.0600
+ 15/143 [==>...........................] - ETA: 1s - loss: 0.2524 - coeff_determination: 0.0926 - RMSE_PM: 210.0252
+ 20/143 [===>..........................] - ETA: 1s - loss: 0.2497 - coeff_determination: 0.0964 - RMSE_PM: 215.5698
+ 25/143 [====>.........................] - ETA: 1s - loss: 0.2491 - coeff_determination: 0.0983 - RMSE_PM: 212.2189
+ 30/143 [=====>........................] - ETA: 1s - loss: 0.2525 - coeff_determination: 0.1030 - RMSE_PM: 208.7318
+ 35/143 [======>.......................] - ETA: 1s - loss: 0.2474 - coeff_determination: 0.1006 - RMSE_PM: 203.8951
+ 40/143 [=======>......................] - ETA: 1s - loss: 0.2430 - coeff_determination: 0.0960 - RMSE_PM: 200.8382
+ 45/143 [========>.....................] - ETA: 1s - loss: 0.2450 - coeff_determination: 0.0955 - RMSE_PM: 205.3231
+ 50/143 [=========>....................] - ETA: 1s - loss: 0.2488 - coeff_determination: 0.0949 - RMSE_PM: 205.3564
+ 55/143 [==========>...................] - ETA: 1s - loss: 0.2479 - coeff_determination: 0.0982 - RMSE_PM: 207.0572
+ 59/143 [===========>..................] - ETA: 1s - loss: 0.2522 - coeff_determination: 0.0934 - RMSE_PM: 207.2355
+ 65/143 [============>.................] - ETA: 0s - loss: 0.2501 - coeff_determination: 0.0859 - RMSE_PM: 206.6119
+ 70/143 [=============>................] - ETA: 0s - loss: 0.2534 - coeff_determination: 0.0770 - RMSE_PM: 207.1978
+ 74/143 [==============>...............] - ETA: 0s - loss: 0.2511 - coeff_determination: 0.0795 - RMSE_PM: 205.7905
+ 80/143 [===============>..............] - ETA: 0s - loss: 0.2532 - coeff_determination: 0.0698 - RMSE_PM: 207.2115
+ 85/143 [================>.............] - ETA: 0s - loss: 0.2535 - coeff_determination: 0.0674 - RMSE_PM: 207.7985
+ 90/143 [=================>............] - ETA: 0s - loss: 0.2527 - coeff_determination: 0.0697 - RMSE_PM: 206.5255
+ 95/143 [==================>...........] - ETA: 0s - loss: 0.2532 - coeff_determination: 0.0650 - RMSE_PM: 205.4947
+100/143 [===================>..........] - ETA: 0s - loss: 0.2517 - coeff_determination: 0.0676 - RMSE_PM: 204.5544
+105/143 [=====================>........] - ETA: 0s - loss: 0.2513 - coeff_determination: 0.0678 - RMSE_PM: 204.8085
+110/143 [======================>.......] - ETA: 0s - loss: 0.2513 - coeff_determination: 0.0633 - RMSE_PM: 204.3514
+115/143 [=======================>......] - ETA: 0s - loss: 0.2495 - coeff_determination: 0.0648 - RMSE_PM: 203.7285
+120/143 [========================>.....] - ETA: 0s - loss: 0.2468 - coeff_determination: 0.0674 - RMSE_PM: 203.3750
+125/143 [=========================>....] - ETA: 0s - loss: 0.2464 - coeff_determination: 0.0675 - RMSE_PM: 202.1067
+130/143 [==========================>...] - ETA: 0s - loss: 0.2472 - coeff_determination: 0.0645 - RMSE_PM: 202.5690
+135/143 [===========================>..] - ETA: 0s - loss: 0.2477 - coeff_determination: 0.0642 - RMSE_PM: 202.3315
+140/143 [============================>.] - ETA: 0s - loss: 0.2474 - coeff_determination: 0.0640 - RMSE_PM: 201.8841
+143/143 [==============================] - 2s 13ms/step - loss: 0.2480 - coeff_determination: 0.0645 - RMSE_PM: 202.8085 - val_loss: 0.3390 - val_coeff_determination: -0.2279 - val_RMSE_PM: 187.7083
+Epoch 22/50
+
+  1/143 [..............................] - ETA: 0s - loss: 0.2488 - coeff_determination: 0.1713 - RMSE_PM: 291.2450
+  6/143 [>.............................] - ETA: 1s - loss: 0.2798 - coeff_determination: 0.0746 - RMSE_PM: 232.4975
+ 11/143 [=>............................] - ETA: 1s - loss: 0.2985 - coeff_determination: 0.0764 - RMSE_PM: 223.8649
+ 16/143 [==>...........................] - ETA: 1s - loss: 0.2811 - coeff_determination: 0.0733 - RMSE_PM: 218.7175
+ 21/143 [===>..........................] - ETA: 1s - loss: 0.2575 - coeff_determination: 0.0762 - RMSE_PM: 209.7279
+ 26/143 [====>.........................] - ETA: 1s - loss: 0.2626 - coeff_determination: 0.0868 - RMSE_PM: 221.8684
+ 31/143 [=====>........................] - ETA: 1s - loss: 0.2650 - coeff_determination: 0.0850 - RMSE_PM: 218.3434
+ 36/143 [======>.......................] - ETA: 1s - loss: 0.2641 - coeff_determination: 0.0852 - RMSE_PM: 219.5626
+ 40/143 [=======>......................] - ETA: 1s - loss: 0.2653 - coeff_determination: 0.0842 - RMSE_PM: 216.7703
+ 45/143 [========>.....................] - ETA: 1s - loss: 0.2635 - coeff_determination: 0.0865 - RMSE_PM: 217.5505
+ 50/143 [=========>....................] - ETA: 1s - loss: 0.2688 - coeff_determination: 0.0923 - RMSE_PM: 221.4891
+ 55/143 [==========>...................] - ETA: 1s - loss: 0.2652 - coeff_determination: 0.0964 - RMSE_PM: 222.6517
+ 60/143 [===========>..................] - ETA: 1s - loss: 0.2638 - coeff_determination: 0.1022 - RMSE_PM: 225.7624
+ 65/143 [============>.................] - ETA: 0s - loss: 0.2592 - coeff_determination: 0.0989 - RMSE_PM: 223.1723
+ 70/143 [=============>................] - ETA: 0s - loss: 0.2549 - coeff_determination: 0.1053 - RMSE_PM: 220.3051
+ 75/143 [==============>...............] - ETA: 0s - loss: 0.2513 - coeff_determination: 0.1076 - RMSE_PM: 217.2103
+ 80/143 [===============>..............] - ETA: 0s - loss: 0.2503 - coeff_determination: 0.1019 - RMSE_PM: 215.4166
+ 85/143 [================>.............] - ETA: 0s - loss: 0.2488 - coeff_determination: 0.1094 - RMSE_PM: 215.5909
+ 90/143 [=================>............] - ETA: 0s - loss: 0.2515 - coeff_determination: 0.1065 - RMSE_PM: 216.1269
+ 95/143 [==================>...........] - ETA: 0s - loss: 0.2519 - coeff_determination: 0.1004 - RMSE_PM: 217.1809
+100/143 [===================>..........] - ETA: 0s - loss: 0.2500 - coeff_determination: 0.1034 - RMSE_PM: 217.1253
+105/143 [=====================>........] - ETA: 0s - loss: 0.2510 - coeff_determination: 0.1026 - RMSE_PM: 215.4661
+110/143 [======================>.......] - ETA: 0s - loss: 0.2521 - coeff_determination: 0.0970 - RMSE_PM: 215.8051
+115/143 [=======================>......] - ETA: 0s - loss: 0.2487 - coeff_determination: 0.0985 - RMSE_PM: 213.3573
+119/143 [=======================>......] - ETA: 0s - loss: 0.2503 - coeff_determination: 0.0985 - RMSE_PM: 213.2631
+124/143 [=========================>....] - ETA: 0s - loss: 0.2501 - coeff_determination: 0.0902 - RMSE_PM: 211.9471
+129/143 [==========================>...] - ETA: 0s - loss: 0.2506 - coeff_determination: 0.0921 - RMSE_PM: 212.2715
+134/143 [===========================>..] - ETA: 0s - loss: 0.2504 - coeff_determination: 0.0915 - RMSE_PM: 211.5082
+139/143 [============================>.] - ETA: 0s - loss: 0.2510 - coeff_determination: 0.0909 - RMSE_PM: 210.5623
+143/143 [==============================] - 2s 13ms/step - loss: 0.2525 - coeff_determination: 0.0899 - RMSE_PM: 211.1821 - val_loss: 0.3193 - val_coeff_determination: -0.1576 - val_RMSE_PM: 184.2448
+Epoch 23/50
+
+  1/143 [..............................] - ETA: 2s - loss: 0.3508 - coeff_determination: -0.2498 - RMSE_PM: 177.7715
+  6/143 [>.............................] - ETA: 1s - loss: 0.2776 - coeff_determination: 0.0810 - RMSE_PM: 218.8566 
+ 11/143 [=>............................] - ETA: 1s - loss: 0.2378 - coeff_determination: 0.0835 - RMSE_PM: 193.6235
+ 16/143 [==>...........................] - ETA: 1s - loss: 0.2458 - coeff_determination: 0.0520 - RMSE_PM: 197.8103
+ 21/143 [===>..........................] - ETA: 1s - loss: 0.2481 - coeff_determination: 0.0444 - RMSE_PM: 199.2550
+ 26/143 [====>.........................] - ETA: 1s - loss: 0.2573 - coeff_determination: 0.0459 - RMSE_PM: 206.9965
+ 31/143 [=====>........................] - ETA: 1s - loss: 0.2566 - coeff_determination: 0.0503 - RMSE_PM: 207.1284
+ 36/143 [======>.......................] - ETA: 1s - loss: 0.2589 - coeff_determination: 0.0613 - RMSE_PM: 213.8924
+ 41/143 [=======>......................] - ETA: 1s - loss: 0.2527 - coeff_determination: 0.0613 - RMSE_PM: 208.5686
+ 46/143 [========>.....................] - ETA: 1s - loss: 0.2474 - coeff_determination: 0.0638 - RMSE_PM: 206.8467
+ 50/143 [=========>....................] - ETA: 1s - loss: 0.2432 - coeff_determination: 0.0693 - RMSE_PM: 202.3835
+ 55/143 [==========>...................] - ETA: 1s - loss: 0.2408 - coeff_determination: 0.0747 - RMSE_PM: 200.0010
+ 60/143 [===========>..................] - ETA: 1s - loss: 0.2425 - coeff_determination: 0.0756 - RMSE_PM: 200.1833
+ 65/143 [============>.................] - ETA: 0s - loss: 0.2416 - coeff_determination: 0.0768 - RMSE_PM: 199.3764
+ 70/143 [=============>................] - ETA: 0s - loss: 0.2458 - coeff_determination: 0.0675 - RMSE_PM: 200.5241
+ 75/143 [==============>...............] - ETA: 0s - loss: 0.2451 - coeff_determination: 0.0701 - RMSE_PM: 203.0950
+ 80/143 [===============>..............] - ETA: 0s - loss: 0.2426 - coeff_determination: 0.0806 - RMSE_PM: 201.9166
+ 85/143 [================>.............] - ETA: 0s - loss: 0.2444 - coeff_determination: 0.0733 - RMSE_PM: 200.6529
+ 90/143 [=================>............] - ETA: 0s - loss: 0.2433 - coeff_determination: 0.0766 - RMSE_PM: 200.2766
+ 95/143 [==================>...........] - ETA: 0s - loss: 0.2444 - coeff_determination: 0.0758 - RMSE_PM: 201.2634
+100/143 [===================>..........] - ETA: 0s - loss: 0.2446 - coeff_determination: 0.0745 - RMSE_PM: 200.5606
+105/143 [=====================>........] - ETA: 0s - loss: 0.2443 - coeff_determination: 0.0772 - RMSE_PM: 201.3143
+110/143 [======================>.......] - ETA: 0s - loss: 0.2453 - coeff_determination: 0.0793 - RMSE_PM: 203.8360
+115/143 [=======================>......] - ETA: 0s - loss: 0.2441 - coeff_determination: 0.0811 - RMSE_PM: 203.1278
+120/143 [========================>.....] - ETA: 0s - loss: 0.2441 - coeff_determination: 0.0802 - RMSE_PM: 202.3444
+125/143 [=========================>....] - ETA: 0s - loss: 0.2472 - coeff_determination: 0.0791 - RMSE_PM: 202.8619
+130/143 [==========================>...] - ETA: 0s - loss: 0.2496 - coeff_determination: 0.0789 - RMSE_PM: 204.5646
+135/143 [===========================>..] - ETA: 0s - loss: 0.2515 - coeff_determination: 0.0781 - RMSE_PM: 204.8003
+139/143 [============================>.] - ETA: 0s - loss: 0.2514 - coeff_determination: 0.0762 - RMSE_PM: 204.1291
+143/143 [==============================] - 2s 13ms/step - loss: 0.2518 - coeff_determination: 0.0738 - RMSE_PM: 205.3617 - val_loss: 0.3185 - val_coeff_determination: -0.1564 - val_RMSE_PM: 185.4695
+Epoch 24/50
+
+  1/143 [..............................] - ETA: 2s - loss: 0.3209 - coeff_determination: -0.1803 - RMSE_PM: 192.3490
+  6/143 [>.............................] - ETA: 1s - loss: 0.2246 - coeff_determination: 0.0172 - RMSE_PM: 191.0602 
+ 11/143 [=>............................] - ETA: 1s - loss: 0.2495 - coeff_determination: 0.0145 - RMSE_PM: 191.9822
+ 16/143 [==>...........................] - ETA: 1s - loss: 0.2454 - coeff_determination: 0.0335 - RMSE_PM: 197.8519
+ 21/143 [===>..........................] - ETA: 1s - loss: 0.2499 - coeff_determination: 0.0425 - RMSE_PM: 200.8413
+ 26/143 [====>.........................] - ETA: 1s - loss: 0.2568 - coeff_determination: 0.0517 - RMSE_PM: 207.8559
+ 31/143 [=====>........................] - ETA: 1s - loss: 0.2516 - coeff_determination: 0.0572 - RMSE_PM: 202.4482
+ 35/143 [======>.......................] - ETA: 1s - loss: 0.2498 - coeff_determination: 0.0501 - RMSE_PM: 203.5835
+ 40/143 [=======>......................] - ETA: 1s - loss: 0.2492 - coeff_determination: 0.0460 - RMSE_PM: 198.9056
+ 46/143 [========>.....................] - ETA: 1s - loss: 0.2525 - coeff_determination: 0.0561 - RMSE_PM: 199.9893
+ 51/143 [=========>....................] - ETA: 1s - loss: 0.2500 - coeff_determination: 0.0626 - RMSE_PM: 201.8207
+ 56/143 [==========>...................] - ETA: 1s - loss: 0.2501 - coeff_determination: 0.0580 - RMSE_PM: 203.0420
+ 61/143 [===========>..................] - ETA: 1s - loss: 0.2493 - coeff_determination: 0.0566 - RMSE_PM: 205.6829
+ 65/143 [============>.................] - ETA: 0s - loss: 0.2485 - coeff_determination: 0.0567 - RMSE_PM: 204.7545
+ 70/143 [=============>................] - ETA: 0s - loss: 0.2466 - coeff_determination: 0.0621 - RMSE_PM: 204.7071
+ 76/143 [==============>...............] - ETA: 0s - loss: 0.2474 - coeff_determination: 0.0639 - RMSE_PM: 204.3689
+ 80/143 [===============>..............] - ETA: 0s - loss: 0.2475 - coeff_determination: 0.0635 - RMSE_PM: 206.8744
+ 86/143 [=================>............] - ETA: 0s - loss: 0.2476 - coeff_determination: 0.0675 - RMSE_PM: 207.3110
+ 90/143 [=================>............] - ETA: 0s - loss: 0.2463 - coeff_determination: 0.0700 - RMSE_PM: 205.9124
+ 95/143 [==================>...........] - ETA: 0s - loss: 0.2452 - coeff_determination: 0.0696 - RMSE_PM: 205.1832
+100/143 [===================>..........] - ETA: 0s - loss: 0.2441 - coeff_determination: 0.0678 - RMSE_PM: 204.4414
+105/143 [=====================>........] - ETA: 0s - loss: 0.2430 - coeff_determination: 0.0685 - RMSE_PM: 203.5872
+110/143 [======================>.......] - ETA: 0s - loss: 0.2429 - coeff_determination: 0.0744 - RMSE_PM: 205.1270
+115/143 [=======================>......] - ETA: 0s - loss: 0.2442 - coeff_determination: 0.0738 - RMSE_PM: 205.8268
+120/143 [========================>.....] - ETA: 0s - loss: 0.2453 - coeff_determination: 0.0730 - RMSE_PM: 206.6999
+125/143 [=========================>....] - ETA: 0s - loss: 0.2437 - coeff_determination: 0.0735 - RMSE_PM: 206.0501
+130/143 [==========================>...] - ETA: 0s - loss: 0.2432 - coeff_determination: 0.0751 - RMSE_PM: 205.2403
+135/143 [===========================>..] - ETA: 0s - loss: 0.2429 - coeff_determination: 0.0782 - RMSE_PM: 204.2074
+140/143 [============================>.] - ETA: 0s - loss: 0.2444 - coeff_determination: 0.0768 - RMSE_PM: 204.1942
+143/143 [==============================] - 2s 13ms/step - loss: 0.2434 - coeff_determination: 0.0784 - RMSE_PM: 203.6599 - val_loss: 0.3213 - val_coeff_determination: -0.1636 - val_RMSE_PM: 184.5789
+Epoch 25/50
+
+  1/143 [..............................] - ETA: 0s - loss: 0.1763 - coeff_determination: 0.0052 - RMSE_PM: 163.8746
+  5/143 [>.............................] - ETA: 1s - loss: 0.2524 - coeff_determination: 0.0973 - RMSE_PM: 201.2809
+ 11/143 [=>............................] - ETA: 1s - loss: 0.2716 - coeff_determination: 0.0122 - RMSE_PM: 212.2510
+ 16/143 [==>...........................] - ETA: 1s - loss: 0.2716 - coeff_determination: 0.0101 - RMSE_PM: 214.3270
+ 21/143 [===>..........................] - ETA: 1s - loss: 0.2645 - coeff_determination: 0.0273 - RMSE_PM: 205.1867
+ 26/143 [====>.........................] - ETA: 1s - loss: 0.2459 - coeff_determination: 0.0261 - RMSE_PM: 198.2997
+ 31/143 [=====>........................] - ETA: 1s - loss: 0.2357 - coeff_determination: 0.0372 - RMSE_PM: 195.3301
+ 36/143 [======>.......................] - ETA: 1s - loss: 0.2388 - coeff_determination: 0.0433 - RMSE_PM: 198.4697
+ 40/143 [=======>......................] - ETA: 1s - loss: 0.2396 - coeff_determination: 0.0488 - RMSE_PM: 200.6837
+ 46/143 [========>.....................] - ETA: 1s - loss: 0.2404 - coeff_determination: 0.0524 - RMSE_PM: 202.4463
+ 50/143 [=========>....................] - ETA: 1s - loss: 0.2387 - coeff_determination: 0.0490 - RMSE_PM: 199.6605
+ 55/143 [==========>...................] - ETA: 1s - loss: 0.2408 - coeff_determination: 0.0545 - RMSE_PM: 199.9044
+ 61/143 [===========>..................] - ETA: 1s - loss: 0.2411 - coeff_determination: 0.0589 - RMSE_PM: 202.6187
+ 66/143 [============>.................] - ETA: 0s - loss: 0.2424 - coeff_determination: 0.0531 - RMSE_PM: 202.9175
+ 70/143 [=============>................] - ETA: 0s - loss: 0.2465 - coeff_determination: 0.0567 - RMSE_PM: 206.8597
+ 75/143 [==============>...............] - ETA: 0s - loss: 0.2476 - coeff_determination: 0.0563 - RMSE_PM: 205.6903
+ 81/143 [===============>..............] - ETA: 0s - loss: 0.2492 - coeff_determination: 0.0601 - RMSE_PM: 210.5032
+ 86/143 [=================>............] - ETA: 0s - loss: 0.2501 - coeff_determination: 0.0610 - RMSE_PM: 209.6386
+ 90/143 [=================>............] - ETA: 0s - loss: 0.2526 - coeff_determination: 0.0619 - RMSE_PM: 211.8156
+ 95/143 [==================>...........] - ETA: 0s - loss: 0.2517 - coeff_determination: 0.0605 - RMSE_PM: 211.5750
+100/143 [===================>..........] - ETA: 0s - loss: 0.2517 - coeff_determination: 0.0613 - RMSE_PM: 210.2565
+105/143 [=====================>........] - ETA: 0s - loss: 0.2517 - coeff_determination: 0.0622 - RMSE_PM: 209.8796
+110/143 [======================>.......] - ETA: 0s - loss: 0.2511 - coeff_determination: 0.0636 - RMSE_PM: 207.7778
+115/143 [=======================>......] - ETA: 0s - loss: 0.2503 - coeff_determination: 0.0661 - RMSE_PM: 207.1962
+120/143 [========================>.....] - ETA: 0s - loss: 0.2500 - coeff_determination: 0.0653 - RMSE_PM: 207.3705
+125/143 [=========================>....] - ETA: 0s - loss: 0.2476 - coeff_determination: 0.0639 - RMSE_PM: 207.5519
+130/143 [==========================>...] - ETA: 0s - loss: 0.2487 - coeff_determination: 0.0602 - RMSE_PM: 207.7719
+135/143 [===========================>..] - ETA: 0s - loss: 0.2483 - coeff_determination: 0.0599 - RMSE_PM: 207.2855
+140/143 [============================>.] - ETA: 0s - loss: 0.2470 - coeff_determination: 0.0587 - RMSE_PM: 205.6669
+143/143 [==============================] - 2s 13ms/step - loss: 0.2472 - coeff_determination: 0.0592 - RMSE_PM: 207.1137 - val_loss: 0.3348 - val_coeff_determination: -0.2118 - val_RMSE_PM: 186.2858
+Epoch 26/50
+
+  1/143 [..............................] - ETA: 0s - loss: 0.1802 - coeff_determination: -0.0846 - RMSE_PM: 197.9745
+  5/143 [>.............................] - ETA: 1s - loss: 0.2253 - coeff_determination: 0.0302 - RMSE_PM: 222.9169 
+ 10/143 [=>............................] - ETA: 1s - loss: 0.2143 - coeff_determination: -0.0058 - RMSE_PM: 195.0760
+ 16/143 [==>...........................] - ETA: 1s - loss: 0.2352 - coeff_determination: 0.0266 - RMSE_PM: 204.2682 
+ 21/143 [===>..........................] - ETA: 1s - loss: 0.2320 - coeff_determination: 0.0224 - RMSE_PM: 202.7258
+ 26/143 [====>.........................] - ETA: 1s - loss: 0.2401 - coeff_determination: 0.0170 - RMSE_PM: 208.9955
+ 31/143 [=====>........................] - ETA: 1s - loss: 0.2394 - coeff_determination: 0.0218 - RMSE_PM: 204.9612
+ 35/143 [======>.......................] - ETA: 1s - loss: 0.2415 - coeff_determination: 0.0309 - RMSE_PM: 204.1405
+ 40/143 [=======>......................] - ETA: 1s - loss: 0.2427 - coeff_determination: 0.0340 - RMSE_PM: 203.1337
+ 45/143 [========>.....................] - ETA: 1s - loss: 0.2484 - coeff_determination: 0.0373 - RMSE_PM: 204.2737
+ 51/143 [=========>....................] - ETA: 1s - loss: 0.2439 - coeff_determination: 0.0365 - RMSE_PM: 199.7919
+ 56/143 [==========>...................] - ETA: 1s - loss: 0.2421 - coeff_determination: 0.0363 - RMSE_PM: 199.3257
+ 61/143 [===========>..................] - ETA: 1s - loss: 0.2399 - coeff_determination: 0.0443 - RMSE_PM: 198.9692
+ 66/143 [============>.................] - ETA: 0s - loss: 0.2403 - coeff_determination: 0.0456 - RMSE_PM: 197.4754
+ 70/143 [=============>................] - ETA: 0s - loss: 0.2412 - coeff_determination: 0.0449 - RMSE_PM: 196.4133
+ 75/143 [==============>...............] - ETA: 0s - loss: 0.2438 - coeff_determination: 0.0426 - RMSE_PM: 197.0202
+ 81/143 [===============>..............] - ETA: 0s - loss: 0.2456 - coeff_determination: 0.0451 - RMSE_PM: 196.6967
+ 86/143 [=================>............] - ETA: 0s - loss: 0.2461 - coeff_determination: 0.0437 - RMSE_PM: 195.0408
+ 90/143 [=================>............] - ETA: 0s - loss: 0.2468 - coeff_determination: 0.0460 - RMSE_PM: 196.4468
+ 95/143 [==================>...........] - ETA: 0s - loss: 0.2445 - coeff_determination: 0.0553 - RMSE_PM: 196.5669
+100/143 [===================>..........] - ETA: 0s - loss: 0.2433 - coeff_determination: 0.0526 - RMSE_PM: 195.4883
+105/143 [=====================>........] - ETA: 0s - loss: 0.2439 - coeff_determination: 0.0538 - RMSE_PM: 194.6152
+110/143 [======================>.......] - ETA: 0s - loss: 0.2455 - coeff_determination: 0.0522 - RMSE_PM: 194.3107
+115/143 [=======================>......] - ETA: 0s - loss: 0.2435 - coeff_determination: 0.0558 - RMSE_PM: 194.2698
+120/143 [========================>.....] - ETA: 0s - loss: 0.2433 - coeff_determination: 0.0545 - RMSE_PM: 193.0905
+124/143 [=========================>....] - ETA: 0s - loss: 0.2439 - coeff_determination: 0.0566 - RMSE_PM: 193.3164
+129/143 [==========================>...] - ETA: 0s - loss: 0.2417 - coeff_determination: 0.0608 - RMSE_PM: 192.3164
+134/143 [===========================>..] - ETA: 0s - loss: 0.2419 - coeff_determination: 0.0613 - RMSE_PM: 191.5082
+138/143 [===========================>..] - ETA: 0s - loss: 0.2409 - coeff_determination: 0.0641 - RMSE_PM: 191.3462
+143/143 [==============================] - 2s 14ms/step - loss: 0.2412 - coeff_determination: 0.0649 - RMSE_PM: 190.7431 - val_loss: 0.3121 - val_coeff_determination: -0.1339 - val_RMSE_PM: 184.1122
+Epoch 27/50
+
+  1/143 [..............................] - ETA: 0s - loss: 0.2149 - coeff_determination: 0.0509 - RMSE_PM: 216.0151
+  5/143 [>.............................] - ETA: 1s - loss: 0.2253 - coeff_determination: 0.0675 - RMSE_PM: 198.2410
+ 10/143 [=>............................] - ETA: 1s - loss: 0.2275 - coeff_determination: 0.0825 - RMSE_PM: 219.1905
+ 14/143 [=>............................] - ETA: 1s - loss: 0.2114 - coeff_determination: 0.0608 - RMSE_PM: 203.9651
+ 19/143 [==>...........................] - ETA: 1s - loss: 0.2288 - coeff_determination: 0.0310 - RMSE_PM: 197.9655
+ 24/143 [====>.........................] - ETA: 1s - loss: 0.2292 - coeff_determination: 0.0326 - RMSE_PM: 196.0378
+ 28/143 [====>.........................] - ETA: 1s - loss: 0.2313 - coeff_determination: 0.0243 - RMSE_PM: 193.5503
+ 33/143 [=====>........................] - ETA: 1s - loss: 0.2361 - coeff_determination: 0.0346 - RMSE_PM: 198.8071
+ 37/143 [======>.......................] - ETA: 1s - loss: 0.2403 - coeff_determination: 0.0374 - RMSE_PM: 201.5762
+ 42/143 [=======>......................] - ETA: 1s - loss: 0.2404 - coeff_determination: 0.0449 - RMSE_PM: 204.4840
+ 46/143 [========>.....................] - ETA: 1s - loss: 0.2394 - coeff_determination: 0.0568 - RMSE_PM: 204.2415
+ 51/143 [=========>....................] - ETA: 1s - loss: 0.2418 - coeff_determination: 0.0666 - RMSE_PM: 203.9403
+ 56/143 [==========>...................] - ETA: 1s - loss: 0.2449 - coeff_determination: 0.0606 - RMSE_PM: 204.1670
+ 61/143 [===========>..................] - ETA: 1s - loss: 0.2438 - coeff_determination: 0.0678 - RMSE_PM: 204.9394
+ 65/143 [============>.................] - ETA: 1s - loss: 0.2436 - coeff_determination: 0.0668 - RMSE_PM: 204.3497
+ 70/143 [=============>................] - ETA: 0s - loss: 0.2464 - coeff_determination: 0.0583 - RMSE_PM: 207.3541
+ 75/143 [==============>...............] - ETA: 0s - loss: 0.2429 - coeff_determination: 0.0595 - RMSE_PM: 204.1107
+ 79/143 [===============>..............] - ETA: 0s - loss: 0.2468 - coeff_determination: 0.0606 - RMSE_PM: 204.1956
+ 84/143 [================>.............] - ETA: 0s - loss: 0.2510 - coeff_determination: 0.0616 - RMSE_PM: 204.7275
+ 88/143 [=================>............] - ETA: 0s - loss: 0.2476 - coeff_determination: 0.0678 - RMSE_PM: 204.3275
+ 93/143 [==================>...........] - ETA: 0s - loss: 0.2489 - coeff_determination: 0.0692 - RMSE_PM: 203.7780
+ 98/143 [===================>..........] - ETA: 0s - loss: 0.2489 - coeff_determination: 0.0684 - RMSE_PM: 202.9626
+102/143 [====================>.........] - ETA: 0s - loss: 0.2500 - coeff_determination: 0.0654 - RMSE_PM: 203.3376
+107/143 [=====================>........] - ETA: 0s - loss: 0.2508 - coeff_determination: 0.0632 - RMSE_PM: 203.3719
+111/143 [======================>.......] - ETA: 0s - loss: 0.2499 - coeff_determination: 0.0634 - RMSE_PM: 202.5258
+116/143 [=======================>......] - ETA: 0s - loss: 0.2479 - coeff_determination: 0.0626 - RMSE_PM: 201.6578
+121/143 [========================>.....] - ETA: 0s - loss: 0.2518 - coeff_determination: 0.0600 - RMSE_PM: 204.3288
+125/143 [=========================>....] - ETA: 0s - loss: 0.2505 - coeff_determination: 0.0597 - RMSE_PM: 202.9602
+130/143 [==========================>...] - ETA: 0s - loss: 0.2490 - coeff_determination: 0.0611 - RMSE_PM: 202.7438
+135/143 [===========================>..] - ETA: 0s - loss: 0.2484 - coeff_determination: 0.0629 - RMSE_PM: 202.6708
+139/143 [============================>.] - ETA: 0s - loss: 0.2471 - coeff_determination: 0.0635 - RMSE_PM: 202.1498
+143/143 [==============================] - 2s 14ms/step - loss: 0.2466 - coeff_determination: 0.0636 - RMSE_PM: 202.4945 - val_loss: 0.3417 - val_coeff_determination: -0.2359 - val_RMSE_PM: 186.7549
+Epoch 28/50
+
+  1/143 [..............................] - ETA: 2s - loss: 0.2035 - coeff_determination: 0.0661 - RMSE_PM: 208.8646
+  5/143 [>.............................] - ETA: 2s - loss: 0.1983 - coeff_determination: 0.0107 - RMSE_PM: 208.6577
+ 10/143 [=>............................] - ETA: 1s - loss: 0.2144 - coeff_determination: 0.0094 - RMSE_PM: 200.9612
+ 14/143 [=>............................] - ETA: 1s - loss: 0.2137 - coeff_determination: 0.0221 - RMSE_PM: 192.2206
+ 19/143 [==>...........................] - ETA: 1s - loss: 0.2182 - coeff_determination: 0.0368 - RMSE_PM: 196.8339
+ 23/143 [===>..........................] - ETA: 1s - loss: 0.2107 - coeff_determination: 0.0428 - RMSE_PM: 196.8664
+ 28/143 [====>.........................] - ETA: 1s - loss: 0.2149 - coeff_determination: 0.0392 - RMSE_PM: 196.4690
+ 33/143 [=====>........................] - ETA: 1s - loss: 0.2154 - coeff_determination: 0.0366 - RMSE_PM: 194.8078
+ 37/143 [======>.......................] - ETA: 1s - loss: 0.2156 - coeff_determination: 0.0424 - RMSE_PM: 195.8401
+ 42/143 [=======>......................] - ETA: 1s - loss: 0.2139 - coeff_determination: 0.0423 - RMSE_PM: 195.4398
+ 47/143 [========>.....................] - ETA: 1s - loss: 0.2225 - coeff_determination: 0.0401 - RMSE_PM: 199.0031
+ 51/143 [=========>....................] - ETA: 1s - loss: 0.2262 - coeff_determination: 0.0399 - RMSE_PM: 199.7088
+ 56/143 [==========>...................] - ETA: 1s - loss: 0.2297 - coeff_determination: 0.0446 - RMSE_PM: 199.7743
+ 60/143 [===========>..................] - ETA: 1s - loss: 0.2328 - coeff_determination: 0.0509 - RMSE_PM: 202.2268
+ 65/143 [============>.................] - ETA: 1s - loss: 0.2336 - coeff_determination: 0.0559 - RMSE_PM: 202.5551
+ 69/143 [=============>................] - ETA: 1s - loss: 0.2339 - coeff_determination: 0.0594 - RMSE_PM: 202.1398
+ 74/143 [==============>...............] - ETA: 0s - loss: 0.2329 - coeff_determination: 0.0557 - RMSE_PM: 199.2456
+ 78/143 [===============>..............] - ETA: 0s - loss: 0.2311 - coeff_determination: 0.0579 - RMSE_PM: 198.5742
+ 83/143 [================>.............] - ETA: 0s - loss: 0.2319 - coeff_determination: 0.0603 - RMSE_PM: 198.3522
+ 88/143 [=================>............] - ETA: 0s - loss: 0.2315 - coeff_determination: 0.0622 - RMSE_PM: 196.6290
+ 92/143 [==================>...........] - ETA: 0s - loss: 0.2326 - coeff_determination: 0.0680 - RMSE_PM: 197.9637
+ 97/143 [===================>..........] - ETA: 0s - loss: 0.2338 - coeff_determination: 0.0688 - RMSE_PM: 199.7055
+101/143 [====================>.........] - ETA: 0s - loss: 0.2351 - coeff_determination: 0.0672 - RMSE_PM: 200.0184
+106/143 [=====================>........] - ETA: 0s - loss: 0.2360 - coeff_determination: 0.0663 - RMSE_PM: 199.7943
+110/143 [======================>.......] - ETA: 0s - loss: 0.2394 - coeff_determination: 0.0620 - RMSE_PM: 199.7449
+115/143 [=======================>......] - ETA: 0s - loss: 0.2389 - coeff_determination: 0.0614 - RMSE_PM: 200.2529
+119/143 [=======================>......] - ETA: 0s - loss: 0.2396 - coeff_determination: 0.0621 - RMSE_PM: 200.7272
+124/143 [=========================>....] - ETA: 0s - loss: 0.2398 - coeff_determination: 0.0625 - RMSE_PM: 200.2711
+129/143 [==========================>...] - ETA: 0s - loss: 0.2386 - coeff_determination: 0.0598 - RMSE_PM: 200.6756
+133/143 [==========================>...] - ETA: 0s - loss: 0.2383 - coeff_determination: 0.0622 - RMSE_PM: 199.6340
+138/143 [===========================>..] - ETA: 0s - loss: 0.2380 - coeff_determination: 0.0628 - RMSE_PM: 199.2677
+143/143 [==============================] - 2s 15ms/step - loss: 0.2416 - coeff_determination: 0.0600 - RMSE_PM: 200.0577 - val_loss: 0.3186 - val_coeff_determination: -0.1531 - val_RMSE_PM: 184.3001
+Epoch 29/50
+
+  1/143 [..............................] - ETA: 2s - loss: 0.2782 - coeff_determination: 0.0163 - RMSE_PM: 234.9569
+  5/143 [>.............................] - ETA: 2s - loss: 0.2075 - coeff_determination: 0.1738 - RMSE_PM: 194.5207
+ 10/143 [=>............................] - ETA: 1s - loss: 0.2419 - coeff_determination: 0.0670 - RMSE_PM: 198.7766
+ 14/143 [=>............................] - ETA: 1s - loss: 0.2254 - coeff_determination: 0.0830 - RMSE_PM: 188.7974
+ 19/143 [==>...........................] - ETA: 1s - loss: 0.2186 - coeff_determination: 0.0938 - RMSE_PM: 190.2798
+ 23/143 [===>..........................] - ETA: 1s - loss: 0.2353 - coeff_determination: 0.0981 - RMSE_PM: 202.2150
+ 28/143 [====>.........................] - ETA: 1s - loss: 0.2341 - coeff_determination: 0.0827 - RMSE_PM: 198.5590
+ 32/143 [=====>........................] - ETA: 1s - loss: 0.2331 - coeff_determination: 0.0832 - RMSE_PM: 199.1368
+ 37/143 [======>.......................] - ETA: 1s - loss: 0.2421 - coeff_determination: 0.0774 - RMSE_PM: 201.4292
+ 42/143 [=======>......................] - ETA: 1s - loss: 0.2436 - coeff_determination: 0.0755 - RMSE_PM: 200.8143
+ 46/143 [========>.....................] - ETA: 1s - loss: 0.2449 - coeff_determination: 0.0631 - RMSE_PM: 201.9225
+ 51/143 [=========>....................] - ETA: 1s - loss: 0.2431 - coeff_determination: 0.0648 - RMSE_PM: 199.9361
+ 55/143 [==========>...................] - ETA: 1s - loss: 0.2409 - coeff_determination: 0.0701 - RMSE_PM: 199.8785
+ 60/143 [===========>..................] - ETA: 1s - loss: 0.2394 - coeff_determination: 0.0740 - RMSE_PM: 199.8346
+ 64/143 [============>.................] - ETA: 1s - loss: 0.2376 - coeff_determination: 0.0761 - RMSE_PM: 198.8255
+ 69/143 [=============>................] - ETA: 1s - loss: 0.2393 - coeff_determination: 0.0790 - RMSE_PM: 202.2831
+ 73/143 [==============>...............] - ETA: 0s - loss: 0.2374 - coeff_determination: 0.0823 - RMSE_PM: 200.4149
+ 78/143 [===============>..............] - ETA: 0s - loss: 0.2361 - coeff_determination: 0.0844 - RMSE_PM: 199.8981
+ 82/143 [================>.............] - ETA: 0s - loss: 0.2397 - coeff_determination: 0.0823 - RMSE_PM: 201.8113
+ 87/143 [=================>............] - ETA: 0s - loss: 0.2379 - coeff_determination: 0.0841 - RMSE_PM: 199.9763
+ 92/143 [==================>...........] - ETA: 0s - loss: 0.2395 - coeff_determination: 0.0813 - RMSE_PM: 200.8797
+ 96/143 [===================>..........] - ETA: 0s - loss: 0.2402 - coeff_determination: 0.0813 - RMSE_PM: 202.6467
+100/143 [===================>..........] - ETA: 0s - loss: 0.2393 - coeff_determination: 0.0769 - RMSE_PM: 200.3837
+105/143 [=====================>........] - ETA: 0s - loss: 0.2395 - coeff_determination: 0.0760 - RMSE_PM: 200.7003
+110/143 [======================>.......] - ETA: 0s - loss: 0.2382 - coeff_determination: 0.0799 - RMSE_PM: 200.0206
+114/143 [======================>.......] - ETA: 0s - loss: 0.2376 - coeff_determination: 0.0808 - RMSE_PM: 199.1674
+119/143 [=======================>......] - ETA: 0s - loss: 0.2398 - coeff_determination: 0.0771 - RMSE_PM: 199.1221
+123/143 [========================>.....] - ETA: 0s - loss: 0.2392 - coeff_determination: 0.0770 - RMSE_PM: 198.2950
+128/143 [=========================>....] - ETA: 0s - loss: 0.2379 - coeff_determination: 0.0785 - RMSE_PM: 198.3115
+132/143 [==========================>...] - ETA: 0s - loss: 0.2375 - coeff_determination: 0.0801 - RMSE_PM: 197.8753
+137/143 [===========================>..] - ETA: 0s - loss: 0.2381 - coeff_determination: 0.0828 - RMSE_PM: 198.5444
+141/143 [============================>.] - ETA: 0s - loss: 0.2370 - coeff_determination: 0.0887 - RMSE_PM: 197.9023
+143/143 [==============================] - 2s 15ms/step - loss: 0.2367 - coeff_determination: 0.0882 - RMSE_PM: 197.9330 - val_loss: 0.3229 - val_coeff_determination: -0.1651 - val_RMSE_PM: 184.2586
+Epoch 30/50
+
+  1/143 [..............................] - ETA: 2s - loss: 0.2770 - coeff_determination: -0.0242 - RMSE_PM: 244.9337
+  5/143 [>.............................] - ETA: 2s - loss: 0.2563 - coeff_determination: 0.1171 - RMSE_PM: 216.4602 
+ 10/143 [=>............................] - ETA: 1s - loss: 0.2426 - coeff_determination: 0.1340 - RMSE_PM: 192.3509
+ 14/143 [=>............................] - ETA: 1s - loss: 0.2521 - coeff_determination: 0.1402 - RMSE_PM: 194.9501
+ 19/143 [==>...........................] - ETA: 1s - loss: 0.2680 - coeff_determination: 0.1284 - RMSE_PM: 207.2125
+ 24/143 [====>.........................] - ETA: 1s - loss: 0.2640 - coeff_determination: 0.1278 - RMSE_PM: 207.1312
+ 28/143 [====>.........................] - ETA: 1s - loss: 0.2632 - coeff_determination: 0.1161 - RMSE_PM: 205.3171
+ 33/143 [=====>........................] - ETA: 1s - loss: 0.2568 - coeff_determination: 0.1188 - RMSE_PM: 204.3769
+ 37/143 [======>.......................] - ETA: 1s - loss: 0.2580 - coeff_determination: 0.1168 - RMSE_PM: 204.5399
+ 42/143 [=======>......................] - ETA: 1s - loss: 0.2556 - coeff_determination: 0.1132 - RMSE_PM: 206.9105
+ 46/143 [========>.....................] - ETA: 1s - loss: 0.2560 - coeff_determination: 0.1131 - RMSE_PM: 205.7959
+ 51/143 [=========>....................] - ETA: 1s - loss: 0.2538 - coeff_determination: 0.1180 - RMSE_PM: 205.5565
+ 55/143 [==========>...................] - ETA: 1s - loss: 0.2498 - coeff_determination: 0.1163 - RMSE_PM: 203.3221
+ 60/143 [===========>..................] - ETA: 1s - loss: 0.2506 - coeff_determination: 0.1138 - RMSE_PM: 202.4962
+ 64/143 [============>.................] - ETA: 1s - loss: 0.2473 - coeff_determination: 0.1119 - RMSE_PM: 201.2352
+ 69/143 [=============>................] - ETA: 1s - loss: 0.2458 - coeff_determination: 0.1091 - RMSE_PM: 200.7485
+ 73/143 [==============>...............] - ETA: 0s - loss: 0.2459 - coeff_determination: 0.1120 - RMSE_PM: 201.3744
+ 78/143 [===============>..............] - ETA: 0s - loss: 0.2442 - coeff_determination: 0.1158 - RMSE_PM: 201.2279
+ 82/143 [================>.............] - ETA: 0s - loss: 0.2424 - coeff_determination: 0.1100 - RMSE_PM: 200.5928
+ 87/143 [=================>............] - ETA: 0s - loss: 0.2397 - coeff_determination: 0.1106 - RMSE_PM: 198.3033
+ 92/143 [==================>...........] - ETA: 0s - loss: 0.2411 - coeff_determination: 0.1140 - RMSE_PM: 200.1814
+ 96/143 [===================>..........] - ETA: 0s - loss: 0.2418 - coeff_determination: 0.1121 - RMSE_PM: 200.6272
+101/143 [====================>.........] - ETA: 0s - loss: 0.2433 - coeff_determination: 0.1127 - RMSE_PM: 200.5149
+106/143 [=====================>........] - ETA: 0s - loss: 0.2422 - coeff_determination: 0.1090 - RMSE_PM: 200.5441
+110/143 [======================>.......] - ETA: 0s - loss: 0.2428 - coeff_determination: 0.1075 - RMSE_PM: 200.5100
+115/143 [=======================>......] - ETA: 0s - loss: 0.2414 - coeff_determination: 0.1051 - RMSE_PM: 198.9758
+119/143 [=======================>......] - ETA: 0s - loss: 0.2398 - coeff_determination: 0.1065 - RMSE_PM: 198.3760
+124/143 [=========================>....] - ETA: 0s - loss: 0.2404 - coeff_determination: 0.1015 - RMSE_PM: 197.6401
+129/143 [==========================>...] - ETA: 0s - loss: 0.2395 - coeff_determination: 0.1035 - RMSE_PM: 197.7996
+133/143 [==========================>...] - ETA: 0s - loss: 0.2379 - coeff_determination: 0.1018 - RMSE_PM: 197.4661
+137/143 [===========================>..] - ETA: 0s - loss: 0.2388 - coeff_determination: 0.1023 - RMSE_PM: 199.2712
+142/143 [============================>.] - ETA: 0s - loss: 0.2399 - coeff_determination: 0.0993 - RMSE_PM: 200.5874
+143/143 [==============================] - 2s 15ms/step - loss: 0.2396 - coeff_determination: 0.0998 - RMSE_PM: 200.3732 - val_loss: 0.3472 - val_coeff_determination: -0.2577 - val_RMSE_PM: 187.5247
+Epoch 31/50
+
+  1/143 [..............................] - ETA: 2s - loss: 0.1917 - coeff_determination: -0.0305 - RMSE_PM: 211.1548
+  5/143 [>.............................] - ETA: 2s - loss: 0.3298 - coeff_determination: 0.0050 - RMSE_PM: 270.6527 
+ 10/143 [=>............................] - ETA: 1s - loss: 0.2731 - coeff_determination: 0.0290 - RMSE_PM: 225.9230
+ 14/143 [=>............................] - ETA: 1s - loss: 0.2686 - coeff_determination: 0.0339 - RMSE_PM: 212.9204
+ 19/143 [==>...........................] - ETA: 1s - loss: 0.2519 - coeff_determination: 0.0773 - RMSE_PM: 207.8135
+ 23/143 [===>..........................] - ETA: 1s - loss: 0.2506 - coeff_determination: 0.0591 - RMSE_PM: 207.2212
+ 28/143 [====>.........................] - ETA: 1s - loss: 0.2413 - coeff_determination: 0.0728 - RMSE_PM: 204.7595
+ 32/143 [=====>........................] - ETA: 1s - loss: 0.2438 - coeff_determination: 0.0758 - RMSE_PM: 203.7410
+ 37/143 [======>.......................] - ETA: 1s - loss: 0.2434 - coeff_determination: 0.0724 - RMSE_PM: 201.6895
+ 42/143 [=======>......................] - ETA: 1s - loss: 0.2426 - coeff_determination: 0.0654 - RMSE_PM: 199.8654
+ 46/143 [========>.....................] - ETA: 1s - loss: 0.2415 - coeff_determination: 0.0649 - RMSE_PM: 204.2084
+ 51/143 [=========>....................] - ETA: 1s - loss: 0.2500 - coeff_determination: 0.0640 - RMSE_PM: 209.9430
+ 55/143 [==========>...................] - ETA: 1s - loss: 0.2494 - coeff_determination: 0.0630 - RMSE_PM: 209.4401
+ 59/143 [===========>..................] - ETA: 1s - loss: 0.2475 - coeff_determination: 0.0674 - RMSE_PM: 210.6648
+ 63/143 [============>.................] - ETA: 1s - loss: 0.2487 - coeff_determination: 0.0683 - RMSE_PM: 210.9758
+ 68/143 [=============>................] - ETA: 1s - loss: 0.2477 - coeff_determination: 0.0713 - RMSE_PM: 209.9140
+ 72/143 [==============>...............] - ETA: 1s - loss: 0.2462 - coeff_determination: 0.0707 - RMSE_PM: 208.1444
+ 76/143 [==============>...............] - ETA: 0s - loss: 0.2465 - coeff_determination: 0.0746 - RMSE_PM: 208.5416
+ 80/143 [===============>..............] - ETA: 0s - loss: 0.2495 - coeff_determination: 0.0732 - RMSE_PM: 209.3382
+ 85/143 [================>.............] - ETA: 0s - loss: 0.2481 - coeff_determination: 0.0765 - RMSE_PM: 210.1722
+ 89/143 [=================>............] - ETA: 0s - loss: 0.2481 - coeff_determination: 0.0802 - RMSE_PM: 210.6197
+ 94/143 [==================>...........] - ETA: 0s - loss: 0.2466 - coeff_determination: 0.0836 - RMSE_PM: 209.5525
+ 99/143 [===================>..........] - ETA: 0s - loss: 0.2443 - coeff_determination: 0.0824 - RMSE_PM: 208.7528
+103/143 [====================>.........] - ETA: 0s - loss: 0.2450 - coeff_determination: 0.0820 - RMSE_PM: 207.5114
+108/143 [=====================>........] - ETA: 0s - loss: 0.2450 - coeff_determination: 0.0812 - RMSE_PM: 206.7829
+113/143 [======================>.......] - ETA: 0s - loss: 0.2442 - coeff_determination: 0.0835 - RMSE_PM: 206.5999
+118/143 [=======================>......] - ETA: 0s - loss: 0.2460 - coeff_determination: 0.0834 - RMSE_PM: 208.6217
+123/143 [========================>.....] - ETA: 0s - loss: 0.2431 - coeff_determination: 0.0852 - RMSE_PM: 205.9833
+128/143 [=========================>....] - ETA: 0s - loss: 0.2420 - coeff_determination: 0.0832 - RMSE_PM: 205.0452
+134/143 [===========================>..] - ETA: 0s - loss: 0.2392 - coeff_determination: 0.0855 - RMSE_PM: 203.9128
+139/143 [============================>.] - ETA: 0s - loss: 0.2415 - coeff_determination: 0.0827 - RMSE_PM: 203.8898
+143/143 [==============================] - 2s 14ms/step - loss: 0.2421 - coeff_determination: 0.0803 - RMSE_PM: 204.7356 - val_loss: 0.3208 - val_coeff_determination: -0.1575 - val_RMSE_PM: 184.2896
+Epoch 32/50
+
+  1/143 [..............................] - ETA: 2s - loss: 0.2347 - coeff_determination: 0.2569 - RMSE_PM: 191.8118
+  6/143 [>.............................] - ETA: 1s - loss: 0.2157 - coeff_determination: 0.1064 - RMSE_PM: 178.2532
+ 11/143 [=>............................] - ETA: 1s - loss: 0.2206 - coeff_determination: 0.1178 - RMSE_PM: 177.6571
+ 16/143 [==>...........................] - ETA: 1s - loss: 0.2252 - coeff_determination: 0.1040 - RMSE_PM: 186.4901
+ 21/143 [===>..........................] - ETA: 1s - loss: 0.2382 - coeff_determination: 0.0834 - RMSE_PM: 192.0357
+ 26/143 [====>.........................] - ETA: 1s - loss: 0.2394 - coeff_determination: 0.0794 - RMSE_PM: 198.5748
+ 31/143 [=====>........................] - ETA: 1s - loss: 0.2357 - coeff_determination: 0.0952 - RMSE_PM: 195.7137
+ 36/143 [======>.......................] - ETA: 1s - loss: 0.2329 - coeff_determination: 0.0945 - RMSE_PM: 192.9885
+ 41/143 [=======>......................] - ETA: 1s - loss: 0.2355 - coeff_determination: 0.0859 - RMSE_PM: 190.0019
+ 46/143 [========>.....................] - ETA: 1s - loss: 0.2331 - coeff_determination: 0.0864 - RMSE_PM: 188.1611
+ 51/143 [=========>....................] - ETA: 1s - loss: 0.2346 - coeff_determination: 0.0852 - RMSE_PM: 188.6193
+ 56/143 [==========>...................] - ETA: 1s - loss: 0.2349 - coeff_determination: 0.0855 - RMSE_PM: 192.2878
+ 61/143 [===========>..................] - ETA: 1s - loss: 0.2361 - coeff_determination: 0.0878 - RMSE_PM: 193.5352
+ 66/143 [============>.................] - ETA: 0s - loss: 0.2341 - coeff_determination: 0.0936 - RMSE_PM: 194.7710
+ 71/143 [=============>................] - ETA: 0s - loss: 0.2362 - coeff_determination: 0.0951 - RMSE_PM: 196.6464
+ 76/143 [==============>...............] - ETA: 0s - loss: 0.2378 - coeff_determination: 0.0926 - RMSE_PM: 198.8631
+ 81/143 [===============>..............] - ETA: 0s - loss: 0.2389 - coeff_determination: 0.0897 - RMSE_PM: 198.6712
+ 86/143 [=================>............] - ETA: 0s - loss: 0.2375 - coeff_determination: 0.0916 - RMSE_PM: 197.2294
+ 91/143 [==================>...........] - ETA: 0s - loss: 0.2355 - coeff_determination: 0.0953 - RMSE_PM: 196.9589
+ 96/143 [===================>..........] - ETA: 0s - loss: 0.2387 - coeff_determination: 0.0965 - RMSE_PM: 200.5358
+101/143 [====================>.........] - ETA: 0s - loss: 0.2409 - coeff_determination: 0.0959 - RMSE_PM: 201.5618
+106/143 [=====================>........] - ETA: 0s - loss: 0.2405 - coeff_determination: 0.0915 - RMSE_PM: 202.4821
+111/143 [======================>.......] - ETA: 0s - loss: 0.2408 - coeff_determination: 0.0909 - RMSE_PM: 202.4237
+116/143 [=======================>......] - ETA: 0s - loss: 0.2402 - coeff_determination: 0.0892 - RMSE_PM: 202.7917
+121/143 [========================>.....] - ETA: 0s - loss: 0.2407 - coeff_determination: 0.0873 - RMSE_PM: 202.1786
+126/143 [=========================>....] - ETA: 0s - loss: 0.2390 - coeff_determination: 0.0862 - RMSE_PM: 202.1667
+131/143 [==========================>...] - ETA: 0s - loss: 0.2403 - coeff_determination: 0.0823 - RMSE_PM: 201.5670
+136/143 [===========================>..] - ETA: 0s - loss: 0.2389 - coeff_determination: 0.0821 - RMSE_PM: 200.6649
+141/143 [============================>.] - ETA: 0s - loss: 0.2369 - coeff_determination: 0.0867 - RMSE_PM: 200.1764
+143/143 [==============================] - 2s 13ms/step - loss: 0.2364 - coeff_determination: 0.0849 - RMSE_PM: 200.5754 - val_loss: 0.3158 - val_coeff_determination: -0.1430 - val_RMSE_PM: 184.6970
+Epoch 33/50
+
+  1/143 [..............................] - ETA: 2s - loss: 0.1954 - coeff_determination: 0.1599 - RMSE_PM: 196.8757
+  6/143 [>.............................] - ETA: 1s - loss: 0.2665 - coeff_determination: 0.0577 - RMSE_PM: 262.5459
+ 11/143 [=>............................] - ETA: 1s - loss: 0.2457 - coeff_determination: 0.0740 - RMSE_PM: 219.7237
+ 16/143 [==>...........................] - ETA: 1s - loss: 0.2518 - coeff_determination: 0.0690 - RMSE_PM: 220.3765
+ 21/143 [===>..........................] - ETA: 1s - loss: 0.2495 - coeff_determination: 0.0786 - RMSE_PM: 220.1350
+ 26/143 [====>.........................] - ETA: 1s - loss: 0.2404 - coeff_determination: 0.0969 - RMSE_PM: 214.3494
+ 31/143 [=====>........................] - ETA: 1s - loss: 0.2482 - coeff_determination: 0.0893 - RMSE_PM: 216.7559
+ 36/143 [======>.......................] - ETA: 1s - loss: 0.2524 - coeff_determination: 0.0941 - RMSE_PM: 219.2652
+ 41/143 [=======>......................] - ETA: 1s - loss: 0.2493 - coeff_determination: 0.0950 - RMSE_PM: 218.8348
+ 46/143 [========>.....................] - ETA: 1s - loss: 0.2499 - coeff_determination: 0.0902 - RMSE_PM: 219.0754
+ 51/143 [=========>....................] - ETA: 1s - loss: 0.2501 - coeff_determination: 0.0885 - RMSE_PM: 221.1512
+ 56/143 [==========>...................] - ETA: 1s - loss: 0.2504 - coeff_determination: 0.0905 - RMSE_PM: 219.2915
+ 61/143 [===========>..................] - ETA: 1s - loss: 0.2550 - coeff_determination: 0.0864 - RMSE_PM: 220.5743
+ 66/143 [============>.................] - ETA: 0s - loss: 0.2520 - coeff_determination: 0.0891 - RMSE_PM: 217.6990
+ 71/143 [=============>................] - ETA: 0s - loss: 0.2543 - coeff_determination: 0.0883 - RMSE_PM: 217.2657
+ 76/143 [==============>...............] - ETA: 0s - loss: 0.2555 - coeff_determination: 0.0843 - RMSE_PM: 218.2886
+ 81/143 [===============>..............] - ETA: 0s - loss: 0.2541 - coeff_determination: 0.0802 - RMSE_PM: 215.5141
+ 86/143 [=================>............] - ETA: 0s - loss: 0.2525 - coeff_determination: 0.0770 - RMSE_PM: 213.6170
+ 91/143 [==================>...........] - ETA: 0s - loss: 0.2530 - coeff_determination: 0.0798 - RMSE_PM: 212.5797
+ 96/143 [===================>..........] - ETA: 0s - loss: 0.2561 - coeff_determination: 0.0774 - RMSE_PM: 212.3335
+101/143 [====================>.........] - ETA: 0s - loss: 0.2540 - coeff_determination: 0.0818 - RMSE_PM: 212.1513
+106/143 [=====================>........] - ETA: 0s - loss: 0.2562 - coeff_determination: 0.0799 - RMSE_PM: 212.0791
+111/143 [======================>.......] - ETA: 0s - loss: 0.2559 - coeff_determination: 0.0789 - RMSE_PM: 213.2282
+116/143 [=======================>......] - ETA: 0s - loss: 0.2561 - coeff_determination: 0.0753 - RMSE_PM: 214.8457
+121/143 [========================>.....] - ETA: 0s - loss: 0.2540 - coeff_determination: 0.0773 - RMSE_PM: 213.5848
+126/143 [=========================>....] - ETA: 0s - loss: 0.2530 - coeff_determination: 0.0747 - RMSE_PM: 212.7587
+131/143 [==========================>...] - ETA: 0s - loss: 0.2508 - coeff_determination: 0.0777 - RMSE_PM: 211.7983
+136/143 [===========================>..] - ETA: 0s - loss: 0.2514 - coeff_determination: 0.0782 - RMSE_PM: 211.4734
+141/143 [============================>.] - ETA: 0s - loss: 0.2515 - coeff_determination: 0.0792 - RMSE_PM: 211.3672
+143/143 [==============================] - 2s 13ms/step - loss: 0.2512 - coeff_determination: 0.0763 - RMSE_PM: 210.2250 - val_loss: 0.3115 - val_coeff_determination: -0.1305 - val_RMSE_PM: 185.0803
+Epoch 34/50
+
+  1/143 [..............................] - ETA: 2s - loss: 0.2353 - coeff_determination: 0.0814 - RMSE_PM: 217.1472
+  6/143 [>.............................] - ETA: 1s - loss: 0.2674 - coeff_determination: 0.0130 - RMSE_PM: 225.3122
+ 11/143 [=>............................] - ETA: 1s - loss: 0.2725 - coeff_determination: 0.0506 - RMSE_PM: 249.2902
+ 16/143 [==>...........................] - ETA: 1s - loss: 0.2632 - coeff_determination: 0.0682 - RMSE_PM: 228.0078
+ 22/143 [===>..........................] - ETA: 1s - loss: 0.2668 - coeff_determination: 0.0727 - RMSE_PM: 221.0039
+ 26/143 [====>.........................] - ETA: 1s - loss: 0.2684 - coeff_determination: 0.0702 - RMSE_PM: 219.1335
+ 31/143 [=====>........................] - ETA: 1s - loss: 0.2812 - coeff_determination: 0.0765 - RMSE_PM: 226.8196
+ 36/143 [======>.......................] - ETA: 1s - loss: 0.2787 - coeff_determination: 0.0699 - RMSE_PM: 222.7235
+ 41/143 [=======>......................] - ETA: 1s - loss: 0.2786 - coeff_determination: 0.0710 - RMSE_PM: 224.0144
+ 46/143 [========>.....................] - ETA: 1s - loss: 0.2719 - coeff_determination: 0.0763 - RMSE_PM: 217.0821
+ 51/143 [=========>....................] - ETA: 1s - loss: 0.2631 - coeff_determination: 0.0810 - RMSE_PM: 214.0257
+ 56/143 [==========>...................] - ETA: 1s - loss: 0.2614 - coeff_determination: 0.0872 - RMSE_PM: 213.7647
+ 61/143 [===========>..................] - ETA: 1s - loss: 0.2633 - coeff_determination: 0.0888 - RMSE_PM: 214.5646
+ 66/143 [============>.................] - ETA: 0s - loss: 0.2583 - coeff_determination: 0.0927 - RMSE_PM: 210.4907
+ 71/143 [=============>................] - ETA: 0s - loss: 0.2551 - coeff_determination: 0.0950 - RMSE_PM: 208.7726
+ 76/143 [==============>...............] - ETA: 0s - loss: 0.2539 - coeff_determination: 0.0886 - RMSE_PM: 207.7624
+ 81/143 [===============>..............] - ETA: 0s - loss: 0.2575 - coeff_determination: 0.0885 - RMSE_PM: 209.0739
+ 86/143 [=================>............] - ETA: 0s - loss: 0.2596 - coeff_determination: 0.0880 - RMSE_PM: 209.9515
+ 90/143 [=================>............] - ETA: 0s - loss: 0.2558 - coeff_determination: 0.0858 - RMSE_PM: 208.6492
+ 96/143 [===================>..........] - ETA: 0s - loss: 0.2511 - coeff_determination: 0.0859 - RMSE_PM: 204.8974
+100/143 [===================>..........] - ETA: 0s - loss: 0.2519 - coeff_determination: 0.0844 - RMSE_PM: 204.1701
+105/143 [=====================>........] - ETA: 0s - loss: 0.2530 - coeff_determination: 0.0830 - RMSE_PM: 207.1164
+110/143 [======================>.......] - ETA: 0s - loss: 0.2547 - coeff_determination: 0.0807 - RMSE_PM: 206.7124
+115/143 [=======================>......] - ETA: 0s - loss: 0.2517 - coeff_determination: 0.0833 - RMSE_PM: 205.8767
+120/143 [========================>.....] - ETA: 0s - loss: 0.2503 - coeff_determination: 0.0811 - RMSE_PM: 206.1112
+125/143 [=========================>....] - ETA: 0s - loss: 0.2481 - coeff_determination: 0.0836 - RMSE_PM: 204.0798
+130/143 [==========================>...] - ETA: 0s - loss: 0.2489 - coeff_determination: 0.0829 - RMSE_PM: 204.2979
+135/143 [===========================>..] - ETA: 0s - loss: 0.2470 - coeff_determination: 0.0852 - RMSE_PM: 203.3888
+140/143 [============================>.] - ETA: 0s - loss: 0.2463 - coeff_determination: 0.0859 - RMSE_PM: 203.5422
+143/143 [==============================] - 2s 13ms/step - loss: 0.2445 - coeff_determination: 0.0877 - RMSE_PM: 203.1324 - val_loss: 0.3312 - val_coeff_determination: -0.1935 - val_RMSE_PM: 185.5395
+Epoch 35/50
+
+  1/143 [..............................] - ETA: 0s - loss: 0.2425 - coeff_determination: -0.0478 - RMSE_PM: 194.7068
+  6/143 [>.............................] - ETA: 1s - loss: 0.2542 - coeff_determination: 0.0696 - RMSE_PM: 189.6218 
+ 10/143 [=>............................] - ETA: 1s - loss: 0.2706 - coeff_determination: 0.0725 - RMSE_PM: 209.0754
+ 15/143 [==>...........................] - ETA: 1s - loss: 0.2526 - coeff_determination: 0.0836 - RMSE_PM: 206.3102
+ 20/143 [===>..........................] - ETA: 1s - loss: 0.2515 - coeff_determination: 0.0934 - RMSE_PM: 218.1942
+ 25/143 [====>.........................] - ETA: 1s - loss: 0.2484 - coeff_determination: 0.1007 - RMSE_PM: 216.1703
+ 30/143 [=====>........................] - ETA: 1s - loss: 0.2475 - coeff_determination: 0.1004 - RMSE_PM: 211.7231
+ 35/143 [======>.......................] - ETA: 1s - loss: 0.2519 - coeff_determination: 0.1037 - RMSE_PM: 211.6902
+ 40/143 [=======>......................] - ETA: 1s - loss: 0.2477 - coeff_determination: 0.1105 - RMSE_PM: 209.5117
+ 45/143 [========>.....................] - ETA: 1s - loss: 0.2456 - coeff_determination: 0.1164 - RMSE_PM: 209.5932
+ 50/143 [=========>....................] - ETA: 1s - loss: 0.2473 - coeff_determination: 0.1117 - RMSE_PM: 208.4377
+ 55/143 [==========>...................] - ETA: 1s - loss: 0.2519 - coeff_determination: 0.0880 - RMSE_PM: 208.0049
+ 60/143 [===========>..................] - ETA: 1s - loss: 0.2488 - coeff_determination: 0.0911 - RMSE_PM: 206.5622
+ 65/143 [============>.................] - ETA: 0s - loss: 0.2495 - coeff_determination: 0.0888 - RMSE_PM: 209.4485
+ 70/143 [=============>................] - ETA: 0s - loss: 0.2486 - coeff_determination: 0.0832 - RMSE_PM: 207.1367
+ 75/143 [==============>...............] - ETA: 0s - loss: 0.2514 - coeff_determination: 0.0855 - RMSE_PM: 209.9225
+ 80/143 [===============>..............] - ETA: 0s - loss: 0.2526 - coeff_determination: 0.0782 - RMSE_PM: 212.3941
+ 85/143 [================>.............] - ETA: 0s - loss: 0.2527 - coeff_determination: 0.0734 - RMSE_PM: 212.4675
+ 90/143 [=================>............] - ETA: 0s - loss: 0.2502 - coeff_determination: 0.0738 - RMSE_PM: 210.9462
+ 95/143 [==================>...........] - ETA: 0s - loss: 0.2512 - coeff_determination: 0.0729 - RMSE_PM: 209.6416
+100/143 [===================>..........] - ETA: 0s - loss: 0.2490 - coeff_determination: 0.0707 - RMSE_PM: 208.6005
+105/143 [=====================>........] - ETA: 0s - loss: 0.2485 - coeff_determination: 0.0717 - RMSE_PM: 207.5506
+110/143 [======================>.......] - ETA: 0s - loss: 0.2494 - coeff_determination: 0.0666 - RMSE_PM: 208.5293
+115/143 [=======================>......] - ETA: 0s - loss: 0.2496 - coeff_determination: 0.0643 - RMSE_PM: 207.6675
+120/143 [========================>.....] - ETA: 0s - loss: 0.2507 - coeff_determination: 0.0650 - RMSE_PM: 206.9648
+125/143 [=========================>....] - ETA: 0s - loss: 0.2494 - coeff_determination: 0.0636 - RMSE_PM: 206.6169
+130/143 [==========================>...] - ETA: 0s - loss: 0.2486 - coeff_determination: 0.0640 - RMSE_PM: 205.9235
+135/143 [===========================>..] - ETA: 0s - loss: 0.2488 - coeff_determination: 0.0629 - RMSE_PM: 209.5197
+139/143 [============================>.] - ETA: 0s - loss: 0.2493 - coeff_determination: 0.0649 - RMSE_PM: 210.5905
+143/143 [==============================] - 2s 13ms/step - loss: 0.2490 - coeff_determination: 0.0636 - RMSE_PM: 210.1526 - val_loss: 0.3392 - val_coeff_determination: -0.2298 - val_RMSE_PM: 186.7152
+Epoch 36/50
+
+  1/143 [..............................] - ETA: 2s - loss: 0.2184 - coeff_determination: 0.2000 - RMSE_PM: 262.7527
+  6/143 [>.............................] - ETA: 1s - loss: 0.2529 - coeff_determination: 0.0813 - RMSE_PM: 183.8943
+ 11/143 [=>............................] - ETA: 1s - loss: 0.2726 - coeff_determination: 0.0730 - RMSE_PM: 197.7119
+ 16/143 [==>...........................] - ETA: 1s - loss: 0.2649 - coeff_determination: 0.0976 - RMSE_PM: 203.9134
+ 21/143 [===>..........................] - ETA: 1s - loss: 0.2614 - coeff_determination: 0.0849 - RMSE_PM: 197.6578
+ 26/143 [====>.........................] - ETA: 1s - loss: 0.2582 - coeff_determination: 0.0901 - RMSE_PM: 197.6685
+ 31/143 [=====>........................] - ETA: 1s - loss: 0.2585 - coeff_determination: 0.0874 - RMSE_PM: 196.7450
+ 36/143 [======>.......................] - ETA: 1s - loss: 0.2588 - coeff_determination: 0.0900 - RMSE_PM: 199.2879
+ 41/143 [=======>......................] - ETA: 1s - loss: 0.2547 - coeff_determination: 0.0934 - RMSE_PM: 197.6548
+ 46/143 [========>.....................] - ETA: 1s - loss: 0.2510 - coeff_determination: 0.0865 - RMSE_PM: 196.1664
+ 51/143 [=========>....................] - ETA: 1s - loss: 0.2563 - coeff_determination: 0.0815 - RMSE_PM: 198.9994
+ 56/143 [==========>...................] - ETA: 1s - loss: 0.2533 - coeff_determination: 0.0874 - RMSE_PM: 199.4678
+ 61/143 [===========>..................] - ETA: 1s - loss: 0.2494 - coeff_determination: 0.0964 - RMSE_PM: 197.4812
+ 66/143 [============>.................] - ETA: 0s - loss: 0.2517 - coeff_determination: 0.0893 - RMSE_PM: 198.3879
+ 70/143 [=============>................] - ETA: 0s - loss: 0.2520 - coeff_determination: 0.0922 - RMSE_PM: 197.9078
+ 75/143 [==============>...............] - ETA: 0s - loss: 0.2524 - coeff_determination: 0.0982 - RMSE_PM: 197.7648
+ 80/143 [===============>..............] - ETA: 0s - loss: 0.2511 - coeff_determination: 0.0945 - RMSE_PM: 199.3430
+ 85/143 [================>.............] - ETA: 0s - loss: 0.2539 - coeff_determination: 0.0925 - RMSE_PM: 200.6098
+ 90/143 [=================>............] - ETA: 0s - loss: 0.2532 - coeff_determination: 0.0883 - RMSE_PM: 199.7388
+ 95/143 [==================>...........] - ETA: 0s - loss: 0.2511 - coeff_determination: 0.0883 - RMSE_PM: 198.7864
+100/143 [===================>..........] - ETA: 0s - loss: 0.2512 - coeff_determination: 0.0916 - RMSE_PM: 199.7598
+105/143 [=====================>........] - ETA: 0s - loss: 0.2521 - coeff_determination: 0.0918 - RMSE_PM: 201.0661
+110/143 [======================>.......] - ETA: 0s - loss: 0.2512 - coeff_determination: 0.0888 - RMSE_PM: 200.8559
+115/143 [=======================>......] - ETA: 0s - loss: 0.2499 - coeff_determination: 0.0877 - RMSE_PM: 200.3242
+120/143 [========================>.....] - ETA: 0s - loss: 0.2490 - coeff_determination: 0.0901 - RMSE_PM: 200.5253
+125/143 [=========================>....] - ETA: 0s - loss: 0.2502 - coeff_determination: 0.0933 - RMSE_PM: 200.0294
+130/143 [==========================>...] - ETA: 0s - loss: 0.2508 - coeff_determination: 0.0886 - RMSE_PM: 202.1096
+135/143 [===========================>..] - ETA: 0s - loss: 0.2486 - coeff_determination: 0.0893 - RMSE_PM: 200.6251
+140/143 [============================>.] - ETA: 0s - loss: 0.2481 - coeff_determination: 0.0892 - RMSE_PM: 200.7564
+143/143 [==============================] - 2s 13ms/step - loss: 0.2484 - coeff_determination: 0.0890 - RMSE_PM: 200.0787 - val_loss: 0.3111 - val_coeff_determination: -0.1282 - val_RMSE_PM: 183.0658
+Epoch 37/50
+
+  1/143 [..............................] - ETA: 2s - loss: 0.3295 - coeff_determination: 0.1965 - RMSE_PM: 247.2146
+  6/143 [>.............................] - ETA: 1s - loss: 0.3077 - coeff_determination: 0.1261 - RMSE_PM: 242.9006
+ 11/143 [=>............................] - ETA: 1s - loss: 0.2873 - coeff_determination: 0.1399 - RMSE_PM: 227.3582
+ 16/143 [==>...........................] - ETA: 1s - loss: 0.2653 - coeff_determination: 0.1085 - RMSE_PM: 219.2289
+ 21/143 [===>..........................] - ETA: 1s - loss: 0.2659 - coeff_determination: 0.1134 - RMSE_PM: 216.9365
+ 26/143 [====>.........................] - ETA: 1s - loss: 0.2517 - coeff_determination: 0.1117 - RMSE_PM: 207.9828
+ 31/143 [=====>........................] - ETA: 1s - loss: 0.2455 - coeff_determination: 0.1130 - RMSE_PM: 203.5040
+ 36/143 [======>.......................] - ETA: 1s - loss: 0.2530 - coeff_determination: 0.1083 - RMSE_PM: 204.0849
+ 41/143 [=======>......................] - ETA: 1s - loss: 0.2469 - coeff_determination: 0.1152 - RMSE_PM: 199.9694
+ 45/143 [========>.....................] - ETA: 1s - loss: 0.2434 - coeff_determination: 0.1220 - RMSE_PM: 200.2202
+ 50/143 [=========>....................] - ETA: 1s - loss: 0.2398 - coeff_determination: 0.1149 - RMSE_PM: 196.9870
+ 55/143 [==========>...................] - ETA: 1s - loss: 0.2348 - coeff_determination: 0.1155 - RMSE_PM: 194.8455
+ 60/143 [===========>..................] - ETA: 1s - loss: 0.2378 - coeff_determination: 0.1112 - RMSE_PM: 194.6381
+ 65/143 [============>.................] - ETA: 0s - loss: 0.2377 - coeff_determination: 0.1036 - RMSE_PM: 194.3550
+ 70/143 [=============>................] - ETA: 0s - loss: 0.2382 - coeff_determination: 0.0947 - RMSE_PM: 194.1625
+ 75/143 [==============>...............] - ETA: 0s - loss: 0.2391 - coeff_determination: 0.0985 - RMSE_PM: 197.5686
+ 80/143 [===============>..............] - ETA: 0s - loss: 0.2407 - coeff_determination: 0.0983 - RMSE_PM: 197.4416
+ 85/143 [================>.............] - ETA: 0s - loss: 0.2398 - coeff_determination: 0.0985 - RMSE_PM: 195.6663
+ 90/143 [=================>............] - ETA: 0s - loss: 0.2411 - coeff_determination: 0.0962 - RMSE_PM: 197.4079
+ 95/143 [==================>...........] - ETA: 0s - loss: 0.2380 - coeff_determination: 0.0988 - RMSE_PM: 194.9178
+100/143 [===================>..........] - ETA: 0s - loss: 0.2380 - coeff_determination: 0.0977 - RMSE_PM: 195.6379
+105/143 [=====================>........] - ETA: 0s - loss: 0.2349 - coeff_determination: 0.0997 - RMSE_PM: 194.7768
+110/143 [======================>.......] - ETA: 0s - loss: 0.2349 - coeff_determination: 0.1011 - RMSE_PM: 195.1238
+115/143 [=======================>......] - ETA: 0s - loss: 0.2353 - coeff_determination: 0.1022 - RMSE_PM: 196.3822
+120/143 [========================>.....] - ETA: 0s - loss: 0.2361 - coeff_determination: 0.1032 - RMSE_PM: 197.1851
+125/143 [=========================>....] - ETA: 0s - loss: 0.2351 - coeff_determination: 0.1029 - RMSE_PM: 195.8441
+130/143 [==========================>...] - ETA: 0s - loss: 0.2346 - coeff_determination: 0.1022 - RMSE_PM: 195.7017
+135/143 [===========================>..] - ETA: 0s - loss: 0.2351 - coeff_determination: 0.1018 - RMSE_PM: 195.4438
+140/143 [============================>.] - ETA: 0s - loss: 0.2356 - coeff_determination: 0.1033 - RMSE_PM: 196.0003
+143/143 [==============================] - 2s 13ms/step - loss: 0.2358 - coeff_determination: 0.1052 - RMSE_PM: 196.6333 - val_loss: 0.3076 - val_coeff_determination: -0.1182 - val_RMSE_PM: 183.2698
+Epoch 38/50
+
+  1/143 [..............................] - ETA: 0s - loss: 0.2328 - coeff_determination: 0.2487 - RMSE_PM: 178.8169
+  5/143 [>.............................] - ETA: 1s - loss: 0.2314 - coeff_determination: 0.1695 - RMSE_PM: 192.9654
+ 10/143 [=>............................] - ETA: 1s - loss: 0.2296 - coeff_determination: 0.1240 - RMSE_PM: 195.7458
+ 15/143 [==>...........................] - ETA: 1s - loss: 0.2354 - coeff_determination: 0.0362 - RMSE_PM: 197.5528
+ 20/143 [===>..........................] - ETA: 1s - loss: 0.2312 - coeff_determination: 0.0483 - RMSE_PM: 195.2774
+ 25/143 [====>.........................] - ETA: 1s - loss: 0.2298 - coeff_determination: 0.0614 - RMSE_PM: 190.8141
+ 29/143 [=====>........................] - ETA: 1s - loss: 0.2294 - coeff_determination: 0.0721 - RMSE_PM: 194.1038
+ 33/143 [=====>........................] - ETA: 1s - loss: 0.2203 - coeff_determination: 0.0864 - RMSE_PM: 191.8583
+ 38/143 [======>.......................] - ETA: 1s - loss: 0.2359 - coeff_determination: 0.0871 - RMSE_PM: 197.0837
+ 42/143 [=======>......................] - ETA: 1s - loss: 0.2318 - coeff_determination: 0.0967 - RMSE_PM: 194.6996
+ 47/143 [========>.....................] - ETA: 1s - loss: 0.2335 - coeff_determination: 0.0872 - RMSE_PM: 191.8048
+ 51/143 [=========>....................] - ETA: 1s - loss: 0.2417 - coeff_determination: 0.0871 - RMSE_PM: 196.5257
+ 55/143 [==========>...................] - ETA: 1s - loss: 0.2391 - coeff_determination: 0.0882 - RMSE_PM: 196.2512
+ 59/143 [===========>..................] - ETA: 1s - loss: 0.2383 - coeff_determination: 0.0911 - RMSE_PM: 197.0850
+ 64/143 [============>.................] - ETA: 1s - loss: 0.2393 - coeff_determination: 0.0928 - RMSE_PM: 199.0820
+ 69/143 [=============>................] - ETA: 1s - loss: 0.2365 - coeff_determination: 0.0945 - RMSE_PM: 198.5151
+ 74/143 [==============>...............] - ETA: 0s - loss: 0.2390 - coeff_determination: 0.0964 - RMSE_PM: 198.3569
+ 79/143 [===============>..............] - ETA: 0s - loss: 0.2426 - coeff_determination: 0.0931 - RMSE_PM: 200.1597
+ 84/143 [================>.............] - ETA: 0s - loss: 0.2400 - coeff_determination: 0.0937 - RMSE_PM: 199.4713
+ 89/143 [=================>............] - ETA: 0s - loss: 0.2382 - coeff_determination: 0.0965 - RMSE_PM: 198.5626
+ 94/143 [==================>...........] - ETA: 0s - loss: 0.2347 - coeff_determination: 0.0980 - RMSE_PM: 196.6377
+ 99/143 [===================>..........] - ETA: 0s - loss: 0.2347 - coeff_determination: 0.0965 - RMSE_PM: 198.1798
+103/143 [====================>.........] - ETA: 0s - loss: 0.2348 - coeff_determination: 0.0950 - RMSE_PM: 198.2199
+108/143 [=====================>........] - ETA: 0s - loss: 0.2359 - coeff_determination: 0.0972 - RMSE_PM: 198.3375
+113/143 [======================>.......] - ETA: 0s - loss: 0.2342 - coeff_determination: 0.1009 - RMSE_PM: 197.4509
+118/143 [=======================>......] - ETA: 0s - loss: 0.2346 - coeff_determination: 0.0916 - RMSE_PM: 196.8031
+123/143 [========================>.....] - ETA: 0s - loss: 0.2375 - coeff_determination: 0.0889 - RMSE_PM: 197.2703
+128/143 [=========================>....] - ETA: 0s - loss: 0.2376 - coeff_determination: 0.0928 - RMSE_PM: 197.4528
+133/143 [==========================>...] - ETA: 0s - loss: 0.2374 - coeff_determination: 0.0953 - RMSE_PM: 196.5536
+138/143 [===========================>..] - ETA: 0s - loss: 0.2369 - coeff_determination: 0.0958 - RMSE_PM: 196.3775
+143/143 [==============================] - 2s 14ms/step - loss: 0.2361 - coeff_determination: 0.0955 - RMSE_PM: 195.4079 - val_loss: 0.3123 - val_coeff_determination: -0.1339 - val_RMSE_PM: 184.3541
+Epoch 39/50
+
+  1/143 [..............................] - ETA: 2s - loss: 0.1546 - coeff_determination: 0.2414 - RMSE_PM: 153.6971
+  6/143 [>.............................] - ETA: 1s - loss: 0.1953 - coeff_determination: 0.1403 - RMSE_PM: 164.7962
+ 11/143 [=>............................] - ETA: 1s - loss: 0.2071 - coeff_determination: 0.1745 - RMSE_PM: 186.3099
+ 15/143 [==>...........................] - ETA: 1s - loss: 0.2213 - coeff_determination: 0.1421 - RMSE_PM: 191.3337
+ 20/143 [===>..........................] - ETA: 1s - loss: 0.2281 - coeff_determination: 0.1391 - RMSE_PM: 190.5590
+ 25/143 [====>.........................] - ETA: 1s - loss: 0.2193 - coeff_determination: 0.1226 - RMSE_PM: 183.0029
+ 30/143 [=====>........................] - ETA: 1s - loss: 0.2289 - coeff_determination: 0.1109 - RMSE_PM: 190.7286
+ 35/143 [======>.......................] - ETA: 1s - loss: 0.2326 - coeff_determination: 0.1050 - RMSE_PM: 189.8076
+ 40/143 [=======>......................] - ETA: 1s - loss: 0.2285 - coeff_determination: 0.0983 - RMSE_PM: 188.7181
+ 45/143 [========>.....................] - ETA: 1s - loss: 0.2272 - coeff_determination: 0.1166 - RMSE_PM: 189.0785
+ 50/143 [=========>....................] - ETA: 1s - loss: 0.2246 - coeff_determination: 0.1121 - RMSE_PM: 185.6772
+ 55/143 [==========>...................] - ETA: 1s - loss: 0.2260 - coeff_determination: 0.0959 - RMSE_PM: 186.9447
+ 60/143 [===========>..................] - ETA: 1s - loss: 0.2268 - coeff_determination: 0.0875 - RMSE_PM: 186.2337
+ 64/143 [============>.................] - ETA: 1s - loss: 0.2269 - coeff_determination: 0.0883 - RMSE_PM: 187.7658
+ 69/143 [=============>................] - ETA: 0s - loss: 0.2298 - coeff_determination: 0.0852 - RMSE_PM: 190.1875
+ 75/143 [==============>...............] - ETA: 0s - loss: 0.2301 - coeff_determination: 0.0852 - RMSE_PM: 191.7055
+ 80/143 [===============>..............] - ETA: 0s - loss: 0.2317 - coeff_determination: 0.0808 - RMSE_PM: 191.9271
+ 85/143 [================>.............] - ETA: 0s - loss: 0.2335 - coeff_determination: 0.0799 - RMSE_PM: 192.9120
+ 90/143 [=================>............] - ETA: 0s - loss: 0.2342 - coeff_determination: 0.0780 - RMSE_PM: 193.1813
+ 95/143 [==================>...........] - ETA: 0s - loss: 0.2353 - coeff_determination: 0.0782 - RMSE_PM: 193.9758
+100/143 [===================>..........] - ETA: 0s - loss: 0.2328 - coeff_determination: 0.0847 - RMSE_PM: 193.1941
+105/143 [=====================>........] - ETA: 0s - loss: 0.2321 - coeff_determination: 0.0874 - RMSE_PM: 194.4412
+109/143 [=====================>........] - ETA: 0s - loss: 0.2332 - coeff_determination: 0.0887 - RMSE_PM: 195.1253
+115/143 [=======================>......] - ETA: 0s - loss: 0.2325 - coeff_determination: 0.0888 - RMSE_PM: 195.0922
+119/143 [=======================>......] - ETA: 0s - loss: 0.2339 - coeff_determination: 0.0880 - RMSE_PM: 195.1116
+124/143 [=========================>....] - ETA: 0s - loss: 0.2318 - coeff_determination: 0.0924 - RMSE_PM: 194.6667
+130/143 [==========================>...] - ETA: 0s - loss: 0.2334 - coeff_determination: 0.0901 - RMSE_PM: 194.5041
+135/143 [===========================>..] - ETA: 0s - loss: 0.2346 - coeff_determination: 0.0895 - RMSE_PM: 196.5406
+140/143 [============================>.] - ETA: 0s - loss: 0.2359 - coeff_determination: 0.0892 - RMSE_PM: 196.0349
+143/143 [==============================] - 2s 13ms/step - loss: 0.2361 - coeff_determination: 0.0875 - RMSE_PM: 196.3938 - val_loss: 0.3094 - val_coeff_determination: -0.1238 - val_RMSE_PM: 184.0332
+Epoch 40/50
+
+  1/143 [..............................] - ETA: 2s - loss: 0.2963 - coeff_determination: 0.0162 - RMSE_PM: 219.5516
+  6/143 [>.............................] - ETA: 1s - loss: 0.2536 - coeff_determination: 0.1542 - RMSE_PM: 233.7897
+ 11/143 [=>............................] - ETA: 1s - loss: 0.2320 - coeff_determination: 0.0917 - RMSE_PM: 205.5420
+ 16/143 [==>...........................] - ETA: 1s - loss: 0.2459 - coeff_determination: 0.0650 - RMSE_PM: 199.3055
+ 21/143 [===>..........................] - ETA: 1s - loss: 0.2367 - coeff_determination: 0.0780 - RMSE_PM: 199.7927
+ 26/143 [====>.........................] - ETA: 1s - loss: 0.2352 - coeff_determination: 0.0662 - RMSE_PM: 201.2714
+ 31/143 [=====>........................] - ETA: 1s - loss: 0.2329 - coeff_determination: 0.0689 - RMSE_PM: 199.0156
+ 36/143 [======>.......................] - ETA: 1s - loss: 0.2308 - coeff_determination: 0.0802 - RMSE_PM: 199.7473
+ 41/143 [=======>......................] - ETA: 1s - loss: 0.2240 - coeff_determination: 0.0983 - RMSE_PM: 201.5428
+ 46/143 [========>.....................] - ETA: 1s - loss: 0.2294 - coeff_determination: 0.1003 - RMSE_PM: 201.2606
+ 51/143 [=========>....................] - ETA: 1s - loss: 0.2324 - coeff_determination: 0.0966 - RMSE_PM: 203.0538
+ 56/143 [==========>...................] - ETA: 1s - loss: 0.2291 - coeff_determination: 0.1001 - RMSE_PM: 200.1878
+ 61/143 [===========>..................] - ETA: 1s - loss: 0.2251 - coeff_determination: 0.1027 - RMSE_PM: 197.2679
+ 66/143 [============>.................] - ETA: 0s - loss: 0.2250 - coeff_determination: 0.1060 - RMSE_PM: 196.8968
+ 71/143 [=============>................] - ETA: 0s - loss: 0.2241 - coeff_determination: 0.1074 - RMSE_PM: 197.1465
+ 76/143 [==============>...............] - ETA: 0s - loss: 0.2246 - coeff_determination: 0.1010 - RMSE_PM: 194.6539
+ 81/143 [===============>..............] - ETA: 0s - loss: 0.2266 - coeff_determination: 0.0997 - RMSE_PM: 195.4819
+ 86/143 [=================>............] - ETA: 0s - loss: 0.2278 - coeff_determination: 0.0981 - RMSE_PM: 195.2985
+ 91/143 [==================>...........] - ETA: 0s - loss: 0.2297 - coeff_determination: 0.0983 - RMSE_PM: 196.1753
+ 96/143 [===================>..........] - ETA: 0s - loss: 0.2292 - coeff_determination: 0.1042 - RMSE_PM: 195.8235
+101/143 [====================>.........] - ETA: 0s - loss: 0.2299 - coeff_determination: 0.1028 - RMSE_PM: 197.3251
+106/143 [=====================>........] - ETA: 0s - loss: 0.2306 - coeff_determination: 0.0985 - RMSE_PM: 197.4719
+111/143 [======================>.......] - ETA: 0s - loss: 0.2312 - coeff_determination: 0.0961 - RMSE_PM: 198.1033
+116/143 [=======================>......] - ETA: 0s - loss: 0.2306 - coeff_determination: 0.0981 - RMSE_PM: 197.3801
+121/143 [========================>.....] - ETA: 0s - loss: 0.2303 - coeff_determination: 0.0973 - RMSE_PM: 197.4531
+125/143 [=========================>....] - ETA: 0s - loss: 0.2299 - coeff_determination: 0.0989 - RMSE_PM: 197.1869
+130/143 [==========================>...] - ETA: 0s - loss: 0.2298 - coeff_determination: 0.1012 - RMSE_PM: 197.4271
+135/143 [===========================>..] - ETA: 0s - loss: 0.2293 - coeff_determination: 0.1074 - RMSE_PM: 198.4270
+140/143 [============================>.] - ETA: 0s - loss: 0.2304 - coeff_determination: 0.1093 - RMSE_PM: 198.2233
+143/143 [==============================] - 2s 13ms/step - loss: 0.2299 - coeff_determination: 0.1115 - RMSE_PM: 197.7504 - val_loss: 0.3224 - val_coeff_determination: -0.1621 - val_RMSE_PM: 184.1261
+Epoch 41/50
+
+  1/143 [..............................] - ETA: 2s - loss: 0.2103 - coeff_determination: 0.2023 - RMSE_PM: 237.8383
+  6/143 [>.............................] - ETA: 1s - loss: 0.2573 - coeff_determination: 0.0907 - RMSE_PM: 185.2477
+ 11/143 [=>............................] - ETA: 1s - loss: 0.2566 - coeff_determination: 0.0883 - RMSE_PM: 193.3241
+ 16/143 [==>...........................] - ETA: 1s - loss: 0.2504 - coeff_determination: 0.1233 - RMSE_PM: 187.3811
+ 20/143 [===>..........................] - ETA: 1s - loss: 0.2526 - coeff_determination: 0.1150 - RMSE_PM: 189.7186
+ 25/143 [====>.........................] - ETA: 1s - loss: 0.2427 - coeff_determination: 0.0967 - RMSE_PM: 183.4033
+ 30/143 [=====>........................] - ETA: 1s - loss: 0.2402 - coeff_determination: 0.1085 - RMSE_PM: 183.2197
+ 35/143 [======>.......................] - ETA: 1s - loss: 0.2401 - coeff_determination: 0.1179 - RMSE_PM: 187.8421
+ 40/143 [=======>......................] - ETA: 1s - loss: 0.2407 - coeff_determination: 0.1178 - RMSE_PM: 194.3071
+ 45/143 [========>.....................] - ETA: 1s - loss: 0.2388 - coeff_determination: 0.1241 - RMSE_PM: 193.5664
+ 50/143 [=========>....................] - ETA: 1s - loss: 0.2386 - coeff_determination: 0.1119 - RMSE_PM: 193.3929
+ 55/143 [==========>...................] - ETA: 1s - loss: 0.2444 - coeff_determination: 0.1057 - RMSE_PM: 195.5623
+ 60/143 [===========>..................] - ETA: 1s - loss: 0.2455 - coeff_determination: 0.1024 - RMSE_PM: 196.2347
+ 65/143 [============>.................] - ETA: 0s - loss: 0.2466 - coeff_determination: 0.0983 - RMSE_PM: 194.9271
+ 70/143 [=============>................] - ETA: 0s - loss: 0.2488 - coeff_determination: 0.1026 - RMSE_PM: 194.4471
+ 75/143 [==============>...............] - ETA: 0s - loss: 0.2493 - coeff_determination: 0.0950 - RMSE_PM: 193.8150
+ 80/143 [===============>..............] - ETA: 0s - loss: 0.2482 - coeff_determination: 0.0947 - RMSE_PM: 196.3849
+ 85/143 [================>.............] - ETA: 0s - loss: 0.2489 - coeff_determination: 0.0927 - RMSE_PM: 195.9835
+ 90/143 [=================>............] - ETA: 0s - loss: 0.2496 - coeff_determination: 0.0925 - RMSE_PM: 194.5517
+ 95/143 [==================>...........] - ETA: 0s - loss: 0.2474 - coeff_determination: 0.0894 - RMSE_PM: 193.9740
+100/143 [===================>..........] - ETA: 0s - loss: 0.2451 - coeff_determination: 0.0944 - RMSE_PM: 193.4903
+105/143 [=====================>........] - ETA: 0s - loss: 0.2456 - coeff_determination: 0.0937 - RMSE_PM: 194.8341
+109/143 [=====================>........] - ETA: 0s - loss: 0.2463 - coeff_determination: 0.0874 - RMSE_PM: 194.2356
+114/143 [======================>.......] - ETA: 0s - loss: 0.2471 - coeff_determination: 0.0873 - RMSE_PM: 193.8883
+119/143 [=======================>......] - ETA: 0s - loss: 0.2464 - coeff_determination: 0.0878 - RMSE_PM: 195.8192
+124/143 [=========================>....] - ETA: 0s - loss: 0.2468 - coeff_determination: 0.0864 - RMSE_PM: 195.4724
+129/143 [==========================>...] - ETA: 0s - loss: 0.2451 - coeff_determination: 0.0911 - RMSE_PM: 196.2441
+134/143 [===========================>..] - ETA: 0s - loss: 0.2458 - coeff_determination: 0.0906 - RMSE_PM: 196.7002
+139/143 [============================>.] - ETA: 0s - loss: 0.2462 - coeff_determination: 0.0906 - RMSE_PM: 195.8013
+143/143 [==============================] - 2s 13ms/step - loss: 0.2445 - coeff_determination: 0.0923 - RMSE_PM: 195.5619 - val_loss: 0.2999 - val_coeff_determination: -0.1113 - val_RMSE_PM: 184.0593
+Epoch 42/50
+
+  1/143 [..............................] - ETA: 2s - loss: 0.1414 - coeff_determination: 0.4954 - RMSE_PM: 162.9675
+  5/143 [>.............................] - ETA: 2s - loss: 0.2478 - coeff_determination: 0.1566 - RMSE_PM: 229.7275
+ 10/143 [=>............................] - ETA: 1s - loss: 0.2693 - coeff_determination: 0.1387 - RMSE_PM: 214.1963
+ 15/143 [==>...........................] - ETA: 1s - loss: 0.2576 - coeff_determination: 0.1372 - RMSE_PM: 207.2650
+ 20/143 [===>..........................] - ETA: 1s - loss: 0.2490 - coeff_determination: 0.1506 - RMSE_PM: 200.6584
+ 25/143 [====>.........................] - ETA: 1s - loss: 0.2544 - coeff_determination: 0.1331 - RMSE_PM: 200.7288
+ 30/143 [=====>........................] - ETA: 1s - loss: 0.2592 - coeff_determination: 0.1368 - RMSE_PM: 208.2154
+ 35/143 [======>.......................] - ETA: 1s - loss: 0.2576 - coeff_determination: 0.1285 - RMSE_PM: 204.9114
+ 39/143 [=======>......................] - ETA: 1s - loss: 0.2555 - coeff_determination: 0.1371 - RMSE_PM: 203.3747
+ 44/143 [========>.....................] - ETA: 1s - loss: 0.2573 - coeff_determination: 0.1290 - RMSE_PM: 203.7010
+ 49/143 [=========>....................] - ETA: 1s - loss: 0.2480 - coeff_determination: 0.1087 - RMSE_PM: 199.3818
+ 54/143 [==========>...................] - ETA: 1s - loss: 0.2470 - coeff_determination: 0.1000 - RMSE_PM: 199.5938
+ 59/143 [===========>..................] - ETA: 1s - loss: 0.2451 - coeff_determination: 0.1015 - RMSE_PM: 200.1758
+ 64/143 [============>.................] - ETA: 1s - loss: 0.2451 - coeff_determination: 0.1072 - RMSE_PM: 202.0405
+ 69/143 [=============>................] - ETA: 0s - loss: 0.2405 - coeff_determination: 0.1109 - RMSE_PM: 198.6583
+ 74/143 [==============>...............] - ETA: 0s - loss: 0.2415 - coeff_determination: 0.1102 - RMSE_PM: 202.3005
+ 79/143 [===============>..............] - ETA: 0s - loss: 0.2383 - coeff_determination: 0.1079 - RMSE_PM: 200.2984
+ 84/143 [================>.............] - ETA: 0s - loss: 0.2413 - coeff_determination: 0.1029 - RMSE_PM: 200.9905
+ 89/143 [=================>............] - ETA: 0s - loss: 0.2419 - coeff_determination: 0.1050 - RMSE_PM: 200.8605
+ 94/143 [==================>...........] - ETA: 0s - loss: 0.2398 - coeff_determination: 0.1076 - RMSE_PM: 200.6866
+ 99/143 [===================>..........] - ETA: 0s - loss: 0.2400 - coeff_determination: 0.1084 - RMSE_PM: 200.8421
+104/143 [====================>.........] - ETA: 0s - loss: 0.2438 - coeff_determination: 0.1062 - RMSE_PM: 202.4108
+109/143 [=====================>........] - ETA: 0s - loss: 0.2431 - coeff_determination: 0.1079 - RMSE_PM: 202.4793
+114/143 [======================>.......] - ETA: 0s - loss: 0.2414 - coeff_determination: 0.1097 - RMSE_PM: 201.2285
+119/143 [=======================>......] - ETA: 0s - loss: 0.2407 - coeff_determination: 0.1087 - RMSE_PM: 200.0695
+123/143 [========================>.....] - ETA: 0s - loss: 0.2399 - coeff_determination: 0.1053 - RMSE_PM: 198.3519
+128/143 [=========================>....] - ETA: 0s - loss: 0.2414 - coeff_determination: 0.1045 - RMSE_PM: 198.5306
+134/143 [===========================>..] - ETA: 0s - loss: 0.2397 - coeff_determination: 0.1082 - RMSE_PM: 199.8153
+139/143 [============================>.] - ETA: 0s - loss: 0.2401 - coeff_determination: 0.1105 - RMSE_PM: 200.3422
+143/143 [==============================] - 2s 14ms/step - loss: 0.2400 - coeff_determination: 0.1090 - RMSE_PM: 199.6426 - val_loss: 0.3318 - val_coeff_determination: -0.1958 - val_RMSE_PM: 184.9527
+Epoch 43/50
+
+  1/143 [..............................] - ETA: 0s - loss: 0.1967 - coeff_determination: 0.2030 - RMSE_PM: 154.5661
+  5/143 [>.............................] - ETA: 1s - loss: 0.2304 - coeff_determination: 0.0897 - RMSE_PM: 159.4662
+ 10/143 [=>............................] - ETA: 1s - loss: 0.2429 - coeff_determination: 0.0302 - RMSE_PM: 182.4507
+ 15/143 [==>...........................] - ETA: 1s - loss: 0.2523 - coeff_determination: 0.0336 - RMSE_PM: 193.2413
+ 20/143 [===>..........................] - ETA: 1s - loss: 0.2431 - coeff_determination: 0.0316 - RMSE_PM: 190.4892
+ 25/143 [====>.........................] - ETA: 1s - loss: 0.2460 - coeff_determination: 0.0435 - RMSE_PM: 188.9170
+ 30/143 [=====>........................] - ETA: 1s - loss: 0.2534 - coeff_determination: 0.0529 - RMSE_PM: 191.9354
+ 35/143 [======>.......................] - ETA: 1s - loss: 0.2490 - coeff_determination: 0.0555 - RMSE_PM: 194.1993
+ 40/143 [=======>......................] - ETA: 1s - loss: 0.2499 - coeff_determination: 0.0645 - RMSE_PM: 197.2732
+ 45/143 [========>.....................] - ETA: 1s - loss: 0.2515 - coeff_determination: 0.0609 - RMSE_PM: 201.2839
+ 50/143 [=========>....................] - ETA: 1s - loss: 0.2520 - coeff_determination: 0.0627 - RMSE_PM: 202.9829
+ 55/143 [==========>...................] - ETA: 1s - loss: 0.2447 - coeff_determination: 0.0680 - RMSE_PM: 198.0337
+ 60/143 [===========>..................] - ETA: 1s - loss: 0.2444 - coeff_determination: 0.0665 - RMSE_PM: 198.8403
+ 65/143 [============>.................] - ETA: 0s - loss: 0.2415 - coeff_determination: 0.0741 - RMSE_PM: 196.9976
+ 70/143 [=============>................] - ETA: 0s - loss: 0.2400 - coeff_determination: 0.0719 - RMSE_PM: 195.9446
+ 75/143 [==============>...............] - ETA: 0s - loss: 0.2416 - coeff_determination: 0.0711 - RMSE_PM: 196.5833
+ 80/143 [===============>..............] - ETA: 0s - loss: 0.2440 - coeff_determination: 0.0718 - RMSE_PM: 198.1241
+ 85/143 [================>.............] - ETA: 0s - loss: 0.2485 - coeff_determination: 0.0698 - RMSE_PM: 200.7993
+ 90/143 [=================>............] - ETA: 0s - loss: 0.2472 - coeff_determination: 0.0741 - RMSE_PM: 202.9750
+ 95/143 [==================>...........] - ETA: 0s - loss: 0.2462 - coeff_determination: 0.0683 - RMSE_PM: 201.0469
+100/143 [===================>..........] - ETA: 0s - loss: 0.2461 - coeff_determination: 0.0676 - RMSE_PM: 199.8210
+105/143 [=====================>........] - ETA: 0s - loss: 0.2440 - coeff_determination: 0.0720 - RMSE_PM: 198.9496
+110/143 [======================>.......] - ETA: 0s - loss: 0.2466 - coeff_determination: 0.0718 - RMSE_PM: 199.2846
+115/143 [=======================>......] - ETA: 0s - loss: 0.2471 - coeff_determination: 0.0748 - RMSE_PM: 199.6362
+120/143 [========================>.....] - ETA: 0s - loss: 0.2456 - coeff_determination: 0.0738 - RMSE_PM: 199.1442
+125/143 [=========================>....] - ETA: 0s - loss: 0.2460 - coeff_determination: 0.0753 - RMSE_PM: 200.7833
+130/143 [==========================>...] - ETA: 0s - loss: 0.2445 - coeff_determination: 0.0810 - RMSE_PM: 200.1012
+135/143 [===========================>..] - ETA: 0s - loss: 0.2435 - coeff_determination: 0.0860 - RMSE_PM: 201.6424
+140/143 [============================>.] - ETA: 0s - loss: 0.2453 - coeff_determination: 0.0857 - RMSE_PM: 201.5153
+143/143 [==============================] - 2s 13ms/step - loss: 0.2440 - coeff_determination: 0.0861 - RMSE_PM: 201.5860 - val_loss: 0.3069 - val_coeff_determination: -0.1109 - val_RMSE_PM: 183.4304
+Epoch 44/50
+
+  1/143 [..............................] - ETA: 0s - loss: 0.2055 - coeff_determination: 0.2062 - RMSE_PM: 160.8750
+  5/143 [>.............................] - ETA: 1s - loss: 0.1901 - coeff_determination: 0.1122 - RMSE_PM: 182.8680
+ 10/143 [=>............................] - ETA: 1s - loss: 0.2124 - coeff_determination: 0.1042 - RMSE_PM: 180.3485
+ 15/143 [==>...........................] - ETA: 1s - loss: 0.2219 - coeff_determination: 0.1195 - RMSE_PM: 199.4733
+ 20/143 [===>..........................] - ETA: 1s - loss: 0.2211 - coeff_determination: 0.1307 - RMSE_PM: 198.2946
+ 25/143 [====>.........................] - ETA: 1s - loss: 0.2225 - coeff_determination: 0.1217 - RMSE_PM: 193.3110
+ 30/143 [=====>........................] - ETA: 1s - loss: 0.2318 - coeff_determination: 0.1112 - RMSE_PM: 192.6760
+ 35/143 [======>.......................] - ETA: 1s - loss: 0.2384 - coeff_determination: 0.0940 - RMSE_PM: 192.9120
+ 40/143 [=======>......................] - ETA: 1s - loss: 0.2304 - coeff_determination: 0.1050 - RMSE_PM: 191.5059
+ 45/143 [========>.....................] - ETA: 1s - loss: 0.2255 - coeff_determination: 0.1049 - RMSE_PM: 187.8583
+ 50/143 [=========>....................] - ETA: 1s - loss: 0.2238 - coeff_determination: 0.1104 - RMSE_PM: 190.8320
+ 55/143 [==========>...................] - ETA: 1s - loss: 0.2268 - coeff_determination: 0.1068 - RMSE_PM: 192.9137
+ 60/143 [===========>..................] - ETA: 1s - loss: 0.2250 - coeff_determination: 0.1157 - RMSE_PM: 193.2633
+ 65/143 [============>.................] - ETA: 0s - loss: 0.2260 - coeff_determination: 0.1176 - RMSE_PM: 196.7659
+ 70/143 [=============>................] - ETA: 0s - loss: 0.2274 - coeff_determination: 0.1164 - RMSE_PM: 196.8118
+ 75/143 [==============>...............] - ETA: 0s - loss: 0.2262 - coeff_determination: 0.1159 - RMSE_PM: 195.8475
+ 80/143 [===============>..............] - ETA: 0s - loss: 0.2250 - coeff_determination: 0.1153 - RMSE_PM: 194.2704
+ 85/143 [================>.............] - ETA: 0s - loss: 0.2247 - coeff_determination: 0.1164 - RMSE_PM: 194.2001
+ 90/143 [=================>............] - ETA: 0s - loss: 0.2284 - coeff_determination: 0.1194 - RMSE_PM: 194.7121
+ 95/143 [==================>...........] - ETA: 0s - loss: 0.2277 - coeff_determination: 0.1176 - RMSE_PM: 194.8964
+100/143 [===================>..........] - ETA: 0s - loss: 0.2306 - coeff_determination: 0.1139 - RMSE_PM: 195.1246
+105/143 [=====================>........] - ETA: 0s - loss: 0.2302 - coeff_determination: 0.1142 - RMSE_PM: 194.5085
+110/143 [======================>.......] - ETA: 0s - loss: 0.2325 - coeff_determination: 0.1135 - RMSE_PM: 195.3862
+115/143 [=======================>......] - ETA: 0s - loss: 0.2343 - coeff_determination: 0.1098 - RMSE_PM: 196.7159
+120/143 [========================>.....] - ETA: 0s - loss: 0.2346 - coeff_determination: 0.1086 - RMSE_PM: 197.1098
+126/143 [=========================>....] - ETA: 0s - loss: 0.2341 - coeff_determination: 0.1084 - RMSE_PM: 196.2541
+131/143 [==========================>...] - ETA: 0s - loss: 0.2348 - coeff_determination: 0.1069 - RMSE_PM: 195.8882
+136/143 [===========================>..] - ETA: 0s - loss: 0.2348 - coeff_determination: 0.1094 - RMSE_PM: 195.4743
+140/143 [============================>.] - ETA: 0s - loss: 0.2352 - coeff_determination: 0.1083 - RMSE_PM: 194.9991
+143/143 [==============================] - 2s 13ms/step - loss: 0.2356 - coeff_determination: 0.1084 - RMSE_PM: 194.6519 - val_loss: 0.3033 - val_coeff_determination: -0.1020 - val_RMSE_PM: 183.5445
+Epoch 45/50
+
+  1/143 [..............................] - ETA: 2s - loss: 0.2108 - coeff_determination: 0.2102 - RMSE_PM: 141.8151
+  6/143 [>.............................] - ETA: 1s - loss: 0.2449 - coeff_determination: 0.0572 - RMSE_PM: 183.4303
+ 11/143 [=>............................] - ETA: 1s - loss: 0.2019 - coeff_determination: 0.0743 - RMSE_PM: 163.5576
+ 16/143 [==>...........................] - ETA: 1s - loss: 0.2150 - coeff_determination: 0.0889 - RMSE_PM: 172.8112
+ 21/143 [===>..........................] - ETA: 1s - loss: 0.2161 - coeff_determination: 0.0869 - RMSE_PM: 178.2487
+ 26/143 [====>.........................] - ETA: 1s - loss: 0.2186 - coeff_determination: 0.0766 - RMSE_PM: 181.5996
+ 30/143 [=====>........................] - ETA: 1s - loss: 0.2244 - coeff_determination: 0.0752 - RMSE_PM: 185.6815
+ 36/143 [======>.......................] - ETA: 1s - loss: 0.2337 - coeff_determination: 0.0690 - RMSE_PM: 189.6128
+ 40/143 [=======>......................] - ETA: 1s - loss: 0.2384 - coeff_determination: 0.0638 - RMSE_PM: 190.0095
+ 45/143 [========>.....................] - ETA: 1s - loss: 0.2382 - coeff_determination: 0.0734 - RMSE_PM: 191.0372
+ 50/143 [=========>....................] - ETA: 1s - loss: 0.2349 - coeff_determination: 0.0858 - RMSE_PM: 193.5066
+ 55/143 [==========>...................] - ETA: 1s - loss: 0.2346 - coeff_determination: 0.0917 - RMSE_PM: 196.3518
+ 60/143 [===========>..................] - ETA: 1s - loss: 0.2391 - coeff_determination: 0.0865 - RMSE_PM: 198.4616
+ 65/143 [============>.................] - ETA: 0s - loss: 0.2395 - coeff_determination: 0.0894 - RMSE_PM: 199.1620
+ 70/143 [=============>................] - ETA: 0s - loss: 0.2368 - coeff_determination: 0.0920 - RMSE_PM: 197.4149
+ 75/143 [==============>...............] - ETA: 0s - loss: 0.2366 - coeff_determination: 0.0973 - RMSE_PM: 198.2878
+ 80/143 [===============>..............] - ETA: 0s - loss: 0.2366 - coeff_determination: 0.1026 - RMSE_PM: 199.6190
+ 85/143 [================>.............] - ETA: 0s - loss: 0.2352 - coeff_determination: 0.1068 - RMSE_PM: 198.5005
+ 90/143 [=================>............] - ETA: 0s - loss: 0.2355 - coeff_determination: 0.1055 - RMSE_PM: 200.1228
+ 95/143 [==================>...........] - ETA: 0s - loss: 0.2341 - coeff_determination: 0.1026 - RMSE_PM: 198.7335
+101/143 [====================>.........] - ETA: 0s - loss: 0.2364 - coeff_determination: 0.1026 - RMSE_PM: 199.8247
+105/143 [=====================>........] - ETA: 0s - loss: 0.2365 - coeff_determination: 0.1025 - RMSE_PM: 199.0876
+111/143 [======================>.......] - ETA: 0s - loss: 0.2369 - coeff_determination: 0.1037 - RMSE_PM: 199.2738
+115/143 [=======================>......] - ETA: 0s - loss: 0.2378 - coeff_determination: 0.1051 - RMSE_PM: 200.8379
+120/143 [========================>.....] - ETA: 0s - loss: 0.2371 - coeff_determination: 0.1086 - RMSE_PM: 200.5974
+125/143 [=========================>....] - ETA: 0s - loss: 0.2364 - coeff_determination: 0.1079 - RMSE_PM: 199.3763
+130/143 [==========================>...] - ETA: 0s - loss: 0.2364 - coeff_determination: 0.1079 - RMSE_PM: 198.3398
+135/143 [===========================>..] - ETA: 0s - loss: 0.2378 - coeff_determination: 0.1055 - RMSE_PM: 198.4174
+140/143 [============================>.] - ETA: 0s - loss: 0.2382 - coeff_determination: 0.1075 - RMSE_PM: 198.7368
+143/143 [==============================] - 2s 13ms/step - loss: 0.2375 - coeff_determination: 0.1079 - RMSE_PM: 198.1063 - val_loss: 0.2995 - val_coeff_determination: -0.0908 - val_RMSE_PM: 182.2528
+Epoch 46/50
+
+  1/143 [..............................] - ETA: 2s - loss: 0.3431 - coeff_determination: 0.1500 - RMSE_PM: 217.0027
+  6/143 [>.............................] - ETA: 1s - loss: 0.2085 - coeff_determination: 0.2188 - RMSE_PM: 180.7470
+ 11/143 [=>............................] - ETA: 1s - loss: 0.2102 - coeff_determination: 0.1628 - RMSE_PM: 173.4673
+ 16/143 [==>...........................] - ETA: 1s - loss: 0.2108 - coeff_determination: 0.1777 - RMSE_PM: 188.1305
+ 21/143 [===>..........................] - ETA: 1s - loss: 0.2216 - coeff_determination: 0.1566 - RMSE_PM: 198.8887
+ 26/143 [====>.........................] - ETA: 1s - loss: 0.2221 - coeff_determination: 0.1540 - RMSE_PM: 196.8364
+ 31/143 [=====>........................] - ETA: 1s - loss: 0.2156 - coeff_determination: 0.1433 - RMSE_PM: 192.5430
+ 36/143 [======>.......................] - ETA: 1s - loss: 0.2188 - coeff_determination: 0.1350 - RMSE_PM: 192.4311
+ 41/143 [=======>......................] - ETA: 1s - loss: 0.2266 - coeff_determination: 0.1336 - RMSE_PM: 192.5553
+ 46/143 [========>.....................] - ETA: 1s - loss: 0.2261 - coeff_determination: 0.1316 - RMSE_PM: 193.8291
+ 51/143 [=========>....................] - ETA: 1s - loss: 0.2262 - coeff_determination: 0.1310 - RMSE_PM: 194.1729
+ 56/143 [==========>...................] - ETA: 1s - loss: 0.2256 - coeff_determination: 0.1260 - RMSE_PM: 192.8066
+ 61/143 [===========>..................] - ETA: 1s - loss: 0.2243 - coeff_determination: 0.1242 - RMSE_PM: 191.4357
+ 66/143 [============>.................] - ETA: 0s - loss: 0.2243 - coeff_determination: 0.1272 - RMSE_PM: 192.3730
+ 71/143 [=============>................] - ETA: 0s - loss: 0.2265 - coeff_determination: 0.1245 - RMSE_PM: 193.4936
+ 76/143 [==============>...............] - ETA: 0s - loss: 0.2252 - coeff_determination: 0.1264 - RMSE_PM: 191.5598
+ 81/143 [===============>..............] - ETA: 0s - loss: 0.2254 - coeff_determination: 0.1217 - RMSE_PM: 192.3360
+ 86/143 [=================>............] - ETA: 0s - loss: 0.2257 - coeff_determination: 0.1216 - RMSE_PM: 191.5817
+ 91/143 [==================>...........] - ETA: 0s - loss: 0.2270 - coeff_determination: 0.1250 - RMSE_PM: 191.9535
+ 96/143 [===================>..........] - ETA: 0s - loss: 0.2288 - coeff_determination: 0.1237 - RMSE_PM: 192.8449
+101/143 [====================>.........] - ETA: 0s - loss: 0.2286 - coeff_determination: 0.1191 - RMSE_PM: 193.0748
+106/143 [=====================>........] - ETA: 0s - loss: 0.2283 - coeff_determination: 0.1224 - RMSE_PM: 193.2551
+111/143 [======================>.......] - ETA: 0s - loss: 0.2274 - coeff_determination: 0.1222 - RMSE_PM: 192.4436
+116/143 [=======================>......] - ETA: 0s - loss: 0.2276 - coeff_determination: 0.1208 - RMSE_PM: 192.4202
+121/143 [========================>.....] - ETA: 0s - loss: 0.2273 - coeff_determination: 0.1181 - RMSE_PM: 191.4492
+126/143 [=========================>....] - ETA: 0s - loss: 0.2290 - coeff_determination: 0.1154 - RMSE_PM: 192.9240
+131/143 [==========================>...] - ETA: 0s - loss: 0.2289 - coeff_determination: 0.1118 - RMSE_PM: 191.8220
+136/143 [===========================>..] - ETA: 0s - loss: 0.2275 - coeff_determination: 0.1151 - RMSE_PM: 191.0246
+141/143 [============================>.] - ETA: 0s - loss: 0.2286 - coeff_determination: 0.1146 - RMSE_PM: 191.6292
+143/143 [==============================] - 2s 13ms/step - loss: 0.2284 - coeff_determination: 0.1147 - RMSE_PM: 191.5833 - val_loss: 0.3054 - val_coeff_determination: -0.1051 - val_RMSE_PM: 182.3456
+Epoch 47/50
+
+  1/143 [..............................] - ETA: 2s - loss: 0.1784 - coeff_determination: 0.1368 - RMSE_PM: 190.1058
+  6/143 [>.............................] - ETA: 1s - loss: 0.2083 - coeff_determination: 0.0849 - RMSE_PM: 182.9084
+ 12/143 [=>............................] - ETA: 1s - loss: 0.2369 - coeff_determination: 0.1008 - RMSE_PM: 186.5106
+ 17/143 [==>...........................] - ETA: 1s - loss: 0.2466 - coeff_determination: 0.1338 - RMSE_PM: 202.8020
+ 22/143 [===>..........................] - ETA: 1s - loss: 0.2518 - coeff_determination: 0.1382 - RMSE_PM: 205.5332
+ 27/143 [====>.........................] - ETA: 1s - loss: 0.2405 - coeff_determination: 0.1431 - RMSE_PM: 203.9850
+ 32/143 [=====>........................] - ETA: 1s - loss: 0.2423 - coeff_determination: 0.1535 - RMSE_PM: 201.9864
+ 37/143 [======>.......................] - ETA: 1s - loss: 0.2482 - coeff_determination: 0.1453 - RMSE_PM: 209.9352
+ 42/143 [=======>......................] - ETA: 1s - loss: 0.2422 - coeff_determination: 0.1383 - RMSE_PM: 203.4562
+ 46/143 [========>.....................] - ETA: 1s - loss: 0.2439 - coeff_determination: 0.1365 - RMSE_PM: 202.7156
+ 51/143 [=========>....................] - ETA: 1s - loss: 0.2406 - coeff_determination: 0.1376 - RMSE_PM: 200.6782
+ 56/143 [==========>...................] - ETA: 1s - loss: 0.2371 - coeff_determination: 0.1380 - RMSE_PM: 201.6412
+ 61/143 [===========>..................] - ETA: 1s - loss: 0.2358 - coeff_determination: 0.1410 - RMSE_PM: 205.6825
+ 66/143 [============>.................] - ETA: 0s - loss: 0.2401 - coeff_determination: 0.1418 - RMSE_PM: 208.0032
+ 71/143 [=============>................] - ETA: 0s - loss: 0.2405 - coeff_determination: 0.1371 - RMSE_PM: 205.5640
+ 76/143 [==============>...............] - ETA: 0s - loss: 0.2404 - coeff_determination: 0.1389 - RMSE_PM: 205.5479
+ 81/143 [===============>..............] - ETA: 0s - loss: 0.2394 - coeff_determination: 0.1336 - RMSE_PM: 205.4348
+ 86/143 [=================>............] - ETA: 0s - loss: 0.2372 - coeff_determination: 0.1326 - RMSE_PM: 202.1997
+ 91/143 [==================>...........] - ETA: 0s - loss: 0.2355 - coeff_determination: 0.1353 - RMSE_PM: 200.4919
+ 96/143 [===================>..........] - ETA: 0s - loss: 0.2349 - coeff_determination: 0.1331 - RMSE_PM: 198.9207
+101/143 [====================>.........] - ETA: 0s - loss: 0.2326 - coeff_determination: 0.1324 - RMSE_PM: 199.4955
+106/143 [=====================>........] - ETA: 0s - loss: 0.2344 - coeff_determination: 0.1299 - RMSE_PM: 199.6160
+111/143 [======================>.......] - ETA: 0s - loss: 0.2342 - coeff_determination: 0.1292 - RMSE_PM: 198.9868
+116/143 [=======================>......] - ETA: 0s - loss: 0.2332 - coeff_determination: 0.1313 - RMSE_PM: 199.1789
+121/143 [========================>.....] - ETA: 0s - loss: 0.2327 - coeff_determination: 0.1308 - RMSE_PM: 198.2878
+126/143 [=========================>....] - ETA: 0s - loss: 0.2325 - coeff_determination: 0.1330 - RMSE_PM: 197.2211
+131/143 [==========================>...] - ETA: 0s - loss: 0.2342 - coeff_determination: 0.1325 - RMSE_PM: 197.1970
+136/143 [===========================>..] - ETA: 0s - loss: 0.2330 - coeff_determination: 0.1325 - RMSE_PM: 196.4367
+141/143 [============================>.] - ETA: 0s - loss: 0.2317 - coeff_determination: 0.1325 - RMSE_PM: 195.5010
+143/143 [==============================] - 2s 13ms/step - loss: 0.2311 - coeff_determination: 0.1322 - RMSE_PM: 195.5453 - val_loss: 0.3058 - val_coeff_determination: -0.1008 - val_RMSE_PM: 182.9603
+Epoch 48/50
+
+  1/143 [..............................] - ETA: 2s - loss: 0.2726 - coeff_determination: 0.2373 - RMSE_PM: 155.0560
+  6/143 [>.............................] - ETA: 1s - loss: 0.2195 - coeff_determination: 0.1482 - RMSE_PM: 206.2113
+ 11/143 [=>............................] - ETA: 1s - loss: 0.2382 - coeff_determination: 0.0658 - RMSE_PM: 192.2849
+ 16/143 [==>...........................] - ETA: 1s - loss: 0.2691 - coeff_determination: 0.0799 - RMSE_PM: 216.2002
+ 21/143 [===>..........................] - ETA: 1s - loss: 0.2509 - coeff_determination: 0.0927 - RMSE_PM: 211.4038
+ 26/143 [====>.........................] - ETA: 1s - loss: 0.2405 - coeff_determination: 0.1130 - RMSE_PM: 205.2066
+ 31/143 [=====>........................] - ETA: 1s - loss: 0.2544 - coeff_determination: 0.1120 - RMSE_PM: 211.7352
+ 36/143 [======>.......................] - ETA: 1s - loss: 0.2524 - coeff_determination: 0.1175 - RMSE_PM: 210.6300
+ 41/143 [=======>......................] - ETA: 1s - loss: 0.2609 - coeff_determination: 0.1113 - RMSE_PM: 210.9343
+ 46/143 [========>.....................] - ETA: 1s - loss: 0.2597 - coeff_determination: 0.1097 - RMSE_PM: 213.1237
+ 51/143 [=========>....................] - ETA: 1s - loss: 0.2587 - coeff_determination: 0.1126 - RMSE_PM: 214.4569
+ 56/143 [==========>...................] - ETA: 1s - loss: 0.2618 - coeff_determination: 0.1091 - RMSE_PM: 214.3280
+ 61/143 [===========>..................] - ETA: 1s - loss: 0.2556 - coeff_determination: 0.1067 - RMSE_PM: 212.2247
+ 66/143 [============>.................] - ETA: 0s - loss: 0.2511 - coeff_determination: 0.1056 - RMSE_PM: 208.6540
+ 71/143 [=============>................] - ETA: 0s - loss: 0.2491 - coeff_determination: 0.1067 - RMSE_PM: 207.4841
+ 75/143 [==============>...............] - ETA: 0s - loss: 0.2508 - coeff_determination: 0.1033 - RMSE_PM: 207.9539
+ 80/143 [===============>..............] - ETA: 0s - loss: 0.2510 - coeff_determination: 0.1031 - RMSE_PM: 208.1084
+ 85/143 [================>.............] - ETA: 0s - loss: 0.2502 - coeff_determination: 0.1032 - RMSE_PM: 209.3098
+ 90/143 [=================>............] - ETA: 0s - loss: 0.2490 - coeff_determination: 0.0977 - RMSE_PM: 207.3808
+ 95/143 [==================>...........] - ETA: 0s - loss: 0.2480 - coeff_determination: 0.0986 - RMSE_PM: 207.0864
+100/143 [===================>..........] - ETA: 0s - loss: 0.2461 - coeff_determination: 0.0929 - RMSE_PM: 204.6894
+106/143 [=====================>........] - ETA: 0s - loss: 0.2466 - coeff_determination: 0.0926 - RMSE_PM: 206.6792
+110/143 [======================>.......] - ETA: 0s - loss: 0.2464 - coeff_determination: 0.0931 - RMSE_PM: 208.6422
+115/143 [=======================>......] - ETA: 0s - loss: 0.2458 - coeff_determination: 0.0949 - RMSE_PM: 209.7297
+120/143 [========================>.....] - ETA: 0s - loss: 0.2448 - coeff_determination: 0.0940 - RMSE_PM: 208.9644
+125/143 [=========================>....] - ETA: 0s - loss: 0.2437 - coeff_determination: 0.0985 - RMSE_PM: 207.2210
+130/143 [==========================>...] - ETA: 0s - loss: 0.2474 - coeff_determination: 0.0891 - RMSE_PM: 208.4929
+136/143 [===========================>..] - ETA: 0s - loss: 0.2486 - coeff_determination: 0.0895 - RMSE_PM: 207.5518
+140/143 [============================>.] - ETA: 0s - loss: 0.2478 - coeff_determination: 0.0906 - RMSE_PM: 208.6673
+143/143 [==============================] - 2s 13ms/step - loss: 0.2473 - coeff_determination: 0.0904 - RMSE_PM: 208.4696 - val_loss: 0.3269 - val_coeff_determination: -0.1789 - val_RMSE_PM: 184.2368
+Epoch 49/50
+
+  1/143 [..............................] - ETA: 2s - loss: 0.3166 - coeff_determination: 0.1961 - RMSE_PM: 212.5760
+  6/143 [>.............................] - ETA: 1s - loss: 0.2600 - coeff_determination: 0.1175 - RMSE_PM: 208.2238
+ 11/143 [=>............................] - ETA: 1s - loss: 0.2585 - coeff_determination: 0.1402 - RMSE_PM: 208.5546
+ 16/143 [==>...........................] - ETA: 1s - loss: 0.2598 - coeff_determination: 0.1558 - RMSE_PM: 213.4307
+ 21/143 [===>..........................] - ETA: 1s - loss: 0.2488 - coeff_determination: 0.1614 - RMSE_PM: 204.3912
+ 26/143 [====>.........................] - ETA: 1s - loss: 0.2465 - coeff_determination: 0.1661 - RMSE_PM: 201.7880
+ 31/143 [=====>........................] - ETA: 1s - loss: 0.2551 - coeff_determination: 0.1462 - RMSE_PM: 205.9196
+ 36/143 [======>.......................] - ETA: 1s - loss: 0.2533 - coeff_determination: 0.1465 - RMSE_PM: 206.5082
+ 41/143 [=======>......................] - ETA: 1s - loss: 0.2507 - coeff_determination: 0.1401 - RMSE_PM: 200.6843
+ 46/143 [========>.....................] - ETA: 1s - loss: 0.2493 - coeff_determination: 0.1450 - RMSE_PM: 202.5681
+ 51/143 [=========>....................] - ETA: 1s - loss: 0.2491 - coeff_determination: 0.1417 - RMSE_PM: 203.1994
+ 56/143 [==========>...................] - ETA: 1s - loss: 0.2493 - coeff_determination: 0.1393 - RMSE_PM: 207.9607
+ 61/143 [===========>..................] - ETA: 1s - loss: 0.2453 - coeff_determination: 0.1456 - RMSE_PM: 206.0413
+ 65/143 [============>.................] - ETA: 0s - loss: 0.2438 - coeff_determination: 0.1482 - RMSE_PM: 206.0377
+ 70/143 [=============>................] - ETA: 0s - loss: 0.2453 - coeff_determination: 0.1401 - RMSE_PM: 205.0480
+ 75/143 [==============>...............] - ETA: 0s - loss: 0.2473 - coeff_determination: 0.1385 - RMSE_PM: 206.4328
+ 80/143 [===============>..............] - ETA: 0s - loss: 0.2448 - coeff_determination: 0.1424 - RMSE_PM: 206.2042
+ 85/143 [================>.............] - ETA: 0s - loss: 0.2447 - coeff_determination: 0.1359 - RMSE_PM: 204.1102
+ 90/143 [=================>............] - ETA: 0s - loss: 0.2421 - coeff_determination: 0.1331 - RMSE_PM: 201.4325
+ 95/143 [==================>...........] - ETA: 0s - loss: 0.2406 - coeff_determination: 0.1371 - RMSE_PM: 199.0347
+100/143 [===================>..........] - ETA: 0s - loss: 0.2387 - coeff_determination: 0.1348 - RMSE_PM: 197.7922
+105/143 [=====================>........] - ETA: 0s - loss: 0.2399 - coeff_determination: 0.1303 - RMSE_PM: 197.3259
+110/143 [======================>.......] - ETA: 0s - loss: 0.2380 - coeff_determination: 0.1306 - RMSE_PM: 195.8844
+115/143 [=======================>......] - ETA: 0s - loss: 0.2370 - coeff_determination: 0.1308 - RMSE_PM: 194.9232
+120/143 [========================>.....] - ETA: 0s - loss: 0.2350 - coeff_determination: 0.1366 - RMSE_PM: 195.6520
+124/143 [=========================>....] - ETA: 0s - loss: 0.2356 - coeff_determination: 0.1346 - RMSE_PM: 196.2388
+129/143 [==========================>...] - ETA: 0s - loss: 0.2368 - coeff_determination: 0.1352 - RMSE_PM: 197.4141
+134/143 [===========================>..] - ETA: 0s - loss: 0.2348 - coeff_determination: 0.1334 - RMSE_PM: 196.2912
+139/143 [============================>.] - ETA: 0s - loss: 0.2329 - coeff_determination: 0.1366 - RMSE_PM: 195.8304
+143/143 [==============================] - 2s 13ms/step - loss: 0.2338 - coeff_determination: 0.1382 - RMSE_PM: 196.2058 - val_loss: 0.2950 - val_coeff_determination: -0.0936 - val_RMSE_PM: 183.2793
+Epoch 50/50
+
+  1/143 [..............................] - ETA: 2s - loss: 0.1876 - coeff_determination: 0.0712 - RMSE_PM: 152.1448
+  6/143 [>.............................] - ETA: 1s - loss: 0.2238 - coeff_determination: 0.0980 - RMSE_PM: 193.1484
+ 11/143 [=>............................] - ETA: 1s - loss: 0.2176 - coeff_determination: 0.0975 - RMSE_PM: 198.7741
+ 16/143 [==>...........................] - ETA: 1s - loss: 0.2279 - coeff_determination: 0.0897 - RMSE_PM: 197.0391
+ 21/143 [===>..........................] - ETA: 1s - loss: 0.2281 - coeff_determination: 0.0975 - RMSE_PM: 197.8943
+ 26/143 [====>.........................] - ETA: 1s - loss: 0.2209 - coeff_determination: 0.1126 - RMSE_PM: 195.6419
+ 31/143 [=====>........................] - ETA: 1s - loss: 0.2327 - coeff_determination: 0.1206 - RMSE_PM: 209.5900
+ 37/143 [======>.......................] - ETA: 1s - loss: 0.2314 - coeff_determination: 0.1265 - RMSE_PM: 205.2519
+ 42/143 [=======>......................] - ETA: 1s - loss: 0.2253 - coeff_determination: 0.1353 - RMSE_PM: 202.0398
+ 47/143 [========>.....................] - ETA: 1s - loss: 0.2274 - coeff_determination: 0.1325 - RMSE_PM: 199.3607
+ 51/143 [=========>....................] - ETA: 1s - loss: 0.2307 - coeff_determination: 0.1313 - RMSE_PM: 200.9642
+ 57/143 [==========>...................] - ETA: 1s - loss: 0.2280 - coeff_determination: 0.1293 - RMSE_PM: 198.5241
+ 62/143 [============>.................] - ETA: 1s - loss: 0.2254 - coeff_determination: 0.1296 - RMSE_PM: 197.5065
+ 66/143 [============>.................] - ETA: 0s - loss: 0.2250 - coeff_determination: 0.1258 - RMSE_PM: 197.4645
+ 71/143 [=============>................] - ETA: 0s - loss: 0.2232 - coeff_determination: 0.1246 - RMSE_PM: 197.0612
+ 76/143 [==============>...............] - ETA: 0s - loss: 0.2216 - coeff_determination: 0.1270 - RMSE_PM: 198.1979
+ 81/143 [===============>..............] - ETA: 0s - loss: 0.2248 - coeff_determination: 0.1244 - RMSE_PM: 200.6569
+ 86/143 [=================>............] - ETA: 0s - loss: 0.2266 - coeff_determination: 0.1186 - RMSE_PM: 200.4748
+ 91/143 [==================>...........] - ETA: 0s - loss: 0.2217 - coeff_determination: 0.1198 - RMSE_PM: 196.9083
+ 96/143 [===================>..........] - ETA: 0s - loss: 0.2254 - coeff_determination: 0.1199 - RMSE_PM: 197.9392
+101/143 [====================>.........] - ETA: 0s - loss: 0.2260 - coeff_determination: 0.1167 - RMSE_PM: 197.8676
+106/143 [=====================>........] - ETA: 0s - loss: 0.2264 - coeff_determination: 0.1145 - RMSE_PM: 197.8177
+111/143 [======================>.......] - ETA: 0s - loss: 0.2271 - coeff_determination: 0.1077 - RMSE_PM: 197.5295
+116/143 [=======================>......] - ETA: 0s - loss: 0.2278 - coeff_determination: 0.1012 - RMSE_PM: 196.0846
+121/143 [========================>.....] - ETA: 0s - loss: 0.2288 - coeff_determination: 0.1028 - RMSE_PM: 197.6867
+126/143 [=========================>....] - ETA: 0s - loss: 0.2309 - coeff_determination: 0.1033 - RMSE_PM: 198.3401
+131/143 [==========================>...] - ETA: 0s - loss: 0.2316 - coeff_determination: 0.1000 - RMSE_PM: 199.1953
+136/143 [===========================>..] - ETA: 0s - loss: 0.2317 - coeff_determination: 0.1015 - RMSE_PM: 199.7415
+141/143 [============================>.] - ETA: 0s - loss: 0.2306 - coeff_determination: 0.1025 - RMSE_PM: 199.7038
+143/143 [==============================] - 2s 13ms/step - loss: 0.2302 - coeff_determination: 0.1032 - RMSE_PM: 199.6223 - val_loss: 0.3217 - val_coeff_determination: -0.1585 - val_RMSE_PM: 184.1934
+Running test metrics
+r2_secore: 0.11793285367311401
+my r2_secore: 0.1179328
+RMSE: 33.804630616722825
+My RMSE: 33.804631331071626

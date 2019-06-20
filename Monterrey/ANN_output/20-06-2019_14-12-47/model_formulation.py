@@ -87,7 +87,7 @@ def generator(data, lookback, delay, min_index, max_index,
 lookback = 18
 step = 1
 delay = 6
-batch_size = 32
+batch_size = 64
 target=5 #PM10 (5), check the order in dframe
 
 train_percent=0.7

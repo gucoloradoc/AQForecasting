@@ -52,7 +52,7 @@ for p in pollutants:
         dframe_norm[p]=(dframe[p]-dframe[p].mean())/dframe[p].std()
 
 
-df2=dframe_norm.resample('4H').mean().values
+df2=dframe_norm.resample('8H').mean().values
 #%% normalization
 
 #%% Looking back lookback, every step, we will predict the 
@@ -84,9 +84,9 @@ def generator(data, lookback, delay, min_index, max_index,
         yield samples, targets
 #%% Generators setup
 
-lookback = 18
+lookback = 9
 step = 1
-delay = 6
+delay = 3
 batch_size = 32
 target=5 #PM10 (5), check the order in dframe
 
