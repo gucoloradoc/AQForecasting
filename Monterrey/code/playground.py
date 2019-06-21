@@ -22,4 +22,4 @@ dframe[dframe.index.weekday== 5]['CENTRO']['NOX'].plot()
 dframe[dframe.index.hour== 17]['CENTRO']['NOX'].hist(bins=50)
 
 
-#%%
+#%% Plotting Training, validation and test set

@@ -58,7 +58,7 @@ for p in pollutants:
         dframe_norm[p]=dframe[p]+norm_guide[p][1]
 
 
-df2=dframe_norm.values #.resample('1H').mean().values
+df2=dframe_norm.resample('1H').mean().values
 #%% normalization
 
 #%% Looking back lookback, every step, we will predict the 

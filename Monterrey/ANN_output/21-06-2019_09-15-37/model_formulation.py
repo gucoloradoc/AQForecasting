@@ -26,45 +26,39 @@ pollutants=list(dframe.columns)
 #df2=dframe['NOROESTE'].fillna(method='ffill').as_matrix()
 dframe_norm=dframe.copy()
 #df2=dframe.values
-norm_guide={'CO':('max', 0.1),
-    'NO': ('max', 0.1),
-    'NO2': ('max', 0.1),
-    'NOX': ('max', 0.1),
-    'O3': ('max', 0.01),
-    'PM10': ('max', 0.1),
-    'PM2.5': ('max', 0.1),
-    'PRS': ('max', 0),
-    'RAINF': ('max', 0.001),
-    'RH': ('max', 0),
-    'SO2': ('max', 0.1),
-    'SR': ('max', 0),
-    'TOUT': ('max',0),
-    'WDR': ('max', 0),
-    'WSR': ('max', 0.1),
+norm_guide={'CO':('log', 0.1),
+    'NO': ('log', 0.1),
+    'NO2': ('log', 0.1),
+    'NOX': ('log', 0.1),
+    'O3': ('log', 0.01),
+    'PM10': ('log', 0.1),
+    'PM2.5': ('log', 0.1),
+    'PRS': ('mean', 0),
+    'RAINF': ('log', 0.001),
+    'RH': ('mean', 0),
+    'SO2': ('log', 0.1),
+    'SR': ('none', 0),
+    'TOUT': ('mean',0),
+    'WDR': ('mean', 0),
+    'WSR': ('log', 0.1),
     }
-
-norm_param=dict.fromkeys(norm_guide.keys())
 
 for p in pollutants:
     if norm_guide[p][0]=='log':
         dframe_norm[p]=np.log(dframe[p]+norm_guide[p][1])
-    elif norm_guide[p][0]=='mean':
-        dframe_norm[p]=(dframe[p]-dframe[p].mean())/dframe[p].std()
-        norm_param[p]=(dframe[p].mean(),dframe[p].std())
-    elif norm_guide[p][0]=='max':
-        dframe_norm[p]=(dframe[p]-dframe[p].min())/(dframe[p].max()-dframe[p].min())
-        norm_param[p]=(dframe[p].min(),dframe[p].max())
     if norm_guide[p][0]=='none':
         dframe_norm[p]=dframe[p]+norm_guide[p][1]
+    if norm_guide[p][0]=='mean':
+        dframe_norm[p]=(dframe[p]-dframe[p].mean())/dframe[p].std()
 
 
-df2=dframe_norm.values #.resample('1H').mean().values
+df2=dframe_norm.resample('24H').mean().values
 #%% normalization
 
 #%% Looking back lookback, every step, we will predict the 
 # concentration in a delay.
 def generator(data, lookback, delay, min_index, max_index,
-              shuffle=False, batch_size=128, step=1, target=5):
+              shuffle=False, batch_size=128, step=6, target=5):
     if max_index is None:
         max_index = len(data) - delay - 1
     i = min_index + lookback
@@ -90,10 +84,10 @@ def generator(data, lookback, delay, min_index, max_index,
         yield samples, targets
 #%% Generators setup
 
-lookback = 24
+lookback = 3
 step = 1
-delay = 24
-batch_size = 64
+delay = 1
+batch_size = 32
 target=5 #PM10 (5), check the order in dframe
 
 train_percent=0.7
@@ -181,25 +175,13 @@ from keras.optimizers import Adam
 from keras import backend as K #Required for tensorflow math
 
 def coeff_determination(y_true, y_pred):
-    """ Coefficient of determination r_squared, with the keras backend.
-    """
     SS_res =  K.sum(K.square( y_true-y_pred )) 
     SS_tot = K.sum(K.square( y_true - K.mean(y_true) ) ) 
     return ( 1 - SS_res/(SS_tot + K.epsilon()) )
 
-def RMSE_PM(y_true, y_pred,normalization=norm_guide["PM10"][0],params=norm_param["PM10"]):
-    """ Computes RSE with the keras backend, according to the normalization used.
-    """
-
-    if normalization=='log':
-        RSE=K.sqrt(K.sum(K.square(K.exp(y_pred)-K.exp(y_true))))
-    elif normalization=='max':
-        y_pred=y_pred*(params[1]-params[0])+params[0]
-        y_true=y_true*(params[1]-params[0])+params[0]
-        RSE=K.sqrt(K.sum(K.square(y_pred-y_true)))
-    else:
-        RSE=K.sqrt(K.sum(K.square(y_pred-y_true)))
-    return RSE
+def RMSE_PM(y_true, y_pred):
+    RMSE=K.sqrt(K.sum(K.square(K.exp(y_pred)-K.exp(y_true))))
+    return RMSE
 #%% ANN Model definition
 model = Sequential()
 model.add(layers.Flatten(input_shape=(lookback // step, df2.shape[-1])))
@@ -210,7 +192,7 @@ model.add(layers.Dense(32, activation='sigmoid', name='sigmoid'))
 #model.add(layers.Dense(32, activation='tanh'))
 model.add(layers.Dense(32, activation='linear', name='linear'))
 #model.add(layers.Dense(128, activation='relu'))
-model.add(layers.Dense(1))
+model.add(layers.Dense(1, activation='linear', name='output'))
 
 #%% ANN model compilation
 sys.stdout = open(out_path+'/model_training_status.txt', 'w')

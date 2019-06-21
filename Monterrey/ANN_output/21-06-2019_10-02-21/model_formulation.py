@@ -26,21 +26,21 @@ pollutants=list(dframe.columns)
 #df2=dframe['NOROESTE'].fillna(method='ffill').as_matrix()
 dframe_norm=dframe.copy()
 #df2=dframe.values
-norm_guide={'CO':('max', 0.1),
-    'NO': ('max', 0.1),
-    'NO2': ('max', 0.1),
-    'NOX': ('max', 0.1),
-    'O3': ('max', 0.01),
+norm_guide={'CO':('log', 0.1),
+    'NO': ('log', 0.1),
+    'NO2': ('log', 0.1),
+    'NOX': ('log', 0.1),
+    'O3': ('log', 0.01),
     'PM10': ('max', 0.1),
-    'PM2.5': ('max', 0.1),
-    'PRS': ('max', 0),
-    'RAINF': ('max', 0.001),
-    'RH': ('max', 0),
-    'SO2': ('max', 0.1),
-    'SR': ('max', 0),
-    'TOUT': ('max',0),
-    'WDR': ('max', 0),
-    'WSR': ('max', 0.1),
+    'PM2.5': ('log', 0.1),
+    'PRS': ('mean', 0),
+    'RAINF': ('log', 0.001),
+    'RH': ('mean', 0),
+    'SO2': ('log', 0.1),
+    'SR': ('none', 0),
+    'TOUT': ('mean',0),
+    'WDR': ('mean', 0),
+    'WSR': ('log', 0.1),
     }
 
 norm_param=dict.fromkeys(norm_guide.keys())
@@ -58,7 +58,7 @@ for p in pollutants:
         dframe_norm[p]=dframe[p]+norm_guide[p][1]
 
 
-df2=dframe_norm.values #.resample('1H').mean().values
+df2=dframe_norm.resample('24H').mean().values
 #%% normalization
 
 #%% Looking back lookback, every step, we will predict the 
@@ -90,10 +90,10 @@ def generator(data, lookback, delay, min_index, max_index,
         yield samples, targets
 #%% Generators setup
 
-lookback = 24
+lookback = 3
 step = 1
-delay = 24
-batch_size = 64
+delay = 1
+batch_size = 32
 target=5 #PM10 (5), check the order in dframe
 
 train_percent=0.7
@@ -191,9 +191,9 @@ def RMSE_PM(y_true, y_pred,normalization=norm_guide["PM10"][0],params=norm_param
     """ Computes RSE with the keras backend, according to the normalization used.
     """
 
-    if normalization=='log':
+    if normalization='log':
         RSE=K.sqrt(K.sum(K.square(K.exp(y_pred)-K.exp(y_true))))
-    elif normalization=='max':
+    elif normalization='max':
         y_pred=y_pred*(params[1]-params[0])+params[0]
         y_true=y_true*(params[1]-params[0])+params[0]
         RSE=K.sqrt(K.sum(K.square(y_pred-y_true)))
