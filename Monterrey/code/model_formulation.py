@@ -62,8 +62,8 @@ df2=dframe_norm.values #.resample('1H').mean().values
 #%% normalization
 
 #%% Looking back lookback, every step, we will predict the 
-# concentration in a delay.
-def generator(data, lookback, delay, min_index, max_index,
+#%% Generator redefinition
+def generator(data, predictors, lookback, delay, min_index, max_index,
               shuffle=False, batch_size=128, step=1, target=5):
     if max_index is None:
         max_index = len(data) - delay - 1
@@ -80,20 +80,25 @@ def generator(data, lookback, delay, min_index, max_index,
 
         samples = np.zeros((len(rows),
                            lookback // step,
-                           data.shape[-1]))
+                           len(predictors)))
         targets = np.zeros((len(rows),))
         for j, row in enumerate(rows):
+            #print(rows)
+            #print(samples.shape)
             indices = range(rows[j] - lookback, rows[j], step)
-            samples[j] = data[indices]
+            #print(indices)
+            samples[j] = data[indices][:,predictors]
             #Here my targets could be O3(4),PM10(5),PM2.5(6)
             targets[j] = data[rows[j] + delay][target]
         yield samples, targets
+
 #%% Generators setup
 
 lookback = 24
-step = 1
+step = 4
 delay = 24
-batch_size = 64
+batch_size = 32
+predictors=[5,9,11,12,13,14]
 target=5 #PM10 (5), check the order in dframe
 
 train_percent=0.7
@@ -109,6 +114,7 @@ test_max_ind=int(test_percent*obs_len+val_max_ind)
 train_gen = generator(df2,
                       lookback=lookback,
                       delay=delay,
+                      predictors=predictors,
                       min_index=0,
                       max_index=train_max_ind,
                       shuffle=True,
@@ -116,6 +122,7 @@ train_gen = generator(df2,
                       batch_size=batch_size,
                       target=target)
 val_gen = generator(df2,
+                    predictors=predictors,
                     lookback=lookback,
                     delay=delay,
                     min_index=train_max_ind+1,
@@ -124,6 +131,7 @@ val_gen = generator(df2,
                     batch_size=batch_size,
                       target=target)
 test_gen = generator(df2,
+                     predictors=predictors,
                      lookback=lookback,
                      delay=delay,
                      min_index=val_max_ind+1,
@@ -202,8 +210,8 @@ def RMSE_PM(y_true, y_pred,normalization=norm_guide["PM10"][0],params=norm_param
     return RSE
 #%% ANN Model definition
 model = Sequential()
-model.add(layers.Flatten(input_shape=(lookback // step, df2.shape[-1])))
-model.add(layers.Dense(32, activation='sigmoid', name='sigmoid'))
+model.add(layers.Flatten(input_shape=(lookback // step, len(predictors))))
+model.add(layers.Dense(128, activation='sigmoid', name='sigmoid'))
 #model.add(layers.GRU(32, input_shape=(None, df2.shape[-1]),
 #                    dropout=0.2,
 #                    recurrent_dropout=0.2))
@@ -217,7 +225,7 @@ sys.stdout = open(out_path+'/model_training_status.txt', 'w')
 model.compile(optimizer=Adam(), loss='mean_squared_error', metrics=[coeff_determination, RMSE_PM])
 history = model.fit_generator(train_gen,
                               steps_per_epoch=train_steps,
-                              epochs=30,
+                              epochs=100,
                               validation_data=val_gen,
                               validation_steps=val_steps)
 
@@ -274,12 +282,8 @@ def data_from_generator(gen,steps):
     samp_out = []
     for step in range(steps):
         samples, targets = next(gen)
-        #preds = samples[:, -1, 1]
-        #mae = np.mean(np.abs(preds - targets))
-        #batch_maes.append(mae)
         samp_imp.extend(samples)
         samp_out.extend(targets)
-    #print(np.mean(batch_maes))
     samp_imp=np.array(samp_imp)
     samp_out=np.array(samp_out, ndmin=1)
     samp_out.shape=(len(samp_out),1)
