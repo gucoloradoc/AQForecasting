@@ -58,7 +58,7 @@ for p in pollutants:
         dframe_norm[p]=dframe[p]+norm_guide[p][1]
 
 
-df2=dframe_norm.values #.resample('1H').mean().values
+df2=dframe_norm.resample('4H').mean().values
 #%% normalization
 
 #%% Looking back lookback, every step, we will predict the 
@@ -94,9 +94,9 @@ def generator(data, predictors, lookback, delay, min_index, max_index,
 
 #%% Generators setup
 
-lookback = 24
-step = 4
-delay = 24
+lookback = 6
+step = 1
+delay = 6
 batch_size = 32
 predictors=[5,9,11,12,13,14]
 target=5 #PM10 (5), check the order in dframe
@@ -211,7 +211,7 @@ def RMSE_PM(y_true, y_pred,normalization=norm_guide["PM10"][0],params=norm_param
 #%% ANN Model definition
 model = Sequential()
 model.add(layers.Flatten(input_shape=(lookback // step, len(predictors))))
-model.add(layers.Dense(128, activation='sigmoid', name='sigmoid'))
+model.add(layers.Dense(64, activation='sigmoid', name='sigmoid'))
 #model.add(layers.GRU(32, input_shape=(None, df2.shape[-1]),
 #                    dropout=0.2,
 #                    recurrent_dropout=0.2))
