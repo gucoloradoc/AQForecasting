@@ -58,7 +58,7 @@ for p in pollutants:
         dframe_norm[p]=dframe[p]+norm_guide[p][1]
 
 
-df2=dframe_norm.resample('4H').mean().values
+df2=dframe_norm.values #resample('4H').mean().values
 #%% normalization
 
 #%% Looking back lookback, every step, we will predict the 
@@ -97,7 +97,7 @@ def generator(data, predictors, lookback, delay, min_index, max_index,
 lookback = 6
 step = 1
 delay = 6
-batch_size = 32
+batch_size = 16
 predictors=[5,9,11,12,13,14]
 target=5 #PM10 (5), check the order in dframe
 
@@ -211,12 +211,19 @@ def RMSE_PM(y_true, y_pred,normalization=norm_guide["PM10"][0],params=norm_param
 #%% ANN Model definition
 model = Sequential()
 model.add(layers.Flatten(input_shape=(lookback // step, len(predictors))))
-model.add(layers.Dense(64, activation='sigmoid', name='sigmoid'))
-#model.add(layers.GRU(32, input_shape=(None, df2.shape[-1]),
+#model.add(layers.Dense(64, activation='sigmoid', name='sigmoid'))
+#model.add(layers.GRU(32, input_shape=(None, len(predictors)),
 #                    dropout=0.2,
 #                    recurrent_dropout=0.2))
 #model.add(layers.Dense(32, activation='tanh'))
-model.add(layers.Dense(32, activation='linear', name='linear'))
+model.add(layers.Dense(32, activation='relu', name='relu_1'))
+model.add(layers.Dense(16, activation='relu', name='relu_2'))
+model.add(layers.Dense(8, activation='relu', name='relu_3'))
+model.add(layers.Dense(8, activation='relu', name='relu_4'))
+model.add(layers.Dense(8, activation='relu', name='relu_5'))
+model.add(layers.Dense(8, activation='relu', name='relu_6'))
+model.add(layers.Dense(16, activation='relu', name='relu_7'))
+model.add(layers.Dense(32, activation='relu', name='relu_8'))
 #model.add(layers.Dense(128, activation='relu'))
 model.add(layers.Dense(1))
 
@@ -225,7 +232,7 @@ sys.stdout = open(out_path+'/model_training_status.txt', 'w')
 model.compile(optimizer=Adam(), loss='mean_squared_error', metrics=[coeff_determination, RMSE_PM])
 history = model.fit_generator(train_gen,
                               steps_per_epoch=train_steps,
-                              epochs=100,
+                              epochs=1000,
                               validation_data=val_gen,
                               validation_steps=val_steps)
 
@@ -304,12 +311,12 @@ pred_test=model.predict(np.array(samp_imp))
 #%% sklearn metrics
 
 det_coeff= metrics.r2_score(samp_out,pred_test)
-print("r2_secore: "+str(det_coeff))
+#print("r2_secore: "+str(det_coeff))
 my_r2_score=coeff_determination(K.variable((samp_out)),K.variable((pred_test)))
 det_coeff_v2=K.eval(my_r2_score)
 print("my r2_secore: "+str(det_coeff_v2))
 rmse_test= np.sqrt(metrics.mean_squared_error(np.exp(samp_out),np.exp(pred_test)))
-print("RMSE: "+ str(rmse_test))
+#print("RMSE: "+ str(rmse_test))
 my_RMSE_test=RMSE_PM(K.variable((samp_out)),K.variable((pred_test)))
 rmse_test_v2=K.eval(my_RMSE_test)/np.sqrt(len(pred_test))
 print("My RMSE: "+ str(rmse_test_v2))

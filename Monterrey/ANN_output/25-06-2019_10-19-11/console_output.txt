@@ -1,0 +1,16 @@
+
+ Training set: 
+
+From naive assumption that the pollutant concentration
+ will be the same that 24h before: 
+
+log(mse)= -3.206
+r2= -15.88049
+
+ Validation set: 
+
+From naive assumption that the pollutant concentration
+ will be the same that 24h before: 
+
+log(mse)= -3.834
+r2= -12.35497
