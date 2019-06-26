@@ -172,11 +172,11 @@ def eval_naive_method(gen, steps,var):
     print("r2= "+str(round(r2_score(tar,pred),5)))
     return round(np.mean(batch_logmse),3), round(r2_score(tar,pred),5)
 
-print("\n Training set: \n")
-train_naive_loss, train_naive_r2 = eval_naive_method(train_gen, train_steps,5)
+#print("\n Training set: \n")
+#train_naive_loss, train_naive_r2 = eval_naive_method(train_gen, train_steps,5)
 
-print("\n Validation set: \n")
-val_naive_loss, val_naive_r2 =eval_naive_method(val_gen, val_steps,5)
+#print("\n Validation set: \n")
+#val_naive_loss, val_naive_r2 =eval_naive_method(val_gen, val_steps,5)
 
 #%% Basic ANN Model
 #pylint: disable=import-error
@@ -230,6 +230,8 @@ model.add(layers.Dense(1))
 #%% ANN model compilation
 sys.stdout = open(out_path+'/model_training_status.txt', 'w')
 model.compile(optimizer=Adam(), loss='mean_squared_error', metrics=[coeff_determination, RMSE_PM])
+
+#%% ANN model fitting
 history = model.fit_generator(train_gen,
                               steps_per_epoch=train_steps,
                               epochs=1000,
