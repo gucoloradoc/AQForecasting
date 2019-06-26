@@ -223,16 +223,59 @@ model.add(layers.Dense(1))
 #%% ANN model compilation
 sys.stdout = open(out_path+'/model_training_status.txt', 'w')
 model.compile(optimizer=Adam(), loss='mean_squared_error', metrics=[coeff_determination, RMSE_PM])
-
-#%% ANN model fitting
 history = model.fit_generator(train_gen,
                               steps_per_epoch=train_steps,
                               epochs=100,
                               validation_data=val_gen,
                               validation_steps=val_steps)
 
+#%% Saving the model 
+model.save(out_path+"/PM10_NOROESTE_Predictor_"+datetime.now().strftime("%d-%m-%Y_%H-%M-%S")+".h5")
+from keras.utils import plot_model
+plot_model(model, to_file=(out_path+'/model.png'), show_shapes=True)
 
+#%% Training metrics
+sys.stdout = open(out_path+'/training_metrics.txt', 'w')
 
+import matplotlib.pyplot as plt
+
+loss = history.history['loss']
+val_loss = history.history['val_loss']
+
+acc=history.history['coeff_determination']
+val_acc=history.history['val_coeff_determination']
+
+train_rmse=history.history['RMSE_PM']/np.sqrt(test_steps)
+val_rmse=history.history['val_RMSE_PM']/np.sqrt(val_steps)
+epochs = range(len(loss))
+
+plt.figure()
+
+plt.subplot(311)
+plt.plot(epochs, np.log(loss), 'bo', alpha=0.5, label='Training loss')
+plt.plot(epochs, np.log(val_loss), 'b', label='Validation loss')
+#plt.plot(epochs, np.ones(len(epochs))*val_naive_loss, color='orange')
+#plt.plot(epochs, np.ones(len(epochs))*train_naive_loss, color='red')
+plt.title('Training and validation loss and accuracy ($r^2$)')
+plt.legend()
+
+plt.subplot(312)
+plt.plot(epochs, acc, 'bo', alpha=0.5, label='Training $r^2$')
+plt.plot(epochs, val_acc, 'b', label='Validation $r^2$')
+#plt.plot(epochs, np.ones(len(epochs))*val_naive_r2, color='orange')
+#plt.plot(epochs, np.ones(len(epochs))*train_naive_r2, color='red')
+plt.ylim([-1,1])
+plt.legend()
+
+plt.subplot(313)
+plt.plot(epochs, train_rmse, 'bo', alpha=0.5, label='Training $RMSE$')
+plt.plot(epochs, val_rmse, 'b', label='Validation $RMSE$')
+plt.legend()
+plt.savefig(out_path+"/Train_val_loss_acc.png", dpi=300)
+#plt.show()
+
+#%% Test metrics############################
+print('Running test metrics')
 #%% Testing the generator
 def data_from_generator(gen,steps):
     samp_imp = []
