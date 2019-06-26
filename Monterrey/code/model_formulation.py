@@ -216,14 +216,14 @@ model.add(layers.Flatten(input_shape=(lookback // step, len(predictors))))
 #                    dropout=0.2,
 #                    recurrent_dropout=0.2))
 #model.add(layers.Dense(32, activation='tanh'))
-model.add(layers.Dense(32, activation='relu', name='relu_1'))
-model.add(layers.Dense(16, activation='relu', name='relu_2'))
-model.add(layers.Dense(8, activation='relu', name='relu_3'))
+model.add(layers.Dense(64, activation='relu', name='relu_1'))
+model.add(layers.Dense(32, activation='relu', name='relu_2'))
+model.add(layers.Dense(16, activation='relu', name='relu_3'))
 model.add(layers.Dense(8, activation='relu', name='relu_4'))
 model.add(layers.Dense(8, activation='relu', name='relu_5'))
-model.add(layers.Dense(8, activation='relu', name='relu_6'))
-model.add(layers.Dense(16, activation='relu', name='relu_7'))
-model.add(layers.Dense(32, activation='relu', name='relu_8'))
+model.add(layers.Dense(16, activation='relu', name='relu_6'))
+model.add(layers.Dense(32, activation='relu', name='relu_7'))
+model.add(layers.Dense(64, activation='relu', name='relu_8'))
 #model.add(layers.Dense(128, activation='relu'))
 model.add(layers.Dense(1))
 
@@ -252,15 +252,15 @@ val_loss = history.history['val_loss']
 acc=history.history['coeff_determination']
 val_acc=history.history['val_coeff_determination']
 
-train_rmse=history.history['RMSE_PM']/np.sqrt(test_steps)
+train_rmse=history.history['RMSE_PM']/np.sqrt(train_steps)
 val_rmse=history.history['val_RMSE_PM']/np.sqrt(val_steps)
 epochs = range(len(loss))
 
 plt.figure()
 
 plt.subplot(311)
-plt.plot(epochs, np.log(loss), 'bo', alpha=0.5, label='Training loss')
-plt.plot(epochs, np.log(val_loss), 'b', label='Validation loss')
+plt.plot(epochs, loss, 'bo', alpha=0.5, label='Training loss')
+plt.plot(epochs, val_loss, 'b', label='Validation loss')
 plt.plot(epochs, np.ones(len(epochs))*val_naive_loss, color='orange')
 plt.plot(epochs, np.ones(len(epochs))*train_naive_loss, color='red')
 plt.title('Training and validation loss and accuracy ($r^2$)')
