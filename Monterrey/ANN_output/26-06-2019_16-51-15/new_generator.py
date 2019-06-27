@@ -165,7 +165,7 @@ model.add(layers.GRU(128, input_shape=(None, len(predictors)),
                     dropout=0.2,
                     recurrent_dropout=0.2))
 #model.add(layers.Dense(32, activation='tanh'))
-model.add(layers.Dense(32, activation='linear', name='linear'))
+#model.add(layers.Dense(32, activation='linear', name='linear'))
 #model.add(layers.Dense(128, activation='relu', name='relu_1'))
 #model.add(layers.Dense(64, activation='relu', name='relu_2'))
 #model.add(layers.Dense(32, activation='relu', name='relu_3'))

@@ -159,21 +159,21 @@ def RMSE_PM(y_true, y_pred,normalization=norm_guide["PM10"][0],params=norm_param
     return RSE
 #%% ANN Model definition
 model = Sequential()
-#model.add(layers.Flatten(input_shape=(lookback // step, len(predictors))))
+model.add(layers.Flatten(input_shape=(lookback // step, len(predictors))))
 #model.add(layers.Dense(128, activation='sigmoid', name='sigmoid'))
-model.add(layers.GRU(128, input_shape=(None, len(predictors)),
-                    dropout=0.2,
-                    recurrent_dropout=0.2))
+#model.add(layers.GRU(32, input_shape=(None, df2.shape[-1]),
+#                    dropout=0.2,
+#                    recurrent_dropout=0.2))
 #model.add(layers.Dense(32, activation='tanh'))
-model.add(layers.Dense(32, activation='linear', name='linear'))
-#model.add(layers.Dense(128, activation='relu', name='relu_1'))
-#model.add(layers.Dense(64, activation='relu', name='relu_2'))
-#model.add(layers.Dense(32, activation='relu', name='relu_3'))
-#model.add(layers.Dense(32, activation='relu', name='relu_4'))
-#model.add(layers.Dense(32, activation='relu', name='relu_5'))
-#model.add(layers.Dense(32, activation='relu', name='relu_6'))
-#model.add(layers.Dense(64, activation='relu', name='relu_7'))
-#model.add(layers.Dense(128, activation='relu', name='relu_8'))
+#model.add(layers.Dense(32, activation='linear', name='linear'))
+model.add(layers.Dense(128, activation='relu', name='relu_1'))
+model.add(layers.Dense(64, activation='relu', name='relu_2'))
+model.add(layers.Dense(32, activation='relu', name='relu_3'))
+model.add(layers.Dense(32, activation='relu', name='relu_4'))
+model.add(layers.Dense(32, activation='relu', name='relu_5'))
+model.add(layers.Dense(32, activation='relu', name='relu_6'))
+model.add(layers.Dense(64, activation='relu', name='relu_7'))
+model.add(layers.Dense(128, activation='relu', name='relu_8'))
 model.add(layers.Dense(1))
 
 #%% ANN model compilation
