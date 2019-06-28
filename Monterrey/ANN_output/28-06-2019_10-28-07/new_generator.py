@@ -21,7 +21,7 @@ dframe=pd.read_csv("Monterrey/data/imputed/data/NOROESTE.csv",
 
 station="NOROESTE"
 pollutants=list(dframe.columns)
-tar_pollutant="O3"
+tar_pollutant="PM10"
 #%% Preparation of the data, normalization
 #dframe.mean(axis=0).unstack('ESTACION')
 #df2=dframe['NOROESTE'].fillna(method='ffill').as_matrix()

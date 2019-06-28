@@ -21,7 +21,7 @@ dframe=pd.read_csv("Monterrey/data/imputed/data/NOROESTE.csv",
 
 station="NOROESTE"
 pollutants=list(dframe.columns)
-tar_pollutant="O3"
+tar_pollutant="PM10"
 #%% Preparation of the data, normalization
 #dframe.mean(axis=0).unstack('ESTACION')
 #df2=dframe['NOROESTE'].fillna(method='ffill').as_matrix()
@@ -168,7 +168,7 @@ model.add(layers.Dense(256, activation='sigmoid', name='sigmoid'))
 #model.add(layers.Dense(32, activation='tanh'))
 model.add(layers.Dense(128, activation='linear', name='linear'))
 model.add(layers.Dense(256, activation='relu', name='relu_1'))
-model.add(layers.Dense(64, activation='relu', name='relu_2'))
+#model.add(layers.Dense(64, activation='relu', name='relu_2'))
 #model.add(layers.Dense(32, activation='relu', name='relu_3'))
 #model.add(layers.Dense(32, activation='relu', name='relu_4'))
 #model.add(layers.Dense(32, activation='relu', name='relu_5'))
@@ -186,7 +186,7 @@ model.compile(optimizer=Adam(), loss='mean_squared_error', metrics=[coeff_determ
 
 history = model.fit(train_set,train_tar,
             batch_size= batch_size,
-            epochs=500,
+            epochs=400,
             validation_data=(val_set, val_tar))
 
 #%% Saving the model 
@@ -253,10 +253,7 @@ my_r2_score=coeff_determination(K.variable((test_tar)),K.variable((pred_test)))
 det_coeff_v2=K.eval(my_r2_score)
 print("my r2_secore: "+str(det_coeff_v2))
 rmse_test= np.sqrt(metrics.mean_squared_error((test_tar),(pred_test)))
-print("RMSE: "+ str(rmse_test)+ "\n")
-print("training set length = "+ str(len(train_set))+ "\n")
-print("validation set length = "+ str(len(val_set))+ "\n")
-print("test set length = "+ str(len(test_set))+ "\n")
+print("RMSE: "+ str(rmse_test))
 #my_RMSE_test=RMSE_PM(K.variable((test_tar)),K.variable((pred_test)))
 #rmse_test_v2=K.eval(my_RMSE_test)/np.sqrt(len(pred_test))
 #print("My RMSE: "+ str(rmse_test_v2))

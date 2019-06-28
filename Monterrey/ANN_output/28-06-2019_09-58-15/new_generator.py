@@ -21,7 +21,7 @@ dframe=pd.read_csv("Monterrey/data/imputed/data/NOROESTE.csv",
 
 station="NOROESTE"
 pollutants=list(dframe.columns)
-tar_pollutant="O3"
+tar_pollutant="PM2.5"
 #%% Preparation of the data, normalization
 #dframe.mean(axis=0).unstack('ESTACION')
 #df2=dframe['NOROESTE'].fillna(method='ffill').as_matrix()
@@ -161,14 +161,14 @@ def RMSE_PM(y_true, y_pred,normalization=norm_guide[tar_pollutant][0],params=nor
 #%% ANN Model definition
 model = Sequential()
 model.add(layers.Flatten(input_shape=(lookback // step, len(predictors))))
-model.add(layers.Dense(256, activation='sigmoid', name='sigmoid'))
+model.add(layers.Dense(128, activation='sigmoid', name='sigmoid'))
 #model.add(layers.GRU(128, input_shape=(None, len(predictors)),
 #                    dropout=0.5,
 #                    recurrent_dropout=0.5))
 #model.add(layers.Dense(32, activation='tanh'))
 model.add(layers.Dense(128, activation='linear', name='linear'))
 model.add(layers.Dense(256, activation='relu', name='relu_1'))
-model.add(layers.Dense(64, activation='relu', name='relu_2'))
+#model.add(layers.Dense(64, activation='relu', name='relu_2'))
 #model.add(layers.Dense(32, activation='relu', name='relu_3'))
 #model.add(layers.Dense(32, activation='relu', name='relu_4'))
 #model.add(layers.Dense(32, activation='relu', name='relu_5'))
@@ -244,7 +244,7 @@ pred_test=model.predict(test_set)
 
 #%% sklearn metrics
 test_tar.shape = (len(test_tar),1)
-from model_post_processing import data_reescaling
+#from model_post_processing import data_reescaling
 pred_test=data_reescaling(pred_test,tar_pollutant,norm_param, norm_guide)
 test_tar=data_reescaling(test_tar,tar_pollutant,norm_param, norm_guide)
 det_coeff= metrics.r2_score(test_tar,pred_test)
@@ -253,10 +253,7 @@ my_r2_score=coeff_determination(K.variable((test_tar)),K.variable((pred_test)))
 det_coeff_v2=K.eval(my_r2_score)
 print("my r2_secore: "+str(det_coeff_v2))
 rmse_test= np.sqrt(metrics.mean_squared_error((test_tar),(pred_test)))
-print("RMSE: "+ str(rmse_test)+ "\n")
-print("training set length = "+ str(len(train_set))+ "\n")
-print("validation set length = "+ str(len(val_set))+ "\n")
-print("test set length = "+ str(len(test_set))+ "\n")
+print("RMSE: "+ str(rmse_test))
 #my_RMSE_test=RMSE_PM(K.variable((test_tar)),K.variable((pred_test)))
 #rmse_test_v2=K.eval(my_RMSE_test)/np.sqrt(len(pred_test))
 #print("My RMSE: "+ str(rmse_test_v2))

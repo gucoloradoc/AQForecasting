@@ -21,7 +21,6 @@ dframe=pd.read_csv("Monterrey/data/imputed/data/NOROESTE.csv",
 
 station="NOROESTE"
 pollutants=list(dframe.columns)
-tar_pollutant="O3"
 #%% Preparation of the data, normalization
 #dframe.mean(axis=0).unstack('ESTACION')
 #df2=dframe['NOROESTE'].fillna(method='ffill').as_matrix()
@@ -95,8 +94,8 @@ lookback = 24
 step = 1
 delay = 24
 batch_size = 32
-predictors=list(range(0,14))
-target=list(norm_guide.keys()).index(tar_pollutant) # check the order in dframe
+predictors=[6,9,11,12,13,14]
+target=6 #PM2.5 (6), check the order in dframe
 
 train_percent=0.7
 val_percent=0.15
@@ -145,7 +144,7 @@ def coeff_determination(y_true, y_pred):
     SS_tot = K.sum(K.square( y_true - K.mean(y_true) ) ) 
     return ( 1 - SS_res/(SS_tot + K.epsilon()) )
 
-def RMSE_PM(y_true, y_pred,normalization=norm_guide[tar_pollutant][0],params=norm_param[tar_pollutant]):
+def RMSE_PM(y_true, y_pred,normalization=norm_guide["PM2.5"][0],params=norm_param["PM2.5"]):
     """ Computes RSE with the keras backend, according to the normalization used.
     """
 
@@ -161,21 +160,21 @@ def RMSE_PM(y_true, y_pred,normalization=norm_guide[tar_pollutant][0],params=nor
 #%% ANN Model definition
 model = Sequential()
 model.add(layers.Flatten(input_shape=(lookback // step, len(predictors))))
-model.add(layers.Dense(256, activation='sigmoid', name='sigmoid'))
+model.add(layers.Dense(128, activation='sigmoid', name='sigmoid'))
 #model.add(layers.GRU(128, input_shape=(None, len(predictors)),
 #                    dropout=0.5,
 #                    recurrent_dropout=0.5))
 #model.add(layers.Dense(32, activation='tanh'))
 model.add(layers.Dense(128, activation='linear', name='linear'))
 model.add(layers.Dense(256, activation='relu', name='relu_1'))
-model.add(layers.Dense(64, activation='relu', name='relu_2'))
+#model.add(layers.Dense(64, activation='relu', name='relu_2'))
 #model.add(layers.Dense(32, activation='relu', name='relu_3'))
 #model.add(layers.Dense(32, activation='relu', name='relu_4'))
 #model.add(layers.Dense(32, activation='relu', name='relu_5'))
 #model.add(layers.Dense(32, activation='relu', name='relu_6'))
 #model.add(layers.Dense(64, activation='relu', name='relu_7'))
 #model.add(layers.Dense(128, activation='relu', name='relu_8'))
-model.add(layers.Dense(1, name='output'))
+model.add(layers.Dense(1))
 
 #%% ANN model compilation
 sys.stdout = open(out_path+'/model_training_status.txt', 'w')
@@ -190,7 +189,7 @@ history = model.fit(train_set,train_tar,
             validation_data=(val_set, val_tar))
 
 #%% Saving the model 
-model.save(out_path+"/" + tar_pollutant+"_NOROESTE_Predictor.h5")
+model.save(out_path+"/PM2.5_NOROESTE_Predictor_"+datetime.now().strftime("%d-%m-%Y_%H-%M-%S")+".h5")
 from tensorflow.keras.utils import plot_model
 plot_model(model, to_file=(out_path+'/model.png'), show_shapes=True)
 
@@ -216,7 +215,7 @@ plt.plot(epochs, np.log(loss), 'bo', alpha=0.5, label='Training loss')
 plt.plot(epochs, np.log(val_loss), 'b', label='Validation loss')
 #plt.plot(epochs, np.ones(len(epochs))*val_naive_loss, color='orange')
 #plt.plot(epochs, np.ones(len(epochs))*train_naive_loss, color='red')
-plt.title('Training and validation loss and accuracy ($r^2$) for '+ tar_pollutant)
+plt.title('Training and validation loss and accuracy ($r^2$)')
 plt.legend()
 
 plt.subplot(312)
@@ -245,18 +244,15 @@ pred_test=model.predict(test_set)
 #%% sklearn metrics
 test_tar.shape = (len(test_tar),1)
 from model_post_processing import data_reescaling
-pred_test=data_reescaling(pred_test,tar_pollutant,norm_param, norm_guide)
-test_tar=data_reescaling(test_tar,tar_pollutant,norm_param, norm_guide)
+pred_test=data_reescaling(pred_test,"PM2.5",norm_param, norm_guide)
+test_tar=data_reescaling(test_tar,"PM2.5",norm_param, norm_guide)
 det_coeff= metrics.r2_score(test_tar,pred_test)
 print("r2_secore: "+str(det_coeff))
 my_r2_score=coeff_determination(K.variable((test_tar)),K.variable((pred_test)))
 det_coeff_v2=K.eval(my_r2_score)
 print("my r2_secore: "+str(det_coeff_v2))
 rmse_test= np.sqrt(metrics.mean_squared_error((test_tar),(pred_test)))
-print("RMSE: "+ str(rmse_test)+ "\n")
-print("training set length = "+ str(len(train_set))+ "\n")
-print("validation set length = "+ str(len(val_set))+ "\n")
-print("test set length = "+ str(len(test_set))+ "\n")
+print("RMSE: "+ str(rmse_test))
 #my_RMSE_test=RMSE_PM(K.variable((test_tar)),K.variable((pred_test)))
 #rmse_test_v2=K.eval(my_RMSE_test)/np.sqrt(len(pred_test))
 #print("My RMSE: "+ str(rmse_test_v2))
@@ -271,7 +267,6 @@ plt.plot([min(min(pred_test),min(test_tar)),
         'r--')
 plt.annotate(("$R^2= $"+str(round(det_coeff,3))),(min(max(pred_test),max(test_tar))*(3/4),
             min(max(pred_test),max(test_tar))*(4/4)))
-plt.title('Coefficient of determination for ' + tar_pollutant)
 plt.ylabel("Measured")
 plt.xlabel("Predicted")
 plt.savefig(out_path+"/R2_test.png", dpi=300)
