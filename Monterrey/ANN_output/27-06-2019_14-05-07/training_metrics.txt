@@ -1,0 +1,20 @@
+<Figure size 640x480 with 0 Axes>
+<matplotlib.axes._subplots.AxesSubplot object at 0x0000024A622F5EB8>
+[<matplotlib.lines.Line2D object at 0x0000024A623692B0>]
+[<matplotlib.lines.Line2D object at 0x0000024A6237F358>]
+Text(0.5, 1.0, 'Training and validation loss and accuracy ($r^2$)')
+<matplotlib.legend.Legend object at 0x0000024A63C2DA20>
+<matplotlib.axes._subplots.AxesSubplot object at 0x0000024A63C40978>
+[<matplotlib.lines.Line2D object at 0x0000024AA30F2C18>]
+[<matplotlib.lines.Line2D object at 0x0000024AA30FFDD8>]
+(-1, 1)
+<matplotlib.legend.Legend object at 0x0000024AA312E320>
+<matplotlib.axes._subplots.AxesSubplot object at 0x0000024AA31386A0>
+[<matplotlib.lines.Line2D object at 0x0000024AA31798D0>]
+[<matplotlib.lines.Line2D object at 0x0000024AA3185B38>]
+<matplotlib.legend.Legend object at 0x0000024AA31960B8>
+Running test metrics
+
+  32/1316 [..............................] - ETA: 0s - loss: 2.8321e-04 - coeff_determination: 0.7229 - RMSE_PM: 95.1606
+ 928/1316 [====================>.........] - ETA: 0s - loss: 5.7607e-04 - coeff_determination: 0.6911 - RMSE_PM: 130.2982
+1316/1316 [==============================] - 0s 58us/sample - loss: 9.4247e-04 - coeff_determination: 0.6445 - RMSE_PM: 144.0302

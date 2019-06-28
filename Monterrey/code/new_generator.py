@@ -58,7 +58,7 @@ for p in pollutants:
         dframe_norm[p]=dframe[p]+norm_guide[p][1]
 
 
-df2=dframe_norm.resample('4H').mean().values
+df2=dframe_norm.values #resample('4H').mean().values
 
 #%% Generator over all the dataset
 def generator_all(data, predictors, lookback, delay, batch_size=128, step=1, target=5):
@@ -90,9 +90,9 @@ def generator_all(data, predictors, lookback, delay, batch_size=128, step=1, tar
 #gen_in, gen_out=generator_all(test_array,[0,1,2],2,1,target=2)
 
 #%% Data set from generator
-lookback = 6
+lookback = 24
 step = 1
-delay = 6
+delay = 24
 batch_size = 32
 predictors=[5,9,11,12,13,14]
 target=5 #PM10 (5), check the order in dframe
@@ -159,11 +159,11 @@ def RMSE_PM(y_true, y_pred,normalization=norm_guide["PM10"][0],params=norm_param
     return RSE
 #%% ANN Model definition
 model = Sequential()
-#model.add(layers.Flatten(input_shape=(lookback // step, len(predictors))))
-#model.add(layers.Dense(128, activation='sigmoid', name='sigmoid'))
-model.add(layers.GRU(128, input_shape=(None, len(predictors)),
-                    dropout=0.2,
-                    recurrent_dropout=0.2))
+model.add(layers.Flatten(input_shape=(lookback // step, len(predictors))))
+model.add(layers.Dense(128, activation='sigmoid', name='sigmoid'))
+#model.add(layers.GRU(128, input_shape=(None, len(predictors)),
+#                    dropout=0.5,
+#                    recurrent_dropout=0.5))
 #model.add(layers.Dense(32, activation='tanh'))
 model.add(layers.Dense(32, activation='linear', name='linear'))
 #model.add(layers.Dense(128, activation='relu', name='relu_1'))
@@ -183,8 +183,9 @@ model.compile(optimizer=Adam(), loss='mean_squared_error', metrics=[coeff_determ
 
 #%% ANN model fitting
 
-history = model.fit(train_set,train_tar, 
-            epochs=500,
+history = model.fit(train_set,train_tar,
+            batch_size= batch_size,
+            epochs=1000,
             validation_data=(val_set, val_tar))
 
 #%% Saving the model 
@@ -242,16 +243,19 @@ pred_test=model.predict(test_set)
 
 #%% sklearn metrics
 test_tar.shape = (len(test_tar),1)
+from model_post_processing import data_reescaling
+pred_test=data_reescaling(pred_test,"PM10",norm_param, norm_guide)
+test_tar=data_reescaling(test_tar,"PM10",norm_param, norm_guide)
 det_coeff= metrics.r2_score(test_tar,pred_test)
 print("r2_secore: "+str(det_coeff))
 my_r2_score=coeff_determination(K.variable((test_tar)),K.variable((pred_test)))
 det_coeff_v2=K.eval(my_r2_score)
 print("my r2_secore: "+str(det_coeff_v2))
-rmse_test= np.sqrt(metrics.mean_squared_error(np.exp(test_tar),np.exp(pred_test)))
+rmse_test= np.sqrt(metrics.mean_squared_error((test_tar),(pred_test)))
 print("RMSE: "+ str(rmse_test))
-my_RMSE_test=RMSE_PM(K.variable((test_tar)),K.variable((pred_test)))
-rmse_test_v2=K.eval(my_RMSE_test)/np.sqrt(len(pred_test))
-print("My RMSE: "+ str(rmse_test_v2))
+#my_RMSE_test=RMSE_PM(K.variable((test_tar)),K.variable((pred_test)))
+#rmse_test_v2=K.eval(my_RMSE_test)/np.sqrt(len(pred_test))
+#print("My RMSE: "+ str(rmse_test_v2))
 
 #Coefficient of determination (r^2)
 plt.figure()

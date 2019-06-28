@@ -1,0 +1,2 @@
+Train on 1534 samples, validate on 327 samples
+Epoch 1/500
