@@ -1,0 +1,7 @@
+Running test metrics
+
+ 32/330 [=>............................] - ETA: 0s - loss: 7.8839e-05 - coeff_determination: 0.4063 - RMSE_PM: 50.1275
+330/330 [==============================] - 0s 60us/sample - loss: 8.8134e-05 - coeff_determination: 0.4278 - RMSE_PM: 49.8142
+r2_secore: 0.5218616817140418
+my r2_secore: 0.5218617
+RMSE: 9.36920071688834

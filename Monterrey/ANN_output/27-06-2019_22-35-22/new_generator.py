@@ -165,8 +165,8 @@ model.add(layers.Dense(128, activation='sigmoid', name='sigmoid'))
 #                    dropout=0.5,
 #                    recurrent_dropout=0.5))
 #model.add(layers.Dense(32, activation='tanh'))
-model.add(layers.Dense(128, activation='linear', name='linear'))
-model.add(layers.Dense(256, activation='relu', name='relu_1'))
+model.add(layers.Dense(32, activation='linear', name='linear'))
+#model.add(layers.Dense(128, activation='relu', name='relu_1'))
 #model.add(layers.Dense(64, activation='relu', name='relu_2'))
 #model.add(layers.Dense(32, activation='relu', name='relu_3'))
 #model.add(layers.Dense(32, activation='relu', name='relu_4'))
@@ -185,7 +185,7 @@ model.compile(optimizer=Adam(), loss='mean_squared_error', metrics=[coeff_determ
 
 history = model.fit(train_set,train_tar,
             batch_size= batch_size,
-            epochs=500,
+            epochs=1000,
             validation_data=(val_set, val_tar))
 
 #%% Saving the model 
