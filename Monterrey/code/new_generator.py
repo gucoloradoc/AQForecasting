@@ -95,7 +95,7 @@ lookback = 24
 step = 1
 delay = 24
 batch_size = 32
-predictors=list(range(0,14))
+predictors=list(range(0,15))
 target=list(norm_guide.keys()).index(tar_pollutant) # check the order in dframe
 
 train_percent=0.7
@@ -167,10 +167,10 @@ model.add(layers.Dense(256, activation='sigmoid', name='sigmoid'))
 #                    recurrent_dropout=0.5))
 #model.add(layers.Dense(32, activation='tanh'))
 model.add(layers.Dense(128, activation='linear', name='linear'))
-model.add(layers.Dense(256, activation='relu', name='relu_1'))
-model.add(layers.Dense(64, activation='relu', name='relu_2'))
-#model.add(layers.Dense(32, activation='relu', name='relu_3'))
-#model.add(layers.Dense(32, activation='relu', name='relu_4'))
+model.add(layers.Dense(1024, activation='relu', name='relu_1'))
+model.add(layers.Dense(1024, activation='sigmoid', name='sigmoid_1'))
+#model.add(layers.Dense(256, activation='sigmoid', name='sigmoid_2'))
+#model.add(layers.Dense(512, activation='relu', name='relu_4'))
 #model.add(layers.Dense(32, activation='relu', name='relu_5'))
 #model.add(layers.Dense(32, activation='relu', name='relu_6'))
 #model.add(layers.Dense(64, activation='relu', name='relu_7'))
@@ -186,7 +186,7 @@ model.compile(optimizer=Adam(), loss='mean_squared_error', metrics=[coeff_determ
 
 history = model.fit(train_set,train_tar,
             batch_size= batch_size,
-            epochs=500,
+            epochs=1000,
             validation_data=(val_set, val_tar))
 
 #%% Saving the model 

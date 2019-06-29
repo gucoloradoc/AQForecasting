@@ -1,0 +1,14 @@
+Running test metrics
+
+ 32/330 [=>............................] - ETA: 0s - loss: 0.0025 - coeff_determination: 0.5213 - RMSE_PM: 40.3440
+330/330 [==============================] - 0s 66us/sample - loss: 0.0023 - coeff_determination: 0.6740 - RMSE_PM: 36.3326
+r2_secore: 0.7004008093716457
+my r2_secore: 0.7004008
+RMSE: 6.760450834398043
+
+training set length = 1534
+
+validation set length = 327
+
+test set length = 330
+
